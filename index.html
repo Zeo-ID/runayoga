@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runayoga – Yoga, Pilates & Massagen in Berlin-Pankow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #7a8b6f;
+            --sage-light: #9aab8f;
+            --sage-dark: #5a6b4f;
+            --cream: #f5f0e8;
+            --warm-white: #faf8f5;
+            --sand: #d4c5a9;
+            --earth: #8b7355;
+            --text-dark: #2d2d2d;
+            --text-medium: #555;
+            --text-light: #888;
+            --accent: #c4956a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: var(--warm-white);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        /* ──── NAV ──── */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            transition: box-shadow 0.3s;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--sage-dark);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-medium);
+            font-size: 0.9rem;
+            font-weight: 400;
+            transition: color 0.3s;
+            letter-spacing: 0.03em;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-dark);
+        }
+
+        .nav-cta {
+            background: var(--sage);
+            color: white !important;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            transition: background 0.3s, transform 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        /* ──── HERO ──── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--warm-white) 50%, #e8ede5 100%);
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text h1 em {
+            color: var(--sage);
+            font-style: italic;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            color: var(--text-medium);
+            margin-bottom: 2.5rem;
+            max-width: 480px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            letter-spacing: 0.02em;
+        }
+
+        .btn-primary {
+            background: var(--sage);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--sage-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(122, 139, 111, 0.3);
+        }
+
+        .btn-outline {
+            border: 1.5px solid var(--sage);
+            color: var(--sage-dark);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--sage);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image-wrapper {
+            width: 100%;
+            aspect-ratio: 4/5;
+            border-radius: 200px 200px 100px 100px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--sage-light), var(--sage));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-decoration {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.15;
+            top: -20px;
+            right: -20px;
+        }
+
+        .hero-decoration-2 {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--sage);
+            opacity: 0.12;
+            bottom: 40px;
+            left: -30px;
+        }
+
+        /* ──── SECTION SHARED ──── */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--sage);
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            color: var(--text-medium);
+            max-width: 600px;
+            margin: 1rem auto 0;
+            font-size: 1.05rem;
+        }
+
+        /* ──── ANGEBOT / SERVICES ──── */
+        .services {
+            background: var(--cream);
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sage-light), var(--sage));
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+        }
+
+        .service-card .arrow {
+            display: inline-block;
+            margin-top: 1.2rem;
+            color: var(--sage);
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        /* ──── ABOUT ──── */
+        .about {
+            background: var(--warm-white);
+        }
+
+        .about-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-image {
+            aspect-ratio: 3/4;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--sand), var(--earth));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .about-text .section-label {
+            text-align: left;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: var(--text-medium);
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .about-text .btn {
+            margin-top: 1rem;
+        }
+
+        /* ──── QUOTE / PHILOSOPHY ──── */
+        .philosophy {
+            background: var(--sage-dark);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .philosophy-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .philosophy blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .philosophy cite {
+            font-style: normal;
+            opacity: 0.7;
+            font-size: 1rem;
+        }
+
+        /* ──── RETREAT ──── */
+        .retreat {
+            background: var(--cream);
+        }
+
+        .retreat-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .retreat-image {
+            aspect-ratio: 16/10;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .retreat-image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #8ba88b, #5a7a5a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .retreat-text h2 {
+            font-size: 2.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .retreat-text p {
+            color: var(--text-medium);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .retreat-highlights {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .retreat-highlights li {
+            padding: 0.5rem 0;
+            color: var(--text-medium);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .retreat-highlights li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--sage);
+            flex-shrink: 0;
+        }
+
+        /* ──── TESTIMONIALS ──── */
+        .testimonials {
+            background: var(--warm-white);
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '\201C';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            color: var(--sage-light);
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            line-height: 1;
+        }
+
+        .testimonial-card p {
+            color: var(--text-medium);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            padding-top: 1.5rem;
+        }
+
+        .testimonial-author {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        /* ──── KONTAKT / CTA ──── */
+        .contact {
+            background: linear-gradient(135deg, var(--sage-dark), var(--sage));
+            color: white;
+            text-align: center;
+        }
+
+        .contact-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .contact-method {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: background 0.3s, transform 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .contact-method:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+        }
+
+        .contact-method-icon {
+            font-size: 1.3rem;
+        }
+
+        /* ──── FOOTER ──── */
+        footer {
+            background: #2a2a2a;
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .social-link:hover {
+            background: var(--sage);
+        }
+
+        /* ──── ANIMATIONS ──── */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ──── RESPONSIVE ──── */
+        @media (max-width: 968px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image-wrapper {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .about-inner,
+            .retreat-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-text .section-label {
+                text-align: center;
+            }
+
+            .about-text h2,
+            .retreat-text h2 {
+                text-align: center;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--warm-white);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.2rem;
+                border-bottom: 1px solid rgba(0,0,0,0.06);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .philosophy blockquote {
+                font-size: 1.6rem;
+            }
+
+            .contact h2 {
+                font-size: 2rem;
+            }
+
+            .contact-methods {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="logo"><img src="https://cdn.website-editor.net/9762d9814124497a996c8985b960cfa7/dms3rep/multi/logo+runayoga.png" alt="Runayoga" style="height: 45px;"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#angebot">Angebot</a></li>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#retreat">Retreat</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <h1>Finde deine <em>innere Harmonie</em></h1>
+                <p>Yoga, Pilates und Massagen in Berlin-Pankow. Deine Reise zu mehr Wohlbefinden beginnt hier und jetzt.</p>
+                <div class="hero-buttons">
+                    <a href="#angebot" class="btn btn-primary">Angebot entdecken</a>
+                    <a href="#kontakt" class="btn btn-outline">Termin vereinbaren</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-decoration"></div>
+                <div class="hero-decoration-2"></div>
+                <div class="hero-image-wrapper">
+                    <img src="https://le-cdn.website-editor.net/s/9762d9814124497a996c8985b960cfa7/dms3rep/multi/opt/IMG_20240326_073943+45-1920w.jpg?Expires=1775214763&Signature=lI1RIURa~c92JyacabPP1UD-27wS3jRYVM1PQW9Uv4O1tmkAhCW2btzyzkOoEux3eHMBUkWMsVBOdvwjydr9hoYjoiMQMBF~RtRVL9nGvqZX-G0eEnrUGNYgbwuLB2p~-lZR4qIaL1N~RsZNLd2Oe1jxjMfy--NgP6Fv6AqyWjhvQ30W76OcImdEYYsPG3UxN9WOhlFk8Ml7zVvHI5oPv4c1zmehy8TtRaWyKZl~E28cIOewTrZm5T-bbGVODTUy0k8OehLgttjPGjLDLGI-XY~VaNaACGM6ic8pbhnkF73X9jl940lk7zjPp7bWXDjQDUoHMXs-YBs1KMSGeVzY-g__&Key-Pair-Id=K2NXBXLF010TJW" alt="Runa beim Yoga im Bambuswald" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANGEBOT -->
+    <section class="services" id="angebot">
+        <div class="section-header fade-in">
+            <span class="section-label">Angebot</span>
+            <h2>Was dich bei mir erwartet</h2>
+            <p>Ein ganzheitliches Angebot für Körper, Geist und Seele</p>
+        </div>
+        <div class="services-grid">
+            <a href="#" class="service-card fade-in">
+                <div class="service-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="9" r="0.5" fill="white"/><circle cx="15" cy="9" r="0.5" fill="white"/><path d="M12 2v4M8 4l1 3M16 4l-1 3"/></svg></div>
+                <h3>Yoga</h3>
+                <p>Präventionskurse, Yin Yoga und Online-Angebote für jedes Level.</p>
+                <span class="arrow">&rarr;</span>
+            </a>
+            <a href="#" class="service-card fade-in">
+                <div class="service-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+                <h3>Pilates</h3>
+                <p>Stärke deine Körpermitte mit unseren zertifizierten Präventionskursen.</p>
+                <span class="arrow">&rarr;</span>
+            </a>
+            <a href="#" class="service-card fade-in">
+                <div class="service-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11c-1.5 0-3-1.2-3-3s1.5-3 3-3c.3 0 .6 0 .9.1C8.6 3.3 10.1 2 12 2s3.4 1.3 4.1 3.1c.3-.1.6-.1.9-.1 1.5 0 3 1.2 3 3s-1.5 3-3 3"/><path d="M12 11v11"/><path d="M9 18l3-3 3 3"/></svg></div>
+                <h3>Massagen</h3>
+                <p>Wohlfühl-Massagen und spezielle Pakete für Pre- und Postnatal.</p>
+                <span class="arrow">&rarr;</span>
+            </a>
+            <a href="#" class="service-card fade-in">
+                <div class="service-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                <h3>Heilraum für die Seele</h3>
+                <p>Schamanische Energiemedizin und spirituelle Begleitung.</p>
+                <span class="arrow">&rarr;</span>
+            </a>
+            <a href="#" class="service-card fade-in">
+                <div class="service-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+                <h3>Mantra singen</h3>
+                <p>Mantrachanting und Medicine Songs für innere Ruhe und Verbindung.</p>
+                <span class="arrow">&rarr;</span>
+            </a>
+            <a href="#" class="service-card fade-in">
+                <div class="service-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 00-6 6c0 5 6 9 6 9s6-4 6-9a6 6 0 00-6-6z"/><circle cx="12" cy="9" r="2"/></svg></div>
+                <h3>Jahreskreis für Frauen</h3>
+                <p>Gemeinsam durch die Zyklen des Jahres mit Ritualen und Gemeinschaft.</p>
+                <span class="arrow">&rarr;</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="philosophy">
+        <div class="philosophy-inner fade-in">
+            <blockquote>
+                „Yoga ist die Reise des Selbst, durch sich selbst, zu sich selbst."
+            </blockquote>
+            <cite>— Bhagavad Gita</cite>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about-inner">
+            <div class="about-image fade-in">
+                <img src="https://le-cdn.website-editor.net/s/9762d9814124497a996c8985b960cfa7/dms3rep/multi/opt/IMG_20240325_161123-1920w.jpg?Expires=1775214763&Signature=H-de6k7FYlyiP3Xgy2-h1tAS3yIT4IaHS96b~kyc6extgxyDbzCqWfroEi590~7TU53bpozX~UBvdNGFMR1ukggEnGf5K08UY4gzaQ2CSWi~79jDUyM86FjBPkE3vFAJFhuYtQtfuQfeAXXQLenfuXhRGr8pQFKk63xRv0oDq~5c8uVxRArfTpJEo5jPqncB2X-MMFUv9hgQzybs6gTTAU92D2ylfKCGilf7c-3xK0gMPzCd9jNRxcJfHAk2I265Gyg53GWKVEOHRyDJZZ23Ow0IdQT4hCkBe~vtSOy54Bz5qAYVFOmzc2H~YgEzot3RJqXNTMW8DvPZkPQqk7uXew__&Key-Pair-Id=K2NXBXLF010TJW" alt="Yoga in der Natur" style="width:100%; height:100%; object-fit:cover; border-radius:30px;" loading="lazy">
+            </div>
+            <div class="about-text fade-in">
+                <span class="section-label">Über mich</span>
+                <h2>Namaste, ich bin Runa</h2>
+                <p>Ich freue mich darauf, dich auf deiner Reise zu mehr innerer Harmonie und Wohlbefinden zu begleiten. In meinem Studio in Berlin-Pankow biete ich dir einen geschützten Raum für Yoga, Pilates und ganzheitliche Heilarbeit.</p>
+                <p>Mit Leidenschaft und Erfahrung unterstütze ich dich dabei, deinen Körper zu stärken, deinen Geist zu beruhigen und deine Seele zu nähren.</p>
+                <a href="#kontakt" class="btn btn-primary">Mehr erfahren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RETREAT -->
+    <section class="retreat" id="retreat">
+        <div class="retreat-inner">
+            <div class="retreat-image fade-in">
+                <img src="https://le-cdn.website-editor.net/s/9762d9814124497a996c8985b960cfa7/dms3rep/multi/opt/56-f0e1e494-1920w.jpg?Expires=1775214763&Signature=gB82JVabsad4cT88-MKMr8kEK0dVwMDt4AsnZKJ2WXNxoT0JJiNniuLKjRYWUHr8g1wd7vHt3D4wpqFAtiA8YWe1T8d2Fu6JYKUKyufdagFA~A3Vf6AESI1d2JFMi7cKd7FFVy~Y4J5IvkqNobSM3kzY~BggG9FaXaXekBR9ZE78kbYoBzV7Mu2BIBSPs3D3E2v5iI1ifWg-iU5VsbyyQcQ~aUJMTkAnfIyLDUveHT66VKF5G0JGtUclqjtKAC-7Rty6AGkHb~Sn9q9WCpAuUeD330MHQNaPdFIu814blasVG5iCFEaXgF3BlpDBt~4S7-5EBtiywESSOEjLlqZqDg__&Key-Pair-Id=K2NXBXLF010TJW" alt="Yoga Retreat" style="width:100%; height:100%; object-fit:cover; border-radius:20px;" loading="lazy">
+            </div>
+            <div class="retreat-text fade-in">
+                <span class="section-label">Yogaretreat 2025/26</span>
+                <h2>Tauche tief ein</h2>
+                <p>Gönne dir eine Auszeit vom Alltag und finde zurück zu dir selbst. Unser Yogaretreat bietet dir die perfekte Mischung aus Praxis, Natur und Gemeinschaft.</p>
+                <ul class="retreat-highlights">
+                    <li>Tägliche Yoga- und Meditationspraxis</li>
+                    <li>Schamanische Zeremonien</li>
+                    <li>Mantrachanting und Medicine Songs</li>
+                    <li>Kleine, persönliche Gruppen</li>
+                </ul>
+                <a href="#kontakt" class="btn btn-primary">Retreat anfragen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="feedback">
+        <div class="section-header fade-in">
+            <span class="section-label">Feedback</span>
+            <h2>Was meine Teilnehmer sagen</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p>Die Yogastunden bei Runa sind ein Highlight meiner Woche. Ich fühle mich danach immer geerdet und voller Energie.</p>
+                <div class="testimonial-author">— Maria S.</div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p>Die Massagen sind einfach wunderbar. Runa hat magische Hände und schafft eine unglaublich entspannende Atmosphäre.</p>
+                <div class="testimonial-author">— Kathrin L.</div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p>Das Retreat war eine lebensverändernde Erfahrung. Die Kombination aus Yoga, Natur und Gemeinschaft war perfekt.</p>
+                <div class="testimonial-author">— Sandra B.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="contact" id="kontakt">
+        <div class="contact-inner fade-in">
+            <span class="section-label" style="color: rgba(255,255,255,0.7);">Kontakt</span>
+            <h2>Bereit für deine Reise?</h2>
+            <p>Melde dich bei mir und wir finden gemeinsam das passende Angebot für dich.</p>
+            <div class="contact-methods">
+                <a href="mailto:runabulla@gmail.com" class="contact-method">
+                    <span class="contact-method-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg></span>
+                    E-Mail schreiben
+                </a>
+                <a href="https://wa.me/4901631391059" class="contact-method">
+                    <span class="contact-method-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></span>
+                    WhatsApp
+                </a>
+                <a href="http://instagram.com/" class="contact-method" target="_blank" rel="noopener">
+                    <span class="contact-method-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></span>
+                    Instagram
+                </a>
+                <a href="tel:+4901631391059" class="contact-method">
+                    <span class="contact-method-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></span>
+                    Anrufen
+                </a>
+            </div>
+            <p style="opacity: 0.7; font-size: 0.95rem;">Berlin-Pankow</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">Runayoga</div>
+            <ul class="footer-links">
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Datenschutz</a></li>
+                <li><a href="#">AGB</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="http://instagram.com/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a>
+                <a href="mailto:runabulla@gmail.com" class="social-link" aria-label="E-Mail"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
