@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a8b6f"/>
+      <stop offset="100%" stop-color="#5a6b4f"/>
+    </linearGradient>
+  </defs>
+  <!-- Leaf shape -->
+  <path d="M16 4 C12 8, 6 14, 6 20 C6 25, 10 28, 16 28 C22 28, 26 25, 26 20 C26 14, 20 8, 16 4Z" fill="url(#g)" opacity="0.9"/>
+  <path d="M16 8 C13 12, 9 16, 9 20 C9 23.5, 12 26, 16 26 C20 26, 23 23.5, 23 20 C23 16, 19 12, 16 8Z" fill="#fff" opacity="0.15"/>
+  <!-- Center vein -->
+  <line x1="16" y1="10" x2="16" y2="25" stroke="#fff" stroke-width="0.8" opacity="0.4" stroke-linecap="round"/>
+  <!-- Left vein -->
+  <path d="M16 16 C13 17, 11 19, 10 21" stroke="#fff" stroke-width="0.6" opacity="0.3" fill="none" stroke-linecap="round"/>
+  <!-- Right vein -->
+  <path d="M16 16 C19 17, 21 19, 22 21" stroke="#fff" stroke-width="0.6" opacity="0.3" fill="none" stroke-linecap="round"/>
+</svg>
