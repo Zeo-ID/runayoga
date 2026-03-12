@@ -1,10 +1,12 @@
 ---
-title: "Massagen"
-subtitle: "Entspannung für Körper und Seele"
-seo_title: "Massagen – Runayoga"
+title: Massagen 01
+subtitle: Entspannung für Körper und Seele
+seo_title: Massagen – Runayoga
 seo_description: "Wohltuende Massagen in Berlin-Pankow: Entspannungs-, Pre- und Postnatal-Massagen. Gönne dir eine Auszeit bei Runayoga."
-slug: "massagen"
+slug: massagen
 sort_order: 3
+highlights: []
+target_audience: ""
 ---
 
 Manchmal braucht der Körper einfach liebevolle Berührung, um loslassen zu können. Meine Massagen sind mehr als nur Muskelarbeit -- sie sind eine Einladung, zur Ruhe zu kommen und dir selbst etwas Gutes zu tun. In meinem Massageraum in Berlin-Pankow erwartet dich eine warme, geschützte Atmosphäre, in der du dich fallen lassen darfst.
