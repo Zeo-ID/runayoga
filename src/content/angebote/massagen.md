@@ -1,5 +1,5 @@
 ---
-title: Massagen02
+title: Massagen
 subtitle: Entspannung für Körper und Seele
 seo_title: Massagen – Runayoga
 seo_description: "Wohltuende Massagen in Berlin-Pankow: Entspannungs-, Pre- und Postnatal-Massagen. Gönne dir eine Auszeit bei Runayoga."
