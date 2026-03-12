@@ -83,6 +83,27 @@
       background: rgba(255,255,255,0.25);
     }
 
+    .btn-publish {
+      background: #e17055;
+      border: none;
+      color: var(--white);
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .btn-publish:hover {
+      background: #d35400;
+    }
+
+    .btn-publish:disabled {
+      background: #b0b0b0;
+      cursor: not-allowed;
+    }
+
     .btn-menu-toggle {
       display: none;
       background: none;
@@ -810,6 +831,7 @@
   </div>
   <div class="header-actions" id="headerActions" style="display:none;">
     <span class="header-user" id="headerUser"></span>
+    <button class="btn-publish" id="btnPublish" onclick="publishSite()">&#9650; Ver&ouml;ffentlichen</button>
     <button class="btn-logout" onclick="logout()">Abmelden</button>
   </div>
 </div>
@@ -1984,6 +2006,33 @@
     } catch(err) {
       document.querySelector('.modal-overlay').remove();
       showToast('Fehler: ' + err.message, 'error');
+    }
+  };
+
+  // =====================
+  // Publish (trigger CF Pages rebuild)
+  // =====================
+
+  window.publishSite = async function() {
+    const btn = document.getElementById('btnPublish');
+    btn.disabled = true;
+    btn.innerHTML = '&#8987; Wird gebaut...';
+
+    try {
+      const res = await fetch('/api/deploy', { method: 'POST' });
+      const data = await res.json();
+      if (data.triggered) {
+        showToast('Seite wird neu gebaut — in 1-2 Min live!', 'success');
+      } else {
+        throw new Error('Deploy konnte nicht gestartet werden');
+      }
+    } catch(err) {
+      showToast('Fehler: ' + err.message, 'error');
+    } finally {
+      setTimeout(function() {
+        btn.disabled = false;
+        btn.innerHTML = '&#9650; Ver&ouml;ffentlichen';
+      }, 10000);
     }
   };
 
