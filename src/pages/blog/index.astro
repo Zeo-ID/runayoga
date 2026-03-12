@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from '../../lib/content';
+
+const posts = getCollection('blog').sort((a, b) => {
+  const dateA = new Date(a.frontmatter.date).getTime();
+  const dateB = new Date(b.frontmatter.date).getTime();
+  return dateB - dateA;
+});
+
+function formatDate(date: string | Date): string {
+  return new Date(date).toLocaleDateString('de-DE', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+---
+
+<BaseLayout title="Blog – Runayoga" description="Yoga-Blog von Runayoga Berlin-Pankow: Tipps, Erfahrungsberichte und Inspiration rund um Yoga, Meditation und Achtsamkeit.">
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> <span>/</span> <span>Blog</span>
+      </nav>
+      <h1>Blog</h1>
+      <p>Inspiration, Tipps und Geschichten rund um Yoga und Achtsamkeit</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="blog-grid fade-in">
+        {posts.map((post) => (
+          <article class="blog-card">
+            <div class="card-body">
+              <span class="date-badge" style="position:static;display:inline-block;margin-bottom:.8rem">{formatDate(post.frontmatter.date)}</span>
+              <h3><a href={`/blog/${post.slug}`}>{post.frontmatter.title}</a></h3>
+              <p class="excerpt">{post.frontmatter.excerpt}</p>
+              <p style="font-size:.85rem;color:var(--text-light);margin-bottom:1rem">von {post.frontmatter.author}</p>
+              <a href={`/blog/${post.slug}`} class="read-more">Weiterlesen &rarr;</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

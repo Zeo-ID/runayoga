@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getContent } from '../lib/content';
+
+const { frontmatter } = getContent('preise.md');
+const sections = frontmatter.sections || [];
+---
+
+<BaseLayout title={`${frontmatter.title} – Runayoga`} description={frontmatter.seo_description}>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> <span>/</span> <span>Preise</span>
+      </nav>
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.subtitle}</p>
+    </div>
+  </section>
+
+  {sections.map((section: any, i: number) => {
+    const isSmallGrid = section.label === 'Heilraum' || section.label === 'Gemeinschaft';
+    return (
+      <section class={i % 2 === 1 ? 'bg-white' : ''}>
+        <div class="container fade-in">
+          <div class="section-header">
+            <span class="section-label">{section.label}</span>
+            <h2>{section.title}</h2>
+            <p>{section.description}</p>
+          </div>
+          <div
+            class="pricing-grid"
+            style={isSmallGrid ? 'max-width:700px;margin:0 auto;grid-template-columns:repeat(2,1fr)' : undefined}
+          >
+            {section.cards.map((card: any) => (
+              <div class={`pricing-card${card.featured ? ' featured' : ''}`}>
+                <div class="pricing-title">{card.name}</div>
+                <div class="pricing-price">{card.price}</div>
+                <div class="pricing-period">{card.period}</div>
+                <ul class="pricing-features">
+                  {card.features.map((feature: string) => (
+                    <li>{feature}</li>
+                  ))}
+                </ul>
+                <a href="/kontakt" class={`btn ${card.featured ? 'btn-primary' : 'btn-outline'}`}>Anfragen</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  })}
+
+  <section class="bg-white">
+    <div class="container fade-in">
+      <div class="section-header">
+        <span class="section-label">Retreat</span>
+        <h2>Yogaretreat 2026</h2>
+        <p>Deine Auszeit vom Alltag — Yoga, Meditation und Natur.</p>
+      </div>
+      <div class="text-center">
+        <a href="/retreat" class="btn btn-primary">Mehr zum Retreat &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container fade-in">
+      <div class="text-center">
+        <h2>Individuelles Angebot</h2>
+        <p>Du hast besondere Wünsche oder Fragen? Ich erstelle dir gerne ein individuelles Angebot.</p>
+      </div>
+      <div class="text-center mt-2">
+        <a href="/kontakt" class="btn btn-accent">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
