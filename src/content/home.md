@@ -22,8 +22,8 @@ retreat_image_alt: Yoga Retreat in der Natur
 testimonials_title: Was meine Teilnehmer sagen
 about_image_alt: Runa in der Natur
 services_label: Angebot
-hero_subtitle: Yoga, Pilates und Massagen in Berlin-Pankow. Deine Reise zu mehr
-  Wohlbefinden beginnt hier und jetzt. 01
+hero_subtitle: "Yoga, Pilates und Massagen in Berlin-Pankow. Deine Reise zu mehr
+  Wohlbefinden beginnt hier und jetzt. "
 about_text: >-
   Ich freue mich darauf, dich auf deiner Reise zu mehr innerer Harmonie und
   Wohlbefinden zu begleiten. In meinem Studio in Berlin-Pankow biete ich dir
