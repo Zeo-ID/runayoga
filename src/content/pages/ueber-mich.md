@@ -1,14 +1,14 @@
 ---
-title: "Über mich"
-subtitle: "Mein Weg zum Yoga"
-seo_title: "Über mich – Runayoga"
-seo_description: "Lerne Runa kennen: Yogalehrerin, Heilpraktikerin und Gründerin von Runayoga in Berlin-Pankow. Mein Weg zum Yoga und zu dir."
-slug: "ueber-mich"
+title: Über mich
+subtitle: Mein Weg zum Yoga
+seo_title: Über mich – Runayoga
+seo_description: "Lerne Runa kennen: Yogalehrerin, Heilpraktikerin und Gründerin
+  von Runayoga in Berlin-Pankow. Mein Weg zum Yoga und zu dir."
+slug: ueber-mich
 ---
-
 ## Namaste, ich bin Runa
 
-Schon als Kind hat mich die Verbindung zwischen Körper und Geist fasziniert. Nach Jahren in einem anspruchsvollen Berufsleben führte mich eine innere Sehnsucht zum Yoga -- und diese Begegnung hat mein Leben von Grund auf verändert. Was als persönliche Praxis begann, wurde zu meiner Berufung.
+Schon als Kind hat mich die Verbindung zwischen Körper und Geist fasziniert. Nach Jahren in einem anspruchsvollen Berufsleben führte mich eine innere Sehnsucht zum Yoga -- und diese Begegnung hat mein Leben von Grund auf verändert. Was als persönliche Praxis begann, wurde zu meiner Berufung...
 
 In meinem Studio in Berlin-Pankow schaffe ich einen Raum, in dem du ankommen darfst -- so wie du bist. Hier geht es nicht um perfekte Haltungen, sondern um das achtsame Spüren, um die liebevolle Verbindung zu dir selbst und um die Kraft, die entsteht, wenn Körper, Geist und Seele in Einklang kommen.
 
@@ -18,13 +18,13 @@ Was mich antreibt, ist die Freude, Menschen dabei zu begleiten, ihre eigene inne
 
 ## Qualifikationen & Ausbildungen
 
-- Yogalehrerin 500h RYT (Registered Yoga Teacher)
-- Zertifizierte Pilates-Trainerin
-- Ausgebildete Massage-Therapeutin
-- Schamanische Ausbildung in Energiemedizin
-- Spezialisierung Prä- und Postnatal Yoga
-- Yin Yoga Ausbildung
-- Zertifizierte Präventionskursleiterin (Krankenkassenzulassung)
+* Yogalehrerin 500h RYT (Registered Yoga Teacher)
+* Zertifizierte Pilates-Trainerin
+* Ausgebildete Massage-Therapeutin
+* Schamanische Ausbildung in Energiemedizin
+* Spezialisierung Prä- und Postnatal Yoga
+* Yin Yoga Ausbildung
+* Zertifizierte Präventionskursleiterin (Krankenkassenzulassung)
 
 ## Meine Philosophie
 
