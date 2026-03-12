@@ -841,49 +841,8 @@
 
 <!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
-  <div class="sidebar-section">
-    <div class="sidebar-section-title">Allgemein</div>
-    <div class="sidebar-item" data-path="src/content/site.md" data-type="site" onclick="loadFile(this)">
-      <span class="icon">&#9881;</span> Seitenweite Daten
-    </div>
-    <div class="sidebar-item" data-path="src/content/home.md" data-type="home" onclick="loadFile(this)">
-      <span class="icon">&#127968;</span> Startseite
-    </div>
-  </div>
-
-  <div class="sidebar-section">
-    <div class="sidebar-section-title">Angebote</div>
-    <div class="sidebar-item sub" data-path="src/content/angebote/yoga.md" data-type="angebot" onclick="loadFile(this)">Yoga</div>
-    <div class="sidebar-item sub" data-path="src/content/angebote/pilates.md" data-type="angebot" onclick="loadFile(this)">Pilates</div>
-    <div class="sidebar-item sub" data-path="src/content/angebote/massagen.md" data-type="angebot" onclick="loadFile(this)">Massagen</div>
-    <div class="sidebar-item sub" data-path="src/content/angebote/heilraum.md" data-type="angebot" onclick="loadFile(this)">Heilraum</div>
-    <div class="sidebar-item sub" data-path="src/content/angebote/mantra.md" data-type="angebot" onclick="loadFile(this)">Mantra</div>
-    <div class="sidebar-item sub" data-path="src/content/angebote/jahreskreis.md" data-type="angebot" onclick="loadFile(this)">Jahreskreis</div>
-  </div>
-
-  <div class="sidebar-section">
-    <div class="sidebar-section-title">Blog</div>
-    <div class="sidebar-item" data-action="blog-list" onclick="loadBlogList()">
-      <span class="icon">&#9998;</span> Alle Beitr&auml;ge
-    </div>
-    <button class="sidebar-btn-new" onclick="newBlogPost()">+ Neuer Beitrag</button>
-  </div>
-
-  <div class="sidebar-section">
-    <div class="sidebar-section-title">Preise</div>
-    <div class="sidebar-item" data-path="src/content/preise.md" data-type="preise" onclick="loadFile(this)">
-      <span class="icon">&#128176;</span> Preise &amp; Pakete
-    </div>
-  </div>
-
-  <div class="sidebar-section">
-    <div class="sidebar-section-title">Seiten</div>
-    <div class="sidebar-item sub" data-path="src/content/pages/ueber-mich.md" data-type="page" onclick="loadFile(this)">&#220;ber mich</div>
-    <div class="sidebar-item sub" data-path="src/content/pages/retreat.md" data-type="page" onclick="loadFile(this)">Retreat</div>
-    <div class="sidebar-item sub" data-path="src/content/pages/kontakt.md" data-type="page" onclick="loadFile(this)">Kontakt</div>
-    <div class="sidebar-item sub" data-path="src/content/pages/angebote.md" data-type="page" onclick="loadFile(this)">Angebote (Seite)</div>
-    <div class="sidebar-item sub" data-path="src/content/pages/impressum.md" data-type="page" onclick="loadFile(this)">Impressum</div>
-    <div class="sidebar-item sub" data-path="src/content/pages/datenschutz.md" data-type="page" onclick="loadFile(this)">Datenschutz</div>
+  <div id="sidebarContent">
+    <div class="loading"><div class="spinner"></div>Laden...</div>
   </div>
 </nav>
 
@@ -905,8 +864,55 @@
   let currentSha = null;
   let currentData = null;
   let currentBody = '';
-  let currentType = null;
-  let blogFiles = [];
+  let currentFieldDefs = [];
+  let currentDir = null;
+  let contentTree = null;
+
+  // Section config for sidebar
+  const SECTION_CONFIG = {
+    _root: { label: 'Allgemein', icon: '&#9881;', order: 0 },
+    angebote: { label: 'Angebote', icon: '', order: 1 },
+    blog: { label: 'Blog', icon: '&#9998;', order: 2 },
+    pages: { label: 'Seiten', icon: '', order: 3 }
+  };
+
+  // Root file display names and icons
+  const ROOT_FILE_CONFIG = {
+    'site.md': { label: 'Seitenweite Daten', icon: '&#9881;' },
+    'home.md': { label: 'Startseite', icon: '&#127968;' },
+    'preise.md': { label: 'Preise &amp; Pakete', icon: '&#128176;' }
+  };
+
+  // Known field labels
+  const FIELD_LABELS = {
+    name: 'Name', email: 'E-Mail', phone: 'Telefon', address: 'Adresse',
+    instagram: 'Instagram URL', whatsapp: 'WhatsApp Nummer',
+    opening_hours: 'Oeffnungszeiten', day: 'Tag', hours: 'Zeiten',
+    seo_title: 'SEO Titel', seo_description: 'SEO Beschreibung',
+    hero_title: 'Hero Titel', hero_subtitle: 'Hero Untertitel',
+    hero_cta_text: 'Hero Button Text', hero_cta_link: 'Hero Button Link',
+    hero_cta_secondary_text: 'Hero Button 2 Text', hero_cta_secondary_link: 'Hero Button 2 Link',
+    hero_image: 'Hero Bild', hero_image_alt: 'Hero Bild Alt-Text',
+    philosophy_quote: 'Philosophie Zitat', philosophy_cite: 'Zitat Quelle',
+    about_label: 'Ueber mich Label', about_title: 'Ueber mich Titel',
+    about_text: 'Ueber mich Text', about_image: 'Ueber mich Bild',
+    about_image_alt: 'Ueber mich Bild Alt-Text',
+    services_label: 'Angebot Label', services_title: 'Angebot Titel',
+    services_subtitle: 'Angebot Untertitel',
+    retreat_label: 'Retreat Label', retreat_title: 'Retreat Titel',
+    retreat_text: 'Retreat Text', retreat_image: 'Retreat Bild',
+    retreat_image_alt: 'Retreat Bild Alt-Text', retreat_highlights: 'Retreat Highlights',
+    testimonials_label: 'Testimonials Label', testimonials_title: 'Testimonials Titel',
+    testimonials: 'Testimonials', cta_title: 'CTA Titel', cta_text: 'CTA Text',
+    title: 'Titel', subtitle: 'Untertitel', slug: 'Slug',
+    sort_order: 'Reihenfolge', highlights: 'Highlights',
+    target_audience: 'Fuer wen geeignet', date: 'Datum', author: 'Autor',
+    excerpt: 'Kurzbeschreibung', image: 'Bild',
+    quote: 'Zitat', stars: 'Sterne (1-5)',
+    sections: 'Preisgruppen', label: 'Label', description: 'Beschreibung',
+    cards: 'Preiskarten', price: 'Preis', period: 'Zeitraum',
+    features: 'Features', featured: 'Hervorgehoben'
+  };
 
   // =====================
   // Auth
@@ -1092,122 +1098,66 @@
   }
 
   // =====================
-  // Field definitions
+  // Field definitions (auto-inferred)
   // =====================
 
-  function getFieldDefs(type) {
-    switch(type) {
-      case 'site':
-        return [
-          { key: 'name', label: 'Studio-Name', type: 'string' },
-          { key: 'email', label: 'E-Mail', type: 'string' },
-          { key: 'phone', label: 'Telefon', type: 'string' },
-          { key: 'address', label: 'Adresse', type: 'string' },
-          { key: 'instagram', label: 'Instagram URL', type: 'string' },
-          { key: 'whatsapp', label: 'WhatsApp Nummer', type: 'string' },
-          { key: 'opening_hours', label: 'Oeffnungszeiten', type: 'object-list', fields: [
-            { key: 'day', label: 'Tag', type: 'string' },
-            { key: 'hours', label: 'Zeiten', type: 'string' }
-          ]}
-        ];
+  function autoLabel(key) {
+    if (FIELD_LABELS[key]) return FIELD_LABELS[key];
+    return key.split('_').map(function(w) {
+      return w.charAt(0).toUpperCase() + w.slice(1);
+    }).join(' ');
+  }
 
-      case 'home':
-        return [
-          { key: 'seo_title', label: 'SEO Titel', type: 'string' },
-          { key: 'seo_description', label: 'SEO Beschreibung', type: 'text' },
-          { key: 'hero_title', label: 'Hero Titel', type: 'string' },
-          { key: 'hero_subtitle', label: 'Hero Untertitel', type: 'text' },
-          { key: 'hero_cta_text', label: 'Hero Button Text', type: 'string' },
-          { key: 'hero_cta_link', label: 'Hero Button Link', type: 'string' },
-          { key: 'hero_cta_secondary_text', label: 'Hero Button 2 Text', type: 'string' },
-          { key: 'hero_cta_secondary_link', label: 'Hero Button 2 Link', type: 'string' },
-          { key: 'hero_image', label: 'Hero Bild', type: 'image' },
-          { key: 'hero_image_alt', label: 'Hero Bild Alt-Text', type: 'string' },
-          { key: 'philosophy_quote', label: 'Philosophie Zitat', type: 'text' },
-          { key: 'philosophy_cite', label: 'Zitat Quelle', type: 'string' },
-          { key: 'about_label', label: 'Ueber mich Label', type: 'string' },
-          { key: 'about_title', label: 'Ueber mich Titel', type: 'string' },
-          { key: 'about_text', label: 'Ueber mich Text', type: 'text' },
-          { key: 'about_image', label: 'Ueber mich Bild', type: 'image' },
-          { key: 'about_image_alt', label: 'Ueber mich Bild Alt-Text', type: 'string' },
-          { key: 'services_label', label: 'Angebot Label', type: 'string' },
-          { key: 'services_title', label: 'Angebot Titel', type: 'string' },
-          { key: 'services_subtitle', label: 'Angebot Untertitel', type: 'string' },
-          { key: 'retreat_label', label: 'Retreat Label', type: 'string' },
-          { key: 'retreat_title', label: 'Retreat Titel', type: 'string' },
-          { key: 'retreat_text', label: 'Retreat Text', type: 'text' },
-          { key: 'retreat_image', label: 'Retreat Bild', type: 'image' },
-          { key: 'retreat_image_alt', label: 'Retreat Bild Alt-Text', type: 'string' },
-          { key: 'retreat_highlights', label: 'Retreat Highlights', type: 'string-list' },
-          { key: 'testimonials_label', label: 'Testimonials Label', type: 'string' },
-          { key: 'testimonials_title', label: 'Testimonials Titel', type: 'string' },
-          { key: 'testimonials', label: 'Testimonials', type: 'object-list', fields: [
-            { key: 'quote', label: 'Zitat', type: 'text' },
-            { key: 'author', label: 'Autor', type: 'string' },
-            { key: 'stars', label: 'Sterne (1-5)', type: 'number' }
-          ]},
-          { key: 'cta_title', label: 'CTA Titel', type: 'string' },
-          { key: 'cta_text', label: 'CTA Text', type: 'text' }
-        ];
+  function inferFieldType(key, value) {
+    if (typeof value === 'boolean') return 'boolean';
+    if (typeof value === 'number') return 'number';
 
-      case 'angebot':
-        return [
-          { key: 'title', label: 'Titel', type: 'string' },
-          { key: 'subtitle', label: 'Untertitel', type: 'string' },
-          { key: 'seo_title', label: 'SEO Titel', type: 'string' },
-          { key: 'seo_description', label: 'SEO Beschreibung', type: 'text' },
-          { key: 'slug', label: 'Slug', type: 'string' },
-          { key: 'sort_order', label: 'Reihenfolge', type: 'number' },
-          { key: 'highlights', label: 'Highlights', type: 'string-list' },
-          { key: 'target_audience', label: 'Fuer wen geeignet', type: 'string' },
-          { key: '_body', label: 'Beschreibung (Markdown)', type: 'body' }
-        ];
-
-      case 'blog':
-        return [
-          { key: 'title', label: 'Titel', type: 'string' },
-          { key: 'date', label: 'Datum', type: 'date' },
-          { key: 'author', label: 'Autor', type: 'string' },
-          { key: 'excerpt', label: 'Kurzbeschreibung', type: 'text' },
-          { key: 'seo_title', label: 'SEO Titel', type: 'string' },
-          { key: 'seo_description', label: 'SEO Beschreibung', type: 'text' },
-          { key: 'slug', label: 'Slug', type: 'string' },
-          { key: 'image', label: 'Beitragsbild', type: 'image' },
-          { key: '_body', label: 'Inhalt (Markdown)', type: 'body' }
-        ];
-
-      case 'preise':
-        return [
-          { key: 'title', label: 'Seitentitel', type: 'string' },
-          { key: 'subtitle', label: 'Untertitel', type: 'string' },
-          { key: 'seo_description', label: 'SEO Beschreibung', type: 'text' },
-          { key: 'sections', label: 'Preisgruppen', type: 'object-list', fields: [
-            { key: 'label', label: 'Label', type: 'string' },
-            { key: 'title', label: 'Gruppenname', type: 'string' },
-            { key: 'description', label: 'Beschreibung', type: 'text' },
-            { key: 'cards', label: 'Preiskarten', type: 'object-list', fields: [
-              { key: 'name', label: 'Name', type: 'string' },
-              { key: 'price', label: 'Preis', type: 'string' },
-              { key: 'period', label: 'Zeitraum', type: 'string' },
-              { key: 'features', label: 'Features', type: 'string-list' },
-              { key: 'featured', label: 'Hervorgehoben', type: 'boolean' }
-            ]}
-          ]}
-        ];
-
-      case 'page':
-        return [
-          { key: 'title', label: 'Titel', type: 'string' },
-          { key: 'subtitle', label: 'Untertitel', type: 'string' },
-          { key: 'seo_title', label: 'SEO Titel', type: 'string' },
-          { key: 'seo_description', label: 'SEO Beschreibung', type: 'text' },
-          { key: 'slug', label: 'Slug', type: 'string' },
-          { key: '_body', label: 'Inhalt (Markdown)', type: 'body' }
-        ];
-
-      default:
-        return [];
+    if (typeof value === 'string') {
+      if (key === 'date' || /^\d{4}-\d{2}-\d{2}/.test(value)) return 'date';
+      if (key.endsWith('_image') || key === 'image' || key === 'hero_image' || key === 'about_image' || key === 'retreat_image' || (value && /^\/images\//.test(value))) return 'image';
+      if (key.endsWith('_text') || key.endsWith('_description') || key === 'excerpt' || key === 'philosophy_quote' || key === 'seo_description' || String(value).length > 80) return 'text';
+      return 'string';
     }
+
+    if (Array.isArray(value)) {
+      if (value.length === 0) return 'string-list';
+      if (typeof value[0] === 'object' && value[0] !== null) return 'object-list';
+      return 'string-list';
+    }
+
+    return 'string';
+  }
+
+  function inferObjectFields(items) {
+    if (!Array.isArray(items) || items.length === 0) return [];
+    var sample = items[0];
+    var fields = [];
+    Object.keys(sample).forEach(function(k) {
+      var ft = inferFieldType(k, sample[k]);
+      var def = { key: k, label: autoLabel(k), type: ft };
+      if (ft === 'object-list') {
+        def.fields = inferObjectFields(sample[k]);
+      }
+      fields.push(def);
+    });
+    return fields;
+  }
+
+  function inferFieldDefs(frontmatter, body) {
+    var defs = [];
+    Object.keys(frontmatter).forEach(function(key) {
+      var value = frontmatter[key];
+      var ft = inferFieldType(key, value);
+      var def = { key: key, label: autoLabel(key), type: ft };
+      if (ft === 'object-list') {
+        def.fields = inferObjectFields(value);
+      }
+      defs.push(def);
+    });
+    if (body && body.trim()) {
+      defs.push({ key: '_body', label: 'Inhalt (Markdown)', type: 'body' });
+    }
+    return defs;
   }
 
   // =====================
@@ -1263,7 +1213,6 @@
 
   window.loadFile = async function(el) {
     const path = el.dataset.path;
-    const type = el.dataset.type;
     setActiveSidebar(el);
     closeSidebar();
     showLoading();
@@ -1277,9 +1226,10 @@
       currentSha = file.sha;
       currentData = parsed.frontmatter;
       currentBody = parsed.body;
-      currentType = type;
+      currentFieldDefs = inferFieldDefs(parsed.frontmatter, parsed.body);
+      currentDir = getFileDir(path);
 
-      renderEditor(path, type, parsed.frontmatter, parsed.body);
+      renderEditor(path, parsed.frontmatter, parsed.body);
     } catch(err) {
       document.getElementById('mainContent').innerHTML = `
         <div class="welcome">
@@ -1290,13 +1240,20 @@
     }
   };
 
-  function loadFileByPath(path, type) {
+  function getFileDir(path) {
+    // src/content/blog/foo.md → blog, src/content/home.md → null
+    var parts = path.replace('src/content/', '').split('/');
+    return parts.length > 1 ? parts[0] : null;
+  }
+
+  function loadFileByPath(path) {
     const el = document.querySelector('.sidebar-item[data-path="' + path + '"]');
     if (el) {
       window.loadFile(el);
     } else {
-      // For blog posts that are not in sidebar
-      setActiveSidebar(document.querySelector('[data-action="blog-list"]'));
+      var dir = getFileDir(path);
+      var listItem = document.querySelector('[data-action="dir-list"][data-dir="' + dir + '"]');
+      setActiveSidebar(listItem);
       closeSidebar();
       showLoading();
 
@@ -1308,9 +1265,10 @@
         currentSha = file.sha;
         currentData = parsed.frontmatter;
         currentBody = parsed.body;
-        currentType = type;
+        currentFieldDefs = inferFieldDefs(parsed.frontmatter, parsed.body);
+        currentDir = dir;
 
-        renderEditor(path, type, parsed.frontmatter, parsed.body);
+        renderEditor(path, parsed.frontmatter, parsed.body);
       }).catch(function(err) {
         document.getElementById('mainContent').innerHTML = `
           <div class="welcome"><h2>Fehler</h2><p>${escHtml(err.message)}</p></div>
@@ -1320,38 +1278,42 @@
   }
 
   // =====================
-  // Blog list
+  // Directory list (generic for any collection)
   // =====================
 
-  window.loadBlogList = async function() {
-    setActiveSidebar(document.querySelector('[data-action="blog-list"]'));
+  window.loadDirectoryList = async function(dir) {
+    var listItem = document.querySelector('[data-action="dir-list"][data-dir="' + dir + '"]');
+    setActiveSidebar(listItem);
     closeSidebar();
     showLoading();
 
     try {
-      const res = await ghFetch('/repos/' + REPO + '/contents/src/content/blog?ref=' + BRANCH);
-      if (!res.ok) throw new Error('Blog konnte nicht geladen werden');
-      blogFiles = await res.json();
+      const res = await ghFetch('/repos/' + REPO + '/contents/src/content/' + dir + '?ref=' + BRANCH);
+      if (!res.ok) throw new Error('Verzeichnis konnte nicht geladen werden');
+      var files = await res.json();
 
-      // Sort by name descending
-      blogFiles.sort(function(a, b) { return b.name.localeCompare(a.name); });
+      files.sort(function(a, b) { return a.name.localeCompare(b.name); });
+
+      var sectionLabel = (SECTION_CONFIG[dir] && SECTION_CONFIG[dir].label) || dir.charAt(0).toUpperCase() + dir.slice(1);
 
       let html = '<div class="blog-list">';
       html += '<div class="blog-list-header">';
-      html += '<h2 class="blog-list-title">Blog-Beitr&auml;ge</h2>';
-      html += '<button class="btn btn-primary" onclick="newBlogPost()">+ Neuer Beitrag</button>';
+      html += '<h2 class="blog-list-title">' + escHtml(sectionLabel) + '</h2>';
+      html += '<button class="btn btn-primary" onclick="newItemInDirectory(\'' + escAttr(dir) + '\')">+ Neuer Eintrag</button>';
       html += '</div>';
 
-      if (blogFiles.length === 0) {
-        html += '<p style="color:var(--dark-light);text-align:center;padding:40px;">Noch keine Blog-Beitr&auml;ge vorhanden.</p>';
+      if (files.length === 0) {
+        html += '<p style="color:var(--dark-light);text-align:center;padding:40px;">Noch keine Eintr&auml;ge vorhanden.</p>';
       }
 
-      blogFiles.forEach(function(f) {
+      files.forEach(function(f) {
+        if (!f.name.endsWith('.md')) return;
         const name = f.name.replace('.md', '');
+        const displayName = fileDisplayName(name);
         html += `
-          <div class="blog-entry" onclick="loadFileByPath('${f.path}', 'blog')">
+          <div class="blog-entry" onclick="loadFileByPath('${escAttr(f.path)}')">
             <div class="blog-entry-info">
-              <h3>${escHtml(name)}</h3>
+              <h3>${escHtml(displayName)}</h3>
               <span class="blog-entry-meta">${escHtml(f.path)}</span>
             </div>
             <span class="blog-entry-arrow">&rsaquo;</span>
@@ -1366,37 +1328,65 @@
     }
   };
 
+  // Backwards-compatible aliases
+  window.loadBlogList = function() { window.loadDirectoryList('blog'); };
+
   window.loadFileByPath = loadFileByPath;
 
-  window.newBlogPost = function() {
+  window.newItemInDirectory = async function(dir) {
     closeSidebar();
-    const today = new Date().toISOString().split('T')[0];
     currentFile = null;
     currentSha = null;
-    currentType = 'blog';
-    currentData = {
-      title: '',
-      date: today,
-      author: 'Runa',
-      excerpt: '',
-      seo_title: '',
-      seo_description: '',
-      slug: '',
-      image: ''
-    };
-    currentBody = '';
+    currentDir = dir;
 
-    renderEditor(null, 'blog', currentData, currentBody, true);
+    // Try to get template from first file in directory
+    try {
+      var treeDirFiles = contentTree ? contentTree.filter(function(f) {
+        return f.startsWith(dir + '/') && f.endsWith('.md');
+      }) : [];
+
+      if (treeDirFiles.length > 0) {
+        var templatePath = 'src/content/' + treeDirFiles[0];
+        var file = await fetchFile(templatePath);
+        var raw = decodeURIComponent(escape(atob(file.content.replace(/\n/g, ''))));
+        var parsed = parseMarkdown(raw);
+
+        // Create empty template based on existing structure
+        currentData = {};
+        Object.keys(parsed.frontmatter).forEach(function(key) {
+          var val = parsed.frontmatter[key];
+          if (typeof val === 'boolean') currentData[key] = false;
+          else if (typeof val === 'number') currentData[key] = 0;
+          else if (Array.isArray(val)) currentData[key] = [];
+          else if (key === 'date') currentData[key] = new Date().toISOString().split('T')[0];
+          else currentData[key] = '';
+        });
+        currentBody = '';
+        if (parsed.body && parsed.body.trim()) currentBody = '';
+      } else {
+        currentData = { title: '', slug: '' };
+        currentBody = '';
+      }
+    } catch(e) {
+      currentData = { title: '', slug: '' };
+      currentBody = '';
+    }
+
+    currentFieldDefs = inferFieldDefs(currentData, currentBody || ' ');
+    renderEditor(null, currentData, currentBody, true);
   };
+
+  // Keep newBlogPost for backwards compatibility
+  window.newBlogPost = function() { window.newItemInDirectory('blog'); };
 
   // =====================
   // Render editor
   // =====================
 
-  function renderEditor(path, type, frontmatter, body, isNew) {
-    const fields = getFieldDefs(type);
-    const title = isNew ? 'Neuer Blog-Beitrag' : getLabel(path, type);
-    const fileName = path ? path.split('/').pop() : 'Neuer Beitrag';
+  function renderEditor(path, frontmatter, body, isNew) {
+    const fields = currentFieldDefs;
+    var sectionLabel = currentDir ? ((SECTION_CONFIG[currentDir] && SECTION_CONFIG[currentDir].label) || currentDir.charAt(0).toUpperCase() + currentDir.slice(1)) : '';
+    const title = isNew ? ('Neuer Eintrag' + (sectionLabel ? ' (' + sectionLabel + ')' : '')) : getLabel(path);
 
     let html = '<div class="editor">';
     html += '<div class="editor-header">';
@@ -1405,8 +1395,9 @@
     if (path) html += '<span class="editor-path">' + escHtml(path) + '</span>';
     html += '</div>';
     html += '<div class="editor-actions">';
-    if (!isNew && type === 'blog') {
-      html += '<button class="btn btn-danger" onclick="deleteBlogPost()">L&ouml;schen</button>';
+    // Show delete button for collection items (files in subdirectories), not root singletons
+    if (!isNew && currentDir) {
+      html += '<button class="btn btn-danger" onclick="deleteCollectionItem()">L&ouml;schen</button>';
     }
     html += '<button class="btn btn-primary" id="btnSave" onclick="saveCurrentFile()">Speichern</button>';
     html += '</div>';
@@ -1844,7 +1835,7 @@
   // =====================
 
   function collectFormData() {
-    const fields = getFieldDefs(currentType);
+    const fields = currentFieldDefs;
     const fm = {};
     let body = '';
 
@@ -1945,20 +1936,24 @@
       const content = serializeMarkdown(data.frontmatter, data.body);
 
       if (!currentFile) {
-        // New blog post
+        // New item in collection
         let slug = data.frontmatter.slug;
         if (!slug) {
-          slug = slugify(data.frontmatter.title || 'neuer-beitrag');
+          slug = slugify(data.frontmatter.title || 'neuer-eintrag');
           data.frontmatter.slug = slug;
         }
-        const path = 'src/content/blog/' + slug + '.md';
+        var dir = currentDir || 'blog';
+        const path = 'src/content/' + dir + '/' + slug + '.md';
         const finalContent = serializeMarkdown(data.frontmatter, data.body);
-        const result = await createFile(path, finalContent, 'Neuer Blog-Beitrag: ' + (data.frontmatter.title || slug));
+        const sectionLabel = (SECTION_CONFIG[dir] && SECTION_CONFIG[dir].label) || dir;
+        const result = await createFile(path, finalContent, 'Neuer Eintrag (' + sectionLabel + '): ' + (data.frontmatter.title || slug));
         currentFile = path;
         currentSha = result.content.sha;
         currentData = data.frontmatter;
         currentBody = data.body;
-        showToast('Blog-Beitrag erstellt!', 'success');
+        // Refresh tree cache
+        contentTree = null;
+        showToast('Eintrag erstellt!', 'success');
       } else {
         const result = await saveFile(currentFile, content, currentSha, 'Update ' + currentFile.split('/').pop());
         currentSha = result.content.sha;
@@ -1975,39 +1970,53 @@
   };
 
   // =====================
-  // Delete blog post
+  // Delete collection item
   // =====================
 
-  window.deleteBlogPost = function() {
+  window.deleteCollectionItem = function() {
+    var fileName = currentFile ? currentFile.split('/').pop() : 'Eintrag';
     const overlay = document.createElement('div');
     overlay.className = 'modal-overlay';
     overlay.innerHTML = `
       <div class="modal">
-        <h3>Beitrag l&ouml;schen?</h3>
-        <p>M&ouml;chtest du diesen Blog-Beitrag wirklich unwiderruflich l&ouml;schen?</p>
+        <h3>Eintrag l&ouml;schen?</h3>
+        <p>M&ouml;chtest du <strong>${escHtml(fileName)}</strong> wirklich unwiderruflich l&ouml;schen?</p>
         <div class="modal-actions">
           <button class="btn btn-secondary" onclick="this.closest('.modal-overlay').remove()">Abbrechen</button>
-          <button class="btn btn-danger" onclick="confirmDeleteBlog(this)">Endg&uuml;ltig l&ouml;schen</button>
+          <button class="btn btn-danger" onclick="confirmDeleteItem(this)">Endg&uuml;ltig l&ouml;schen</button>
         </div>
       </div>
     `;
     document.body.appendChild(overlay);
   };
 
-  window.confirmDeleteBlog = async function(btn) {
+  // Keep backwards compat
+  window.deleteBlogPost = window.deleteCollectionItem;
+
+  window.confirmDeleteItem = async function(btn) {
     btn.disabled = true;
     btn.textContent = 'Loeschen...';
 
+    var dir = currentDir;
     try {
       await deleteFile(currentFile, currentSha, 'Delete ' + currentFile.split('/').pop());
       document.querySelector('.modal-overlay').remove();
-      showToast('Beitrag geloescht!', 'success');
-      window.loadBlogList();
+      // Refresh tree cache
+      contentTree = null;
+      showToast('Eintrag geloescht!', 'success');
+      if (dir) {
+        window.loadDirectoryList(dir);
+      } else {
+        showWelcome();
+      }
     } catch(err) {
       document.querySelector('.modal-overlay').remove();
       showToast('Fehler: ' + err.message, 'error');
     }
   };
+
+  // Keep backwards compat
+  window.confirmDeleteBlog = window.confirmDeleteItem;
 
   // =====================
   // Publish (trigger CF Pages rebuild)
@@ -2078,27 +2087,123 @@
       .substring(0, 80);
   }
 
-  function getLabel(path, type) {
+  function getLabel(path) {
     if (!path) return '';
     const name = path.split('/').pop().replace('.md', '');
-    const labels = {
-      'site': 'Seitenweite Daten',
-      'home': 'Startseite',
-      'preise': 'Preise & Pakete',
-      'yoga': 'Yoga',
-      'pilates': 'Pilates',
-      'massagen': 'Massagen',
-      'heilraum': 'Heilraum',
-      'mantra': 'Mantra',
-      'jahreskreis': 'Jahreskreis',
-      'ueber-mich': 'Ueber mich',
-      'retreat': 'Retreat',
-      'kontakt': 'Kontakt',
-      'angebote': 'Angebote (Seite)',
-      'impressum': 'Impressum',
-      'datenschutz': 'Datenschutz'
-    };
-    return labels[name] || name;
+    // Check root file config first
+    var rootConf = ROOT_FILE_CONFIG[name + '.md'];
+    if (rootConf) return rootConf.label.replace(/&amp;/g, '&');
+    return fileDisplayName(name);
+  }
+
+  function fileDisplayName(name) {
+    // "ueber-mich" → "Ueber Mich", "yoga-im-alltag" → "Yoga Im Alltag"
+    return name.split('-').map(function(w) {
+      return w.charAt(0).toUpperCase() + w.slice(1);
+    }).join(' ');
+  }
+
+  // =====================
+  // Dynamic sidebar
+  // =====================
+
+  async function fetchContentTree() {
+    if (contentTree) return contentTree;
+
+    var res = await ghFetch('/repos/' + REPO + '/git/trees/' + BRANCH + '?recursive=1');
+    if (!res.ok) throw new Error('Tree konnte nicht geladen werden');
+    var data = await res.json();
+
+    // Filter to src/content/**/*.md
+    var files = [];
+    data.tree.forEach(function(item) {
+      if (item.type === 'blob' && item.path.startsWith('src/content/') && item.path.endsWith('.md')) {
+        files.push(item.path.replace('src/content/', ''));
+      }
+    });
+
+    contentTree = files;
+    return files;
+  }
+
+  async function buildSidebar() {
+    var sidebarEl = document.getElementById('sidebarContent');
+    try {
+      var files = await fetchContentTree();
+
+      // Group: root files vs directory files
+      var rootFiles = [];
+      var dirs = {};
+      files.forEach(function(f) {
+        var parts = f.split('/');
+        if (parts.length === 1) {
+          rootFiles.push(f);
+        } else {
+          var dir = parts[0];
+          if (!dirs[dir]) dirs[dir] = [];
+          dirs[dir].push(f);
+        }
+      });
+
+      var html = '';
+
+      // Root files → "Allgemein" section
+      if (rootFiles.length > 0) {
+        html += '<div class="sidebar-section">';
+        html += '<div class="sidebar-section-title">Allgemein</div>';
+        rootFiles.forEach(function(f) {
+          var conf = ROOT_FILE_CONFIG[f] || {};
+          var label = conf.label || fileDisplayName(f.replace('.md', ''));
+          var icon = conf.icon || '';
+          html += '<div class="sidebar-item" data-path="src/content/' + escAttr(f) + '" onclick="loadFile(this)">';
+          if (icon) html += '<span class="icon">' + icon + '</span> ';
+          html += label;
+          html += '</div>';
+        });
+        html += '</div>';
+      }
+
+      // Sort directories by config order, then alphabetically
+      var dirNames = Object.keys(dirs).sort(function(a, b) {
+        var oa = SECTION_CONFIG[a] ? SECTION_CONFIG[a].order : 99;
+        var ob = SECTION_CONFIG[b] ? SECTION_CONFIG[b].order : 99;
+        if (oa !== ob) return oa - ob;
+        return a.localeCompare(b);
+      });
+
+      dirNames.forEach(function(dir) {
+        var conf = SECTION_CONFIG[dir] || {};
+        var label = conf.label || dir.charAt(0).toUpperCase() + dir.slice(1);
+        var icon = conf.icon || '';
+
+        html += '<div class="sidebar-section">';
+        html += '<div class="sidebar-section-title">' + escHtml(label) + '</div>';
+
+        // "Alle anzeigen" link for collections
+        html += '<div class="sidebar-item" data-action="dir-list" data-dir="' + escAttr(dir) + '" onclick="loadDirectoryList(\'' + escAttr(dir) + '\')">';
+        if (icon) html += '<span class="icon">' + icon + '</span> ';
+        html += 'Alle ' + escHtml(label);
+        html += '</div>';
+
+        // Individual items
+        dirs[dir].sort(function(a, b) { return a.localeCompare(b); });
+        dirs[dir].forEach(function(f) {
+          var name = f.split('/').pop().replace('.md', '');
+          html += '<div class="sidebar-item sub" data-path="src/content/' + escAttr(f) + '" onclick="loadFile(this)">';
+          html += escHtml(fileDisplayName(name));
+          html += '</div>';
+        });
+
+        // "Neuer Eintrag" button
+        html += '<button class="sidebar-btn-new" onclick="newItemInDirectory(\'' + escAttr(dir) + '\')">+ Neuer Eintrag</button>';
+
+        html += '</div>';
+      });
+
+      sidebarEl.innerHTML = html;
+    } catch(err) {
+      sidebarEl.innerHTML = '<div style="padding:20px;color:var(--red);font-size:13px;">Sidebar konnte nicht geladen werden: ' + escHtml(err.message) + '</div>';
+    }
   }
 
   // =====================
@@ -2119,6 +2224,7 @@
     }
 
     loadUser();
+    buildSidebar();
     showWelcome();
   }
 
