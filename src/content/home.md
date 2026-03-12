@@ -1,7 +1,7 @@
 ---
 retreat_title: Tauche tief ein
 hero_image_alt: Runa beim Yoga im Bambuswald
-seo_title: Runayoga – Yoga, Pilates & Massagen in Berlin-Pankow test
+seo_title: Runayoga – Yoga, Pilates & Massagen in Berlin-Pankow
 hero_title: Finde deine innere Harmonie
 hero_cta_text: Angebot entdecken
 hero_cta_link: /angebote
@@ -23,7 +23,7 @@ testimonials_title: Was meine Teilnehmer sagen
 about_image_alt: Runa in der Natur
 services_label: Angebot
 hero_subtitle: Yoga, Pilates und Massagen in Berlin-Pankow. Deine Reise zu mehr
-  Wohlbefinden beginnt hier und jetzt.
+  Wohlbefinden beginnt hier und jetzt. 01
 about_text: >-
   Ich freue mich darauf, dich auf deiner Reise zu mehr innerer Harmonie und
   Wohlbefinden zu begleiten. In meinem Studio in Berlin-Pankow biete ich dir
