@@ -678,6 +678,89 @@
       justify-content: flex-end;
     }
 
+    /* Image upload */
+    .image-field {
+      border: 1px solid var(--beige-dark);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--white);
+    }
+
+    .image-preview {
+      margin-bottom: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--beige);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80px;
+    }
+
+    .image-preview img {
+      max-width: 100%;
+      max-height: 260px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .image-preview-empty {
+      color: var(--dark-light);
+      font-size: 13px;
+      padding: 24px;
+    }
+
+    .image-upload-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .image-upload-row .form-input {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .btn-upload {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--sage);
+      color: var(--white);
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-upload:hover {
+      background: var(--sage-dark);
+    }
+
+    .btn-upload:disabled {
+      background: var(--sage-light);
+      cursor: not-allowed;
+    }
+
+    .image-upload-status {
+      font-size: 12px;
+      color: var(--dark-light);
+      margin-top: 6px;
+    }
+
+    .image-upload-status.uploading {
+      color: var(--sage);
+    }
+
+    .image-upload-status.error {
+      color: var(--red);
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .btn-menu-toggle {
@@ -1016,14 +1099,14 @@
           { key: 'hero_cta_link', label: 'Hero Button Link', type: 'string' },
           { key: 'hero_cta_secondary_text', label: 'Hero Button 2 Text', type: 'string' },
           { key: 'hero_cta_secondary_link', label: 'Hero Button 2 Link', type: 'string' },
-          { key: 'hero_image', label: 'Hero Bild (Pfad)', type: 'string' },
+          { key: 'hero_image', label: 'Hero Bild', type: 'image' },
           { key: 'hero_image_alt', label: 'Hero Bild Alt-Text', type: 'string' },
           { key: 'philosophy_quote', label: 'Philosophie Zitat', type: 'text' },
           { key: 'philosophy_cite', label: 'Zitat Quelle', type: 'string' },
           { key: 'about_label', label: 'Ueber mich Label', type: 'string' },
           { key: 'about_title', label: 'Ueber mich Titel', type: 'string' },
           { key: 'about_text', label: 'Ueber mich Text', type: 'text' },
-          { key: 'about_image', label: 'Ueber mich Bild (Pfad)', type: 'string' },
+          { key: 'about_image', label: 'Ueber mich Bild', type: 'image' },
           { key: 'about_image_alt', label: 'Ueber mich Bild Alt-Text', type: 'string' },
           { key: 'services_label', label: 'Angebot Label', type: 'string' },
           { key: 'services_title', label: 'Angebot Titel', type: 'string' },
@@ -1031,7 +1114,7 @@
           { key: 'retreat_label', label: 'Retreat Label', type: 'string' },
           { key: 'retreat_title', label: 'Retreat Titel', type: 'string' },
           { key: 'retreat_text', label: 'Retreat Text', type: 'text' },
-          { key: 'retreat_image', label: 'Retreat Bild (Pfad)', type: 'string' },
+          { key: 'retreat_image', label: 'Retreat Bild', type: 'image' },
           { key: 'retreat_image_alt', label: 'Retreat Bild Alt-Text', type: 'string' },
           { key: 'retreat_highlights', label: 'Retreat Highlights', type: 'string-list' },
           { key: 'testimonials_label', label: 'Testimonials Label', type: 'string' },
@@ -1067,7 +1150,7 @@
           { key: 'seo_title', label: 'SEO Titel', type: 'string' },
           { key: 'seo_description', label: 'SEO Beschreibung', type: 'text' },
           { key: 'slug', label: 'Slug', type: 'string' },
-          { key: 'image', label: 'Beitragsbild (Pfad)', type: 'string' },
+          { key: 'image', label: 'Beitragsbild', type: 'image' },
           { key: '_body', label: 'Inhalt (Markdown)', type: 'body' }
         ];
 
@@ -1377,6 +1460,29 @@
         html += '</div>';
         break;
 
+      case 'image':
+        var imgPath = value || '';
+        var imgSrc = imgPath ? imgPath : '';
+        html += '<div class="form-group">';
+        html += '<label class="form-label">' + escHtml(field.label) + '</label>';
+        html += '<div class="image-field">';
+        html += '<div class="image-preview" id="preview_' + fieldId + '">';
+        if (imgSrc) {
+          html += '<img src="' + escAttr(imgSrc) + '" alt="Vorschau" />';
+        } else {
+          html += '<span class="image-preview-empty">Kein Bild ausgewaehlt</span>';
+        }
+        html += '</div>';
+        html += '<div class="image-upload-row">';
+        html += '<input class="form-input" type="text" id="' + fieldId + '" name="' + fieldId + '" value="' + escAttr(imgPath) + '" placeholder="/images/beispiel.jpg" />';
+        html += '<input type="file" id="file_' + fieldId + '" accept="image/*" style="display:none" onchange="handleImageUpload(\'' + fieldId + '\', this)" />';
+        html += '<button type="button" class="btn-upload" onclick="document.getElementById(\'file_' + fieldId + '\').click()">&#128247; Hochladen</button>';
+        html += '</div>';
+        html += '<div class="image-upload-status" id="status_' + fieldId + '"></div>';
+        html += '</div>';
+        html += '</div>';
+        break;
+
       case 'string-list':
         var items = Array.isArray(value) ? value : [];
         html += '<div class="form-group">';
@@ -1616,6 +1722,102 @@
   }
 
   // =====================
+  // Image upload
+  // =====================
+
+  window.handleImageUpload = async function(fieldId, fileInput) {
+    const file = fileInput.files[0];
+    if (!file) return;
+
+    // Validate file type
+    if (!file.type.startsWith('image/')) {
+      showToast('Bitte nur Bilddateien hochladen', 'error');
+      return;
+    }
+
+    // Validate file size (max 5MB)
+    if (file.size > 5 * 1024 * 1024) {
+      showToast('Bild zu gross (max. 5 MB)', 'error');
+      return;
+    }
+
+    const statusEl = document.getElementById('status_' + fieldId);
+    const uploadBtn = fileInput.previousElementSibling.nextElementSibling || fileInput.parentElement.querySelector('.btn-upload');
+
+    statusEl.textContent = 'Wird hochgeladen...';
+    statusEl.className = 'image-upload-status uploading';
+
+    try {
+      // Read file as base64
+      const base64 = await new Promise(function(resolve, reject) {
+        const reader = new FileReader();
+        reader.onload = function() {
+          // Remove the data:image/...;base64, prefix
+          resolve(reader.result.split(',')[1]);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+
+      // Clean filename
+      const ext = file.name.split('.').pop().toLowerCase();
+      const baseName = file.name.replace(/\.[^.]+$/, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+      const fileName = baseName + '.' + ext;
+      const ghPath = 'public/images/' + fileName;
+
+      // Check if file already exists
+      let existingSha = null;
+      try {
+        const checkRes = await ghFetch('/repos/' + REPO + '/contents/' + ghPath + '?ref=' + BRANCH);
+        if (checkRes.ok) {
+          const existing = await checkRes.json();
+          existingSha = existing.sha;
+        }
+      } catch(e) { /* File doesn't exist, that's fine */ }
+
+      // Upload to GitHub
+      const uploadBody = {
+        message: 'Upload Bild: ' + fileName,
+        content: base64,
+        branch: BRANCH
+      };
+      if (existingSha) {
+        uploadBody.sha = existingSha;
+      }
+
+      const uploadRes = await ghFetch('/repos/' + REPO + '/contents/' + ghPath, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(uploadBody)
+      });
+
+      if (!uploadRes.ok) {
+        const err = await uploadRes.json();
+        throw new Error(err.message || 'Upload fehlgeschlagen');
+      }
+
+      // Update the text field with the path
+      const imgPath = '/images/' + fileName;
+      document.getElementById(fieldId).value = imgPath;
+
+      // Update preview
+      const previewEl = document.getElementById('preview_' + fieldId);
+      previewEl.innerHTML = '<img src="' + escAttr(imgPath) + '" alt="Vorschau" />';
+
+      statusEl.textContent = 'Hochgeladen: ' + fileName;
+      statusEl.className = 'image-upload-status';
+      showToast('Bild hochgeladen!', 'success');
+    } catch(err) {
+      statusEl.textContent = 'Fehler: ' + err.message;
+      statusEl.className = 'image-upload-status error';
+      showToast('Upload fehlgeschlagen: ' + err.message, 'error');
+    }
+  };
+
+  // =====================
   // Collect form data
   // =====================
 
@@ -1632,6 +1834,9 @@
         fm[field.key] = collectStringList(field.key);
       } else if (field.type === 'object-list') {
         fm[field.key] = collectObjectList(field.key, field.fields);
+      } else if (field.type === 'image') {
+        const el = document.getElementById(field.key);
+        fm[field.key] = el ? el.value : '';
       } else if (field.type === 'boolean') {
         const el = document.getElementById(field.key);
         fm[field.key] = el ? el.checked : false;
