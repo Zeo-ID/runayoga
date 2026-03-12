@@ -1,11 +1,1876 @@
 <!doctype html>
-<html>
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin – Runayoga</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sage: #7a9a8a;
+      --sage-light: #a3c4b4;
+      --sage-dark: #5a7a6a;
+      --beige: #f5f0e8;
+      --beige-dark: #e8e0d4;
+      --dark: #2d3436;
+      --dark-light: #636e72;
+      --white: #ffffff;
+      --red: #d63031;
+      --red-light: #fab1a0;
+      --green: #00b894;
+      --green-light: #dfe6e9;
+      --sidebar-width: 280px;
+      --header-height: 56px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--beige);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      background: var(--sage-dark);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .header-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-user {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .btn-logout {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+
+    .btn-logout:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .btn-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: var(--header-height);
+      left: 0;
+      bottom: 0;
+      width: var(--sidebar-width);
+      background: var(--white);
+      border-right: 1px solid var(--beige-dark);
+      overflow-y: auto;
+      z-index: 90;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar-section {
+      padding: 16px 0 4px 0;
+    }
+
+    .sidebar-section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--dark-light);
+      padding: 0 20px 8px;
+    }
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--dark);
+      border-left: 3px solid transparent;
+      transition: all 0.15s;
+      text-decoration: none;
+    }
+
+    .sidebar-item:hover {
+      background: var(--beige);
+    }
+
+    .sidebar-item.active {
+      background: var(--beige);
+      border-left-color: var(--sage);
+      color: var(--sage-dark);
+      font-weight: 600;
+    }
+
+    .sidebar-item.sub {
+      padding-left: 36px;
+      font-size: 13px;
+    }
+
+    .sidebar-item .icon {
+      margin-right: 10px;
+      font-size: 16px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .sidebar-btn-new {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 8px 20px;
+      padding: 8px 14px;
+      background: var(--sage);
+      color: var(--white);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .sidebar-btn-new:hover {
+      background: var(--sage-dark);
+    }
+
+    /* Main content */
+    .main {
+      margin-left: var(--sidebar-width);
+      margin-top: var(--header-height);
+      min-height: calc(100vh - var(--header-height));
+      padding: 32px;
+    }
+
+    /* Auth screen */
+    .auth-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - var(--header-height));
+      text-align: center;
+    }
+
+    .auth-screen h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+
+    .auth-screen p {
+      color: var(--dark-light);
+      margin-bottom: 24px;
+    }
+
+    .btn-github {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--dark);
+      color: var(--white);
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .btn-github:hover {
+      opacity: 0.85;
+    }
+
+    .btn-github svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* Welcome screen */
+    .welcome {
+      max-width: 600px;
+      margin: 60px auto;
+      text-align: center;
+    }
+
+    .welcome h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .welcome p {
+      color: var(--dark-light);
+    }
+
+    /* Editor */
+    .editor {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .editor-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .editor-title {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .editor-path {
+      font-size: 12px;
+      color: var(--dark-light);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      background: var(--beige-dark);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .editor-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 10px 22px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--sage);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--sage-dark);
+    }
+
+    .btn-primary:disabled {
+      background: var(--sage-light);
+      cursor: not-allowed;
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--dark);
+      border: 1px solid var(--beige-dark);
+    }
+
+    .btn-secondary:hover {
+      background: var(--beige);
+    }
+
+    .btn-danger {
+      background: var(--white);
+      color: var(--red);
+      border: 1px solid var(--red-light);
+    }
+
+    .btn-danger:hover {
+      background: #ffeaea;
+    }
+
+    /* Form fields */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--beige-dark);
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+      background: var(--white);
+      color: var(--dark);
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: var(--sage);
+      box-shadow: 0 0 0 3px rgba(122,154,138,0.15);
+    }
+
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-textarea.body-editor {
+      min-height: 400px;
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .form-checkbox-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .form-checkbox {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--sage);
+      cursor: pointer;
+    }
+
+    .form-checkbox-label {
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    /* List fields */
+    .list-field {
+      border: 1px solid var(--beige-dark);
+      border-radius: 8px;
+      background: var(--white);
+      overflow: hidden;
+    }
+
+    .list-field-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: var(--beige);
+      border-bottom: 1px solid var(--beige-dark);
+    }
+
+    .list-field-title {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .list-field-count {
+      font-size: 12px;
+      color: var(--dark-light);
+      background: var(--white);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .btn-add {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--sage);
+      color: var(--white);
+      border: none;
+      padding: 5px 12px;
+      border-radius: 5px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .btn-add:hover {
+      background: var(--sage-dark);
+    }
+
+    .list-item {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--beige);
+      position: relative;
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    .list-item-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .list-item-number {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--dark-light);
+      background: var(--beige);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .list-item-actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-move,
+    .btn-remove {
+      background: none;
+      border: 1px solid var(--beige-dark);
+      color: var(--dark-light);
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+
+    .btn-move:hover {
+      background: var(--beige);
+      color: var(--dark);
+    }
+
+    .btn-remove:hover {
+      background: #ffeaea;
+      color: var(--red);
+      border-color: var(--red-light);
+    }
+
+    .list-item .form-group {
+      margin-bottom: 10px;
+    }
+
+    .list-item .form-group:last-child {
+      margin-bottom: 0;
+    }
+
+    /* String list (simple list of strings) */
+    .string-list-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .string-list-item .form-input {
+      flex: 1;
+    }
+
+    .string-list-item .btn-remove {
+      flex-shrink: 0;
+    }
+
+    /* Nested list (e.g. cards inside sections) */
+    .nested-list {
+      margin-top: 10px;
+      border: 1px dashed var(--beige-dark);
+      border-radius: 6px;
+      padding: 12px;
+      background: var(--beige);
+    }
+
+    .nested-list .list-item {
+      background: var(--white);
+      border-radius: 6px;
+      margin-bottom: 8px;
+      border: 1px solid var(--beige-dark);
+    }
+
+    .nested-list .list-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white);
+      z-index: 200;
+      animation: slideUp 0.3s ease;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .toast.success {
+      background: var(--green);
+    }
+
+    .toast.error {
+      background: var(--red);
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Loading */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      color: var(--dark-light);
+    }
+
+    .spinner {
+      width: 24px;
+      height: 24px;
+      border: 3px solid var(--beige-dark);
+      border-top-color: var(--sage);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-right: 12px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Blog list */
+    .blog-list {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .blog-list-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .blog-list-title {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .blog-entry {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      border: 1px solid var(--beige-dark);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .blog-entry:hover {
+      border-color: var(--sage-light);
+      box-shadow: 0 2px 8px rgba(122,154,138,0.1);
+    }
+
+    .blog-entry-info h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .blog-entry-meta {
+      font-size: 12px;
+      color: var(--dark-light);
+    }
+
+    .blog-entry-arrow {
+      color: var(--dark-light);
+      font-size: 18px;
+    }
+
+    /* Delete confirm */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 300;
+    }
+
+    .modal {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 28px;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+    .modal h3 {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .modal p {
+      color: var(--dark-light);
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .btn-menu-toggle {
+        display: block;
+      }
+
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .sidebar-overlay {
+        position: fixed;
+        inset: 0;
+        top: var(--header-height);
+        background: rgba(0,0,0,0.3);
+        z-index: 85;
+        display: none;
+      }
+
+      .sidebar-overlay.open {
+        display: block;
+      }
+
+      .main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      .editor-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+<!-- Header -->
+<div class="header">
+  <div style="display:flex;align-items:center;gap:12px;">
+    <button class="btn-menu-toggle" onclick="toggleSidebar()" aria-label="Menu">&#9776;</button>
+    <span class="header-title">Runayoga Admin</span>
+  </div>
+  <div class="header-actions" id="headerActions" style="display:none;">
+    <span class="header-user" id="headerUser"></span>
+    <button class="btn-logout" onclick="logout()">Abmelden</button>
+  </div>
+</div>
+
+<!-- Sidebar overlay for mobile -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<!-- Sidebar -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Allgemein</div>
+    <div class="sidebar-item" data-path="src/content/site.md" data-type="site" onclick="loadFile(this)">
+      <span class="icon">&#9881;</span> Seitenweite Daten
+    </div>
+    <div class="sidebar-item" data-path="src/content/home.md" data-type="home" onclick="loadFile(this)">
+      <span class="icon">&#127968;</span> Startseite
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Angebote</div>
+    <div class="sidebar-item sub" data-path="src/content/angebote/yoga.md" data-type="angebot" onclick="loadFile(this)">Yoga</div>
+    <div class="sidebar-item sub" data-path="src/content/angebote/pilates.md" data-type="angebot" onclick="loadFile(this)">Pilates</div>
+    <div class="sidebar-item sub" data-path="src/content/angebote/massagen.md" data-type="angebot" onclick="loadFile(this)">Massagen</div>
+    <div class="sidebar-item sub" data-path="src/content/angebote/heilraum.md" data-type="angebot" onclick="loadFile(this)">Heilraum</div>
+    <div class="sidebar-item sub" data-path="src/content/angebote/mantra.md" data-type="angebot" onclick="loadFile(this)">Mantra</div>
+    <div class="sidebar-item sub" data-path="src/content/angebote/jahreskreis.md" data-type="angebot" onclick="loadFile(this)">Jahreskreis</div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Blog</div>
+    <div class="sidebar-item" data-action="blog-list" onclick="loadBlogList()">
+      <span class="icon">&#9998;</span> Alle Beitr&auml;ge
+    </div>
+    <button class="sidebar-btn-new" onclick="newBlogPost()">+ Neuer Beitrag</button>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Preise</div>
+    <div class="sidebar-item" data-path="src/content/preise.md" data-type="preise" onclick="loadFile(this)">
+      <span class="icon">&#128176;</span> Preise &amp; Pakete
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Seiten</div>
+    <div class="sidebar-item sub" data-path="src/content/pages/ueber-mich.md" data-type="page" onclick="loadFile(this)">&#220;ber mich</div>
+    <div class="sidebar-item sub" data-path="src/content/pages/retreat.md" data-type="page" onclick="loadFile(this)">Retreat</div>
+    <div class="sidebar-item sub" data-path="src/content/pages/kontakt.md" data-type="page" onclick="loadFile(this)">Kontakt</div>
+    <div class="sidebar-item sub" data-path="src/content/pages/angebote.md" data-type="page" onclick="loadFile(this)">Angebote (Seite)</div>
+    <div class="sidebar-item sub" data-path="src/content/pages/impressum.md" data-type="page" onclick="loadFile(this)">Impressum</div>
+    <div class="sidebar-item sub" data-path="src/content/pages/datenschutz.md" data-type="page" onclick="loadFile(this)">Datenschutz</div>
+  </div>
+</nav>
+
+<!-- Main content area -->
+<div class="main" id="mainContent">
+  <!-- Auth screen or content will be injected here -->
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  const REPO = 'Zeo-ID/runayoga';
+  const API_BASE = 'https://api.github.com';
+  const BRANCH = 'main';
+
+  // State
+  let currentFile = null;
+  let currentSha = null;
+  let currentData = null;
+  let currentBody = '';
+  let currentType = null;
+  let blogFiles = [];
+
+  // =====================
+  // Auth
+  // =====================
+
+  function getToken() {
+    return localStorage.getItem('github_token');
+  }
+
+  function isAuthenticated() {
+    return !!getToken();
+  }
+
+  window.logout = function() {
+    localStorage.removeItem('github_token');
+    localStorage.removeItem('github_user');
+    location.reload();
+  };
+
+  function showAuthScreen() {
+    document.getElementById('headerActions').style.display = 'none';
+    document.getElementById('sidebar').style.display = 'none';
+    document.getElementById('mainContent').innerHTML = `
+      <div class="auth-screen">
+        <h2>Runayoga Admin</h2>
+        <p>Melde dich mit GitHub an, um Inhalte zu bearbeiten.</p>
+        <button class="btn-github" onclick="startOAuth()">
+          <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          Mit GitHub verbinden
+        </button>
+      </div>
+    `;
+  }
+
+  window.startOAuth = function() {
+    const popup = window.open('/oauth/auth', 'github-oauth', 'width=600,height=700');
+
+    window.addEventListener('message', function handler(e) {
+      if (typeof e.data !== 'string') return;
+
+      if (e.data.startsWith('authorizing:github')) {
+        popup.postMessage(e.data, e.origin);
+        return;
+      }
+
+      if (e.data.startsWith('authorization:github:success:')) {
+        const jsonStr = e.data.replace('authorization:github:success:', '');
+        try {
+          const authData = JSON.parse(jsonStr);
+          if (authData.token) {
+            localStorage.setItem('github_token', authData.token);
+            window.removeEventListener('message', handler);
+            popup.close();
+            location.reload();
+          }
+        } catch(err) {
+          console.error('OAuth parse error:', err);
+        }
+      }
+    });
+  };
+
+  async function loadUser() {
+    try {
+      const res = await ghFetch('/user');
+      if (res.ok) {
+        const user = await res.json();
+        localStorage.setItem('github_user', user.login);
+        document.getElementById('headerUser').textContent = user.login;
+        document.getElementById('headerActions').style.display = 'flex';
+      }
+    } catch(e) {
+      console.error('Failed to load user:', e);
+    }
+  }
+
+  // =====================
+  // GitHub API
+  // =====================
+
+  function ghFetch(path, options) {
+    const token = getToken();
+    const url = path.startsWith('http') ? path : API_BASE + path;
+    return fetch(url, {
+      ...options,
+      headers: {
+        'Authorization': 'token ' + token,
+        'Accept': 'application/vnd.github.v3+json',
+        ...(options && options.headers || {})
+      }
+    });
+  }
+
+  async function fetchFile(path) {
+    const res = await ghFetch('/repos/' + REPO + '/contents/' + path + '?ref=' + BRANCH);
+    if (!res.ok) throw new Error('Datei konnte nicht geladen werden: ' + res.status);
+    return res.json();
+  }
+
+  async function saveFile(path, content, sha, message) {
+    const body = {
+      message: message || 'Update ' + path.split('/').pop(),
+      content: btoa(unescape(encodeURIComponent(content))),
+      sha: sha,
+      branch: BRANCH
+    };
+    const res = await ghFetch('/repos/' + REPO + '/contents/' + path, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.message || 'Speichern fehlgeschlagen');
+    }
+    return res.json();
+  }
+
+  async function createFile(path, content, message) {
+    const body = {
+      message: message || 'Create ' + path.split('/').pop(),
+      content: btoa(unescape(encodeURIComponent(content))),
+      branch: BRANCH
+    };
+    const res = await ghFetch('/repos/' + REPO + '/contents/' + path, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.message || 'Erstellen fehlgeschlagen');
+    }
+    return res.json();
+  }
+
+  async function deleteFile(path, sha, message) {
+    const body = {
+      message: message || 'Delete ' + path.split('/').pop(),
+      sha: sha,
+      branch: BRANCH
+    };
+    const res = await ghFetch('/repos/' + REPO + '/contents/' + path, {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.message || 'Loeschen fehlgeschlagen');
+    }
+    return res.json();
+  }
+
+  // =====================
+  // Content parsing
+  // =====================
+
+  function parseMarkdown(raw) {
+    const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+    if (!match) return { frontmatter: {}, body: raw };
+    let fm;
+    try {
+      fm = jsyaml.load(match[1]) || {};
+    } catch(e) {
+      fm = {};
+    }
+    return { frontmatter: fm, body: match[2] || '' };
+  }
+
+  function serializeMarkdown(frontmatter, body) {
+    const yamlStr = jsyaml.dump(frontmatter, {
+      lineWidth: -1,
+      quotingType: '"',
+      forceQuotes: false,
+      noRefs: true,
+      sortKeys: false
+    });
+    if (body && body.trim()) {
+      return '---\n' + yamlStr + '---\n\n' + body.trimEnd() + '\n';
+    }
+    return '---\n' + yamlStr + '---\n';
+  }
+
+  // =====================
+  // Field definitions
+  // =====================
+
+  function getFieldDefs(type) {
+    switch(type) {
+      case 'site':
+        return [
+          { key: 'name', label: 'Studio-Name', type: 'string' },
+          { key: 'email', label: 'E-Mail', type: 'string' },
+          { key: 'phone', label: 'Telefon', type: 'string' },
+          { key: 'address', label: 'Adresse', type: 'string' },
+          { key: 'instagram', label: 'Instagram URL', type: 'string' },
+          { key: 'whatsapp', label: 'WhatsApp Nummer', type: 'string' },
+          { key: 'opening_hours', label: 'Oeffnungszeiten', type: 'object-list', fields: [
+            { key: 'day', label: 'Tag', type: 'string' },
+            { key: 'hours', label: 'Zeiten', type: 'string' }
+          ]}
+        ];
+
+      case 'home':
+        return [
+          { key: 'seo_title', label: 'SEO Titel', type: 'string' },
+          { key: 'seo_description', label: 'SEO Beschreibung', type: 'text' },
+          { key: 'hero_title', label: 'Hero Titel', type: 'string' },
+          { key: 'hero_subtitle', label: 'Hero Untertitel', type: 'text' },
+          { key: 'hero_cta_text', label: 'Hero Button Text', type: 'string' },
+          { key: 'hero_cta_link', label: 'Hero Button Link', type: 'string' },
+          { key: 'hero_cta_secondary_text', label: 'Hero Button 2 Text', type: 'string' },
+          { key: 'hero_cta_secondary_link', label: 'Hero Button 2 Link', type: 'string' },
+          { key: 'hero_image', label: 'Hero Bild (Pfad)', type: 'string' },
+          { key: 'hero_image_alt', label: 'Hero Bild Alt-Text', type: 'string' },
+          { key: 'philosophy_quote', label: 'Philosophie Zitat', type: 'text' },
+          { key: 'philosophy_cite', label: 'Zitat Quelle', type: 'string' },
+          { key: 'about_label', label: 'Ueber mich Label', type: 'string' },
+          { key: 'about_title', label: 'Ueber mich Titel', type: 'string' },
+          { key: 'about_text', label: 'Ueber mich Text', type: 'text' },
+          { key: 'about_image', label: 'Ueber mich Bild (Pfad)', type: 'string' },
+          { key: 'about_image_alt', label: 'Ueber mich Bild Alt-Text', type: 'string' },
+          { key: 'services_label', label: 'Angebot Label', type: 'string' },
+          { key: 'services_title', label: 'Angebot Titel', type: 'string' },
+          { key: 'services_subtitle', label: 'Angebot Untertitel', type: 'string' },
+          { key: 'retreat_label', label: 'Retreat Label', type: 'string' },
+          { key: 'retreat_title', label: 'Retreat Titel', type: 'string' },
+          { key: 'retreat_text', label: 'Retreat Text', type: 'text' },
+          { key: 'retreat_image', label: 'Retreat Bild (Pfad)', type: 'string' },
+          { key: 'retreat_image_alt', label: 'Retreat Bild Alt-Text', type: 'string' },
+          { key: 'retreat_highlights', label: 'Retreat Highlights', type: 'string-list' },
+          { key: 'testimonials_label', label: 'Testimonials Label', type: 'string' },
+          { key: 'testimonials_title', label: 'Testimonials Titel', type: 'string' },
+          { key: 'testimonials', label: 'Testimonials', type: 'object-list', fields: [
+            { key: 'quote', label: 'Zitat', type: 'text' },
+            { key: 'author', label: 'Autor', type: 'string' },
+            { key: 'stars', label: 'Sterne (1-5)', type: 'number' }
+          ]},
+          { key: 'cta_title', label: 'CTA Titel', type: 'string' },
+          { key: 'cta_text', label: 'CTA Text', type: 'text' }
+        ];
+
+      case 'angebot':
+        return [
+          { key: 'title', label: 'Titel', type: 'string' },
+          { key: 'subtitle', label: 'Untertitel', type: 'string' },
+          { key: 'seo_title', label: 'SEO Titel', type: 'string' },
+          { key: 'seo_description', label: 'SEO Beschreibung', type: 'text' },
+          { key: 'slug', label: 'Slug', type: 'string' },
+          { key: 'sort_order', label: 'Reihenfolge', type: 'number' },
+          { key: 'highlights', label: 'Highlights', type: 'string-list' },
+          { key: 'target_audience', label: 'Fuer wen geeignet', type: 'string' },
+          { key: '_body', label: 'Beschreibung (Markdown)', type: 'body' }
+        ];
+
+      case 'blog':
+        return [
+          { key: 'title', label: 'Titel', type: 'string' },
+          { key: 'date', label: 'Datum', type: 'date' },
+          { key: 'author', label: 'Autor', type: 'string' },
+          { key: 'excerpt', label: 'Kurzbeschreibung', type: 'text' },
+          { key: 'seo_title', label: 'SEO Titel', type: 'string' },
+          { key: 'seo_description', label: 'SEO Beschreibung', type: 'text' },
+          { key: 'slug', label: 'Slug', type: 'string' },
+          { key: 'image', label: 'Beitragsbild (Pfad)', type: 'string' },
+          { key: '_body', label: 'Inhalt (Markdown)', type: 'body' }
+        ];
+
+      case 'preise':
+        return [
+          { key: 'title', label: 'Seitentitel', type: 'string' },
+          { key: 'subtitle', label: 'Untertitel', type: 'string' },
+          { key: 'seo_description', label: 'SEO Beschreibung', type: 'text' },
+          { key: 'sections', label: 'Preisgruppen', type: 'object-list', fields: [
+            { key: 'label', label: 'Label', type: 'string' },
+            { key: 'title', label: 'Gruppenname', type: 'string' },
+            { key: 'description', label: 'Beschreibung', type: 'text' },
+            { key: 'cards', label: 'Preiskarten', type: 'object-list', fields: [
+              { key: 'name', label: 'Name', type: 'string' },
+              { key: 'price', label: 'Preis', type: 'string' },
+              { key: 'period', label: 'Zeitraum', type: 'string' },
+              { key: 'features', label: 'Features', type: 'string-list' },
+              { key: 'featured', label: 'Hervorgehoben', type: 'boolean' }
+            ]}
+          ]}
+        ];
+
+      case 'page':
+        return [
+          { key: 'title', label: 'Titel', type: 'string' },
+          { key: 'subtitle', label: 'Untertitel', type: 'string' },
+          { key: 'seo_title', label: 'SEO Titel', type: 'string' },
+          { key: 'seo_description', label: 'SEO Beschreibung', type: 'text' },
+          { key: 'slug', label: 'Slug', type: 'string' },
+          { key: '_body', label: 'Inhalt (Markdown)', type: 'body' }
+        ];
+
+      default:
+        return [];
+    }
+  }
+
+  // =====================
+  // UI Rendering
+  // =====================
+
+  function showLoading() {
+    document.getElementById('mainContent').innerHTML = `
+      <div class="loading"><div class="spinner"></div>Laden...</div>
+    `;
+  }
+
+  function showWelcome() {
+    document.getElementById('mainContent').innerHTML = `
+      <div class="welcome">
+        <h2>Willkommen im Admin-Bereich</h2>
+        <p>Waehle links einen Inhalt zum Bearbeiten aus.</p>
+      </div>
+    `;
+  }
+
+  function showToast(message, type) {
+    const existing = document.querySelector('.toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'toast ' + type;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(function() { toast.remove(); }, 4000);
+  }
+
+  function setActiveSidebar(el) {
+    document.querySelectorAll('.sidebar-item').forEach(function(item) {
+      item.classList.remove('active');
+    });
+    if (el) el.classList.add('active');
+  }
+
+  window.toggleSidebar = function() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebarOverlay').classList.toggle('open');
+  };
+
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sidebarOverlay').classList.remove('open');
+  }
+
+  // =====================
+  // Load file
+  // =====================
+
+  window.loadFile = async function(el) {
+    const path = el.dataset.path;
+    const type = el.dataset.type;
+    setActiveSidebar(el);
+    closeSidebar();
+    showLoading();
+
+    try {
+      const file = await fetchFile(path);
+      const raw = decodeURIComponent(escape(atob(file.content.replace(/\n/g, ''))));
+      const parsed = parseMarkdown(raw);
+
+      currentFile = path;
+      currentSha = file.sha;
+      currentData = parsed.frontmatter;
+      currentBody = parsed.body;
+      currentType = type;
+
+      renderEditor(path, type, parsed.frontmatter, parsed.body);
+    } catch(err) {
+      document.getElementById('mainContent').innerHTML = `
+        <div class="welcome">
+          <h2>Fehler</h2>
+          <p>${escHtml(err.message)}</p>
+        </div>
+      `;
+    }
+  };
+
+  function loadFileByPath(path, type) {
+    const el = document.querySelector('.sidebar-item[data-path="' + path + '"]');
+    if (el) {
+      window.loadFile(el);
+    } else {
+      // For blog posts that are not in sidebar
+      setActiveSidebar(document.querySelector('[data-action="blog-list"]'));
+      closeSidebar();
+      showLoading();
+
+      fetchFile(path).then(function(file) {
+        var raw = decodeURIComponent(escape(atob(file.content.replace(/\n/g, ''))));
+        var parsed = parseMarkdown(raw);
+
+        currentFile = path;
+        currentSha = file.sha;
+        currentData = parsed.frontmatter;
+        currentBody = parsed.body;
+        currentType = type;
+
+        renderEditor(path, type, parsed.frontmatter, parsed.body);
+      }).catch(function(err) {
+        document.getElementById('mainContent').innerHTML = `
+          <div class="welcome"><h2>Fehler</h2><p>${escHtml(err.message)}</p></div>
+        `;
+      });
+    }
+  }
+
+  // =====================
+  // Blog list
+  // =====================
+
+  window.loadBlogList = async function() {
+    setActiveSidebar(document.querySelector('[data-action="blog-list"]'));
+    closeSidebar();
+    showLoading();
+
+    try {
+      const res = await ghFetch('/repos/' + REPO + '/contents/src/content/blog?ref=' + BRANCH);
+      if (!res.ok) throw new Error('Blog konnte nicht geladen werden');
+      blogFiles = await res.json();
+
+      // Sort by name descending
+      blogFiles.sort(function(a, b) { return b.name.localeCompare(a.name); });
+
+      let html = '<div class="blog-list">';
+      html += '<div class="blog-list-header">';
+      html += '<h2 class="blog-list-title">Blog-Beitr&auml;ge</h2>';
+      html += '<button class="btn btn-primary" onclick="newBlogPost()">+ Neuer Beitrag</button>';
+      html += '</div>';
+
+      if (blogFiles.length === 0) {
+        html += '<p style="color:var(--dark-light);text-align:center;padding:40px;">Noch keine Blog-Beitr&auml;ge vorhanden.</p>';
+      }
+
+      blogFiles.forEach(function(f) {
+        const name = f.name.replace('.md', '');
+        html += `
+          <div class="blog-entry" onclick="loadFileByPath('${f.path}', 'blog')">
+            <div class="blog-entry-info">
+              <h3>${escHtml(name)}</h3>
+              <span class="blog-entry-meta">${escHtml(f.path)}</span>
+            </div>
+            <span class="blog-entry-arrow">&rsaquo;</span>
+          </div>
+        `;
+      });
+
+      html += '</div>';
+      document.getElementById('mainContent').innerHTML = html;
+    } catch(err) {
+      showToast(err.message, 'error');
+    }
+  };
+
+  window.loadFileByPath = loadFileByPath;
+
+  window.newBlogPost = function() {
+    closeSidebar();
+    const today = new Date().toISOString().split('T')[0];
+    currentFile = null;
+    currentSha = null;
+    currentType = 'blog';
+    currentData = {
+      title: '',
+      date: today,
+      author: 'Runa',
+      excerpt: '',
+      seo_title: '',
+      seo_description: '',
+      slug: '',
+      image: ''
+    };
+    currentBody = '';
+
+    renderEditor(null, 'blog', currentData, currentBody, true);
+  };
+
+  // =====================
+  // Render editor
+  // =====================
+
+  function renderEditor(path, type, frontmatter, body, isNew) {
+    const fields = getFieldDefs(type);
+    const title = isNew ? 'Neuer Blog-Beitrag' : getLabel(path, type);
+    const fileName = path ? path.split('/').pop() : 'Neuer Beitrag';
+
+    let html = '<div class="editor">';
+    html += '<div class="editor-header">';
+    html += '<div>';
+    html += '<h2 class="editor-title">' + escHtml(title) + '</h2>';
+    if (path) html += '<span class="editor-path">' + escHtml(path) + '</span>';
+    html += '</div>';
+    html += '<div class="editor-actions">';
+    if (!isNew && type === 'blog') {
+      html += '<button class="btn btn-danger" onclick="deleteBlogPost()">L&ouml;schen</button>';
+    }
+    html += '<button class="btn btn-primary" id="btnSave" onclick="saveCurrentFile()">Speichern</button>';
+    html += '</div>';
+    html += '</div>';
+
+    html += '<form id="editorForm" onsubmit="return false;">';
+
+    fields.forEach(function(field) {
+      html += renderField(field, frontmatter, body);
+    });
+
+    html += '</form>';
+    html += '</div>';
+
+    document.getElementById('mainContent').innerHTML = html;
+  }
+
+  function renderField(field, data, body, prefix) {
+    const pfx = prefix || '';
+    const fieldId = pfx + field.key;
+    let value;
+
+    if (field.key === '_body') {
+      value = body || '';
+    } else {
+      value = getNestedValue(data, field.key);
+    }
+
+    let html = '';
+
+    switch(field.type) {
+      case 'string':
+        html += '<div class="form-group">';
+        html += '<label class="form-label" for="' + fieldId + '">' + escHtml(field.label) + '</label>';
+        html += '<input class="form-input" type="text" id="' + fieldId + '" name="' + fieldId + '" value="' + escAttr(value || '') + '" />';
+        html += '</div>';
+        break;
+
+      case 'text':
+        html += '<div class="form-group">';
+        html += '<label class="form-label" for="' + fieldId + '">' + escHtml(field.label) + '</label>';
+        html += '<textarea class="form-textarea" id="' + fieldId + '" name="' + fieldId + '">' + escHtml(value || '') + '</textarea>';
+        html += '</div>';
+        break;
+
+      case 'number':
+        html += '<div class="form-group">';
+        html += '<label class="form-label" for="' + fieldId + '">' + escHtml(field.label) + '</label>';
+        html += '<input class="form-input" type="number" id="' + fieldId + '" name="' + fieldId + '" value="' + escAttr(value != null ? value : '') + '" />';
+        html += '</div>';
+        break;
+
+      case 'date':
+        html += '<div class="form-group">';
+        html += '<label class="form-label" for="' + fieldId + '">' + escHtml(field.label) + '</label>';
+        html += '<input class="form-input" type="date" id="' + fieldId + '" name="' + fieldId + '" value="' + escAttr(formatDate(value)) + '" />';
+        html += '</div>';
+        break;
+
+      case 'boolean':
+        html += '<div class="form-group">';
+        html += '<div class="form-checkbox-wrap">';
+        html += '<input class="form-checkbox" type="checkbox" id="' + fieldId + '" name="' + fieldId + '"' + (value ? ' checked' : '') + ' />';
+        html += '<label class="form-checkbox-label" for="' + fieldId + '">' + escHtml(field.label) + '</label>';
+        html += '</div>';
+        html += '</div>';
+        break;
+
+      case 'body':
+        html += '<div class="form-group">';
+        html += '<label class="form-label" for="' + fieldId + '">' + escHtml(field.label) + '</label>';
+        html += '<textarea class="form-textarea body-editor" id="' + fieldId + '" name="' + fieldId + '">' + escHtml(value || '') + '</textarea>';
+        html += '</div>';
+        break;
+
+      case 'string-list':
+        var items = Array.isArray(value) ? value : [];
+        html += '<div class="form-group">';
+        html += '<div class="list-field">';
+        html += '<div class="list-field-header">';
+        html += '<span class="list-field-title">' + escHtml(field.label) + '</span>';
+        html += '<div style="display:flex;align-items:center;gap:8px;">';
+        html += '<span class="list-field-count">' + items.length + '</span>';
+        html += '<button type="button" class="btn-add" onclick="addStringListItem(\'' + fieldId + '\')">+ Hinzuf&uuml;gen</button>';
+        html += '</div>';
+        html += '</div>';
+        html += '<div id="list_' + fieldId + '" style="padding:12px 16px;">';
+        items.forEach(function(item, i) {
+          html += renderStringListItem(fieldId, i, item);
+        });
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+        break;
+
+      case 'object-list':
+        var objItems = Array.isArray(value) ? value : [];
+        html += '<div class="form-group">';
+        html += '<div class="list-field">';
+        html += '<div class="list-field-header">';
+        html += '<span class="list-field-title">' + escHtml(field.label) + '</span>';
+        html += '<div style="display:flex;align-items:center;gap:8px;">';
+        html += '<span class="list-field-count" id="count_' + fieldId + '">' + objItems.length + '</span>';
+        html += '<button type="button" class="btn-add" onclick="addObjectListItem(\'' + fieldId + '\', \'' + escAttr(JSON.stringify(field.fields)) + '\')">+ Hinzuf&uuml;gen</button>';
+        html += '</div>';
+        html += '</div>';
+        html += '<div id="list_' + fieldId + '">';
+        objItems.forEach(function(item, i) {
+          html += renderObjectListItem(fieldId, i, item, field.fields);
+        });
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+        break;
+    }
+
+    return html;
+  }
+
+  function renderStringListItem(fieldId, index, value) {
+    return '<div class="string-list-item" data-list="' + fieldId + '" data-index="' + index + '">' +
+      '<input class="form-input" type="text" name="' + fieldId + '_' + index + '" value="' + escAttr(value || '') + '" />' +
+      '<button type="button" class="btn-remove" onclick="removeStringListItem(this)" title="Entfernen">&times;</button>' +
+      '</div>';
+  }
+
+  function renderObjectListItem(fieldId, index, item, subFields) {
+    let html = '<div class="list-item" data-list="' + fieldId + '" data-index="' + index + '">';
+    html += '<div class="list-item-header">';
+    html += '<span class="list-item-number">#' + (index + 1) + '</span>';
+    html += '<div class="list-item-actions">';
+    html += '<button type="button" class="btn-move" onclick="moveListItem(this, -1)" title="Nach oben">&uarr;</button>';
+    html += '<button type="button" class="btn-move" onclick="moveListItem(this, 1)" title="Nach unten">&darr;</button>';
+    html += '<button type="button" class="btn-remove" onclick="removeObjectListItem(this)" title="Entfernen">&times;</button>';
+    html += '</div>';
+    html += '</div>';
+
+    subFields.forEach(function(sf) {
+      var subId = fieldId + '_' + index + '_' + sf.key;
+      var subValue = item ? item[sf.key] : '';
+
+      if (sf.type === 'string-list') {
+        var subItems = Array.isArray(subValue) ? subValue : [];
+        html += '<div class="form-group">';
+        html += '<label class="form-label">' + escHtml(sf.label) + '</label>';
+        html += '<div class="nested-list" id="list_' + subId + '">';
+        subItems.forEach(function(si, j) {
+          html += '<div class="string-list-item" data-list="' + subId + '" data-index="' + j + '">' +
+            '<input class="form-input" type="text" name="' + subId + '_' + j + '" value="' + escAttr(si || '') + '" />' +
+            '<button type="button" class="btn-remove" onclick="removeStringListItem(this)" title="Entfernen">&times;</button>' +
+            '</div>';
+        });
+        html += '<button type="button" class="btn-add" style="margin-top:6px;" onclick="addStringListItem(\'' + subId + '\')">+ Hinzuf&uuml;gen</button>';
+        html += '</div>';
+        html += '</div>';
+      } else if (sf.type === 'object-list') {
+        var nestedItems = Array.isArray(subValue) ? subValue : [];
+        html += '<div class="form-group">';
+        html += '<label class="form-label">' + escHtml(sf.label) + '</label>';
+        html += '<div class="nested-list" id="list_' + subId + '">';
+        nestedItems.forEach(function(ni, j) {
+          html += renderObjectListItem(subId, j, ni, sf.fields);
+        });
+        html += '<button type="button" class="btn-add" style="margin-top:6px;" onclick="addObjectListItem(\'' + subId + '\', \'' + escAttr(JSON.stringify(sf.fields)) + '\')">+ Hinzuf&uuml;gen</button>';
+        html += '</div>';
+        html += '</div>';
+      } else if (sf.type === 'text') {
+        html += '<div class="form-group">';
+        html += '<label class="form-label" for="' + subId + '">' + escHtml(sf.label) + '</label>';
+        html += '<textarea class="form-textarea" id="' + subId + '" name="' + subId + '">' + escHtml(subValue || '') + '</textarea>';
+        html += '</div>';
+      } else if (sf.type === 'number') {
+        html += '<div class="form-group">';
+        html += '<label class="form-label" for="' + subId + '">' + escHtml(sf.label) + '</label>';
+        html += '<input class="form-input" type="number" id="' + subId + '" name="' + subId + '" value="' + escAttr(subValue != null ? subValue : '') + '" />';
+        html += '</div>';
+      } else if (sf.type === 'boolean') {
+        html += '<div class="form-group">';
+        html += '<div class="form-checkbox-wrap">';
+        html += '<input class="form-checkbox" type="checkbox" id="' + subId + '" name="' + subId + '"' + (subValue ? ' checked' : '') + ' />';
+        html += '<label class="form-checkbox-label" for="' + subId + '">' + escHtml(sf.label) + '</label>';
+        html += '</div>';
+        html += '</div>';
+      } else {
+        html += '<div class="form-group">';
+        html += '<label class="form-label" for="' + subId + '">' + escHtml(sf.label) + '</label>';
+        html += '<input class="form-input" type="text" id="' + subId + '" name="' + subId + '" value="' + escAttr(subValue || '') + '" />';
+        html += '</div>';
+      }
+    });
+
+    html += '</div>';
+    return html;
+  }
+
+  // =====================
+  // List manipulation
+  // =====================
+
+  window.addStringListItem = function(fieldId) {
+    const container = document.getElementById('list_' + fieldId);
+    if (!container) return;
+    const items = container.querySelectorAll('.string-list-item');
+    const index = items.length;
+    const div = document.createElement('div');
+    div.innerHTML = renderStringListItem(fieldId, index, '');
+    // Append the actual child, not the wrapper div
+    const newItem = div.firstElementChild;
+    // Insert before the add button if it's a nested list
+    const addBtn = container.querySelector(':scope > .btn-add');
+    if (addBtn) {
+      container.insertBefore(newItem, addBtn);
+    } else {
+      container.appendChild(newItem);
+    }
+    // Update count
+    updateListCount(fieldId);
+  };
+
+  window.removeStringListItem = function(btn) {
+    const item = btn.closest('.string-list-item');
+    const fieldId = item.dataset.list;
+    item.remove();
+    reindexStringList(fieldId);
+    updateListCount(fieldId);
+  };
+
+  window.addObjectListItem = function(fieldId, fieldsJson) {
+    const fields = JSON.parse(fieldsJson);
+    const container = document.getElementById('list_' + fieldId);
+    if (!container) return;
+    const items = container.querySelectorAll(':scope > .list-item');
+    const index = items.length;
+    const emptyItem = {};
+    fields.forEach(function(f) {
+      if (f.type === 'string-list' || f.type === 'object-list') {
+        emptyItem[f.key] = [];
+      } else if (f.type === 'boolean') {
+        emptyItem[f.key] = false;
+      } else if (f.type === 'number') {
+        emptyItem[f.key] = 0;
+      } else {
+        emptyItem[f.key] = '';
+      }
+    });
+    const div = document.createElement('div');
+    div.innerHTML = renderObjectListItem(fieldId, index, emptyItem, fields);
+    const newItem = div.firstElementChild;
+    // Insert before the add button if it's a nested list
+    const addBtn = container.querySelector(':scope > .btn-add');
+    if (addBtn) {
+      container.insertBefore(newItem, addBtn);
+    } else {
+      container.appendChild(newItem);
+    }
+    updateListCount(fieldId);
+  };
+
+  window.removeObjectListItem = function(btn) {
+    const item = btn.closest('.list-item');
+    const fieldId = item.dataset.list;
+    item.remove();
+    reindexObjectList(fieldId);
+    updateListCount(fieldId);
+  };
+
+  window.moveListItem = function(btn, direction) {
+    const item = btn.closest('.list-item');
+    const container = item.parentNode;
+    const items = Array.from(container.querySelectorAll(':scope > .list-item'));
+    const idx = items.indexOf(item);
+    const newIdx = idx + direction;
+    if (newIdx < 0 || newIdx >= items.length) return;
+
+    if (direction === -1) {
+      container.insertBefore(item, items[newIdx]);
+    } else {
+      container.insertBefore(item, items[newIdx].nextSibling);
+    }
+    reindexObjectList(item.dataset.list);
+  };
+
+  function reindexStringList(fieldId) {
+    const container = document.getElementById('list_' + fieldId);
+    if (!container) return;
+    const items = container.querySelectorAll('.string-list-item');
+    items.forEach(function(item, i) {
+      item.dataset.index = i;
+      const input = item.querySelector('input');
+      if (input) input.name = fieldId + '_' + i;
+    });
+  }
+
+  function reindexObjectList(fieldId) {
+    const container = document.getElementById('list_' + fieldId);
+    if (!container) return;
+    const items = container.querySelectorAll(':scope > .list-item');
+    items.forEach(function(item, i) {
+      item.dataset.index = i;
+      const num = item.querySelector('.list-item-number');
+      if (num) num.textContent = '#' + (i + 1);
+    });
+  }
+
+  function updateListCount(fieldId) {
+    const countEl = document.getElementById('count_' + fieldId);
+    if (!countEl) return;
+    const container = document.getElementById('list_' + fieldId);
+    if (!container) return;
+    const items = container.querySelectorAll(':scope > .list-item');
+    countEl.textContent = items.length;
+  }
+
+  // =====================
+  // Collect form data
+  // =====================
+
+  function collectFormData() {
+    const fields = getFieldDefs(currentType);
+    const fm = {};
+    let body = '';
+
+    fields.forEach(function(field) {
+      if (field.key === '_body') {
+        const el = document.getElementById(field.key);
+        body = el ? el.value : '';
+      } else if (field.type === 'string-list') {
+        fm[field.key] = collectStringList(field.key);
+      } else if (field.type === 'object-list') {
+        fm[field.key] = collectObjectList(field.key, field.fields);
+      } else if (field.type === 'boolean') {
+        const el = document.getElementById(field.key);
+        fm[field.key] = el ? el.checked : false;
+      } else if (field.type === 'number') {
+        const el = document.getElementById(field.key);
+        fm[field.key] = el && el.value !== '' ? parseInt(el.value, 10) : 0;
+      } else if (field.type === 'date') {
+        const el = document.getElementById(field.key);
+        fm[field.key] = el ? el.value : '';
+      } else {
+        const el = document.getElementById(field.key);
+        fm[field.key] = el ? el.value : '';
+      }
+    });
+
+    // Preserve any frontmatter keys not in field definitions
+    if (currentData) {
+      Object.keys(currentData).forEach(function(key) {
+        if (!(key in fm)) {
+          fm[key] = currentData[key];
+        }
+      });
+    }
+
+    return { frontmatter: fm, body: body };
+  }
+
+  function collectStringList(fieldId) {
+    const container = document.getElementById('list_' + fieldId);
+    if (!container) return [];
+    const items = container.querySelectorAll('.string-list-item input');
+    const result = [];
+    items.forEach(function(input) {
+      if (input.value.trim()) result.push(input.value);
+    });
+    return result;
+  }
+
+  function collectObjectList(fieldId, subFields) {
+    const container = document.getElementById('list_' + fieldId);
+    if (!container) return [];
+    const items = container.querySelectorAll(':scope > .list-item');
+    const result = [];
+
+    items.forEach(function(item, i) {
+      const obj = {};
+      subFields.forEach(function(sf) {
+        const subId = fieldId + '_' + i + '_' + sf.key;
+        if (sf.type === 'string-list') {
+          obj[sf.key] = collectStringList(subId);
+        } else if (sf.type === 'object-list') {
+          obj[sf.key] = collectObjectList(subId, sf.fields);
+        } else if (sf.type === 'boolean') {
+          const el = document.getElementById(subId);
+          obj[sf.key] = el ? el.checked : false;
+        } else if (sf.type === 'number') {
+          const el = document.getElementById(subId);
+          obj[sf.key] = el && el.value !== '' ? parseInt(el.value, 10) : 0;
+        } else if (sf.type === 'text') {
+          const el = document.getElementById(subId);
+          obj[sf.key] = el ? el.value : '';
+        } else {
+          const el = document.getElementById(subId);
+          obj[sf.key] = el ? el.value : '';
+        }
+      });
+      result.push(obj);
+    });
+
+    return result;
+  }
+
+  // =====================
+  // Save
+  // =====================
+
+  window.saveCurrentFile = async function() {
+    const btn = document.getElementById('btnSave');
+    btn.disabled = true;
+    btn.textContent = 'Speichern...';
+
+    try {
+      const data = collectFormData();
+      const content = serializeMarkdown(data.frontmatter, data.body);
+
+      if (!currentFile) {
+        // New blog post
+        let slug = data.frontmatter.slug;
+        if (!slug) {
+          slug = slugify(data.frontmatter.title || 'neuer-beitrag');
+          data.frontmatter.slug = slug;
+        }
+        const path = 'src/content/blog/' + slug + '.md';
+        const finalContent = serializeMarkdown(data.frontmatter, data.body);
+        const result = await createFile(path, finalContent, 'Neuer Blog-Beitrag: ' + (data.frontmatter.title || slug));
+        currentFile = path;
+        currentSha = result.content.sha;
+        currentData = data.frontmatter;
+        currentBody = data.body;
+        showToast('Blog-Beitrag erstellt!', 'success');
+      } else {
+        const result = await saveFile(currentFile, content, currentSha, 'Update ' + currentFile.split('/').pop());
+        currentSha = result.content.sha;
+        currentData = data.frontmatter;
+        currentBody = data.body;
+        showToast('Gespeichert!', 'success');
+      }
+    } catch(err) {
+      showToast('Fehler: ' + err.message, 'error');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Speichern';
+    }
+  };
+
+  // =====================
+  // Delete blog post
+  // =====================
+
+  window.deleteBlogPost = function() {
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.innerHTML = `
+      <div class="modal">
+        <h3>Beitrag l&ouml;schen?</h3>
+        <p>M&ouml;chtest du diesen Blog-Beitrag wirklich unwiderruflich l&ouml;schen?</p>
+        <div class="modal-actions">
+          <button class="btn btn-secondary" onclick="this.closest('.modal-overlay').remove()">Abbrechen</button>
+          <button class="btn btn-danger" onclick="confirmDeleteBlog(this)">Endg&uuml;ltig l&ouml;schen</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+  };
+
+  window.confirmDeleteBlog = async function(btn) {
+    btn.disabled = true;
+    btn.textContent = 'Loeschen...';
+
+    try {
+      await deleteFile(currentFile, currentSha, 'Delete ' + currentFile.split('/').pop());
+      document.querySelector('.modal-overlay').remove();
+      showToast('Beitrag geloescht!', 'success');
+      window.loadBlogList();
+    } catch(err) {
+      document.querySelector('.modal-overlay').remove();
+      showToast('Fehler: ' + err.message, 'error');
+    }
+  };
+
+  // =====================
+  // Helpers
+  // =====================
+
+  function escHtml(str) {
+    if (str == null) return '';
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function escAttr(str) {
+    if (str == null) return '';
+    return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function getNestedValue(obj, key) {
+    if (!obj) return undefined;
+    return obj[key];
+  }
+
+  function formatDate(val) {
+    if (!val) return '';
+    if (val instanceof Date) {
+      return val.toISOString().split('T')[0];
+    }
+    const str = String(val);
+    // Handle ISO dates
+    if (str.length >= 10) {
+      return str.substring(0, 10);
+    }
+    return str;
+  }
+
+  function slugify(str) {
+    return str
+      .toLowerCase()
+      .replace(/[aeoeue]/g, function(m) { return {ae:'ae',oe:'oe',ue:'ue'}[m] || m; })
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '')
+      .substring(0, 80);
+  }
+
+  function getLabel(path, type) {
+    if (!path) return '';
+    const name = path.split('/').pop().replace('.md', '');
+    const labels = {
+      'site': 'Seitenweite Daten',
+      'home': 'Startseite',
+      'preise': 'Preise & Pakete',
+      'yoga': 'Yoga',
+      'pilates': 'Pilates',
+      'massagen': 'Massagen',
+      'heilraum': 'Heilraum',
+      'mantra': 'Mantra',
+      'jahreskreis': 'Jahreskreis',
+      'ueber-mich': 'Ueber mich',
+      'retreat': 'Retreat',
+      'kontakt': 'Kontakt',
+      'angebote': 'Angebote (Seite)',
+      'impressum': 'Impressum',
+      'datenschutz': 'Datenschutz'
+    };
+    return labels[name] || name;
+  }
+
+  // =====================
+  // Init
+  // =====================
+
+  function init() {
+    if (!isAuthenticated()) {
+      showAuthScreen();
+      return;
+    }
+
+    document.getElementById('sidebar').style.display = '';
+    const savedUser = localStorage.getItem('github_user');
+    if (savedUser) {
+      document.getElementById('headerUser').textContent = savedUser;
+      document.getElementById('headerActions').style.display = 'flex';
+    }
+
+    loadUser();
+    showWelcome();
+  }
+
+  init();
+
+})();
+</script>
+
 </body>
 </html>
