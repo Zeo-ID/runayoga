@@ -2024,7 +2024,8 @@
       if (data.triggered) {
         showToast('Seite wird neu gebaut — in 1-2 Min live!', 'success');
       } else {
-        throw new Error('Deploy konnte nicht gestartet werden');
+        const detail = data.error || (data.errors && data.errors.length ? data.errors[0].message : '') || 'Status: ' + (data.status || '?');
+        throw new Error('Deploy fehlgeschlagen: ' + detail);
       }
     } catch(err) {
       showToast('Fehler: ' + err.message, 'error');
