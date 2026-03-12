@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://runayoga.pages.dev/sitemap.xml
