@@ -225,11 +225,39 @@
       margin-bottom: 24px;
     }
 
-    .btn-github {
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .login-form input {
+      padding: 12px 16px;
+      border: 1px solid var(--beige-dark);
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .login-form input:focus {
+      border-color: var(--sage);
+    }
+
+    .login-error {
+      color: var(--red);
+      font-size: 13px;
+      min-height: 20px;
+    }
+
+    .btn-login {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
-      background: var(--dark);
+      background: var(--sage-dark);
       color: var(--white);
       padding: 12px 28px;
       border: none;
@@ -240,14 +268,13 @@
       transition: opacity 0.2s;
     }
 
-    .btn-github:hover {
+    .btn-login:hover {
       opacity: 0.85;
     }
 
-    .btn-github svg {
-      width: 20px;
-      height: 20px;
-      fill: currentColor;
+    .btn-login:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
 
     /* Welcome screen */
@@ -928,7 +955,6 @@
 
   window.logout = function() {
     localStorage.removeItem('github_token');
-    localStorage.removeItem('github_user');
     location.reload();
   };
 
@@ -938,55 +964,51 @@
     document.getElementById('mainContent').innerHTML = `
       <div class="auth-screen">
         <h2>Runayoga Admin</h2>
-        <p>Melde dich mit GitHub an, um Inhalte zu bearbeiten.</p>
-        <button class="btn-github" onclick="startOAuth()">
-          <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          Mit GitHub verbinden
-        </button>
+        <p>Bitte Passwort eingeben, um Inhalte zu bearbeiten.</p>
+        <form class="login-form" onsubmit="return handleLogin(event)">
+          <input type="password" id="loginPassword" name="password" placeholder="Passwort" autocomplete="current-password" required />
+          <div class="login-error" id="loginError"></div>
+          <button type="submit" class="btn-login" id="loginBtn">Anmelden</button>
+        </form>
       </div>
     `;
+    document.getElementById('loginPassword').focus();
   }
 
-  window.startOAuth = function() {
-    const popup = window.open('/oauth/auth', 'github-oauth', 'width=600,height=700');
-
-    window.addEventListener('message', function handler(e) {
-      if (typeof e.data !== 'string') return;
-
-      if (e.data.startsWith('authorizing:github')) {
-        popup.postMessage(e.data, e.origin);
-        return;
+  window.handleLogin = async function(e) {
+    e.preventDefault();
+    const pw = document.getElementById('loginPassword').value;
+    const btn = document.getElementById('loginBtn');
+    const errEl = document.getElementById('loginError');
+    errEl.textContent = '';
+    btn.disabled = true;
+    btn.textContent = 'Wird geprüft...';
+    try {
+      const res = await fetch('/api/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pw })
+      });
+      const data = await res.json();
+      if (data.token) {
+        localStorage.setItem('github_token', data.token);
+        location.reload();
+      } else {
+        errEl.textContent = data.error || 'Anmeldung fehlgeschlagen';
+        btn.disabled = false;
+        btn.textContent = 'Anmelden';
       }
-
-      if (e.data.startsWith('authorization:github:success:')) {
-        const jsonStr = e.data.replace('authorization:github:success:', '');
-        try {
-          const authData = JSON.parse(jsonStr);
-          if (authData.token) {
-            localStorage.setItem('github_token', authData.token);
-            window.removeEventListener('message', handler);
-            popup.close();
-            location.reload();
-          }
-        } catch(err) {
-          console.error('OAuth parse error:', err);
-        }
-      }
-    });
+    } catch(err) {
+      errEl.textContent = 'Verbindungsfehler';
+      btn.disabled = false;
+      btn.textContent = 'Anmelden';
+    }
+    return false;
   };
 
   async function loadUser() {
-    try {
-      const res = await ghFetch('/user');
-      if (res.ok) {
-        const user = await res.json();
-        localStorage.setItem('github_user', user.login);
-        document.getElementById('headerUser').textContent = user.login;
-        document.getElementById('headerActions').style.display = 'flex';
-      }
-    } catch(e) {
-      console.error('Failed to load user:', e);
-    }
+    document.getElementById('headerUser').textContent = 'Admin';
+    document.getElementById('headerActions').style.display = 'flex';
   }
 
   // =====================
@@ -2217,12 +2239,6 @@
     }
 
     document.getElementById('sidebar').style.display = '';
-    const savedUser = localStorage.getItem('github_user');
-    if (savedUser) {
-      document.getElementById('headerUser').textContent = savedUser;
-      document.getElementById('headerActions').style.display = 'flex';
-    }
-
     loadUser();
     buildSidebar();
     showWelcome();
