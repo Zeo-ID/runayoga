@@ -1760,6 +1760,35 @@
   // Image upload
   // =====================
 
+  // Compress image via Canvas (max 1600px, JPEG 0.82)
+  function compressImage(file, maxWidth, maxHeight, quality) {
+    maxWidth = maxWidth || 1600;
+    maxHeight = maxHeight || 1200;
+    quality = quality || 0.82;
+    return new Promise(function(resolve, reject) {
+      var img = new Image();
+      img.onload = function() {
+        var w = img.width, h = img.height;
+        if (w > maxWidth || h > maxHeight) {
+          var ratio = Math.min(maxWidth / w, maxHeight / h);
+          w = Math.round(w * ratio);
+          h = Math.round(h * ratio);
+        }
+        var canvas = document.createElement('canvas');
+        canvas.width = w;
+        canvas.height = h;
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, w, h);
+        var dataUrl = canvas.toDataURL('image/jpeg', quality);
+        var b64 = dataUrl.split(',')[1];
+        var sizeKB = Math.round(b64.length * 3 / 4 / 1024);
+        resolve({ base64: b64, ext: 'jpg', sizeKB: sizeKB, width: w, height: h });
+      };
+      img.onerror = function() { reject(new Error('Bild konnte nicht geladen werden')); };
+      img.src = URL.createObjectURL(file);
+    });
+  }
+
   window.handleImageUpload = async function(fieldId, fileInput) {
     const file = fileInput.files[0];
     if (!file) return;
@@ -1770,37 +1799,30 @@
       return;
     }
 
-    // Validate file size (max 5MB)
-    if (file.size > 5 * 1024 * 1024) {
-      showToast('Bild zu gross (max. 5 MB)', 'error');
+    // Validate file size (max 10MB before compression)
+    if (file.size > 10 * 1024 * 1024) {
+      showToast('Bild zu gross (max. 10 MB)', 'error');
       return;
     }
 
     const statusEl = document.getElementById('status_' + fieldId);
-    const uploadBtn = fileInput.previousElementSibling.nextElementSibling || fileInput.parentElement.querySelector('.btn-upload');
 
-    statusEl.textContent = 'Wird hochgeladen...';
+    statusEl.textContent = 'Wird komprimiert...';
     statusEl.className = 'image-upload-status uploading';
 
     try {
-      // Read file as base64
-      const base64 = await new Promise(function(resolve, reject) {
-        const reader = new FileReader();
-        reader.onload = function() {
-          // Remove the data:image/...;base64, prefix
-          resolve(reader.result.split(',')[1]);
-        };
-        reader.onerror = reject;
-        reader.readAsDataURL(file);
-      });
+      // Compress image
+      var compressed = await compressImage(file, 1600, 1200, 0.82);
+      var base64 = compressed.base64;
 
-      // Clean filename
-      const ext = file.name.split('.').pop().toLowerCase();
+      statusEl.textContent = 'Wird hochgeladen (' + compressed.sizeKB + ' KB, ' + compressed.width + 'x' + compressed.height + ')...';
+
+      // Clean filename (always .jpg after compression)
       const baseName = file.name.replace(/\.[^.]+$/, '')
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)/g, '');
-      const fileName = baseName + '.' + ext;
+      const fileName = baseName + '.jpg';
       const ghPath = 'public/images/' + fileName;
 
       // Check if file already exists
@@ -1838,13 +1860,13 @@
       const imgPath = '/images/' + fileName;
       document.getElementById(fieldId).value = imgPath;
 
-      // Update preview
+      // Update preview with data URL (instant, no deploy needed)
       const previewEl = document.getElementById('preview_' + fieldId);
-      previewEl.innerHTML = '<img src="' + escAttr(imgPath) + '" alt="Vorschau" />';
+      previewEl.innerHTML = '<img src="data:image/jpeg;base64,' + base64 + '" alt="Vorschau" />';
 
-      statusEl.textContent = 'Hochgeladen: ' + fileName;
+      statusEl.textContent = 'Hochgeladen: ' + fileName + ' (' + compressed.sizeKB + ' KB)';
       statusEl.className = 'image-upload-status';
-      showToast('Bild hochgeladen!', 'success');
+      showToast('Bild hochgeladen! (' + compressed.sizeKB + ' KB)', 'success');
     } catch(err) {
       statusEl.textContent = 'Fehler: ' + err.message;
       statusEl.className = 'image-upload-status error';
