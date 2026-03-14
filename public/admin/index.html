@@ -1825,31 +1825,32 @@
       const fileName = baseName + '.jpg';
       const ghPath = 'public/images/' + fileName;
 
-      // Check if file already exists
-      let existingSha = null;
-      try {
-        const checkRes = await ghFetch('/repos/' + REPO + '/contents/' + ghPath + '?ref=' + BRANCH);
-        if (checkRes.ok) {
-          const existing = await checkRes.json();
-          existingSha = existing.sha;
-        }
-      } catch(e) { /* File doesn't exist, that's fine */ }
-
-      // Upload to GitHub
+      // Upload to GitHub (direct, no existence check to avoid 404 console errors)
       const uploadBody = {
         message: 'Upload Bild: ' + fileName,
         content: base64,
         branch: BRANCH
       };
-      if (existingSha) {
-        uploadBody.sha = existingSha;
-      }
 
-      const uploadRes = await ghFetch('/repos/' + REPO + '/contents/' + ghPath, {
+      var uploadRes = await ghFetch('/repos/' + REPO + '/contents/' + ghPath, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(uploadBody)
       });
+
+      // If file exists (409/422), get SHA and retry
+      if (uploadRes.status === 409 || uploadRes.status === 422) {
+        var shaRes = await ghFetch('/repos/' + REPO + '/contents/' + ghPath + '?ref=' + BRANCH);
+        if (shaRes.ok) {
+          var existing = await shaRes.json();
+          uploadBody.sha = existing.sha;
+          uploadRes = await ghFetch('/repos/' + REPO + '/contents/' + ghPath, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(uploadBody)
+          });
+        }
+      }
 
       if (!uploadRes.ok) {
         const err = await uploadRes.json();
