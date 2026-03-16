@@ -1,6 +1,5 @@
 const headers = {
   'Content-Type': 'application/json',
-  'Access-Control-Allow-Origin': '*',
 };
 
 const MAX_ATTEMPTS = 5;
@@ -11,6 +10,23 @@ const SETUP_TOKEN_EXPIRY = 600; // 10 minutes for MFA setup
 
 function jsonResponse(data, status = 200) {
   return new Response(JSON.stringify(data), { status, headers });
+}
+
+/** Constant-time string comparison using HMAC to prevent timing attacks */
+async function timingSafeEqual(a, b) {
+  const encoder = new TextEncoder();
+  const keyData = encoder.encode('timing-safe-compare-key');
+  const key = await crypto.subtle.importKey(
+    'raw', keyData, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']
+  );
+  const sig1 = new Uint8Array(await crypto.subtle.sign('HMAC', key, encoder.encode(a)));
+  const sig2 = new Uint8Array(await crypto.subtle.sign('HMAC', key, encoder.encode(b)));
+  if (sig1.length !== sig2.length) return false;
+  let result = 0;
+  for (let i = 0; i < sig1.length; i++) {
+    result |= sig1[i] ^ sig2[i];
+  }
+  return result === 0;
 }
 
 export async function onRequestPost(context) {
@@ -48,8 +64,9 @@ export async function onRequestPost(context) {
       await kv.delete('login_attempts');
     }
 
-    // --- Password Check ---
-    if (password !== adminPassword) {
+    // --- Password Check (timing-safe) ---
+    const passwordCorrect = await timingSafeEqual(password || '', adminPassword);
+    if (!passwordCorrect) {
       // Increment failed attempts
       const attemptsStr = await kv.get('login_attempts');
       const attempts = attemptsStr ? parseInt(attemptsStr, 10) + 1 : 1;

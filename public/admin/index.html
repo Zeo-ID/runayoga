@@ -1372,7 +1372,6 @@
     }).then(function(res) { return res.json(); })
       .then(function(data) {
         if (data.uri) {
-          window._mfaSecret = data.secret;
           var container = document.getElementById('qrContainer');
           var qr = qrcode(0, 'M');
           qr.addData(data.uri);
@@ -1528,7 +1527,7 @@
         errEl.textContent = 'Bitte Recovery-Code eingeben';
         return;
       }
-      body.recovery_code = recoveryCode;
+      body.code = recoveryCode;
     } else {
       var code = getCodeFromInputs('mfaVerifyInputs');
       if (code.length !== 6) return;

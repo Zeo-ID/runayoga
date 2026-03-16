@@ -2,7 +2,6 @@ import { generateSecret, generateTOTPUri, verifyTOTP, generateRecoveryCodes } fr
 
 const headers = {
   'Content-Type': 'application/json',
-  'Access-Control-Allow-Origin': '*',
 };
 
 function jsonResponse(data, status = 200) {
@@ -46,7 +45,7 @@ export async function onRequestPost(context) {
         expirationTtl: 600, // 10 minutes
       });
 
-      return jsonResponse({ secret, uri });
+      return jsonResponse({ uri });
     }
 
     // --- Action: verify ---
