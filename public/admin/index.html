@@ -927,6 +927,88 @@
       margin-top: 12px;
       text-decoration: underline;
     }
+
+    /* Theme editor */
+    .theme-editor {
+      background: var(--white);
+      border: 1px solid var(--beige-dark);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+
+    .theme-editor h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .theme-presets {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .theme-preset-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 2px solid var(--beige-dark);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      background: var(--white);
+      transition: all 0.2s;
+    }
+
+    .theme-preset-btn:hover { border-color: var(--sage-light); }
+    .theme-preset-btn.active { border-color: var(--sage); background: var(--beige); }
+
+    .theme-swatch {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid rgba(0,0,0,0.1);
+    }
+
+    .color-pickers {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .color-picker-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .color-picker-group label {
+      font-size: 13px;
+      font-weight: 500;
+      min-width: 80px;
+    }
+
+    .color-picker-group input[type="color"] {
+      width: 40px;
+      height: 36px;
+      border: 1px solid var(--beige-dark);
+      border-radius: 6px;
+      cursor: pointer;
+      padding: 2px;
+    }
+
+    .color-picker-group input[type="text"] {
+      width: 90px;
+      padding: 6px 8px;
+      border: 1px solid var(--beige-dark);
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
   </style>
 </head>
 <body>
@@ -1020,6 +1102,14 @@
     sections: 'Preisgruppen', label: 'Label', description: 'Beschreibung',
     cards: 'Preiskarten', price: 'Preis', period: 'Zeitraum',
     features: 'Features', featured: 'Hervorgehoben'
+  };
+
+  const THEME_PRESETS = {
+    sage: { label: 'Sage', primary: '#7a8b6f', primary_light: '#9aab8f', primary_dark: '#5a6b4f', accent: '#c4956a', background: '#f5f0e8', text: '#2d2d2d' },
+    ocean: { label: 'Ocean', primary: '#4a7c8e', primary_light: '#6a9cae', primary_dark: '#3a6c7e', accent: '#e8a87c', background: '#f0f4f5', text: '#2c3e50' },
+    sunset: { label: 'Sunset', primary: '#b06846', primary_light: '#d08866', primary_dark: '#905836', accent: '#d4a574', background: '#faf5f0', text: '#3d2b1f' },
+    lavender: { label: 'Lavender', primary: '#8b7a9e', primary_light: '#ab9abe', primary_dark: '#6b5a7e', accent: '#c49a6a', background: '#f5f0f8', text: '#2d2636' },
+    earth: { label: 'Earth', primary: '#6b7355', primary_light: '#8b9375', primary_dark: '#4b5335', accent: '#a08060', background: '#f4f0e8', text: '#2d3426' }
   };
 
   // =====================
@@ -1742,6 +1832,96 @@
   // Render editor
   // =====================
 
+  function renderThemeEditor(data) {
+    var preset = data.theme_preset || 'sage';
+    var colors = data.colors || THEME_PRESETS.sage;
+    var html = '<div class="theme-editor">';
+    html += '<h3>Design-Vorlage &amp; Farben</h3>';
+
+    // Preset buttons
+    html += '<div class="theme-presets">';
+    Object.keys(THEME_PRESETS).forEach(function(key) {
+      var p = THEME_PRESETS[key];
+      var active = key === preset ? ' active' : '';
+      html += '<button type="button" class="theme-preset-btn' + active + '" data-preset="' + key + '" onclick="applyThemePreset(\'' + key + '\')">';
+      html += '<span class="theme-swatch" style="background:' + p.primary + ';"></span>';
+      html += escHtml(p.label);
+      html += '</button>';
+    });
+    html += '</div>';
+
+    // Color pickers
+    var colorFields = [
+      { key: 'primary', label: 'Hauptfarbe' },
+      { key: 'primary_light', label: 'Hell' },
+      { key: 'primary_dark', label: 'Dunkel' },
+      { key: 'accent', label: 'Akzent' },
+      { key: 'background', label: 'Hintergrund' },
+      { key: 'text', label: 'Text' }
+    ];
+    html += '<div class="color-pickers">';
+    colorFields.forEach(function(cf) {
+      var val = colors[cf.key] || '#000000';
+      html += '<div class="color-picker-group">';
+      html += '<label>' + escHtml(cf.label) + '</label>';
+      html += '<input type="color" id="color_' + cf.key + '" value="' + escAttr(val) + '" onchange="updateColor(\'' + cf.key + '\', this.value)" />';
+      html += '<input type="text" id="colorhex_' + cf.key + '" value="' + escAttr(val) + '" onchange="updateColor(\'' + cf.key + '\', this.value)" />';
+      html += '</div>';
+    });
+    html += '</div>';
+    html += '</div>';
+    return html;
+  }
+
+  window.applyThemePreset = function(key) {
+    var p = THEME_PRESETS[key];
+    if (!p) return;
+    // Update active state
+    document.querySelectorAll('.theme-preset-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.preset === key);
+    });
+    // Update hidden field
+    var presetField = document.getElementById('theme_preset');
+    if (presetField) presetField.value = key;
+    // Update pickers
+    Object.keys(p).forEach(function(colorKey) {
+      if (colorKey === 'label') return;
+      var colorInput = document.getElementById('color_' + colorKey);
+      var hexInput = document.getElementById('colorhex_' + colorKey);
+      if (colorInput) colorInput.value = p[colorKey];
+      if (hexInput) hexInput.value = p[colorKey];
+    });
+    applyColorsLive(p);
+  };
+
+  window.updateColor = function(key, value) {
+    var colorInput = document.getElementById('color_' + key);
+    var hexInput = document.getElementById('colorhex_' + key);
+    if (colorInput && colorInput.value !== value) colorInput.value = value;
+    if (hexInput && hexInput.value !== value) hexInput.value = value;
+    // Mark as custom
+    document.querySelectorAll('.theme-preset-btn').forEach(function(btn) { btn.classList.remove('active'); });
+    var presetField = document.getElementById('theme_preset');
+    if (presetField) presetField.value = 'custom';
+    // Apply live
+    var colors = {};
+    ['primary', 'primary_light', 'primary_dark', 'accent', 'background', 'text'].forEach(function(k) {
+      var el = document.getElementById('color_' + k);
+      if (el) colors[k] = el.value;
+    });
+    applyColorsLive(colors);
+  };
+
+  function applyColorsLive(colors) {
+    var root = document.documentElement;
+    if (colors.primary) root.style.setProperty('--sage', colors.primary);
+    if (colors.primary_light) root.style.setProperty('--sage-light', colors.primary_light);
+    if (colors.primary_dark) root.style.setProperty('--sage-dark', colors.primary_dark);
+    if (colors.accent) root.style.setProperty('--accent', colors.accent);
+    if (colors.background) root.style.setProperty('--cream', colors.background);
+    if (colors.text) root.style.setProperty('--text-dark', colors.text);
+  }
+
   function renderEditor(path, frontmatter, body, isNew) {
     const fields = currentFieldDefs;
     var sectionLabel = currentDir ? ((SECTION_CONFIG[currentDir] && SECTION_CONFIG[currentDir].label) || currentDir.charAt(0).toUpperCase() + currentDir.slice(1)) : '';
@@ -1761,6 +1941,11 @@
     html += '<button class="btn btn-primary" id="btnSave" onclick="saveCurrentFile()">Speichern</button>';
     html += '</div>';
     html += '</div>';
+
+    if (currentFile === 'src/content/site.md') {
+      html += renderThemeEditor(frontmatter);
+      html += '<input type="hidden" id="theme_preset" name="theme_preset" value="' + escAttr(frontmatter.theme_preset || 'sage') + '" />';
+    }
 
     html += '<form id="editorForm" onsubmit="return false;">';
 
@@ -2234,6 +2419,17 @@
         if (!(key in fm)) {
           fm[key] = currentData[key];
         }
+      });
+    }
+
+    // Collect theme data if editing site.md
+    if (currentFile === 'src/content/site.md') {
+      var presetField = document.getElementById('theme_preset');
+      if (presetField) fm.theme_preset = presetField.value;
+      fm.colors = {};
+      ['primary', 'primary_light', 'primary_dark', 'accent', 'background', 'text'].forEach(function(k) {
+        var el = document.getElementById('color_' + k);
+        if (el) fm.colors[k] = el.value;
       });
     }
 
