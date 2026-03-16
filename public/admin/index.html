@@ -7,6 +7,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <script src="/admin/js-yaml.min.js"></script>
   <script src="/admin/qrcode.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1009,6 +1010,169 @@
       font-size: 13px;
       font-family: 'SF Mono', 'Fira Code', monospace;
     }
+
+    /* Site preview — scoped site typography */
+    .site-preview {
+      border: 1px solid var(--beige-dark);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f5f0e8;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #2d2d2d;
+      --sage: #7a8b6f;
+      --sage-light: #9aab8f;
+      --sage-dark: #5a6b4f;
+      --cream: #f5f0e8;
+      --warm-white: #faf8f5;
+      --sand: #d4c5a9;
+      --earth: #8b7355;
+      --text-dark: #2d2d2d;
+      --text-medium: #555;
+      --text-light: #888;
+      --accent: #c4956a;
+      --radius: 20px;
+    }
+
+    .site-preview h1, .site-preview h2, .site-preview h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      line-height: 1.2;
+      color: #2d2d2d;
+    }
+
+    .site-preview h1 { font-size: 2.6rem; }
+    .site-preview h2 { font-size: 2rem; }
+    .site-preview h3 { font-size: 1.4rem; }
+
+    .site-preview p { color: #555; margin-bottom: 1rem; }
+    .site-preview p:last-child { margin-bottom: 0; }
+
+    .site-preview img { max-width: 100%; height: auto; display: block; }
+
+    .site-preview .section-label {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--sage);
+      margin-bottom: .6rem;
+    }
+
+    .site-preview .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .85rem 2rem;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: .95rem;
+      cursor: default;
+      border: 2px solid transparent;
+    }
+
+    .site-preview .btn-primary {
+      background: var(--sage);
+      color: #fff;
+      border-color: var(--sage);
+    }
+
+    .site-preview .btn-outline {
+      background: transparent;
+      color: var(--sage);
+      border-color: var(--sage);
+    }
+
+    .site-preview .detail-content h2 { margin: 2rem 0 1rem; }
+    .site-preview .detail-content h3 { margin: 1.5rem 0 .8rem; }
+    .site-preview .detail-content p { margin-bottom: 1.2rem; font-size: 1.05rem; }
+    .site-preview .detail-content ul,
+    .site-preview .detail-content ol { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+    .site-preview .detail-content ul li { list-style: disc; margin-bottom: .4rem; color: #555; }
+    .site-preview .detail-content ol li { list-style: decimal; margin-bottom: .4rem; color: #555; }
+    .site-preview .detail-content blockquote {
+      border-left: 4px solid var(--sage);
+      margin: 1.5rem 0;
+      padding: 1rem 1.5rem;
+      background: var(--warm-white);
+      border-radius: 0 12px 12px 0;
+      font-style: italic;
+    }
+
+    .site-preview [data-editable] {
+      position: relative;
+      cursor: pointer;
+      transition: outline 0.15s;
+      outline: 2px dashed transparent;
+      outline-offset: 4px;
+    }
+
+    .site-preview [data-editable]:hover {
+      outline-color: var(--sage-light);
+    }
+
+    .edit-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 250;
+    }
+
+    .edit-panel {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px;
+      max-width: 600px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+    .edit-panel h3 { font-size: 16px; margin-bottom: 16px; }
+
+    .edit-panel-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-top: 16px;
+    }
+
+    .view-toggle {
+      display: flex;
+      gap: 4px;
+      background: var(--beige);
+      border-radius: 8px;
+      padding: 3px;
+    }
+
+    .view-toggle-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--dark-light);
+      background: transparent;
+      cursor: pointer;
+      border: none;
+      transition: all 0.15s;
+    }
+
+    .view-toggle-btn.active {
+      background: var(--white);
+      color: var(--dark);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .preview-container { display: block; }
+    .form-container { display: none; }
+    .form-container.active { display: block; }
+    .preview-container.hidden { display: none; }
   </style>
 </head>
 <body>
@@ -1922,10 +2086,552 @@
     if (colors.text) root.style.setProperty('--text-dark', colors.text);
   }
 
+  // =====================
+  // Preview templates
+  // =====================
+
+  function hasPreviewTemplate(path) {
+    if (!path) return false;
+    var rel = path.replace('src/content/', '');
+    if (rel === 'home.md') return true;
+    if (rel === 'preise.md') return true;
+    if (rel.startsWith('angebote/')) return true;
+    if (rel.startsWith('blog/')) return true;
+    if (rel.startsWith('pages/')) return true;
+    return false;
+  }
+
+  function markdownToHtml(md) {
+    if (!md) return '';
+    var html = md;
+    // Headings
+    html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+    html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+    html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+    // Bold and italic
+    html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+    html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+    // Links
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+    // Unordered lists
+    html = html.replace(/^[\-\*] (.+)$/gm, '<li>$1</li>');
+    html = html.replace(/(<li>.*<\/li>\n?)+/g, function(m) { return '<ul>' + m + '</ul>'; });
+    // Paragraphs (lines not already wrapped)
+    html = html.replace(/^(?!<[hulo])((?!<).+)$/gm, '<p>$1</p>');
+    // Clean up extra newlines
+    html = html.replace(/\n{2,}/g, '\n');
+    return html;
+  }
+
+  function editable(field, type, content) {
+    return ' data-editable data-field="' + escAttr(field) + '" data-type="' + escAttr(type || 'string') + '"';
+  }
+
+  function renderHomePreview(fm, body) {
+    var h = '<div class="site-preview">';
+
+    // Hero section
+    h += '<section style="padding:60px 40px;background:var(--cream,#f5f0e8);">';
+    h += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1100px;margin:0 auto;">';
+    h += '<div class="hero-text">';
+    h += '<h1' + editable('hero_title', 'string') + '>' + escHtml(fm.hero_title || 'Hero Titel') + '</h1>';
+    h += '<p' + editable('hero_subtitle', 'text') + ' style="font-size:1.1rem;color:var(--text-medium,#555);margin-bottom:2rem;">' + escHtml(fm.hero_subtitle || '') + '</p>';
+    h += '<div class="hero-buttons" style="display:flex;gap:1rem;flex-wrap:wrap;">';
+    if (fm.hero_cta_text) h += '<span class="btn btn-primary"' + editable('hero_cta_text', 'string') + '>' + escHtml(fm.hero_cta_text) + '</span>';
+    if (fm.hero_cta_secondary_text) h += '<span class="btn btn-outline"' + editable('hero_cta_secondary_text', 'string') + '>' + escHtml(fm.hero_cta_secondary_text) + '</span>';
+    h += '</div>';
+    h += '</div>';
+    if (fm.hero_image) {
+      h += '<div class="hero-image" style="border-radius:30% 70% 70% 30%/30% 30% 70% 70%;overflow:hidden;aspect-ratio:4/5;max-height:400px;">';
+      h += '<img src="' + escAttr(fm.hero_image) + '" alt="' + escAttr(fm.hero_image_alt || '') + '" style="width:100%;height:100%;object-fit:cover;"' + editable('hero_image', 'image') + ' />';
+      h += '</div>';
+    }
+    h += '</div>';
+    h += '</section>';
+
+    // Services section
+    h += '<section style="padding:60px 40px;background:var(--warm-white,#faf8f5);">';
+    h += '<div class="section-header" style="text-align:center;max-width:640px;margin:0 auto 2rem;">';
+    if (fm.services_label) h += '<span class="section-label"' + editable('services_label', 'string') + '>' + escHtml(fm.services_label) + '</span>';
+    h += '<h2' + editable('services_title', 'string') + '>' + escHtml(fm.services_title || 'Angebote') + '</h2>';
+    if (fm.services_subtitle) h += '<p' + editable('services_subtitle', 'text') + '>' + escHtml(fm.services_subtitle) + '</p>';
+    h += '</div>';
+    h += '</section>';
+
+    // Philosophy section
+    if (fm.philosophy_quote) {
+      h += '<section class="philosophy" style="padding:60px 40px;background:var(--sage-dark,#5a6b4f);color:#fff;text-align:center;">';
+      h += '<div class="philosophy-inner" style="max-width:800px;margin:0 auto;">';
+      h += '<blockquote style="font-family:\'Cormorant Garamond\',serif;font-size:2rem;font-style:italic;line-height:1.5;margin-bottom:1.5rem;opacity:.95;"' + editable('philosophy_quote', 'text') + '>' + escHtml(fm.philosophy_quote) + '</blockquote>';
+      if (fm.philosophy_cite) h += '<cite style="font-style:normal;opacity:.7;font-size:1rem;"' + editable('philosophy_cite', 'string') + '>' + escHtml(fm.philosophy_cite) + '</cite>';
+      h += '</div>';
+      h += '</section>';
+    }
+
+    // About section
+    h += '<section style="padding:60px 40px;background:var(--cream,#f5f0e8);">';
+    h += '<div class="about-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1100px;margin:0 auto;">';
+    if (fm.about_image) {
+      h += '<img src="' + escAttr(fm.about_image) + '" alt="' + escAttr(fm.about_image_alt || '') + '" style="border-radius:30% 70% 70% 30%/30% 30% 70% 70%;width:100%;object-fit:cover;max-height:400px;"' + editable('about_image', 'image') + ' />';
+    }
+    h += '<div>';
+    if (fm.about_label) h += '<span class="section-label"' + editable('about_label', 'string') + '>' + escHtml(fm.about_label) + '</span>';
+    h += '<h2' + editable('about_title', 'string') + '>' + escHtml(fm.about_title || '') + '</h2>';
+    if (fm.about_text) h += '<p' + editable('about_text', 'text') + ' style="font-size:1.02rem;color:var(--text-medium,#555);">' + escHtml(fm.about_text) + '</p>';
+    h += '</div>';
+    h += '</div>';
+    h += '</section>';
+
+    // Retreat section
+    if (fm.retreat_title) {
+      h += '<section style="padding:60px 40px;background:var(--warm-white,#faf8f5);">';
+      h += '<div class="retreat-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1100px;margin:0 auto;">';
+      if (fm.retreat_image) {
+        h += '<img src="' + escAttr(fm.retreat_image) + '" alt="' + escAttr(fm.retreat_image_alt || '') + '" style="border-radius:var(--radius,20px);width:100%;object-fit:cover;max-height:400px;"' + editable('retreat_image', 'image') + ' />';
+      }
+      h += '<div>';
+      if (fm.retreat_label) h += '<span class="section-label"' + editable('retreat_label', 'string') + '>' + escHtml(fm.retreat_label) + '</span>';
+      h += '<h2' + editable('retreat_title', 'string') + '>' + escHtml(fm.retreat_title) + '</h2>';
+      if (fm.retreat_text) h += '<p' + editable('retreat_text', 'text') + ' style="color:var(--text-medium,#555);">' + escHtml(fm.retreat_text) + '</p>';
+      if (Array.isArray(fm.retreat_highlights) && fm.retreat_highlights.length > 0) {
+        h += '<ul class="retreat-highlights" style="margin-top:1.5rem;list-style:none;">';
+        fm.retreat_highlights.forEach(function(hl) {
+          h += '<li style="display:flex;align-items:center;gap:.8rem;padding:.5rem 0;font-size:.95rem;color:var(--text-medium,#555);"><span style="color:var(--sage,#7a8b6f);">&#10003;</span> ' + escHtml(hl) + '</li>';
+        });
+        h += '</ul>';
+      }
+      h += '</div>';
+      h += '</div>';
+      h += '</section>';
+    }
+
+    // Testimonials section
+    if (Array.isArray(fm.testimonials) && fm.testimonials.length > 0) {
+      h += '<section style="padding:60px 40px;background:var(--cream,#f5f0e8);">';
+      h += '<div class="section-header" style="text-align:center;max-width:640px;margin:0 auto 2rem;">';
+      if (fm.testimonials_label) h += '<span class="section-label"' + editable('testimonials_label', 'string') + '>' + escHtml(fm.testimonials_label) + '</span>';
+      if (fm.testimonials_title) h += '<h2' + editable('testimonials_title', 'string') + '>' + escHtml(fm.testimonials_title) + '</h2>';
+      h += '</div>';
+      h += '<div class="testimonials-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1100px;margin:0 auto;">';
+      fm.testimonials.forEach(function(t, idx) {
+        h += '<div class="testimonial-card" style="background:#fff;border-radius:var(--radius,20px);padding:2rem;position:relative;">';
+        var starStr = '';
+        for (var s = 0; s < (t.stars || 5); s++) starStr += '&#9733;';
+        h += '<div class="stars" style="color:var(--accent,#c4956a);font-size:.9rem;margin-bottom:.8rem;letter-spacing:2px;"' + editable('testimonials.' + idx + '.stars', 'number') + '>' + starStr + '</div>';
+        h += '<p class="quote" style="font-style:italic;font-size:.95rem;margin-bottom:1.2rem;position:relative;z-index:1;"' + editable('testimonials.' + idx + '.quote', 'text') + '>' + escHtml(t.quote || '') + '</p>';
+        h += '<span class="author" style="font-weight:500;font-size:.88rem;"' + editable('testimonials.' + idx + '.name', 'string') + '>' + escHtml(t.name || '') + '</span>';
+        h += '</div>';
+      });
+      h += '</div>';
+      h += '</section>';
+    }
+
+    // CTA section
+    if (fm.cta_title) {
+      h += '<section style="padding:60px 40px;">';
+      h += '<div class="cta-banner" style="background:var(--sage,#7a8b6f);color:#fff;text-align:center;padding:3rem 2rem;border-radius:var(--radius,20px);max-width:1100px;margin:0 auto;">';
+      h += '<h2 style="color:#fff;margin-bottom:.8rem;"' + editable('cta_title', 'string') + '>' + escHtml(fm.cta_title) + '</h2>';
+      if (fm.cta_text) h += '<p style="color:rgba(255,255,255,.85);max-width:500px;margin:0 auto;"' + editable('cta_text', 'text') + '>' + escHtml(fm.cta_text) + '</p>';
+      h += '</div>';
+      h += '</section>';
+    }
+
+    h += '</div>';
+    return h;
+  }
+
+  function renderPagePreview(fm, body) {
+    var h = '<div class="site-preview">';
+    // Page hero
+    h += '<div class="page-hero" style="background:linear-gradient(135deg,var(--sage-dark,#5a6b4f),var(--sage,#7a8b6f));color:#fff;text-align:center;padding:5rem 2rem 3rem;">';
+    h += '<h1 style="color:#fff;font-size:2.4rem;margin-bottom:.6rem;"' + editable('title', 'string') + '>' + escHtml(fm.title || 'Seitentitel') + '</h1>';
+    if (fm.subtitle) h += '<p style="color:rgba(255,255,255,.85);font-size:1.1rem;max-width:580px;margin:0 auto;"' + editable('subtitle', 'text') + '>' + escHtml(fm.subtitle) + '</p>';
+    h += '</div>';
+    // Body content
+    h += '<div class="detail-content" style="max-width:800px;margin:0 auto;padding:3rem 2rem;"' + editable('_body', 'body') + '>';
+    h += markdownToHtml(body);
+    h += '</div>';
+    h += '</div>';
+    return h;
+  }
+
+  function renderAngebotPreview(fm, body) {
+    var h = '<div class="site-preview">';
+    // Page hero
+    h += '<div class="page-hero" style="background:linear-gradient(135deg,var(--sage-dark,#5a6b4f),var(--sage,#7a8b6f));color:#fff;text-align:center;padding:5rem 2rem 3rem;">';
+    if (fm.subtitle) h += '<span class="section-label" style="color:var(--sand,#d4c5a9);"' + editable('subtitle', 'string') + '>' + escHtml(fm.subtitle) + '</span>';
+    h += '<h1 style="color:#fff;font-size:2.4rem;margin-bottom:.6rem;"' + editable('title', 'string') + '>' + escHtml(fm.title || 'Angebot') + '</h1>';
+    h += '</div>';
+    // Content area
+    h += '<div style="max-width:900px;margin:0 auto;padding:3rem 2rem;">';
+    if (fm.image) {
+      h += '<img src="' + escAttr(fm.image) + '" alt="" style="width:100%;border-radius:var(--radius,20px);margin-bottom:2rem;max-height:400px;object-fit:cover;"' + editable('image', 'image') + ' />';
+    }
+    h += '<div class="detail-content" style="padding:0;"' + editable('_body', 'body') + '>';
+    h += markdownToHtml(body);
+    h += '</div>';
+    // Highlights
+    if (Array.isArray(fm.highlights) && fm.highlights.length > 0) {
+      h += '<div style="margin-top:2rem;padding:2rem;background:var(--warm-white,#faf8f5);border-radius:var(--radius,20px);">';
+      h += '<h3 style="margin-bottom:1rem;">Highlights</h3>';
+      h += '<ul style="list-style:none;">';
+      fm.highlights.forEach(function(hl) {
+        h += '<li style="display:flex;align-items:center;gap:.8rem;padding:.4rem 0;color:var(--text-medium,#555);"><span style="color:var(--sage,#7a8b6f);">&#10003;</span> ' + escHtml(hl) + '</li>';
+      });
+      h += '</ul>';
+      h += '</div>';
+    }
+    h += '</div>';
+    h += '</div>';
+    return h;
+  }
+
+  function renderBlogPreview(fm, body) {
+    var h = '<div class="site-preview">';
+    // Page hero
+    h += '<div class="page-hero" style="background:linear-gradient(135deg,var(--sage-dark,#5a6b4f),var(--sage,#7a8b6f));color:#fff;text-align:center;padding:5rem 2rem 3rem;">';
+    h += '<h1 style="color:#fff;font-size:2.4rem;margin-bottom:.6rem;"' + editable('title', 'string') + '>' + escHtml(fm.title || 'Blogbeitrag') + '</h1>';
+    var metaLine = '';
+    if (fm.date) metaLine += '<span' + editable('date', 'date') + '>' + escHtml(formatDate(fm.date)) + '</span>';
+    if (fm.author) metaLine += (metaLine ? ' &middot; ' : '') + '<span' + editable('author', 'string') + '>' + escHtml(fm.author) + '</span>';
+    if (metaLine) h += '<p style="color:rgba(255,255,255,.7);font-size:.95rem;">' + metaLine + '</p>';
+    h += '</div>';
+    // Content
+    h += '<div class="detail-content" style="max-width:800px;margin:0 auto;padding:3rem 2rem;">';
+    if (fm.excerpt) {
+      h += '<p style="font-size:1.1rem;font-style:italic;color:var(--text-light,#888);margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--sand,#d4c5a9);"' + editable('excerpt', 'text') + '>' + escHtml(fm.excerpt) + '</p>';
+    }
+    h += '<div' + editable('_body', 'body') + '>';
+    h += markdownToHtml(body);
+    h += '</div>';
+    h += '</div>';
+    h += '</div>';
+    return h;
+  }
+
+  function renderPreisePreview(fm, body) {
+    var h = '<div class="site-preview">';
+    // Page hero
+    h += '<div class="page-hero" style="background:linear-gradient(135deg,var(--sage-dark,#5a6b4f),var(--sage,#7a8b6f));color:#fff;text-align:center;padding:5rem 2rem 3rem;">';
+    h += '<h1 style="color:#fff;font-size:2.4rem;"' + editable('title', 'string') + '>' + escHtml(fm.title || 'Preise & Pakete') + '</h1>';
+    if (fm.subtitle) h += '<p style="color:rgba(255,255,255,.85);font-size:1.1rem;max-width:580px;margin:.6rem auto 0;"' + editable('subtitle', 'text') + '>' + escHtml(fm.subtitle) + '</p>';
+    h += '</div>';
+    // Sections
+    if (Array.isArray(fm.sections)) {
+      fm.sections.forEach(function(sec, sIdx) {
+        h += '<section style="padding:50px 40px;' + (sIdx % 2 === 0 ? 'background:var(--warm-white,#faf8f5);' : 'background:var(--cream,#f5f0e8);') + '">';
+        h += '<div style="max-width:1100px;margin:0 auto;">';
+        h += '<div class="section-header" style="text-align:center;margin-bottom:2.5rem;">';
+        if (sec.label) h += '<span class="section-label">' + escHtml(sec.label) + '</span>';
+        h += '<h2' + editable('sections.' + sIdx + '.name', 'string') + '>' + escHtml(sec.name || 'Preiskategorie') + '</h2>';
+        if (sec.description) h += '<p>' + escHtml(sec.description) + '</p>';
+        h += '</div>';
+        if (Array.isArray(sec.cards)) {
+          h += '<div class="pricing-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;">';
+          sec.cards.forEach(function(card, cIdx) {
+            var isFeatured = card.featured ? ' featured' : '';
+            h += '<div class="pricing-card' + isFeatured + '" style="background:' + (card.featured ? 'var(--sage,#7a8b6f)' : '#fff') + ';border:2px solid ' + (card.featured ? 'var(--sage,#7a8b6f)' : 'rgba(122,139,111,.15)') + ';border-radius:var(--radius,20px);padding:2.5rem 2rem;text-align:center;">';
+            h += '<div class="pricing-title" style="font-family:\'Cormorant Garamond\',serif;font-size:1.4rem;font-weight:500;margin-bottom:.6rem;' + (card.featured ? 'color:#fff;' : '') + '">' + escHtml(card.name || '') + '</div>';
+            h += '<div class="pricing-price" style="font-family:\'Cormorant Garamond\',serif;font-size:2.8rem;font-weight:600;' + (card.featured ? 'color:#fff;' : 'color:var(--sage,#7a8b6f);') + 'margin-bottom:.2rem;">' + escHtml(card.price || '') + '</div>';
+            if (card.period) h += '<div class="pricing-period" style="font-size:.85rem;' + (card.featured ? 'color:rgba(255,255,255,.7);' : 'color:var(--text-light,#888);') + 'margin-bottom:1.5rem;">' + escHtml(card.period) + '</div>';
+            if (Array.isArray(card.features) && card.features.length > 0) {
+              h += '<ul class="pricing-features" style="text-align:left;list-style:none;margin-bottom:1.5rem;">';
+              card.features.forEach(function(feat) {
+                h += '<li style="padding:.4rem 0;font-size:.92rem;display:flex;align-items:center;gap:.6rem;' + (card.featured ? 'color:rgba(255,255,255,.9);' : 'color:var(--text-medium,#555);') + '"><span style="' + (card.featured ? 'color:var(--sand,#d4c5a9);' : 'color:var(--sage,#7a8b6f);') + 'font-weight:700;">&#10003;</span> ' + escHtml(feat) + '</li>';
+              });
+              h += '</ul>';
+            }
+            h += '</div>';
+          });
+          h += '</div>';
+        }
+        h += '</div>';
+        h += '</section>';
+      });
+    }
+    h += '</div>';
+    return h;
+  }
+
+  function getPreviewHtml(path, fm, body) {
+    var rel = path.replace('src/content/', '');
+    if (rel === 'home.md') return renderHomePreview(fm, body);
+    if (rel === 'preise.md') return renderPreisePreview(fm, body);
+    if (rel.startsWith('angebote/')) return renderAngebotPreview(fm, body);
+    if (rel.startsWith('blog/')) return renderBlogPreview(fm, body);
+    if (rel.startsWith('pages/')) return renderPagePreview(fm, body);
+    return '';
+  }
+
+  // =====================
+  // Inline edit system
+  // =====================
+
+  var currentViewMode = 'preview';
+
+  function attachEditableListeners() {
+    var editables = document.querySelectorAll('.site-preview [data-editable]');
+    editables.forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var fieldKey = el.getAttribute('data-field');
+        var fieldType = el.getAttribute('data-type');
+        openEditPanel(fieldKey, fieldType, el);
+      });
+    });
+  }
+
+  function openEditPanel(fieldKey, fieldType, targetEl) {
+    // Get current value
+    var value = '';
+    if (fieldKey === '_body') {
+      value = currentBody || '';
+    } else if (fieldKey.indexOf('.') !== -1) {
+      // Nested: e.g. testimonials.0.quote
+      var parts = fieldKey.split('.');
+      var obj = currentData;
+      for (var i = 0; i < parts.length; i++) {
+        if (obj == null) break;
+        var k = isNaN(parts[i]) ? parts[i] : parseInt(parts[i], 10);
+        obj = obj[k];
+      }
+      value = obj != null ? obj : '';
+    } else {
+      value = currentData[fieldKey] != null ? currentData[fieldKey] : '';
+    }
+
+    var label = autoLabel(fieldKey.split('.').pop());
+
+    var overlay = document.createElement('div');
+    overlay.className = 'edit-overlay';
+    overlay.id = 'editOverlay';
+
+    var panelHtml = '<div class="edit-panel">';
+    panelHtml += '<h3>' + escHtml(label) + ' bearbeiten</h3>';
+
+    if (fieldType === 'body') {
+      panelHtml += '<textarea class="form-textarea body-editor" id="editPanelInput" style="min-height:300px;">' + escHtml(String(value)) + '</textarea>';
+    } else if (fieldType === 'text') {
+      panelHtml += '<textarea class="form-textarea" id="editPanelInput" style="min-height:120px;">' + escHtml(String(value)) + '</textarea>';
+    } else if (fieldType === 'image') {
+      panelHtml += '<div class="image-field">';
+      panelHtml += '<div class="image-preview" id="editPanelPreview">';
+      if (value) {
+        panelHtml += '<img src="' + escAttr(String(value)) + '" alt="Vorschau" />';
+      } else {
+        panelHtml += '<span class="image-preview-empty">Kein Bild</span>';
+      }
+      panelHtml += '</div>';
+      panelHtml += '<div class="image-upload-row">';
+      panelHtml += '<input class="form-input" type="text" id="editPanelInput" value="' + escAttr(String(value)) + '" placeholder="/images/beispiel.jpg" />';
+      panelHtml += '<input type="file" id="editPanelFile" accept="image/*" style="display:none" />';
+      panelHtml += '<button type="button" class="btn-upload" id="editPanelUploadBtn">&#128247; Hochladen</button>';
+      panelHtml += '</div>';
+      panelHtml += '<div class="image-upload-status" id="editPanelStatus"></div>';
+      panelHtml += '</div>';
+    } else if (fieldType === 'date') {
+      panelHtml += '<input class="form-input" type="date" id="editPanelInput" value="' + escAttr(formatDate(value)) + '" />';
+    } else if (fieldType === 'number') {
+      panelHtml += '<input class="form-input" type="number" id="editPanelInput" value="' + escAttr(String(value)) + '" />';
+    } else {
+      panelHtml += '<input class="form-input" type="text" id="editPanelInput" value="' + escAttr(String(value)) + '" />';
+    }
+
+    panelHtml += '<div class="edit-panel-actions">';
+    panelHtml += '<button class="btn btn-secondary" id="editPanelCancel">Abbrechen</button>';
+    panelHtml += '<button class="btn btn-primary" id="editPanelApply">&Uuml;bernehmen</button>';
+    panelHtml += '</div>';
+    panelHtml += '</div>';
+
+    overlay.innerHTML = panelHtml;
+    document.body.appendChild(overlay);
+
+    // Focus the input
+    var inputEl = document.getElementById('editPanelInput');
+    if (inputEl) inputEl.focus();
+
+    // Image upload handling
+    if (fieldType === 'image') {
+      document.getElementById('editPanelUploadBtn').addEventListener('click', function() {
+        document.getElementById('editPanelFile').click();
+      });
+      document.getElementById('editPanelFile').addEventListener('change', function() {
+        handleEditPanelImageUpload(this);
+      });
+    }
+
+    // Cancel
+    document.getElementById('editPanelCancel').addEventListener('click', function() {
+      closeEditPanel();
+    });
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeEditPanel();
+    });
+
+    // Apply
+    document.getElementById('editPanelApply').addEventListener('click', function() {
+      applyEditPanel(fieldKey, fieldType, targetEl);
+    });
+
+    // Enter key for single-line inputs
+    if (fieldType === 'string' || fieldType === 'date' || fieldType === 'number') {
+      inputEl.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          applyEditPanel(fieldKey, fieldType, targetEl);
+        }
+      });
+    }
+  }
+
+  function closeEditPanel() {
+    var overlay = document.getElementById('editOverlay');
+    if (overlay) overlay.remove();
+  }
+
+  function applyEditPanel(fieldKey, fieldType, targetEl) {
+    var inputEl = document.getElementById('editPanelInput');
+    if (!inputEl) return;
+    var newValue = inputEl.value;
+
+    // Convert type
+    if (fieldType === 'number') {
+      newValue = parseInt(newValue, 10) || 0;
+    }
+
+    // Update data model
+    if (fieldKey === '_body') {
+      currentBody = newValue;
+    } else if (fieldKey.indexOf('.') !== -1) {
+      // Nested: e.g. testimonials.0.quote
+      var parts = fieldKey.split('.');
+      var obj = currentData;
+      for (var i = 0; i < parts.length - 1; i++) {
+        var k = isNaN(parts[i]) ? parts[i] : parseInt(parts[i], 10);
+        if (obj[k] == null) obj[k] = {};
+        obj = obj[k];
+      }
+      var lastKey = isNaN(parts[parts.length - 1]) ? parts[parts.length - 1] : parseInt(parts[parts.length - 1], 10);
+      obj[lastKey] = newValue;
+    } else {
+      currentData[fieldKey] = newValue;
+    }
+
+    // Update visual element
+    if (targetEl) {
+      if (fieldType === 'image') {
+        if (targetEl.tagName === 'IMG') {
+          targetEl.src = newValue;
+        }
+      } else if (fieldType === 'body') {
+        targetEl.innerHTML = markdownToHtml(newValue);
+      } else if (fieldKey.indexOf('.stars') !== -1) {
+        // Stars → render star characters
+        var starCount = parseInt(newValue, 10) || 5;
+        var starHtml = '';
+        for (var s = 0; s < starCount; s++) starHtml += '\u2605';
+        targetEl.textContent = starHtml;
+      } else {
+        targetEl.textContent = newValue;
+      }
+    }
+
+    closeEditPanel();
+  }
+
+  async function handleEditPanelImageUpload(fileInput) {
+    var file = fileInput.files[0];
+    if (!file) return;
+    if (!file.type.startsWith('image/')) {
+      showToast('Bitte nur Bilddateien hochladen', 'error');
+      return;
+    }
+    if (file.size > 10 * 1024 * 1024) {
+      showToast('Bild zu gross (max. 10 MB)', 'error');
+      return;
+    }
+    var statusEl = document.getElementById('editPanelStatus');
+    statusEl.textContent = 'Wird komprimiert...';
+    statusEl.className = 'image-upload-status uploading';
+    try {
+      var compressed = await compressImage(file, 1600, 1200, 0.82);
+      statusEl.textContent = 'Wird hochgeladen (' + compressed.sizeKB + ' KB)...';
+      var ts = Date.now();
+      var fileName = 'img-' + ts + '.jpg';
+      var ghPath = 'public/images/' + fileName;
+      var uploadRes = await ghFetch('/repos/' + REPO + '/contents/' + ghPath, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: 'Upload Bild: ' + fileName, content: compressed.base64, branch: BRANCH })
+      });
+      if (!uploadRes.ok) {
+        var err = await uploadRes.json();
+        throw new Error(err.message || 'Upload fehlgeschlagen');
+      }
+      var imgPath = '/images/' + fileName;
+      document.getElementById('editPanelInput').value = imgPath;
+      var previewEl = document.getElementById('editPanelPreview');
+      previewEl.innerHTML = '<img src="data:image/jpeg;base64,' + compressed.base64 + '" alt="Vorschau" />';
+      statusEl.textContent = 'Hochgeladen: ' + fileName;
+      statusEl.className = 'image-upload-status';
+      showToast('Bild hochgeladen!', 'success');
+    } catch(err) {
+      statusEl.textContent = 'Fehler: ' + err.message;
+      statusEl.className = 'image-upload-status error';
+    }
+  }
+
+  window.switchView = function(mode) {
+    currentViewMode = mode;
+    var previewContainer = document.getElementById('previewContainer');
+    var formContainer = document.getElementById('formContainer');
+    var togglePreview = document.getElementById('togglePreview');
+    var toggleForm = document.getElementById('toggleForm');
+
+    if (mode === 'preview') {
+      // If form is visible, collect form data first to sync edits
+      if (formContainer && formContainer.classList.contains('active')) {
+        var formEl = document.getElementById('editorForm');
+        if (formEl) {
+          currentViewMode = 'form'; // temporarily set for collectFormData
+          var collected = collectFormData();
+          currentData = collected.frontmatter;
+          currentBody = collected.body;
+          currentViewMode = 'preview';
+        }
+      }
+      if (previewContainer) {
+        previewContainer.classList.remove('hidden');
+        previewContainer.innerHTML = getPreviewHtml(currentFile, currentData, currentBody);
+        setTimeout(function() { attachEditableListeners(); }, 50);
+      }
+      if (formContainer) formContainer.classList.remove('active');
+      if (togglePreview) togglePreview.classList.add('active');
+      if (toggleForm) toggleForm.classList.remove('active');
+    } else {
+      // Switching to form — data is already up-to-date in currentData/currentBody
+      if (previewContainer) previewContainer.classList.add('hidden');
+      if (formContainer) {
+        formContainer.classList.add('active');
+        // Re-render form with potentially updated data from inline edits
+        var formHtml = '';
+        currentFieldDefs.forEach(function(field) {
+          formHtml += renderField(field, currentData, currentBody);
+        });
+        formContainer.innerHTML = '<form id="editorForm" onsubmit="return false;">' + formHtml + '</form>';
+      }
+      if (togglePreview) togglePreview.classList.remove('active');
+      if (toggleForm) toggleForm.classList.add('active');
+    }
+  };
+
   function renderEditor(path, frontmatter, body, isNew) {
     const fields = currentFieldDefs;
     var sectionLabel = currentDir ? ((SECTION_CONFIG[currentDir] && SECTION_CONFIG[currentDir].label) || currentDir.charAt(0).toUpperCase() + currentDir.slice(1)) : '';
     const title = isNew ? ('Neuer Eintrag' + (sectionLabel ? ' (' + sectionLabel + ')' : '')) : getLabel(path);
+    var showPreview = !isNew && path && hasPreviewTemplate(path);
 
     let html = '<div class="editor">';
     html += '<div class="editor-header">';
@@ -1933,6 +2639,14 @@
     html += '<h2 class="editor-title">' + escHtml(title) + '</h2>';
     if (path) html += '<span class="editor-path">' + escHtml(path) + '</span>';
     html += '</div>';
+
+    if (showPreview) {
+      html += '<div class="view-toggle">';
+      html += '<button type="button" class="view-toggle-btn active" id="togglePreview" onclick="switchView(\'preview\')">Vorschau</button>';
+      html += '<button type="button" class="view-toggle-btn" id="toggleForm" onclick="switchView(\'form\')">Formular</button>';
+      html += '</div>';
+    }
+
     html += '<div class="editor-actions">';
     // Show delete button for collection items (files in subdirectories), not root singletons
     if (!isNew && currentDir) {
@@ -1947,16 +2661,37 @@
       html += '<input type="hidden" id="theme_preset" name="theme_preset" value="' + escAttr(frontmatter.theme_preset || 'sage') + '" />';
     }
 
-    html += '<form id="editorForm" onsubmit="return false;">';
+    if (showPreview) {
+      // Preview container (visible by default)
+      html += '<div id="previewContainer" class="preview-container">';
+      html += getPreviewHtml(path, frontmatter, body);
+      html += '</div>';
 
-    fields.forEach(function(field) {
-      html += renderField(field, frontmatter, body);
-    });
+      // Form container (hidden by default)
+      html += '<div id="formContainer" class="form-container">';
+      html += '<form id="editorForm" onsubmit="return false;">';
+      fields.forEach(function(field) {
+        html += renderField(field, frontmatter, body);
+      });
+      html += '</form>';
+      html += '</div>';
+    } else {
+      // No preview — just show form
+      html += '<form id="editorForm" onsubmit="return false;">';
+      fields.forEach(function(field) {
+        html += renderField(field, frontmatter, body);
+      });
+      html += '</form>';
+    }
 
-    html += '</form>';
     html += '</div>';
 
     document.getElementById('mainContent').innerHTML = html;
+    currentViewMode = showPreview ? 'preview' : 'form';
+
+    if (showPreview) {
+      setTimeout(function() { attachEditableListeners(); }, 50);
+    }
   }
 
   function renderField(field, data, body, prefix) {
@@ -2383,6 +3118,23 @@
   // =====================
 
   function collectFormData() {
+    // If in preview mode, use currentData/currentBody directly (inline edits update those)
+    if (currentViewMode === 'preview' && hasPreviewTemplate(currentFile)) {
+      var previewFm = JSON.parse(JSON.stringify(currentData));
+      var previewBody = currentBody || '';
+      // Collect theme data if editing site.md
+      if (currentFile === 'src/content/site.md') {
+        var presetField = document.getElementById('theme_preset');
+        if (presetField) previewFm.theme_preset = presetField.value;
+        previewFm.colors = {};
+        ['primary', 'primary_light', 'primary_dark', 'accent', 'background', 'text'].forEach(function(k) {
+          var el = document.getElementById('color_' + k);
+          if (el) previewFm.colors[k] = el.value;
+        });
+      }
+      return { frontmatter: previewFm, body: previewBody };
+    }
+
     const fields = currentFieldDefs;
     const fm = {};
     let body = '';
@@ -2390,14 +3142,14 @@
     fields.forEach(function(field) {
       if (field.key === '_body') {
         const el = document.getElementById(field.key);
-        body = el ? el.value : '';
+        body = el ? el.value : currentBody || '';
       } else if (field.type === 'string-list') {
         fm[field.key] = collectStringList(field.key);
       } else if (field.type === 'object-list') {
         fm[field.key] = collectObjectList(field.key, field.fields);
       } else if (field.type === 'image') {
         const el = document.getElementById(field.key);
-        fm[field.key] = el ? el.value : '';
+        fm[field.key] = el ? el.value : (currentData[field.key] || '');
       } else if (field.type === 'boolean') {
         const el = document.getElementById(field.key);
         fm[field.key] = el ? el.checked : false;
