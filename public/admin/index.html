@@ -2311,104 +2311,103 @@
     h += '<h1' + editable('hero_title', 'string') + '>' + escHtml(fm.hero_title || 'Hero Titel') + '</h1>';
     h += '<p' + editable('hero_subtitle', 'text') + ' style="font-size:1.1rem;color:var(--text-medium,#555);margin-bottom:2rem;">' + escHtml(fm.hero_subtitle || '') + '</p>';
     h += '<div class="hero-buttons" style="display:flex;gap:1rem;flex-wrap:wrap;">';
-    if (fm.hero_cta_text) h += '<span class="btn btn-primary"' + editable('hero_cta_text', 'string') + '>' + escHtml(fm.hero_cta_text) + '</span>';
-    if (fm.hero_cta_secondary_text) h += '<span class="btn btn-outline"' + editable('hero_cta_secondary_text', 'string') + '>' + escHtml(fm.hero_cta_secondary_text) + '</span>';
+    h += '<span class="btn btn-primary"' + editable('hero_cta_text', 'string') + '>' + escHtml(fm.hero_cta_text || 'CTA Text') + '</span>';
+    h += '<span class="btn btn-outline"' + editable('hero_cta_secondary_text', 'string') + '>' + escHtml(fm.hero_cta_secondary_text || 'Zweiter CTA') + '</span>';
+    h += '</div>';
+    h += '<div style="margin-top:.8rem;font-size:.8rem;color:var(--text-light,#999);">';
+    h += 'Link: <span' + editable('hero_cta_link', 'string') + ' style="text-decoration:underline;cursor:pointer;">' + escHtml(fm.hero_cta_link || '/') + '</span>';
+    h += ' &middot; <span' + editable('hero_cta_secondary_link', 'string') + ' style="text-decoration:underline;cursor:pointer;">' + escHtml(fm.hero_cta_secondary_link || '/') + '</span>';
     h += '</div>';
     h += '</div>';
-    if (fm.hero_image) {
-      h += '<div class="hero-image" style="border-radius:30% 70% 70% 30%/30% 30% 70% 70%;overflow:hidden;aspect-ratio:4/5;max-height:400px;">';
-      h += '<img src="' + escAttr(fm.hero_image) + '" alt="' + escAttr(fm.hero_image_alt || '') + '" style="width:100%;height:100%;object-fit:cover;"' + editable('hero_image', 'image') + ' />';
-      h += '</div>';
-    }
+    h += '<div class="hero-image" style="border-radius:30% 70% 70% 30%/30% 30% 70% 70%;overflow:hidden;aspect-ratio:4/5;max-height:400px;">';
+    h += '<img src="' + escAttr(fm.hero_image || '/images/placeholder.jpg') + '" alt="' + escAttr(fm.hero_image_alt || '') + '" style="width:100%;height:100%;object-fit:cover;"' + editable('hero_image', 'image') + ' />';
+    h += '</div>';
     h += '</div>';
     h += '</section>';
 
     // Services section
     h += '<section style="padding:60px 40px;background:var(--warm-white,#faf8f5);">';
     h += '<div class="section-header" style="text-align:center;max-width:640px;margin:0 auto 2rem;">';
-    if (fm.services_label) h += '<span class="section-label"' + editable('services_label', 'string') + '>' + escHtml(fm.services_label) + '</span>';
+    h += '<span class="section-label"' + editable('services_label', 'string') + '>' + escHtml(fm.services_label || 'Angebot') + '</span>';
     h += '<h2' + editable('services_title', 'string') + '>' + escHtml(fm.services_title || 'Angebote') + '</h2>';
-    if (fm.services_subtitle) h += '<p' + editable('services_subtitle', 'text') + '>' + escHtml(fm.services_subtitle) + '</p>';
+    h += '<p' + editable('services_subtitle', 'text') + '>' + escHtml(fm.services_subtitle || '') + '</p>';
     h += '</div>';
     h += '</section>';
 
     // Philosophy section
-    if (fm.philosophy_quote) {
-      h += '<section class="philosophy" style="padding:60px 40px;background:var(--sage-dark,#5a6b4f);color:#fff;text-align:center;">';
-      h += '<div class="philosophy-inner" style="max-width:800px;margin:0 auto;">';
-      h += '<blockquote style="font-family:\'Cormorant Garamond\',serif;font-size:2rem;font-style:italic;line-height:1.5;margin-bottom:1.5rem;opacity:.95;"' + editable('philosophy_quote', 'text') + '>' + escHtml(fm.philosophy_quote) + '</blockquote>';
-      if (fm.philosophy_cite) h += '<cite style="font-style:normal;opacity:.7;font-size:1rem;"' + editable('philosophy_cite', 'string') + '>' + escHtml(fm.philosophy_cite) + '</cite>';
-      h += '</div>';
-      h += '</section>';
-    }
+    h += '<section class="philosophy" style="padding:60px 40px;background:var(--sage-dark,#5a6b4f);color:#fff;text-align:center;">';
+    h += '<div class="philosophy-inner" style="max-width:800px;margin:0 auto;">';
+    h += '<blockquote style="font-family:\'Cormorant Garamond\',serif;font-size:2rem;font-style:italic;line-height:1.5;margin-bottom:1.5rem;opacity:.95;"' + editable('philosophy_quote', 'text') + '>' + escHtml(fm.philosophy_quote || 'Zitat hier...') + '</blockquote>';
+    h += '<cite style="font-style:normal;opacity:.7;font-size:1rem;"' + editable('philosophy_cite', 'string') + '>' + escHtml(fm.philosophy_cite || '') + '</cite>';
+    h += '</div>';
+    h += '</section>';
 
     // About section
     h += '<section style="padding:60px 40px;background:var(--cream,#f5f0e8);">';
     h += '<div class="about-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1100px;margin:0 auto;">';
-    if (fm.about_image) {
-      h += '<img src="' + escAttr(fm.about_image) + '" alt="' + escAttr(fm.about_image_alt || '') + '" style="border-radius:30% 70% 70% 30%/30% 30% 70% 70%;width:100%;object-fit:cover;max-height:400px;"' + editable('about_image', 'image') + ' />';
-    }
+    h += '<img src="' + escAttr(fm.about_image || '/images/placeholder.jpg') + '" alt="' + escAttr(fm.about_image_alt || '') + '" style="border-radius:30% 70% 70% 30%/30% 30% 70% 70%;width:100%;object-fit:cover;max-height:400px;"' + editable('about_image', 'image') + ' />';
     h += '<div>';
-    if (fm.about_label) h += '<span class="section-label"' + editable('about_label', 'string') + '>' + escHtml(fm.about_label) + '</span>';
+    h += '<span class="section-label"' + editable('about_label', 'string') + '>' + escHtml(fm.about_label || '') + '</span>';
     h += '<h2' + editable('about_title', 'string') + '>' + escHtml(fm.about_title || '') + '</h2>';
-    if (fm.about_text) h += '<p' + editable('about_text', 'text') + ' style="font-size:1.02rem;color:var(--text-medium,#555);">' + escHtml(fm.about_text) + '</p>';
+    h += '<p' + editable('about_text', 'text') + ' style="font-size:1.02rem;color:var(--text-medium,#555);white-space:pre-line;">' + escHtml(fm.about_text || '') + '</p>';
     h += '</div>';
     h += '</div>';
     h += '</section>';
 
     // Retreat section
-    if (fm.retreat_title) {
-      h += '<section style="padding:60px 40px;background:var(--warm-white,#faf8f5);">';
-      h += '<div class="retreat-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1100px;margin:0 auto;">';
-      if (fm.retreat_image) {
-        h += '<img src="' + escAttr(fm.retreat_image) + '" alt="' + escAttr(fm.retreat_image_alt || '') + '" style="border-radius:var(--radius,20px);width:100%;object-fit:cover;max-height:400px;"' + editable('retreat_image', 'image') + ' />';
-      }
-      h += '<div>';
-      if (fm.retreat_label) h += '<span class="section-label"' + editable('retreat_label', 'string') + '>' + escHtml(fm.retreat_label) + '</span>';
-      h += '<h2' + editable('retreat_title', 'string') + '>' + escHtml(fm.retreat_title) + '</h2>';
-      if (fm.retreat_text) h += '<p' + editable('retreat_text', 'text') + ' style="color:var(--text-medium,#555);">' + escHtml(fm.retreat_text) + '</p>';
-      if (Array.isArray(fm.retreat_highlights) && fm.retreat_highlights.length > 0) {
-        h += '<ul class="retreat-highlights" style="margin-top:1.5rem;list-style:none;">';
-        fm.retreat_highlights.forEach(function(hl) {
-          h += '<li style="display:flex;align-items:center;gap:.8rem;padding:.5rem 0;font-size:.95rem;color:var(--text-medium,#555);"><span style="color:var(--sage,#7a8b6f);">&#10003;</span> ' + escHtml(hl) + '</li>';
-        });
-        h += '</ul>';
-      }
-      h += '</div>';
-      h += '</div>';
-      h += '</section>';
+    h += '<section style="padding:60px 40px;background:var(--warm-white,#faf8f5);">';
+    h += '<div class="retreat-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1100px;margin:0 auto;">';
+    h += '<img src="' + escAttr(fm.retreat_image || '/images/placeholder.jpg') + '" alt="' + escAttr(fm.retreat_image_alt || '') + '" style="border-radius:var(--radius,20px);width:100%;object-fit:cover;max-height:400px;"' + editable('retreat_image', 'image') + ' />';
+    h += '<div>';
+    h += '<span class="section-label"' + editable('retreat_label', 'string') + '>' + escHtml(fm.retreat_label || '') + '</span>';
+    h += '<h2' + editable('retreat_title', 'string') + '>' + escHtml(fm.retreat_title || 'Retreat') + '</h2>';
+    h += '<p' + editable('retreat_text', 'text') + ' style="color:var(--text-medium,#555);">' + escHtml(fm.retreat_text || '') + '</p>';
+    h += '<ul class="retreat-highlights" style="margin-top:1.5rem;list-style:none;"' + editable('retreat_highlights', 'string-list') + '>';
+    if (Array.isArray(fm.retreat_highlights)) {
+      fm.retreat_highlights.forEach(function(hl) {
+        h += '<li style="display:flex;align-items:center;gap:.8rem;padding:.5rem 0;font-size:.95rem;color:var(--text-medium,#555);"><span style="color:var(--sage,#7a8b6f);">&#10003;</span> ' + escHtml(hl) + '</li>';
+      });
     }
+    h += '</ul>';
+    h += '</div>';
+    h += '</div>';
+    h += '</section>';
 
     // Testimonials section
-    if (Array.isArray(fm.testimonials) && fm.testimonials.length > 0) {
-      h += '<section style="padding:60px 40px;background:var(--cream,#f5f0e8);">';
-      h += '<div class="section-header" style="text-align:center;max-width:640px;margin:0 auto 2rem;">';
-      if (fm.testimonials_label) h += '<span class="section-label"' + editable('testimonials_label', 'string') + '>' + escHtml(fm.testimonials_label) + '</span>';
-      if (fm.testimonials_title) h += '<h2' + editable('testimonials_title', 'string') + '>' + escHtml(fm.testimonials_title) + '</h2>';
-      h += '</div>';
-      h += '<div class="testimonials-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1100px;margin:0 auto;">';
+    h += '<section style="padding:60px 40px;background:var(--cream,#f5f0e8);">';
+    h += '<div class="section-header" style="text-align:center;max-width:640px;margin:0 auto 2rem;">';
+    h += '<span class="section-label"' + editable('testimonials_label', 'string') + '>' + escHtml(fm.testimonials_label || 'Feedback') + '</span>';
+    h += '<h2' + editable('testimonials_title', 'string') + '>' + escHtml(fm.testimonials_title || 'Testimonials') + '</h2>';
+    h += '</div>';
+    h += '<div class="testimonials-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1100px;margin:0 auto;">';
+    if (Array.isArray(fm.testimonials)) {
       fm.testimonials.forEach(function(t, idx) {
         h += '<div class="testimonial-card" style="background:#fff;border-radius:var(--radius,20px);padding:2rem;position:relative;">';
         var starStr = '';
         for (var s = 0; s < (t.stars || 5); s++) starStr += '&#9733;';
         h += '<div class="stars" style="color:var(--accent,#c4956a);font-size:.9rem;margin-bottom:.8rem;letter-spacing:2px;"' + editable('testimonials.' + idx + '.stars', 'number') + '>' + starStr + '</div>';
         h += '<p class="quote" style="font-style:italic;font-size:.95rem;margin-bottom:1.2rem;position:relative;z-index:1;"' + editable('testimonials.' + idx + '.quote', 'text') + '>' + escHtml(t.quote || '') + '</p>';
-        h += '<span class="author" style="font-weight:500;font-size:.88rem;"' + editable('testimonials.' + idx + '.name', 'string') + '>' + escHtml(t.name || '') + '</span>';
+        h += '<span class="author" style="font-weight:500;font-size:.88rem;"' + editable('testimonials.' + idx + '.author', 'string') + '>' + escHtml(t.author || '') + '</span>';
         h += '</div>';
       });
-      h += '</div>';
-      h += '</section>';
     }
+    h += '</div>';
+    h += '</section>';
 
     // CTA section
-    if (fm.cta_title) {
-      h += '<section style="padding:60px 40px;">';
-      h += '<div class="cta-banner" style="background:var(--sage,#7a8b6f);color:#fff;text-align:center;padding:3rem 2rem;border-radius:var(--radius,20px);max-width:1100px;margin:0 auto;">';
-      h += '<h2 style="color:#fff;margin-bottom:.8rem;"' + editable('cta_title', 'string') + '>' + escHtml(fm.cta_title) + '</h2>';
-      if (fm.cta_text) h += '<p style="color:rgba(255,255,255,.85);max-width:500px;margin:0 auto;"' + editable('cta_text', 'text') + '>' + escHtml(fm.cta_text) + '</p>';
-      h += '</div>';
-      h += '</section>';
-    }
+    h += '<section style="padding:60px 40px;">';
+    h += '<div class="cta-banner" style="background:var(--sage,#7a8b6f);color:#fff;text-align:center;padding:3rem 2rem;border-radius:var(--radius,20px);max-width:1100px;margin:0 auto;">';
+    h += '<h2 style="color:#fff;margin-bottom:.8rem;"' + editable('cta_title', 'string') + '>' + escHtml(fm.cta_title || 'Call to Action') + '</h2>';
+    h += '<p style="color:rgba(255,255,255,.85);max-width:500px;margin:0 auto;"' + editable('cta_text', 'text') + '>' + escHtml(fm.cta_text || '') + '</p>';
+    h += '</div>';
+    h += '</section>';
+
+    // SEO fields (subtle, at bottom)
+    h += '<div style="max-width:1100px;margin:1.5rem auto 0;padding:1rem;background:#f8f8f8;border-radius:8px;font-size:.85rem;color:var(--dark-light);">';
+    h += '<strong>SEO</strong><br/>';
+    h += 'Titel: <span' + editable('seo_title', 'string') + ' style="cursor:pointer;text-decoration:underline dotted;">' + escHtml(fm.seo_title || '(nicht gesetzt)') + '</span><br/>';
+    h += 'Beschreibung: <span' + editable('seo_description', 'text') + ' style="cursor:pointer;text-decoration:underline dotted;">' + escHtml(fm.seo_description || '(nicht gesetzt)') + '</span>';
+    h += '</div>';
 
     h += '</div>';
     return h;
@@ -2419,11 +2418,17 @@
     // Page hero
     h += '<div class="page-hero" style="background:linear-gradient(135deg,var(--sage-dark,#5a6b4f),var(--sage,#7a8b6f));color:#fff;text-align:center;padding:5rem 2rem 3rem;">';
     h += '<h1 style="color:#fff;font-size:2.4rem;margin-bottom:.6rem;"' + editable('title', 'string') + '>' + escHtml(fm.title || 'Seitentitel') + '</h1>';
-    if (fm.subtitle) h += '<p style="color:rgba(255,255,255,.85);font-size:1.1rem;max-width:580px;margin:0 auto;"' + editable('subtitle', 'text') + '>' + escHtml(fm.subtitle) + '</p>';
+    h += '<p style="color:rgba(255,255,255,.85);font-size:1.1rem;max-width:580px;margin:0 auto;"' + editable('subtitle', 'text') + '>' + escHtml(fm.subtitle || '') + '</p>';
     h += '</div>';
     // Body content
     h += '<div class="detail-content" style="max-width:800px;margin:0 auto;padding:3rem 2rem;"' + editable('_body', 'body') + '>';
     h += markdownToHtml(body);
+    h += '</div>';
+    // SEO
+    h += '<div style="max-width:800px;margin:1.5rem auto 0;padding:1rem;background:#f8f8f8;border-radius:8px;font-size:.85rem;color:var(--dark-light);">';
+    h += '<strong>SEO</strong><br/>';
+    h += 'Titel: <span' + editable('seo_title', 'string') + ' style="cursor:pointer;text-decoration:underline dotted;">' + escHtml(fm.seo_title || '(nicht gesetzt)') + '</span><br/>';
+    h += 'Beschreibung: <span' + editable('seo_description', 'text') + ' style="cursor:pointer;text-decoration:underline dotted;">' + escHtml(fm.seo_description || '(nicht gesetzt)') + '</span>';
     h += '</div>';
     h += '</div>';
     return h;
@@ -2433,28 +2438,32 @@
     var h = '<div class="site-preview">';
     // Page hero
     h += '<div class="page-hero" style="background:linear-gradient(135deg,var(--sage-dark,#5a6b4f),var(--sage,#7a8b6f));color:#fff;text-align:center;padding:5rem 2rem 3rem;">';
-    if (fm.subtitle) h += '<span class="section-label" style="color:var(--sand,#d4c5a9);"' + editable('subtitle', 'string') + '>' + escHtml(fm.subtitle) + '</span>';
+    h += '<span class="section-label" style="color:var(--sand,#d4c5a9);"' + editable('subtitle', 'string') + '>' + escHtml(fm.subtitle || 'Untertitel') + '</span>';
     h += '<h1 style="color:#fff;font-size:2.4rem;margin-bottom:.6rem;"' + editable('title', 'string') + '>' + escHtml(fm.title || 'Angebot') + '</h1>';
     h += '</div>';
     // Content area
     h += '<div style="max-width:900px;margin:0 auto;padding:3rem 2rem;">';
-    if (fm.image) {
-      h += '<img src="' + escAttr(fm.image) + '" alt="" style="width:100%;border-radius:var(--radius,20px);margin-bottom:2rem;max-height:400px;object-fit:cover;"' + editable('image', 'image') + ' />';
-    }
+    h += '<img src="' + escAttr(fm.image || '/images/placeholder.jpg') + '" alt="" style="width:100%;border-radius:var(--radius,20px);margin-bottom:2rem;max-height:400px;object-fit:cover;"' + editable('image', 'image') + ' />';
     h += '<div class="detail-content" style="padding:0;"' + editable('_body', 'body') + '>';
     h += markdownToHtml(body);
     h += '</div>';
     // Highlights
-    if (Array.isArray(fm.highlights) && fm.highlights.length > 0) {
-      h += '<div style="margin-top:2rem;padding:2rem;background:var(--warm-white,#faf8f5);border-radius:var(--radius,20px);">';
-      h += '<h3 style="margin-bottom:1rem;">Highlights</h3>';
-      h += '<ul style="list-style:none;">';
+    h += '<div style="margin-top:2rem;padding:2rem;background:var(--warm-white,#faf8f5);border-radius:var(--radius,20px);">';
+    h += '<h3 style="margin-bottom:1rem;">Highlights</h3>';
+    h += '<ul style="list-style:none;"' + editable('highlights', 'string-list') + '>';
+    if (Array.isArray(fm.highlights)) {
       fm.highlights.forEach(function(hl) {
         h += '<li style="display:flex;align-items:center;gap:.8rem;padding:.4rem 0;color:var(--text-medium,#555);"><span style="color:var(--sage,#7a8b6f);">&#10003;</span> ' + escHtml(hl) + '</li>';
       });
-      h += '</ul>';
-      h += '</div>';
     }
+    h += '</ul>';
+    h += '</div>';
+    h += '</div>';
+    // SEO
+    h += '<div style="max-width:900px;margin:1.5rem auto 0;padding:1rem;background:#f8f8f8;border-radius:8px;font-size:.85rem;color:var(--dark-light);">';
+    h += '<strong>SEO</strong><br/>';
+    h += 'Titel: <span' + editable('seo_title', 'string') + ' style="cursor:pointer;text-decoration:underline dotted;">' + escHtml(fm.seo_title || '(nicht gesetzt)') + '</span><br/>';
+    h += 'Beschreibung: <span' + editable('seo_description', 'text') + ' style="cursor:pointer;text-decoration:underline dotted;">' + escHtml(fm.seo_description || '(nicht gesetzt)') + '</span>';
     h += '</div>';
     h += '</div>';
     return h;
@@ -2465,19 +2474,26 @@
     // Page hero
     h += '<div class="page-hero" style="background:linear-gradient(135deg,var(--sage-dark,#5a6b4f),var(--sage,#7a8b6f));color:#fff;text-align:center;padding:5rem 2rem 3rem;">';
     h += '<h1 style="color:#fff;font-size:2.4rem;margin-bottom:.6rem;"' + editable('title', 'string') + '>' + escHtml(fm.title || 'Blogbeitrag') + '</h1>';
-    var metaLine = '';
-    if (fm.date) metaLine += '<span' + editable('date', 'date') + '>' + escHtml(formatDate(fm.date)) + '</span>';
-    if (fm.author) metaLine += (metaLine ? ' &middot; ' : '') + '<span' + editable('author', 'string') + '>' + escHtml(fm.author) + '</span>';
-    if (metaLine) h += '<p style="color:rgba(255,255,255,.7);font-size:.95rem;">' + metaLine + '</p>';
+    h += '<p style="color:rgba(255,255,255,.7);font-size:.95rem;">';
+    h += '<span' + editable('date', 'date') + '>' + escHtml(formatDate(fm.date) || 'Datum') + '</span>';
+    h += ' &middot; <span' + editable('author', 'string') + '>' + escHtml(fm.author || 'Autor') + '</span>';
+    h += '</p>';
     h += '</div>';
     // Content
     h += '<div class="detail-content" style="max-width:800px;margin:0 auto;padding:3rem 2rem;">';
-    if (fm.excerpt) {
-      h += '<p style="font-size:1.1rem;font-style:italic;color:var(--text-light,#888);margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--sand,#d4c5a9);"' + editable('excerpt', 'text') + '>' + escHtml(fm.excerpt) + '</p>';
+    if (fm.image) {
+      h += '<img src="' + escAttr(fm.image) + '" alt="" style="width:100%;border-radius:var(--radius,20px);margin-bottom:2rem;max-height:400px;object-fit:cover;"' + editable('image', 'image') + ' />';
     }
+    h += '<p style="font-size:1.1rem;font-style:italic;color:var(--text-light,#888);margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--sand,#d4c5a9);"' + editable('excerpt', 'text') + '>' + escHtml(fm.excerpt || 'Kurzbeschreibung...') + '</p>';
     h += '<div' + editable('_body', 'body') + '>';
     h += markdownToHtml(body);
     h += '</div>';
+    h += '</div>';
+    // SEO
+    h += '<div style="max-width:800px;margin:1.5rem auto 0;padding:1rem;background:#f8f8f8;border-radius:8px;font-size:.85rem;color:var(--dark-light);">';
+    h += '<strong>SEO</strong><br/>';
+    h += 'Titel: <span' + editable('seo_title', 'string') + ' style="cursor:pointer;text-decoration:underline dotted;">' + escHtml(fm.seo_title || '(nicht gesetzt)') + '</span><br/>';
+    h += 'Beschreibung: <span' + editable('seo_description', 'text') + ' style="cursor:pointer;text-decoration:underline dotted;">' + escHtml(fm.seo_description || '(nicht gesetzt)') + '</span>';
     h += '</div>';
     h += '</div>';
     return h;
@@ -2488,7 +2504,7 @@
     // Page hero
     h += '<div class="page-hero" style="background:linear-gradient(135deg,var(--sage-dark,#5a6b4f),var(--sage,#7a8b6f));color:#fff;text-align:center;padding:5rem 2rem 3rem;">';
     h += '<h1 style="color:#fff;font-size:2.4rem;"' + editable('title', 'string') + '>' + escHtml(fm.title || 'Preise & Pakete') + '</h1>';
-    if (fm.subtitle) h += '<p style="color:rgba(255,255,255,.85);font-size:1.1rem;max-width:580px;margin:.6rem auto 0;"' + editable('subtitle', 'text') + '>' + escHtml(fm.subtitle) + '</p>';
+    h += '<p style="color:rgba(255,255,255,.85);font-size:1.1rem;max-width:580px;margin:.6rem auto 0;"' + editable('subtitle', 'text') + '>' + escHtml(fm.subtitle || '') + '</p>';
     h += '</div>';
     // Sections
     if (Array.isArray(fm.sections)) {
@@ -2496,25 +2512,26 @@
         h += '<section style="padding:50px 40px;' + (sIdx % 2 === 0 ? 'background:var(--warm-white,#faf8f5);' : 'background:var(--cream,#f5f0e8);') + '">';
         h += '<div style="max-width:1100px;margin:0 auto;">';
         h += '<div class="section-header" style="text-align:center;margin-bottom:2.5rem;">';
-        if (sec.label) h += '<span class="section-label">' + escHtml(sec.label) + '</span>';
-        h += '<h2' + editable('sections.' + sIdx + '.name', 'string') + '>' + escHtml(sec.name || 'Preiskategorie') + '</h2>';
-        if (sec.description) h += '<p>' + escHtml(sec.description) + '</p>';
+        h += '<span class="section-label"' + editable('sections.' + sIdx + '.label', 'string') + '>' + escHtml(sec.label || 'Label') + '</span>';
+        h += '<h2' + editable('sections.' + sIdx + '.title', 'string') + '>' + escHtml(sec.title || 'Preiskategorie') + '</h2>';
+        h += '<p' + editable('sections.' + sIdx + '.description', 'text') + '>' + escHtml(sec.description || '') + '</p>';
         h += '</div>';
         if (Array.isArray(sec.cards)) {
           h += '<div class="pricing-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;">';
           sec.cards.forEach(function(card, cIdx) {
             var isFeatured = card.featured ? ' featured' : '';
+            var cardPath = 'sections.' + sIdx + '.cards.' + cIdx;
             h += '<div class="pricing-card' + isFeatured + '" style="background:' + (card.featured ? 'var(--sage,#7a8b6f)' : '#fff') + ';border:2px solid ' + (card.featured ? 'var(--sage,#7a8b6f)' : 'rgba(122,139,111,.15)') + ';border-radius:var(--radius,20px);padding:2.5rem 2rem;text-align:center;">';
-            h += '<div class="pricing-title" style="font-family:\'Cormorant Garamond\',serif;font-size:1.4rem;font-weight:500;margin-bottom:.6rem;' + (card.featured ? 'color:#fff;' : '') + '">' + escHtml(card.name || '') + '</div>';
-            h += '<div class="pricing-price" style="font-family:\'Cormorant Garamond\',serif;font-size:2.8rem;font-weight:600;' + (card.featured ? 'color:#fff;' : 'color:var(--sage,#7a8b6f);') + 'margin-bottom:.2rem;">' + escHtml(card.price || '') + '</div>';
-            if (card.period) h += '<div class="pricing-period" style="font-size:.85rem;' + (card.featured ? 'color:rgba(255,255,255,.7);' : 'color:var(--text-light,#888);') + 'margin-bottom:1.5rem;">' + escHtml(card.period) + '</div>';
-            if (Array.isArray(card.features) && card.features.length > 0) {
-              h += '<ul class="pricing-features" style="text-align:left;list-style:none;margin-bottom:1.5rem;">';
+            h += '<div class="pricing-title" style="font-family:\'Cormorant Garamond\',serif;font-size:1.4rem;font-weight:500;margin-bottom:.6rem;' + (card.featured ? 'color:#fff;' : '') + '"' + editable(cardPath + '.name', 'string') + '>' + escHtml(card.name || '') + '</div>';
+            h += '<div class="pricing-price" style="font-family:\'Cormorant Garamond\',serif;font-size:2.8rem;font-weight:600;' + (card.featured ? 'color:#fff;' : 'color:var(--sage,#7a8b6f);') + 'margin-bottom:.2rem;"' + editable(cardPath + '.price', 'string') + '>' + escHtml(card.price || '') + '</div>';
+            h += '<div class="pricing-period" style="font-size:.85rem;' + (card.featured ? 'color:rgba(255,255,255,.7);' : 'color:var(--text-light,#888);') + 'margin-bottom:1.5rem;"' + editable(cardPath + '.period', 'string') + '>' + escHtml(card.period || '') + '</div>';
+            h += '<ul class="pricing-features" style="text-align:left;list-style:none;margin-bottom:1.5rem;"' + editable(cardPath + '.features', 'string-list') + '>';
+            if (Array.isArray(card.features)) {
               card.features.forEach(function(feat) {
                 h += '<li style="padding:.4rem 0;font-size:.92rem;display:flex;align-items:center;gap:.6rem;' + (card.featured ? 'color:rgba(255,255,255,.9);' : 'color:var(--text-medium,#555);') + '"><span style="' + (card.featured ? 'color:var(--sand,#d4c5a9);' : 'color:var(--sage,#7a8b6f);') + 'font-weight:700;">&#10003;</span> ' + escHtml(feat) + '</li>';
               });
-              h += '</ul>';
             }
+            h += '</ul>';
             h += '</div>';
           });
           h += '</div>';
@@ -2523,6 +2540,11 @@
         h += '</section>';
       });
     }
+    // SEO
+    h += '<div style="max-width:1100px;margin:1.5rem auto 0;padding:1rem;background:#f8f8f8;border-radius:8px;font-size:.85rem;color:var(--dark-light);">';
+    h += '<strong>SEO</strong><br/>';
+    h += 'Beschreibung: <span' + editable('seo_description', 'text') + ' style="cursor:pointer;text-decoration:underline dotted;">' + escHtml(fm.seo_description || '(nicht gesetzt)') + '</span>';
+    h += '</div>';
     h += '</div>';
     return h;
   }
@@ -2586,6 +2608,10 @@
 
     if (fieldType === 'body') {
       panelHtml += '<textarea class="form-textarea body-editor" id="editPanelInput" style="min-height:300px;">' + escHtml(String(value)) + '</textarea>';
+    } else if (fieldType === 'string-list') {
+      var listValue = Array.isArray(value) ? value.join('\n') : String(value || '');
+      panelHtml += '<p style="font-size:12px;color:var(--dark-light);margin-bottom:8px;">Ein Eintrag pro Zeile</p>';
+      panelHtml += '<textarea class="form-textarea" id="editPanelInput" style="min-height:160px;">' + escHtml(listValue) + '</textarea>';
     } else if (fieldType === 'text') {
       panelHtml += '<textarea class="form-textarea" id="editPanelInput" style="min-height:120px;">' + escHtml(String(value)) + '</textarea>';
     } else if (fieldType === 'image') {
@@ -2672,6 +2698,8 @@
     // Convert type
     if (fieldType === 'number') {
       newValue = parseInt(newValue, 10) || 0;
+    } else if (fieldType === 'string-list') {
+      newValue = newValue.split('\n').map(function(s) { return s.trim(); }).filter(function(s) { return s.length > 0; });
     }
 
     // Update data model
@@ -2694,7 +2722,16 @@
 
     // Update visual element
     if (targetEl) {
-      if (fieldType === 'image') {
+      if (fieldType === 'string-list') {
+        // Re-render the whole preview to reflect list changes
+        var previewContainer = document.getElementById('previewContainer');
+        if (previewContainer) {
+          previewContainer.innerHTML = getPreviewHtml(currentFile, currentData, currentBody);
+          setTimeout(function() { attachEditableListeners(); }, 50);
+        }
+        closeEditPanel();
+        return;
+      } else if (fieldType === 'image') {
         if (targetEl.tagName === 'IMG') {
           targetEl.src = newValue;
         }
@@ -3634,27 +3671,63 @@
         currentBody = data.body;
         savedData = JSON.parse(JSON.stringify(data.frontmatter));
         savedBody = data.body;
-        showToast('Gespeichert!', 'success');
       }
 
       // Trigger deploy
-      btn.innerHTML = '&#8987; Wird gebaut...';
+      btn.innerHTML = '&#8987; Build wird gestartet...';
       const res = await fetch('/api/deploy', { method: 'POST' });
       const deployData = await res.json();
-      if (deployData.triggered) {
-        showToast('Seite wird neu gebaut — in 1-2 Min live!', 'success');
-      } else {
+      if (!deployData.triggered) {
         const detail = deployData.error || (deployData.errors && deployData.errors.length ? deployData.errors[0].message : '') || 'Status: ' + (deployData.status || '?');
         throw new Error('Deploy fehlgeschlagen: ' + detail);
       }
+
+      // Poll for deployment status
+      showToast('Build gestartet...', 'success');
+      btn.innerHTML = '&#8987; Wird gebaut...';
+      var pollCount = 0;
+      var maxPolls = 30; // 30 x 5s = 150s max
+      var pollInterval = setInterval(async function() {
+        pollCount++;
+        try {
+          var statusRes = await fetch('/api/deploy-status');
+          var statusData = await statusRes.json();
+
+          if (statusData.stage === 'deploy' && statusData.status === 'success') {
+            clearInterval(pollInterval);
+            btn.disabled = false;
+            btn.innerHTML = '&#9989; Live!';
+            showToast('Seite erfolgreich ver\u00f6ffentlicht!', 'success');
+            setTimeout(function() { btn.innerHTML = '&#9650; Ver&ouml;ffentlichen'; }, 5000);
+          } else if (statusData.status === 'failure') {
+            clearInterval(pollInterval);
+            btn.disabled = false;
+            btn.innerHTML = '&#10060; Fehlgeschlagen';
+            showToast('Build fehlgeschlagen. Bitte im Cloudflare Dashboard pr\u00fcfen.', 'error');
+            setTimeout(function() { btn.innerHTML = '&#9650; Ver&ouml;ffentlichen'; }, 5000);
+          } else if (pollCount >= maxPolls) {
+            clearInterval(pollInterval);
+            btn.disabled = false;
+            btn.innerHTML = '&#9650; Ver&ouml;ffentlichen';
+            showToast('Build l\u00e4uft noch. Bitte sp\u00e4ter pr\u00fcfen.', 'success');
+          } else {
+            var stageLabel = statusData.stage === 'build' ? 'Wird gebaut' : statusData.stage === 'deploy' ? 'Wird deployed' : statusData.stage || 'Wartet';
+            btn.innerHTML = '&#8987; ' + stageLabel + '...';
+          }
+        } catch(e) {
+          // Ignore poll errors, keep trying
+          if (pollCount >= maxPolls) {
+            clearInterval(pollInterval);
+            btn.disabled = false;
+            btn.innerHTML = '&#9650; Ver&ouml;ffentlichen';
+          }
+        }
+      }, 5000);
     } catch(err) {
       console.error('Publish error:', err);
       showToast('Fehler: ' + err.message, 'error');
-    } finally {
-      setTimeout(function() {
-        btn.disabled = false;
-        btn.innerHTML = '&#9650; Ver&ouml;ffentlichen';
-      }, 10000);
+      btn.disabled = false;
+      btn.innerHTML = '&#9650; Ver&ouml;ffentlichen';
     }
   };
 
