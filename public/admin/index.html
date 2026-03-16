@@ -3360,18 +3360,34 @@
   window.publishSite = async function() {
     const btn = document.getElementById('btnPublish');
     btn.disabled = true;
-    btn.innerHTML = '&#8987; Wird gebaut...';
+    btn.innerHTML = '&#8987; Wird gespeichert...';
 
     try {
+      // Auto-save current file first (if loaded and not new)
+      if (currentFile && currentSha) {
+        const data = collectFormData();
+        const content = serializeMarkdown(data.frontmatter, data.body);
+        const result = await saveFile(currentFile, content, currentSha, 'Update ' + currentFile.split('/').pop());
+        currentSha = result.content.sha;
+        currentData = data.frontmatter;
+        currentBody = data.body;
+        savedData = JSON.parse(JSON.stringify(data.frontmatter));
+        savedBody = data.body;
+        showToast('Gespeichert!', 'success');
+      }
+
+      // Trigger deploy
+      btn.innerHTML = '&#8987; Wird gebaut...';
       const res = await fetch('/api/deploy', { method: 'POST' });
-      const data = await res.json();
-      if (data.triggered) {
+      const deployData = await res.json();
+      if (deployData.triggered) {
         showToast('Seite wird neu gebaut — in 1-2 Min live!', 'success');
       } else {
-        const detail = data.error || (data.errors && data.errors.length ? data.errors[0].message : '') || 'Status: ' + (data.status || '?');
+        const detail = deployData.error || (deployData.errors && deployData.errors.length ? deployData.errors[0].message : '') || 'Status: ' + (deployData.status || '?');
         throw new Error('Deploy fehlgeschlagen: ' + detail);
       }
     } catch(err) {
+      console.error('Publish error:', err);
       showToast('Fehler: ' + err.message, 'error');
     } finally {
       setTimeout(function() {
