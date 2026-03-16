@@ -6,6 +6,7 @@
   <title>Admin – Runayoga</title>
   <meta name="robots" content="noindex, nofollow" />
   <script src="/admin/js-yaml.min.js"></script>
+  <script src="/admin/qrcode.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -846,6 +847,86 @@
         align-items: flex-start;
       }
     }
+
+    /* MFA screens */
+    .mfa-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - var(--header-height));
+      text-align: center;
+      padding: 20px;
+    }
+
+    .mfa-screen h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .mfa-screen p {
+      color: var(--dark-light);
+      margin-bottom: 20px;
+      max-width: 400px;
+    }
+
+    .mfa-code-inputs {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .mfa-code-input {
+      width: 48px;
+      height: 56px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      border: 2px solid var(--beige-dark);
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .mfa-code-input:focus {
+      border-color: var(--sage);
+    }
+
+    .qr-container {
+      background: white;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .recovery-codes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      max-width: 320px;
+      margin: 16px auto;
+      text-align: left;
+    }
+
+    .recovery-code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 14px;
+      background: var(--beige);
+      padding: 6px 12px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+    }
+
+    .mfa-recovery-link {
+      font-size: 13px;
+      color: var(--sage);
+      cursor: pointer;
+      margin-top: 12px;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -977,22 +1058,26 @@
 
   window.handleLogin = async function(e) {
     e.preventDefault();
-    const pw = document.getElementById('loginPassword').value;
-    const btn = document.getElementById('loginBtn');
-    const errEl = document.getElementById('loginError');
+    var pw = document.getElementById('loginPassword').value;
+    var btn = document.getElementById('loginBtn');
+    var errEl = document.getElementById('loginError');
     errEl.textContent = '';
     btn.disabled = true;
     btn.textContent = 'Wird geprüft...';
     try {
-      const res = await fetch('/api/auth', {
+      var res = await fetch('/api/auth', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password: pw })
       });
-      const data = await res.json();
+      var data = await res.json();
       if (data.token) {
         localStorage.setItem('github_token', data.token);
         location.reload();
+      } else if (data.mfa_setup_required) {
+        showMfaSetup(data.setup_token);
+      } else if (data.mfa_required) {
+        showMfaVerify(data.session_token);
       } else {
         errEl.textContent = data.error || 'Anmeldung fehlgeschlagen';
         btn.disabled = false;
@@ -1004,6 +1089,258 @@
       btn.textContent = 'Anmelden';
     }
     return false;
+  };
+
+  // =====================
+  // MFA Functions
+  // =====================
+
+  function showMfaSetup(setupToken) {
+    window._mfaSetupToken = setupToken;
+    document.getElementById('mainContent').innerHTML = `
+      <div class="mfa-screen">
+        <h2>Zwei-Faktor-Authentifizierung einrichten</h2>
+        <p>Scanne den QR-Code mit deiner Authenticator-App (z.B. Google Authenticator, Authy).</p>
+        <div class="qr-container" id="qrContainer">
+          <div class="loading"><div class="spinner"></div>QR-Code wird geladen...</div>
+        </div>
+        <div class="mfa-code-inputs" id="mfaSetupInputs"></div>
+        <button class="btn-login" id="mfaSetupBtn" disabled onclick="verifyMfaSetup()">Best&auml;tigen</button>
+        <div class="login-error" id="mfaSetupError" style="margin-top:12px;"></div>
+      </div>
+    `;
+    renderCodeInputs('mfaSetupInputs', 'mfaSetupBtn');
+    // Generate QR code
+    fetch('/api/mfa-setup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'generate', setup_token: setupToken })
+    }).then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.uri) {
+          window._mfaSecret = data.secret;
+          var container = document.getElementById('qrContainer');
+          var qr = qrcode(0, 'M');
+          qr.addData(data.uri);
+          qr.make();
+          container.innerHTML = qr.createImgTag(5, 8);
+        } else {
+          document.getElementById('mfaSetupError').textContent = data.error || 'QR-Code konnte nicht generiert werden';
+        }
+      }).catch(function() {
+        document.getElementById('mfaSetupError').textContent = 'Verbindungsfehler';
+      });
+  }
+
+  function showMfaVerify(sessionToken) {
+    window._mfaSessionToken = sessionToken;
+    document.getElementById('mainContent').innerHTML = `
+      <div class="mfa-screen">
+        <h2>Zwei-Faktor-Authentifizierung</h2>
+        <p>Gib den 6-stelligen Code aus deiner Authenticator-App ein.</p>
+        <div class="mfa-code-inputs" id="mfaVerifyInputs"></div>
+        <button class="btn-login" id="mfaVerifyBtn" disabled onclick="verifyMfa()">Anmelden</button>
+        <div class="login-error" id="mfaVerifyError" style="margin-top:12px;"></div>
+        <div class="mfa-recovery-link" onclick="toggleRecoveryInput()">Recovery-Code verwenden</div>
+        <div id="recoveryInputWrap" style="display:none;margin-top:16px;width:100%;max-width:320px;">
+          <input class="form-input" type="text" id="recoveryCodeInput" placeholder="Recovery-Code (z.B. A1B2C3D4)" style="text-align:center;font-family:'SF Mono','Fira Code',monospace;letter-spacing:1px;" />
+          <button class="btn-login" style="margin-top:10px;width:100%;" onclick="verifyMfa(true)">Mit Recovery-Code anmelden</button>
+        </div>
+      </div>
+    `;
+    renderCodeInputs('mfaVerifyInputs', 'mfaVerifyBtn');
+  }
+
+  function showRecoveryCodes(codes, token) {
+    window._pendingToken = token;
+    var codesHtml = '';
+    codes.forEach(function(code) {
+      codesHtml += '<div class="recovery-code">' + escHtml(code) + '</div>';
+    });
+    document.getElementById('mainContent').innerHTML = `
+      <div class="mfa-screen">
+        <h2>Recovery-Codes sichern</h2>
+        <p>Speichere diese Codes an einem sicheren Ort. Jeder Code kann nur einmal verwendet werden, falls du den Zugang zu deiner Authenticator-App verlierst.</p>
+        <div class="recovery-codes">
+          ${codesHtml}
+        </div>
+        <button class="btn-login" onclick="finishMfaSetup()" style="margin-top:20px;">Verstanden, weiter</button>
+      </div>
+    `;
+  }
+
+  function renderCodeInputs(containerId, submitBtnId) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+    var html = '';
+    for (var i = 0; i < 6; i++) {
+      html += '<input class="mfa-code-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" data-idx="' + i + '" autocomplete="one-time-code" />';
+    }
+    container.innerHTML = html;
+    var inputs = container.querySelectorAll('.mfa-code-input');
+    inputs.forEach(function(input, idx) {
+      input.addEventListener('input', function(e) {
+        var val = e.target.value.replace(/[^0-9]/g, '');
+        e.target.value = val;
+        if (val && idx < 5) {
+          inputs[idx + 1].focus();
+        }
+        // Enable/disable submit button
+        var btn = document.getElementById(submitBtnId);
+        if (btn) btn.disabled = getCodeFromInputs(containerId).length !== 6;
+      });
+      input.addEventListener('keydown', function(e) {
+        if (e.key === 'Backspace' && !e.target.value && idx > 0) {
+          inputs[idx - 1].focus();
+          inputs[idx - 1].value = '';
+          var btn = document.getElementById(submitBtnId);
+          if (btn) btn.disabled = true;
+        }
+        if (e.key === 'Enter') {
+          var code = getCodeFromInputs(containerId);
+          if (code.length === 6) {
+            var btn = document.getElementById(submitBtnId);
+            if (btn) btn.click();
+          }
+        }
+      });
+      input.addEventListener('paste', function(e) {
+        e.preventDefault();
+        var paste = (e.clipboardData || window.clipboardData).getData('text').replace(/[^0-9]/g, '');
+        for (var j = 0; j < 6 && j < paste.length; j++) {
+          inputs[j].value = paste[j];
+        }
+        if (paste.length >= 6) {
+          inputs[5].focus();
+          var btn = document.getElementById(submitBtnId);
+          if (btn) btn.disabled = false;
+        } else if (paste.length > 0) {
+          inputs[Math.min(paste.length, 5)].focus();
+        }
+      });
+    });
+    // Focus the first input
+    if (inputs.length > 0) inputs[0].focus();
+  }
+
+  function getCodeFromInputs(containerId) {
+    var container = document.getElementById(containerId);
+    if (!container) return '';
+    var inputs = container.querySelectorAll('.mfa-code-input');
+    var code = '';
+    inputs.forEach(function(input) { code += input.value; });
+    return code;
+  }
+
+  window.verifyMfaSetup = async function() {
+    var code = getCodeFromInputs('mfaSetupInputs');
+    var btn = document.getElementById('mfaSetupBtn');
+    var errEl = document.getElementById('mfaSetupError');
+    errEl.textContent = '';
+    btn.disabled = true;
+    btn.textContent = 'Wird geprüft...';
+    try {
+      var res = await fetch('/api/mfa-setup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'verify', setup_token: window._mfaSetupToken, code: code })
+      });
+      var data = await res.json();
+      if (data.token && data.recovery_codes) {
+        showRecoveryCodes(data.recovery_codes, data.token);
+      } else {
+        errEl.textContent = data.error || 'Code ungültig';
+        btn.disabled = false;
+        btn.textContent = 'Bestätigen';
+        // Clear inputs
+        var inputs = document.querySelectorAll('#mfaSetupInputs .mfa-code-input');
+        inputs.forEach(function(i) { i.value = ''; });
+        if (inputs.length > 0) inputs[0].focus();
+      }
+    } catch(err) {
+      errEl.textContent = 'Verbindungsfehler';
+      btn.disabled = false;
+      btn.textContent = 'Bestätigen';
+    }
+  };
+
+  window.verifyMfa = async function(useRecovery) {
+    var errEl = document.getElementById('mfaVerifyError');
+    errEl.textContent = '';
+    var body = { session_token: window._mfaSessionToken };
+    if (useRecovery) {
+      var recoveryCode = document.getElementById('recoveryCodeInput').value.trim();
+      if (!recoveryCode) {
+        errEl.textContent = 'Bitte Recovery-Code eingeben';
+        return;
+      }
+      body.recovery_code = recoveryCode;
+    } else {
+      var code = getCodeFromInputs('mfaVerifyInputs');
+      if (code.length !== 6) return;
+      body.code = code;
+      var btn = document.getElementById('mfaVerifyBtn');
+      btn.disabled = true;
+      btn.textContent = 'Wird geprüft...';
+    }
+    try {
+      var res = await fetch('/api/mfa-verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      var data = await res.json();
+      if (data.token) {
+        if (data.recovery_code_used) {
+          showToast('Recovery-Code verwendet. Noch ' + data.remaining + ' übrig.', 'success');
+        }
+        localStorage.setItem('github_token', data.token);
+        location.reload();
+      } else {
+        errEl.textContent = data.error || 'Code ungültig';
+        if (!useRecovery) {
+          var btn = document.getElementById('mfaVerifyBtn');
+          btn.disabled = false;
+          btn.textContent = 'Anmelden';
+          var inputs = document.querySelectorAll('#mfaVerifyInputs .mfa-code-input');
+          inputs.forEach(function(i) { i.value = ''; });
+          if (inputs.length > 0) inputs[0].focus();
+        }
+      }
+    } catch(err) {
+      errEl.textContent = 'Verbindungsfehler';
+      if (!useRecovery) {
+        var btn = document.getElementById('mfaVerifyBtn');
+        btn.disabled = false;
+        btn.textContent = 'Anmelden';
+      }
+    }
+  };
+
+  window.toggleRecoveryInput = function() {
+    var wrap = document.getElementById('recoveryInputWrap');
+    var codeInputs = document.getElementById('mfaVerifyInputs');
+    var verifyBtn = document.getElementById('mfaVerifyBtn');
+    if (wrap.style.display === 'none') {
+      wrap.style.display = 'block';
+      codeInputs.style.display = 'none';
+      verifyBtn.style.display = 'none';
+      document.getElementById('recoveryCodeInput').focus();
+    } else {
+      wrap.style.display = 'none';
+      codeInputs.style.display = 'flex';
+      verifyBtn.style.display = '';
+      var inputs = codeInputs.querySelectorAll('.mfa-code-input');
+      if (inputs.length > 0) inputs[0].focus();
+    }
+  };
+
+  window.finishMfaSetup = function() {
+    if (window._pendingToken) {
+      localStorage.setItem('github_token', window._pendingToken);
+      window._pendingToken = null;
+      location.reload();
+    }
   };
 
   async function loadUser() {

@@ -15,6 +15,7 @@
     "astro": "^6.0.3",
     "gray-matter": "^4.0.3",
     "marked": "^17.0.4",
-    "otpauth": "^9.5.0"
+    "otpauth": "^9.5.0",
+    "qrcode-generator": "^2.0.4"
   }
 }
