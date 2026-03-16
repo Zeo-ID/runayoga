@@ -157,6 +157,42 @@ In `src/content/site.md` die Farben anpassen oder im Admin-Panel unter "Allgemei
 2. `.astro` in `src/pages/` erstellen (kopiere impressum.astro als Vorlage)
 3. Navigation in Header.astro ergaenzen
 
+## Template-Updates (Upstream Sync)
+
+Dieses Projekt erhaelt automatisch Updates vom ZAIOS Astro Template via GitHub Actions.
+
+### Einrichtung (einmalig)
+
+1. **TEMPLATE_TOKEN** als Repository Secret anlegen:
+   - Settings > Secrets > Actions > New Repository Secret
+   - Name: `TEMPLATE_TOKEN`
+   - Value: GitHub PAT mit `repo` Scope (Zugriff auf `Zeo-ID/zaios-astro-template`)
+
+2. Die Workflow-Datei `.github/workflows/sync-template.yml` ist bereits enthalten.
+
+### Wie es funktioniert
+
+- **Jeden Montag um 6:00 UTC** prueft der Workflow auf neue Template-Aenderungen
+- Bei Updates wird automatisch ein **Pull Request** erstellt
+- **Eure Inhalte bleiben erhalten:** Content (Texte, Bilder, CSS) wird NICHT ueberschrieben
+- **Framework-Updates** (Components, Layouts, Functions, Admin) werden aktualisiert
+- Konflikte werden automatisch aufgeloest (Kundeninhalt > Template)
+- Der PR kann manuell geprueft und gemergt werden
+
+### Manueller Sync
+
+Im GitHub-Tab "Actions" > "Sync Template Updates" > "Run workflow" klicken.
+
+### Was wird aktualisiert?
+
+| Aktualisiert (Template) | Beibehalten (Kunde) |
+|---|---|
+| Astro Components/Layouts | src/content/ (alle Inhalte) |
+| Admin-Panel | public/images/ |
+| Cloudflare Functions | public/css/styles.css |
+| Security Headers | site.md Konfiguration |
+| Package Updates | Blog-Beitraege |
+
 ## Technologie
 
 | Komponente | Technologie |
