@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin – Runayoga</title>
+  <title>Admin Panel</title>
   <meta name="robots" content="noindex, nofollow" />
   <script src="/admin/js-yaml.min.js"></script>
   <script src="/admin/qrcode.min.js"></script>
@@ -1307,7 +1307,7 @@
 <div class="header">
   <div style="display:flex;align-items:center;gap:12px;">
     <button class="btn-menu-toggle" onclick="toggleSidebar()" aria-label="Menu">&#9776;</button>
-    <span class="header-title">Runayoga Admin</span>
+    <span class="header-title">Admin Panel</span>
   </div>
   <div class="header-actions" id="headerActions" style="display:none;">
     <span class="header-user" id="headerUser"></span>
@@ -1336,7 +1336,8 @@
 (function() {
   'use strict';
 
-  const REPO = 'Zeo-ID/runayoga';
+  // TODO: Configure your GitHub repo here (format: 'owner/repo')
+  const REPO = '';
   const API_BASE = 'https://api.github.com';
   const BRANCH = 'main';
 
@@ -1427,7 +1428,7 @@
     document.getElementById('sidebar').style.display = 'none';
     document.getElementById('mainContent').innerHTML = `
       <div class="auth-screen">
-        <h2>Runayoga Admin</h2>
+        <h2>Admin Panel</h2>
         <p>Bitte Passwort eingeben, um Inhalte zu bearbeiten.</p>
         <form class="login-form" onsubmit="return handleLogin(event)">
           <input type="password" id="loginPassword" name="password" placeholder="Passwort" autocomplete="current-password" required />

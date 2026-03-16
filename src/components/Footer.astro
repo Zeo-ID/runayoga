@@ -1,15 +1,20 @@
+---
+import { getContent } from '../lib/content';
+const { frontmatter: siteData } = getContent('site.md');
+---
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/">
-          <img src="/images/logo.png" alt="Runayoga" style="height:40px">
+          <img src="/images/logo.png" alt="Logo" style="height:40px">
         </a>
-        <p>Yoga, Pilates &amp; Massage in Berlin-Pankow. Finde deine Balance &mdash; auf und neben der Matte.</p>
+        <p>{siteData.name}</p>
         <div class="footer-contact-info">
-          <p>runabulla@gmail.com</p>
-          <p>+49 163 139 1059</p>
-          <p>Berlin-Pankow</p>
+          <p>{siteData.email}</p>
+          <p>{siteData.phone}</p>
+          <p>{siteData.address}</p>
         </div>
       </div>
       <div>
@@ -29,18 +34,18 @@
           <li><a href="/datenschutz">Datenschutz</a></li>
         </ul>
         <div class="footer-social">
-          <a href="https://www.instagram.com/runayoga_berlin/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href={siteData.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
-          <a href="mailto:runabulla@gmail.com" aria-label="E-Mail">
+          <a href={`mailto:${siteData.email}`} aria-label="E-Mail">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Runayoga. Alle Rechte vorbehalten.</p>
-      <p class="footer-company">Ein Projekt von ZAIOS UG &middot; c/o Maurice Winter &middot; Charlottenstra&szlig;e 36 &middot; 13156 Berlin</p>
+      <p>&copy; {new Date().getFullYear()} {siteData.name}. Alle Rechte vorbehalten.</p>
+      <p class="footer-company">{{COMPANY}}</p>
     </div>
   </div>
 </footer>

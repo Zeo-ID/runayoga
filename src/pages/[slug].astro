@@ -14,7 +14,7 @@ const { slug, frontmatter, html } = Astro.props;
 ---
 
 <BaseLayout
-  title={frontmatter.seo_title || `${frontmatter.title} – Runayoga`}
+  title={frontmatter.seo_title || frontmatter.title}
   description={frontmatter.seo_description || frontmatter.subtitle}
 >
   <!-- Page Hero -->

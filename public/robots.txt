@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://runayoga.pages.dev/sitemap.xml
+# TODO: Update sitemap URL to your domain
+# Sitemap: https://your-domain.pages.dev/sitemap.xml

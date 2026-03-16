@@ -11,8 +11,9 @@ interface Props {
 }
 
 const { title, description = '', ogUrl = '', ogImage = '/images/hero.jpg' } = Astro.props;
-const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://runayoga.pages.dev${ogImage}`;
-const fullOgUrl = ogUrl || `https://runayoga.pages.dev${Astro.url.pathname}`;
+const siteUrl = Astro.site?.origin || 'https://example.pages.dev';
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+const fullOgUrl = ogUrl || `${siteUrl}${Astro.url.pathname}`;
 
 const { frontmatter: siteData } = getContent('site.md');
 const colors = siteData.colors || {};

@@ -1,6 +1,6 @@
 import * as OTPAuth from 'otpauth';
 
-const ISSUER = 'Runayoga Admin';
+const ISSUER = 'Admin Panel';
 const DIGITS = 6;
 const PERIOD = 30;
 const ALGORITHM = 'SHA1';

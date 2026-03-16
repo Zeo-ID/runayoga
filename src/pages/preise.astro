@@ -6,7 +6,7 @@ const { frontmatter } = getContent('preise.md');
 const sections = frontmatter.sections || [];
 ---
 
-<BaseLayout title={`${frontmatter.title} – Runayoga`} description={frontmatter.seo_description}>
+<BaseLayout title={frontmatter.title} description={frontmatter.seo_description}>
   <section class="page-hero">
     <div class="container">
       <nav class="breadcrumb">
@@ -18,7 +18,7 @@ const sections = frontmatter.sections || [];
   </section>
 
   {sections.map((section: any, i: number) => {
-    const isSmallGrid = section.label === 'Heilraum' || section.label === 'Gemeinschaft';
+    const isSmallGrid = section.cards && section.cards.length <= 2;
     return (
       <section class={i % 2 === 1 ? 'bg-white' : ''}>
         <div class="container fade-in">
@@ -54,8 +54,8 @@ const sections = frontmatter.sections || [];
     <div class="container fade-in">
       <div class="section-header">
         <span class="section-label">Retreat</span>
-        <h2>Yogaretreat 2026</h2>
-        <p>Deine Auszeit vom Alltag — Yoga, Meditation und Natur.</p>
+        <h2>Retreat</h2>
+        <p>Deine Auszeit vom Alltag.</p>
       </div>
       <div class="text-center">
         <a href="/retreat" class="btn btn-primary">Mehr zum Retreat &rarr;</a>

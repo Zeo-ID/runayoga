@@ -1,5 +1,11 @@
-export async function onRequestPost() {
-  const hookUrl = 'https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/ae599d9e-52dd-4e06-93aa-aa8e00418a7a';
+export async function onRequestPost(context) {
+  const hookUrl = context.env.DEPLOY_HOOK_URL;
+
+  if (!hookUrl) {
+    return new Response(JSON.stringify({ triggered: false, error: 'Deploy Hook nicht konfiguriert' }), {
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
 
   try {
     const resp = await fetch(hookUrl, { method: 'POST' });

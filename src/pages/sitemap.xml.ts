@@ -1,6 +1,6 @@
 import { getCollection } from '../lib/content';
 
-const base = 'https://runayoga.pages.dev';
+const base = 'https://example.pages.dev';
 
 export function GET() {
   const blogs = getCollection('blog');
@@ -13,12 +13,9 @@ export function GET() {
     { url: '/preise', priority: '0.8' },
     { url: '/blog', priority: '0.8' },
     { url: '/kontakt', priority: '0.8' },
-    { url: '/yoga', priority: '0.6' },
-    { url: '/pilates', priority: '0.6' },
-    { url: '/massagen', priority: '0.6' },
-    { url: '/heilraum', priority: '0.6' },
-    { url: '/mantra', priority: '0.6' },
-    { url: '/jahreskreis', priority: '0.6' },
+    { url: '/service-1', priority: '0.6' },
+    { url: '/service-2', priority: '0.6' },
+    { url: '/service-3', priority: '0.6' },
     { url: '/impressum', priority: '0.3' },
     { url: '/datenschutz', priority: '0.3' },
   ];

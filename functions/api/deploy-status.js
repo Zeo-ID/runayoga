@@ -2,8 +2,9 @@ export async function onRequestGet(context) {
   const { env } = context;
   const accountId = env.CF_ACCOUNT_ID;
   const apiToken = env.CF_DEPLOY_TOKEN;
+  const projectName = env.CF_PROJECT_NAME;
 
-  if (!accountId || !apiToken) {
+  if (!accountId || !apiToken || !projectName) {
     return new Response(JSON.stringify({ error: 'Nicht konfiguriert' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
@@ -12,7 +13,7 @@ export async function onRequestGet(context) {
 
   try {
     const res = await fetch(
-      `https://api.cloudflare.com/client/v4/accounts/${accountId}/pages/projects/runayoga/deployments?sort_by=created_on&sort_order=desc&per_page=1`,
+      `https://api.cloudflare.com/client/v4/accounts/${accountId}/pages/projects/${projectName}/deployments?sort_by=created_on&sort_order=desc&per_page=1`,
       {
         headers: {
           'Authorization': `Bearer ${apiToken}`,
