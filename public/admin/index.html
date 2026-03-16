@@ -281,8 +281,8 @@
 
     /* Welcome screen */
     .welcome {
-      max-width: 600px;
-      margin: 60px auto;
+      max-width: 680px;
+      margin: 40px auto;
       text-align: center;
     }
 
@@ -293,6 +293,58 @@
 
     .welcome p {
       color: var(--dark-light);
+    }
+
+    .guide {
+      max-width: 680px;
+      margin: 24px auto 0;
+      text-align: left;
+    }
+
+    .guide-section {
+      background: var(--white);
+      border: 1px solid var(--beige-dark, #e0dcd4);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 14px;
+    }
+
+    .guide-section h3 {
+      font-size: 15px;
+      margin: 0 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .guide-section p, .guide-section li {
+      font-size: 13px;
+      color: var(--dark-light);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .guide-section ol, .guide-section ul {
+      margin: 6px 0 0;
+      padding-left: 20px;
+    }
+
+    .guide-section li {
+      margin-bottom: 4px;
+    }
+
+    .guide-icon {
+      font-size: 18px;
+    }
+
+    .guide-kbd {
+      display: inline-block;
+      background: var(--beige, #f0ece4);
+      border: 1px solid var(--beige-dark, #e0dcd4);
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-size: 12px;
+      font-family: monospace;
     }
 
     /* Editor */
@@ -1863,6 +1915,48 @@
       <div class="welcome">
         <h2>Willkommen im Admin-Bereich</h2>
         <p>Waehle links einen Inhalt zum Bearbeiten aus.</p>
+      </div>
+      <div class="guide">
+        <div class="guide-section">
+          <h3><span class="guide-icon">&#9997;</span> Inhalte bearbeiten</h3>
+          <ol>
+            <li>W&auml;hle in der Seitenleiste eine Seite oder einen Beitrag aus.</li>
+            <li>In der <strong>Vorschau</strong> kannst du direkt auf Texte klicken, um sie zu bearbeiten.</li>
+            <li>&Uuml;ber <span class="guide-kbd">Formular</span> erreichst du alle Felder als klassische Eingabefelder.</li>
+            <li>Bilder &auml;nderst du per Klick auf das Bild &mdash; ein Upload-Dialog &ouml;ffnet sich.</li>
+          </ol>
+        </div>
+        <div class="guide-section">
+          <h3><span class="guide-icon">&#128190;</span> Speichern &amp; Ver&ouml;ffentlichen</h3>
+          <ol>
+            <li><strong>Speichern</strong> &mdash; sichert deine &Auml;nderungen auf GitHub (noch nicht live).</li>
+            <li><strong>Ver&ouml;ffentlichen</strong> (oben rechts) &mdash; speichert automatisch und baut die Seite neu. In 1&ndash;2 Minuten sind die &Auml;nderungen live.</li>
+          </ol>
+        </div>
+        <div class="guide-section">
+          <h3><span class="guide-icon">&#8634;</span> Verwerfen &amp; Versionen</h3>
+          <ol>
+            <li><strong>Verwerfen</strong> &mdash; setzt alle ungespeicherten &Auml;nderungen auf den letzten Stand zur&uuml;ck.</li>
+            <li><strong>Versionen</strong> &mdash; zeigt die letzten 20 gespeicherten Versionen der Datei. Du kannst jede fr&uuml;here Version mit einem Klick wiederherstellen.</li>
+          </ol>
+        </div>
+        <div class="guide-section">
+          <h3><span class="guide-icon">&#127912;</span> Design anpassen</h3>
+          <ol>
+            <li>Gehe zu <strong>Allgemein</strong> in der Seitenleiste.</li>
+            <li>Unter <strong>Theme</strong> w&auml;hlst du eine Designvorlage (Sage, Ocean, Sunset, Lavender, Earth).</li>
+            <li>Mit dem <strong>Farb-Picker</strong> kannst du einzelne Farben feinjustieren.</li>
+            <li>Die Vorschau aktualisiert sich sofort &mdash; klicke <strong>Ver&ouml;ffentlichen</strong>, um das Design live zu schalten.</li>
+          </ol>
+        </div>
+        <div class="guide-section">
+          <h3><span class="guide-icon">&#10133;</span> Neue Inhalte</h3>
+          <ol>
+            <li>Klicke in der Seitenleiste auf eine Kategorie (z.B. Blog, Angebote).</li>
+            <li>Klicke auf <strong>+ Neuer Eintrag</strong> oben in der Liste.</li>
+            <li>F&uuml;lle die Felder aus und klicke <strong>Speichern</strong>.</li>
+          </ol>
+        </div>
       </div>
     `;
   }
