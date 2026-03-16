@@ -1120,6 +1120,12 @@ section.bg-sage .section-label {
   color: rgba(255,255,255,.4);
 }
 
+.footer-company {
+  margin-top: .5rem;
+  font-size: .75rem;
+  color: rgba(255,255,255,.3);
+}
+
 .footer-contact-info {
   margin-top: 1rem;
 }
