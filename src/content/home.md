@@ -29,7 +29,7 @@ retreat_label: Yogaretreat 2026
 testimonials:
   - quote: Die Yogastunden bei Runa sind ein Highlight meiner Woche. Ich fühle mich danach immer geerdet und voller Energie.
     author: Maria S.
-    stars: 5
+    stars: 4
   - quote: Die Massagen sind einfach wunderbar. Runa hat magische Hände und schafft eine unglaublich entspannende Atmosphäre.
     author: Kathrin L.
     stars: 5
