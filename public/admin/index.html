@@ -1218,6 +1218,8 @@
   let currentSha = null;
   let currentData = null;
   let currentBody = '';
+  let savedData = null;
+  let savedBody = '';
   let currentFieldDefs = [];
   let currentDir = null;
   let contentTree = null;
@@ -1838,6 +1840,8 @@
       currentSha = file.sha;
       currentData = parsed.frontmatter;
       currentBody = parsed.body;
+      savedData = JSON.parse(JSON.stringify(parsed.frontmatter));
+      savedBody = parsed.body;
       currentFieldDefs = inferFieldDefs(parsed.frontmatter, parsed.body);
       currentDir = getFileDir(path);
 
@@ -1877,6 +1881,8 @@
         currentSha = file.sha;
         currentData = parsed.frontmatter;
         currentBody = parsed.body;
+        savedData = JSON.parse(JSON.stringify(parsed.frontmatter));
+        savedBody = parsed.body;
         currentFieldDefs = inferFieldDefs(parsed.frontmatter, parsed.body);
         currentDir = dir;
 
@@ -2651,6 +2657,7 @@
     if (!isNew && currentDir) {
       html += '<button class="btn btn-danger" onclick="deleteCollectionItem()">L&ouml;schen</button>';
     }
+    html += '<button class="btn btn-secondary" id="btnDiscard" onclick="discardChanges()">Verwerfen</button>';
     html += '<button class="btn btn-primary" id="btnSave" onclick="saveCurrentFile()">Speichern</button>';
     html += '</div>';
     html += '</div>';
@@ -3236,6 +3243,19 @@
   // Save
   // =====================
 
+  window.discardChanges = function() {
+    if (!savedData) {
+      showToast('Keine gespeicherten Daten vorhanden', 'error');
+      return;
+    }
+    if (!confirm('Alle Änderungen verwerfen und auf den letzten Stand zurücksetzen?')) return;
+    currentData = JSON.parse(JSON.stringify(savedData));
+    currentBody = savedBody;
+    currentFieldDefs = inferFieldDefs(currentData, currentBody);
+    renderEditor(currentFile, currentData, currentBody);
+    showToast('Änderungen verworfen', 'success');
+  };
+
   window.saveCurrentFile = async function() {
     const btn = document.getElementById('btnSave');
     btn.disabled = true;
@@ -3261,6 +3281,8 @@
         currentSha = result.content.sha;
         currentData = data.frontmatter;
         currentBody = data.body;
+        savedData = JSON.parse(JSON.stringify(data.frontmatter));
+        savedBody = data.body;
         // Refresh tree cache
         contentTree = null;
         showToast('Eintrag erstellt!', 'success');
@@ -3269,9 +3291,12 @@
         currentSha = result.content.sha;
         currentData = data.frontmatter;
         currentBody = data.body;
+        savedData = JSON.parse(JSON.stringify(data.frontmatter));
+        savedBody = data.body;
         showToast('Gespeichert!', 'success');
       }
     } catch(err) {
+      console.error('Save error:', err);
       showToast('Fehler: ' + err.message, 'error');
     } finally {
       btn.disabled = false;
