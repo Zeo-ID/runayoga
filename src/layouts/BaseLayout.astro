@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { getContent } from '../lib/content';
 
 interface Props {
   title: string;
@@ -12,6 +13,9 @@ interface Props {
 const { title, description = '', ogUrl = '', ogImage = '/images/hero.jpg' } = Astro.props;
 const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://runayoga.pages.dev${ogImage}`;
 const fullOgUrl = ogUrl || `https://runayoga.pages.dev${Astro.url.pathname}`;
+
+const { frontmatter: siteData } = getContent('site.md');
+const colors = siteData.colors || {};
 ---
 
 <!DOCTYPE html>
@@ -33,6 +37,18 @@ const fullOgUrl = ogUrl || `https://runayoga.pages.dev${Astro.url.pathname}`;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+    {colors.primary && (
+      <style set:html={`
+        :root {
+          --sage: ${colors.primary};
+          --sage-light: ${colors.primary_light || colors.primary};
+          --sage-dark: ${colors.primary_dark || colors.primary};
+          --accent: ${colors.accent || '#c4956a'};
+          --cream: ${colors.background || '#f5f0e8'};
+          --text-dark: ${colors.text || '#2d2d2d'};
+        }
+      `} />
+    )}
     <slot name="head" />
 </head>
 <body>

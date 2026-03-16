@@ -12,4 +12,12 @@ opening_hours:
     hours: 10:00–16:00
   - day: So
     hours: nach Vereinbarung
+theme_preset: sage
+colors:
+  primary: "#7a8b6f"
+  primary_light: "#9aab8f"
+  primary_dark: "#5a6b4f"
+  accent: "#c4956a"
+  background: "#f5f0e8"
+  text: "#2d2d2d"
 ---
