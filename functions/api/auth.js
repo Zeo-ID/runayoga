@@ -44,8 +44,13 @@ export async function onRequestPost(context) {
       return jsonResponse({ error: 'Server nicht konfiguriert' }, 500);
     }
 
+    // --- Fallback: no KV = password-only login (no MFA, no rate limiting) ---
     if (!kv) {
-      return jsonResponse({ error: 'KV-Speicher nicht konfiguriert' }, 500);
+      const passwordCorrect = await timingSafeEqual(password || '', adminPassword);
+      if (!passwordCorrect) {
+        return jsonResponse({ error: 'Falsches Passwort' }, 401);
+      }
+      return jsonResponse({ token: githubToken });
     }
 
     // --- Rate Limiting ---
