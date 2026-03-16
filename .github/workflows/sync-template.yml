@@ -1,0 +1,126 @@
+name: Sync Template Updates
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Montags 6:00 UTC
+  workflow_dispatch:       # Manuell ausloesbar
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "ZAIOS Template Bot"
+          git config user.email "noreply@zaios.net"
+
+      - name: Add template remote
+        run: |
+          git remote add template https://x-access-token:${{ secrets.TEMPLATE_TOKEN }}@github.com/Zeo-ID/zaios-astro-template.git 2>/dev/null || true
+          git fetch template main
+
+      - name: Check for updates
+        id: check
+        run: |
+          # Letzen Merge-Commit finden
+          LAST_MERGE=$(git log --all --grep="template-sync" --format="%H" -1 2>/dev/null || echo "")
+          if [ -z "$LAST_MERGE" ]; then
+            # Erster Sync — alle Template-Commits
+            CHANGES=$(git log template/main --oneline | head -20)
+          else
+            MERGE_DATE=$(git log -1 --format="%aI" "$LAST_MERGE" 2>/dev/null || echo "2000-01-01")
+            CHANGES=$(git log template/main --after="$MERGE_DATE" --oneline | head -20)
+          fi
+
+          if [ -z "$CHANGES" ]; then
+            echo "has_updates=false" >> "$GITHUB_OUTPUT"
+            echo "Keine neuen Template-Updates."
+          else
+            echo "has_updates=true" >> "$GITHUB_OUTPUT"
+            echo "Neue Updates gefunden:"
+            echo "$CHANGES"
+          fi
+
+      - name: Create sync branch
+        if: steps.check.outputs.has_updates == 'true'
+        run: |
+          BRANCH="template-sync/$(date +%Y-%m-%d)"
+          git checkout -b "$BRANCH"
+
+          # Merge mit Konflikt-Strategie (eigene Aenderungen bevorzugen)
+          git merge template/main \
+            --no-edit \
+            --allow-unrelated-histories \
+            -m "chore: template-sync $(date +%Y-%m-%d)" \
+            || true
+
+          # Bei Konflikten: Kundendateien behalten
+          CONFLICTS=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
+          if [ -n "$CONFLICTS" ]; then
+            echo "Konflikte in:"
+            echo "$CONFLICTS"
+            # Content-Dateien: Kunden-Version behalten
+            for f in $CONFLICTS; do
+              case "$f" in
+                src/content/*|public/images/*|public/css/styles.css)
+                  echo "  Behalte Kunden-Version: $f"
+                  git checkout --ours "$f"
+                  ;;
+                *)
+                  echo "  Behalte Template-Version: $f"
+                  git checkout --theirs "$f"
+                  ;;
+              esac
+              git add "$f"
+            done
+            git commit --no-edit -m "chore: resolve template-sync conflicts"
+          fi
+
+          git push origin "$BRANCH"
+          echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
+
+      - name: Create Pull Request
+        if: steps.check.outputs.has_updates == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Template-Changelog sammeln
+          LAST_MERGE=$(git log --all --grep="template-sync" --format="%H" -2 | tail -1 2>/dev/null || echo "")
+          if [ -n "$LAST_MERGE" ]; then
+            MERGE_DATE=$(git log -1 --format="%aI" "$LAST_MERGE")
+            CHANGELOG=$(git log template/main --after="$MERGE_DATE" --format="- %s" | head -20)
+          else
+            CHANGELOG=$(git log template/main --format="- %s" | head -20)
+          fi
+
+          gh pr create \
+            --title "Template-Update $(date +%Y-%m-%d)" \
+            --body "$(cat <<EOF
+          ## Template-Updates
+
+          Neue Aenderungen aus dem ZAIOS Astro Template:
+
+          ${CHANGELOG}
+
+          ## Hinweise
+
+          - Content-Dateien (src/content/, Bilder, CSS) behalten eure Version
+          - Framework-Dateien (Components, Layouts, Functions) werden aktualisiert
+          - **Bitte vor dem Merge pruefen**, ob alles passt
+
+          ---
+          *Automatisch erstellt von ZAIOS Template Bot*
+          EOF
+          )" \
+            --base main \
+            --head "$BRANCH"
