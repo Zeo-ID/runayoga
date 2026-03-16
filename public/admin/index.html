@@ -728,6 +728,80 @@
       justify-content: flex-end;
     }
 
+    .modal-wide {
+      max-width: 560px;
+    }
+
+    .version-list {
+      max-height: 360px;
+      overflow-y: auto;
+      margin-bottom: 16px;
+    }
+
+    .version-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--beige);
+      gap: 12px;
+    }
+
+    .version-item:last-child {
+      border-bottom: none;
+    }
+
+    .version-item:hover {
+      background: var(--beige-light, #f9f7f3);
+    }
+
+    .version-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .version-date {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .version-msg {
+      font-size: 12px;
+      color: var(--dark-light);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .version-current {
+      font-size: 11px;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .btn-restore {
+      background: var(--white);
+      color: var(--accent, #6c5ce7);
+      border: 1px solid var(--accent, #6c5ce7);
+      padding: 4px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .btn-restore:hover {
+      background: #f0eafa;
+    }
+
+    .btn-restore:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
     /* Image upload */
     .image-field {
       border: 1px solid var(--beige-dark);
@@ -2657,6 +2731,9 @@
     if (!isNew && currentDir) {
       html += '<button class="btn btn-danger" onclick="deleteCollectionItem()">L&ouml;schen</button>';
     }
+    if (!isNew) {
+      html += '<button class="btn btn-secondary" onclick="showVersions()">Versionen</button>';
+    }
     html += '<button class="btn btn-secondary" id="btnDiscard" onclick="discardChanges()">Verwerfen</button>';
     html += '<button class="btn btn-primary" id="btnSave" onclick="saveCurrentFile()">Speichern</button>';
     html += '</div>';
@@ -3238,6 +3315,96 @@
 
     return result;
   }
+
+  // =====================
+  // Versions (Backup/Restore)
+  // =====================
+
+  window.showVersions = async function() {
+    if (!currentFile) return;
+
+    var overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.innerHTML = '<div class="modal modal-wide"><h3>Versionen</h3><div class="version-list"><div class="loading"><div class="spinner"></div>Lade Versionen...</div></div><div class="modal-actions"><button class="btn btn-secondary" onclick="this.closest(\'.modal-overlay\').remove()">Schlie&szlig;en</button></div></div>';
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) overlay.remove(); });
+
+    try {
+      var res = await ghFetch('/repos/' + REPO + '/commits?path=' + encodeURIComponent(currentFile) + '&sha=' + BRANCH + '&per_page=20');
+      if (!res.ok) throw new Error('Versionen konnten nicht geladen werden');
+      var commits = await res.json();
+
+      var listEl = overlay.querySelector('.version-list');
+      if (!commits.length) {
+        listEl.innerHTML = '<p style="padding:12px;color:var(--dark-light);">Keine Versionen gefunden.</p>';
+        return;
+      }
+
+      var html = '';
+      commits.forEach(function(c, i) {
+        var date = new Date(c.commit.author.date);
+        var dateStr = date.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+        var msg = c.commit.message.split('\n')[0];
+        var sha = c.sha;
+        var shortSha = sha.substring(0, 7);
+
+        html += '<div class="version-item">';
+        html += '<div class="version-info">';
+        html += '<div class="version-date">' + escHtml(dateStr) + ' <span style="color:var(--dark-light);font-weight:400;font-size:11px;">(' + shortSha + ')</span></div>';
+        html += '<div class="version-msg">' + escHtml(msg) + '</div>';
+        if (i === 0) html += '<div class="version-current">Aktuell</div>';
+        html += '</div>';
+        if (i > 0) {
+          html += '<button class="btn-restore" onclick="restoreVersion(\'' + sha + '\', this)">Wiederherstellen</button>';
+        }
+        html += '</div>';
+      });
+      listEl.innerHTML = html;
+    } catch(err) {
+      console.error('Versions error:', err);
+      var listEl = overlay.querySelector('.version-list');
+      listEl.innerHTML = '<p style="padding:12px;color:var(--red);">' + escHtml(err.message) + '</p>';
+    }
+  };
+
+  window.restoreVersion = async function(commitSha, btnEl) {
+    if (!confirm('Diese Version wiederherstellen? Die aktuelle Version wird überschrieben.')) return;
+
+    btnEl.disabled = true;
+    btnEl.textContent = 'Wird geladen...';
+
+    try {
+      // Fetch file content at the selected commit
+      var res = await ghFetch('/repos/' + REPO + '/contents/' + encodeURIComponent(currentFile) + '?ref=' + commitSha);
+      if (!res.ok) throw new Error('Version konnte nicht geladen werden');
+      var fileData = await res.json();
+      var raw = decodeURIComponent(escape(atob(fileData.content.replace(/\n/g, ''))));
+
+      // Save restored content as new commit (using current SHA for conflict-free update)
+      var shortSha = commitSha.substring(0, 7);
+      var result = await saveFile(currentFile, raw, currentSha, 'Restore ' + currentFile.split('/').pop() + ' to version ' + shortSha);
+
+      // Update local state
+      var parsed = parseMarkdown(raw);
+      currentSha = result.content.sha;
+      currentData = parsed.frontmatter;
+      currentBody = parsed.body;
+      savedData = JSON.parse(JSON.stringify(parsed.frontmatter));
+      savedBody = parsed.body;
+      currentFieldDefs = inferFieldDefs(parsed.frontmatter, parsed.body);
+
+      // Close modal and re-render
+      var overlay = btnEl.closest('.modal-overlay');
+      if (overlay) overlay.remove();
+      renderEditor(currentFile, currentData, currentBody);
+      showToast('Version wiederhergestellt!', 'success');
+    } catch(err) {
+      console.error('Restore error:', err);
+      btnEl.disabled = false;
+      btnEl.textContent = 'Wiederherstellen';
+      showToast('Fehler: ' + err.message, 'error');
+    }
+  };
 
   // =====================
   // Save
