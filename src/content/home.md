@@ -2,7 +2,7 @@
 retreat_title: Tauche tief ein
 hero_image_alt: Runa beim Yoga im Bambuswald
 seo_title: Runayoga – Yoga, Pilates & Massagen in Berlin-Pankow
-hero_title: Finde deine innere Harmonie...
+hero_title: Finde deine innere Harmonie..
 hero_cta_text: Angebot entdecken
 hero_cta_link: /angebote
 hero_image: /images/hero.jpg
