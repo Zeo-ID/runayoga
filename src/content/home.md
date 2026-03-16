@@ -2,7 +2,7 @@
 retreat_title: Tauche tief ein
 hero_image_alt: Runa beim Yoga im Bambuswald
 seo_title: Runayoga – Yoga, Pilates & Massagen in Berlin-Pankow
-hero_title: Finde deine innere Harmonie....
+hero_title: Finde deine innere Harmonie
 hero_cta_text: Angebot entdecken
 hero_cta_link: /angebote
 hero_image: /images/hero.jpg
@@ -29,7 +29,7 @@ retreat_label: Yogaretreat 2026
 testimonials:
   - quote: Die Yogastunden bei Runa sind ein Highlight meiner Woche. Ich fühle mich danach immer geerdet und voller Energie.
     author: Maria S.
-    stars: 5
+    stars: 4
   - quote: Die Massagen sind einfach wunderbar. Runa hat magische Hände und schafft eine unglaublich entspannende Atmosphäre.
     author: Kathrin L.
     stars: 5
