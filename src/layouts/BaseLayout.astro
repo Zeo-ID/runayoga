@@ -1,0 +1,136 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getContent } from '../lib/content';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogUrl?: string;
+  ogImage?: string;
+}
+
+const { title, description = '', ogUrl = '', ogImage = '/images/hero.jpg' } = Astro.props;
+const siteUrl = Astro.site?.origin || 'https://example.pages.dev';
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+const fullOgUrl = ogUrl || `${siteUrl}${Astro.url.pathname}`;
+
+const { frontmatter: siteData } = getContent('site.md');
+const colors = siteData.colors || {};
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullOgUrl} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:locale" content="de_DE" />
+    <link rel="canonical" href={fullOgUrl} />
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    {colors.primary && (
+      <style set:html={`
+        :root {
+          --sage: ${colors.primary};
+          --sage-light: ${colors.primary_light || colors.primary};
+          --sage-dark: ${colors.primary_dark || colors.primary};
+          --accent: ${colors.accent || '#c4956a'};
+          --cream: ${colors.background || '#f5f0e8'};
+          --text-dark: ${colors.text || '#2d2d2d'};
+        }
+      `} />
+    )}
+    <slot name="head" />
+</head>
+<body>
+    <Header />
+    <slot />
+    <Footer />
+    <script is:inline>
+    // Scroll nav shadow
+    (function() {
+      var nav = document.getElementById('main-nav');
+      if (!nav) return;
+      function onScroll() {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // Hamburger
+    (function() {
+      var btn = document.getElementById('hamburger');
+      var links = document.getElementById('nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', function() {
+        btn.classList.toggle('active');
+        links.classList.toggle('open');
+      });
+      links.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() {
+          if (a.closest('.nav-dropdown') && a === a.closest('.nav-dropdown').querySelector(':scope > a')) return;
+          btn.classList.remove('active');
+          links.classList.remove('open');
+        });
+      });
+    })();
+
+    // Mobile dropdown
+    (function() {
+      var dropdown = document.getElementById('nav-dropdown-angebot');
+      if (!dropdown) return;
+      var toggle = dropdown.querySelector(':scope > a');
+      toggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 968) {
+          e.preventDefault();
+          dropdown.classList.toggle('dropdown-open');
+        }
+      });
+    })();
+
+    // Active nav link
+    (function() {
+      var path = window.location.pathname;
+      document.querySelectorAll('.nav-links a:not(.btn)').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (!href) return;
+        if (path === href || (href !== '/' && path.startsWith(href.replace('.html', '')))) {
+          link.classList.add('active');
+          var parent = link.closest('.nav-dropdown');
+          if (parent) {
+            var parentLink = parent.querySelector(':scope > a');
+            if (parentLink) parentLink.classList.add('active');
+          }
+        }
+      });
+    })();
+
+    // Fade-in observer
+    (function() {
+      var els = document.querySelectorAll('.fade-in');
+      if (!els.length) return;
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function(el) { el.classList.add('visible'); });
+        return;
+      }
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(function(el) { obs.observe(el); });
+    })();
+    </script>
+</body>
+</html>

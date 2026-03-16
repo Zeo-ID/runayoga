@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# TODO: Update sitemap URL to your domain
+# Sitemap: https://your-domain.pages.dev/sitemap.xml

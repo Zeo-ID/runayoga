@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { getCollection } from '../lib/content';
+
+const angebote = getCollection('angebote').sort(
+  (a, b) => (a.frontmatter.sort_order || 99) - (b.frontmatter.sort_order || 99)
+);
+
+const iconMap: Record<string, string> = {
+  'service-1': '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>',
+  'service-2': '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>',
+  'service-3': '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
+};
+
+const descriptionMap: Record<string, string> = {
+  'service-1': 'Beschreibung der ersten Leistung. Wird aus der Content-Datei geladen.',
+  'service-2': 'Beschreibung der zweiten Leistung. Wird aus der Content-Datei geladen.',
+  'service-3': 'Beschreibung der dritten Leistung. Wird aus der Content-Datei geladen.',
+};
+---
+
+<BaseLayout
+  title="Unser Angebot"
+  description="Entdecke unser Angebot an Leistungen und Services."
+>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> <span>/</span> <span>Angebot</span>
+      </nav>
+      <h1>Unser Angebot</h1>
+      <p>Ein ganzheitliches Angebot für unsere Kunden</p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section>
+    <div class="container">
+      <div class="services-grid">
+        {angebote.map(a => (
+          <ServiceCard
+            href={`/${a.slug}`}
+            title={a.frontmatter.title}
+            description={descriptionMap[a.slug] || a.frontmatter.subtitle}
+            icon={iconMap[a.slug] || ''}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-sage">
+    <div class="container">
+      <div class="text-center fade-in">
+        <h2>Fragen zu unserem Angebot?</h2>
+        <p>Wir beraten Sie gerne und finden gemeinsam das passende Angebot.</p>
+        <a href="/kontakt" class="btn btn-accent mt-2">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

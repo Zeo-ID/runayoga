@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getContent } from '../lib/content';
+
+const { frontmatter, html } = getContent('pages/impressum.md');
+---
+
+<BaseLayout title={frontmatter.seo_title || frontmatter.title} description={frontmatter.seo_description}>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> <span>/</span> <span>{frontmatter.title}</span>
+      </nav>
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.subtitle}</p>
+    </div>
+  </section>
+
+  <article class="detail-content fade-in">
+    <Fragment set:html={html} />
+  </article>
+</BaseLayout>

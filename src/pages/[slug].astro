@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from '../lib/content';
+
+export function getStaticPaths() {
+  const angebote = getCollection('angebote');
+  return angebote.map(a => ({
+    params: { slug: a.slug },
+    props: a,
+  }));
+}
+
+const { slug, frontmatter, html } = Astro.props;
+---
+
+<BaseLayout
+  title={frontmatter.seo_title || frontmatter.title}
+  description={frontmatter.seo_description || frontmatter.subtitle}
+>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> <span>/</span> <a href="/angebote">Angebot</a> <span>/</span> <span>{frontmatter.title}</span>
+      </nav>
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.subtitle}</p>
+    </div>
+  </section>
+
+  <!-- Detail Content -->
+  <section>
+    <div class="detail-content fade-in" set:html={html} />
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="detail-content fade-in">
+      <h2>Preise</h2>
+      <p>Alle Informationen zu Kursgebühren, Einzelstunden und Paketen findest du auf meiner Preisseite.</p>
+      <a href="/preise" class="btn btn-outline">Zur Preisübersicht</a>
+
+      <h2>Interesse?</h2>
+      <p>Du möchtest {frontmatter.title} bei mir ausprobieren oder hast Fragen? Melde dich einfach bei mir -- ich freue mich auf dich.</p>
+      <a href="/kontakt" class="btn btn-primary mt-2">Kontakt aufnehmen</a>
+    </div>
+  </section>
+</BaseLayout>
