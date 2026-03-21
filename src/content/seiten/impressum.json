@@ -4,14 +4,14 @@
       "type": "RichText",
       "props": {
         "id": "RichText-001",
-        "content": "<h2>Impressum</h2><p>Angaben gemäß § 5 TMG</p><p>[Hier Ihre Angaben einfügen]</p>"
+        "content": "<h2>Angaben gem\u00e4\u00df \u00a7 5 TMG</h2><p>Runa Bulla<br>Runayoga<br>Berlin-Pankow</p><h2>Kontakt</h2><p>Telefon: +49 163 139 1059<br>E-Mail: runabulla@gmail.com</p><h2>Streitschlichtung</h2><p>Die Europ\u00e4ische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href=\"https://ec.europa.eu/consumers/odr/\" target=\"_blank\" rel=\"noopener noreferrer\">https://ec.europa.eu/consumers/odr/</a></p><p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>"
       }
     }
   ],
   "root": {
     "props": {
-      "seoTitle": "Impressum",
-      "seoDescription": "Impressum und rechtliche Angaben."
+      "seoTitle": "Impressum \u2013 Runayoga",
+      "seoDescription": "Impressum von Runayoga in Berlin-Pankow. Angaben gem\u00e4\u00df \u00a7 5 TMG zur Anbieterkennzeichnung und Kontaktinformationen."
     }
   },
   "zones": {}

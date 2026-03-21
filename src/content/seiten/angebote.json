@@ -1,0 +1,90 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Mein Angebot",
+        "subtitle": "Ein ganzheitliches Angebot f\u00fcr K\u00f6rper, Geist und Seele",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Entdecke mein ganzheitliches Angebot f\u00fcr K\u00f6rper, Geist und Seele. Von Yoga und Pilates \u00fcber Massagen bis hin zu schamanischer Heilarbeit, Mantra-Singen und dem Jahreskreis f\u00fcr Frauen -- bei mir findest du den passenden Weg zu mehr Wohlbefinden.</p>"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-001",
+        "title": "",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "Yoga",
+            "text": "Hatha, Vinyasa und Yin Yoga in kleinen Gruppen. Finde Gleichgewicht und innere Ruhe auf der Matte.",
+            "image": "",
+            "link": "/angebote/yoga"
+          },
+          {
+            "title": "Pilates",
+            "text": "St\u00e4rke deine K\u00f6rpermitte mit bewusster, kontrollierter Bewegung. Zertifizierte Pr\u00e4ventionskurse.",
+            "image": "",
+            "link": "/angebote/pilates"
+          },
+          {
+            "title": "Massagen",
+            "text": "Wohltuende Massagen f\u00fcr K\u00f6rper und Seele. Spezialisiert auf Pre- und Postnatal-Massagen.",
+            "image": "",
+            "link": "/angebote/massagen"
+          },
+          {
+            "title": "Heilraum f\u00fcr die Seele",
+            "text": "Schamanische Energiemedizin und spirituelle Begleitung f\u00fcr tiefe Heilung und innere Kraft.",
+            "image": "",
+            "link": "/angebote/heilraum"
+          },
+          {
+            "title": "Mantra singen",
+            "text": "Gemeinsames Singen von Mantras und Medicine Songs. Erlebe die heilende Kraft von Klang und Gemeinschaft.",
+            "image": "",
+            "link": "/angebote/mantra"
+          },
+          {
+            "title": "Jahreskreis f\u00fcr Frauen",
+            "text": "Frauenkreis mit 8 Treffen im Jahr zu den keltischen Jahreskreisfesten. Rituale, Gemeinschaft und Verbindung.",
+            "image": "",
+            "link": "/angebote/jahreskreis"
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Fragen zu meinem Angebot?",
+        "text": "Ich berate dich gerne pers\u00f6nlich und finde mit dir gemeinsam das passende Angebot.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Mein Angebot \u2013 Runayoga",
+      "seoDescription": "Entdecke das Angebot von Runayoga: Yoga, Pilates, Massagen, Heilraum, Mantra-Singen und Jahreskreis f\u00fcr Frauen in Berlin-Pankow."
+    }
+  },
+  "zones": {}
+}

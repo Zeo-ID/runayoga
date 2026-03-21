@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Jahreskreis f\u00fcr Frauen",
+        "subtitle": "Gemeinsam durch die Zyklen des Jahres",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Der Jahreskreis ist ein Frauenkreis, in dem wir uns achtmal im Jahr treffen, um die gro\u00dfen Wendepunkte des Jahres gemeinsam zu feiern. Orientiert an den keltischen Jahreskreisfesten und den Rhythmen der Natur, schaffen wir einen Raum, in dem Frauen sich begegnen, austauschen und gegenseitig st\u00e4rken k\u00f6nnen.</p><p>Jedes Treffen hat sein eigenes Thema, das zur jeweiligen Jahreszeit passt. Im Fr\u00fchling geht es um Neubeginn und Wachstum, im Sommer um F\u00fclle und Lebensfreude, im Herbst um Dankbarkeit und Loslassen, und im Winter um Stille und Einkehr. Mit Ritualen, Meditationen und Gespr\u00e4chen vertiefen wir die Verbindung zu uns selbst, zueinander und zur Natur.</p><p>Der Frauenkreis ist ein gesch\u00fctzter Raum, in dem du so sein darfst, wie du bist. Hier gibt es kein Richtig oder Falsch, kein Bewerten oder Vergleichen. Was im Kreis gesprochen wird, bleibt im Kreis. In der Gemeinschaft von Frauen liegt eine besondere Kraft, die jede von uns n\u00e4hrt und tr\u00e4gt -- und die weit \u00fcber das einzelne Treffen hinauswirkt.</p><h2>Was dich erwartet</h2><ul><li>8 Treffen im Jahr zu den Jahreskreisfesten</li><li>Rituale und Zeremonien passend zur Jahreszeit</li><li>Nur f\u00fcr Frauen -- ein gesch\u00fctzter Raum</li><li>Verbindung und Gemeinschaft unter Frauen</li><li>Meditationen und tiefgehende Gespr\u00e4che</li><li>Kein Vorwissen n\u00f6tig -- komm so wie du bist</li></ul><h2>F\u00fcr wen ist der Jahreskreis geeignet?</h2><p>Der Jahreskreis ist offen f\u00fcr alle Frauen, die sich nach Gemeinschaft, Spiritualit\u00e4t und einer tieferen Verbindung zur Natur sehnen. Du brauchst keine Vorkenntnisse oder bestimmte spirituelle Ausrichtung. Alles, was z\u00e4hlt, ist deine Offenheit und der Wunsch, gemeinsam mit anderen Frauen durch das Jahr zu gehen.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Interesse am Jahreskreis?",
+        "text": "Melde dich bei mir f\u00fcr Infos zu den n\u00e4chsten Terminen und freien Pl\u00e4tzen.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Jahreskreis f\u00fcr Frauen \u2013 Runayoga",
+      "seoDescription": "Jahreskreis f\u00fcr Frauen bei Runayoga: Gemeinsam die Zyklen des Jahres feiern mit Ritualen und Frauenkreis in Berlin-Pankow."
+    }
+  },
+  "zones": {}
+}

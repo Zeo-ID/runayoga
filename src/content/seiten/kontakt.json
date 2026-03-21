@@ -5,7 +5,7 @@
       "props": {
         "id": "Contact-001",
         "title": "Kontakt",
-        "text": "Wir freuen uns auf Ihre Nachricht.",
+        "text": "Schreib mir, ruf an oder komm einfach auf einen Tee vorbei.",
         "showMap": false,
         "mapEmbed": ""
       }
@@ -13,8 +13,8 @@
   ],
   "root": {
     "props": {
-      "seoTitle": "Kontakt",
-      "seoDescription": "Nehmen Sie Kontakt mit uns auf."
+      "seoTitle": "Kontakt \u2013 Runayoga",
+      "seoDescription": "Kontaktiere Runayoga in Berlin-Pankow: Per E-Mail, WhatsApp oder Telefon. Vereinbare jetzt deinen Termin f\u00fcr Yoga oder Massage."
     }
   },
   "zones": {}

@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Mantra singen",
+        "subtitle": "Die Kraft der Kl\u00e4nge",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Wenn wir gemeinsam singen, passiert etwas Magisches. Die Stimme ist eines unserer urspr\u00fcnglichsten Instrumente, und Mantras tragen eine Kraft in sich, die tief in uns wirkt. In meinen Mantra-Abenden kommen wir zusammen, um durch Klang und Vibration innere Ruhe zu finden und uns miteinander zu verbinden.</p><p>Ob traditionelle Mantras aus der Yoga-Tradition, heilende Medicine Songs aus verschiedenen Kulturen oder gemeinsames Kirtan-Singen -- es geht nicht darum, sch\u00f6n zu singen. Es geht darum, dich durch den Klang deiner eigenen Stimme zu sp\u00fcren und loszulassen. Die Melodien sind einfach und wiederholen sich, sodass du dich ganz dem Moment hingeben kannst.</p><p>Die Mantra-Abende sind f\u00fcr mich eine Herzensangelegenheit. In der Gemeinschaft entsteht ein Klangteppich, der jeden Einzelnen tr\u00e4gt. Viele Teilnehmerinnen und Teilnehmer beschreiben das gemeinsame Singen als zutiefst ber\u00fchrend und heilsam. Du brauchst weder musikalische Vorkenntnisse noch eine besondere Stimme -- nur die Bereitschaft, dich einzulassen.</p><h2>Was dich erwartet</h2><ul><li>Gemeinsames Singen in herzlicher Runde</li><li>Medicine Songs aus verschiedenen Traditionen</li><li>Keine Vorkenntnisse n\u00f6tig -- jede Stimme ist willkommen</li><li>Offene Runde, komm einfach vorbei</li><li>Mantrachanting und Kirtan</li><li>Sound Healing als erg\u00e4nzendes Erlebnis</li></ul>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Lust auf Mantra singen?",
+        "text": "Melde dich bei mir f\u00fcr Infos zu den n\u00e4chsten Terminen.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Mantra singen \u2013 Runayoga",
+      "seoDescription": "Mantra-Singen und Medicine Songs bei Runayoga in Berlin-Pankow. Erlebe die heilende Kraft von Klang und Gemeinschaft."
+    }
+  },
+  "zones": {}
+}

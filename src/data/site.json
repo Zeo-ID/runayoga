@@ -1,36 +1,50 @@
 {
-  "name": "Meine Website",
-  "tagline": "Willkommen auf meiner Website",
-  "logo": "/images/logo.svg",
+  "name": "Runayoga",
+  "tagline": "Yoga, Pilates & Massagen in Berlin-Pankow",
+  "logo": "/images/logo.png",
   "contact": {
-    "email": "info@example.de",
-    "phone": "+49 123 456 7890",
-    "address": "Berlin",
-    "whatsapp": "",
-    "instagram": ""
+    "email": "runabulla@gmail.com",
+    "phone": "+49 163 139 1059",
+    "address": "Berlin-Pankow",
+    "whatsapp": "4901631391059",
+    "instagram": "https://www.instagram.com/runayoga_berlin/"
   },
   "openingHours": [
-    { "day": "Mo–Fr", "time": "9:00–18:00" },
-    { "day": "Sa", "time": "10:00–14:00" }
+    { "day": "Mo\u2013Fr", "time": "9:00\u201320:00" },
+    { "day": "Sa", "time": "10:00\u201316:00" },
+    { "day": "So", "time": "nach Vereinbarung" }
   ],
   "theme": {
     "preset": "sage",
-    "primaryColor": "#5F7A5E",
-    "accentColor": "#D4A574",
+    "primaryColor": "#7a8b6f",
+    "accentColor": "#c4956a",
     "fontHeading": "Playfair Display",
     "fontBody": "Open Sans"
   },
   "navigation": [
     { "label": "Startseite", "href": "/" },
-    { "label": "Angebot", "href": "/angebote" },
+    {
+      "label": "Angebot",
+      "href": "/angebote",
+      "children": [
+        { "label": "Yoga", "href": "/angebote/yoga" },
+        { "label": "Pilates", "href": "/angebote/pilates" },
+        { "label": "Massagen", "href": "/angebote/massagen" },
+        { "label": "Heilraum", "href": "/angebote/heilraum" },
+        { "label": "Mantra", "href": "/angebote/mantra" },
+        { "label": "Jahreskreis", "href": "/angebote/jahreskreis" }
+      ]
+    },
+    { "label": "Retreat", "href": "/retreat" },
     { "label": "Blog", "href": "/blog" },
-    { "label": "Kontakt", "href": "/kontakt" }
+    { "label": "Kontakt", "href": "/kontakt" },
+    { "label": "\u00dcber mich", "href": "/ueber-mich" }
   ],
   "footer": {
     "legal": [
       { "label": "Impressum", "href": "/impressum" },
       { "label": "Datenschutz", "href": "/datenschutz" }
     ],
-    "copyright": "© 2026 Meine Website. Alle Rechte vorbehalten."
+    "copyright": "\u00a9 2026 Runayoga. Alle Rechte vorbehalten."
   }
 }

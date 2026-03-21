@@ -1,0 +1,123 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Yogaretreat 2026",
+        "subtitle": "Deine Auszeit vom Alltag",
+        "buttonText": "Platz sichern",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/retreat.jpg",
+        "imageAlt": "Yoga Retreat in der Natur",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<h2>Tauche tief ein</h2><p><em>Eine Reise zu dir selbst</em></p><p>Stell dir vor, du wachst auf mit dem Klang der Natur, beginnst den Tag mit einer sanften Yogapraxis bei Sonnenaufgang und l\u00e4sst den Abend mit Mantrachanting und Meditation ausklingen. Unser Yogaretreat ist mehr als ein Urlaub -- es ist eine Einladung, dich selbst wiederzufinden.</p><p>In einer kleinen, vertrauten Gruppe schaffen wir einen gesch\u00fctzten Raum, in dem du loslassen, auftanken und dich mit Gleichgesinnten verbinden kannst. Die Kombination aus t\u00e4glicher Yogapraxis, schamanischen Zeremonien, n\u00e4hrender Verpflegung und der Sch\u00f6nheit der Natur macht dieses Retreat zu einem unvergesslichen Erlebnis.</p><p>Ob du Anf\u00e4ngerin bist oder erfahrene Praktizierende -- das Retreat ist so gestaltet, dass jede Teilnehmerin ihren eigenen Rhythmus finden kann. Hier gibt es keinen Leistungsdruck, sondern nur die Einladung, ganz bei dir anzukommen.</p><h2>Was dich erwartet</h2><p>Eine ganzheitliche Erfahrung f\u00fcr K\u00f6rper, Geist und Seele:</p><ul><li>T\u00e4gliche Yoga- und Meditationspraxis</li><li>Schamanische Zeremonien</li><li>Mantrachanting und Medicine Songs</li><li>Vegetarische Vollverpflegung</li><li>Kleine, pers\u00f6nliche Gruppen (max. 12 Teilnehmer)</li><li>Freie Zeit f\u00fcr Wanderungen und Natur</li></ul><h2>Termine &amp; Ort</h2><p><strong>Fr\u00fchling 2026</strong> -- Termine werden bald bekannt gegeben.</p><p><strong>Ort:</strong> Mittelmeerraum -- genauer Ort wird noch bekannt gegeben</p><p><strong>Dauer:</strong> 7 Tage / 6 N\u00e4chte</p><p>Trage dich auf die Warteliste ein, um als Erste von den Terminen und dem genauen Ort zu erfahren.</p>"
+      }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-001",
+        "title": "Retreat-Pakete",
+        "packages": [
+          {
+            "name": "Fr\u00fchbucher",
+            "price": "Preis auf Anfrage",
+            "features": [
+              "7 Tage / 6 N\u00e4chte",
+              "Unterkunft im Mehrbettzimmer",
+              "Vegetarische Vollverpflegung",
+              "Alle Yoga- & Meditationseinheiten",
+              "Schamanische Zeremonien"
+            ],
+            "buttonText": "Anfragen",
+            "buttonLink": "/kontakt",
+            "highlighted": false
+          },
+          {
+            "name": "Regular",
+            "price": "Preis auf Anfrage",
+            "features": [
+              "7 Tage / 6 N\u00e4chte",
+              "Unterkunft im Doppelzimmer",
+              "Vegetarische Vollverpflegung",
+              "Alle Yoga- & Meditationseinheiten",
+              "Schamanische Zeremonien",
+              "1 Einzelmassage inklusive"
+            ],
+            "buttonText": "Anfragen",
+            "buttonLink": "/kontakt",
+            "highlighted": true
+          },
+          {
+            "name": "Deluxe",
+            "price": "Preis auf Anfrage",
+            "features": [
+              "7 Tage / 6 N\u00e4chte",
+              "Unterkunft im Einzelzimmer",
+              "Vegetarische Vollverpflegung",
+              "Alle Yoga- & Meditationseinheiten",
+              "Schamanische Zeremonien",
+              "2 Einzelmassagen inklusive",
+              "Pers\u00f6nliche Einzelsitzung mit Runa"
+            ],
+            "buttonText": "Anfragen",
+            "buttonLink": "/kontakt",
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "FAQ",
+      "props": {
+        "id": "FAQ-001",
+        "title": "H\u00e4ufige Fragen zum Retreat",
+        "items": [
+          {
+            "question": "Was ist im Preis enthalten?",
+            "answer": "Der Preis beinhaltet die Unterkunft, vegetarische Vollverpflegung, alle Yoga- und Meditationseinheiten, schamanische Zeremonien sowie Mantrachanting-Sessions. Je nach gew\u00e4hltem Paket sind zus\u00e4tzlich Einzelmassagen und pers\u00f6nliche Sitzungen enthalten. Die Anreise ist nicht im Preis inbegriffen."
+          },
+          {
+            "question": "F\u00fcr wen ist das Retreat geeignet?",
+            "answer": "Das Retreat richtet sich an alle, die sich eine Auszeit vom Alltag w\u00fcnschen und offen sind f\u00fcr Yoga, Meditation und spirituelle Erfahrungen. Es ist ein Ort der Begegnung und des pers\u00f6nlichen Wachstums -- unabh\u00e4ngig von Alter, Geschlecht oder Erfahrungslevel."
+          },
+          {
+            "question": "Muss ich Yoga-Erfahrung haben?",
+            "answer": "Nein, du brauchst keinerlei Vorkenntnisse. Die Yogaeinheiten werden so angeleitet, dass sowohl Anf\u00e4ngerinnen als auch erfahrene Praktizierende auf ihre Kosten kommen. Ich hole dich dort ab, wo du gerade stehst."
+          },
+          {
+            "question": "Wie komme ich zum Retreat-Ort?",
+            "answer": "Detaillierte Anreiseinformationen erh\u00e4ltst du nach deiner Buchung. In der Regel organisieren wir einen gemeinsamen Transfer vom n\u00e4chstgelegenen Flughafen oder Bahnhof zum Retreat-Ort. Die Transferkosten werden vorab bekannt gegeben."
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Bereit f\u00fcr deine Auszeit?",
+        "text": "Sichere dir jetzt deinen Platz beim Yogaretreat 2026. Ich freue mich auf dich!",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yogaretreat 2026 \u2013 Runayoga",
+      "seoDescription": "Yogaretreat 2026 mit Runayoga: Deine Auszeit vom Alltag mit Yoga, Meditation, Mantras und Natur. Jetzt Platz sichern!"
+    }
+  },
+  "zones": {}
+}

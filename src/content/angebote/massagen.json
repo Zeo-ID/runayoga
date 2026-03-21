@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Massagen",
+        "subtitle": "Entspannung f\u00fcr K\u00f6rper und Seele",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Manchmal braucht der K\u00f6rper einfach liebevolle Ber\u00fchrung, um loslassen zu k\u00f6nnen. Meine Massagen sind mehr als nur Muskelarbeit -- sie sind eine Einladung, zur Ruhe zu kommen und dir selbst etwas Gutes zu tun. In meinem Massageraum in Berlin-Pankow erwartet dich eine warme, gesch\u00fctzte Atmosph\u00e4re, in der du dich fallen lassen darfst.</p><p>Ich biete verschiedene Massagearten an, die ich individuell auf deine Bed\u00fcrfnisse abstimme. Von der klassischen Ganzk\u00f6rpermassage \u00fcber wohltuende Aromatherapie-Behandlungen bis hin zu speziellen Massagen f\u00fcr werdende und frischgebackene Mamas -- bei mir findest du die Entspannung, die du gerade brauchst.</p><p>Besonders am Herzen liegen mir meine Prenatal- und Postnatal-Massagen. Die Schwangerschaft und die Zeit nach der Geburt sind so besondere Phasen im Leben einer Frau, und eine einf\u00fchlsame Massage kann dabei wunderbar unterst\u00fctzen. Ich bin speziell daf\u00fcr ausgebildet und sorge daf\u00fcr, dass du dich in jeder Phase sicher und gut aufgehoben f\u00fchlst.</p><h2>Was dich erwartet</h2><ul><li>Verschiedene Massagearten, individuell auf dich abgestimmt</li><li>Spezialisiert auf Pre- und Postnatal-Massagen</li><li>Wohlf\u00fchlatmosph\u00e4re in gesch\u00fctztem Raum</li><li>Individuelle Behandlung nach Vorgespr\u00e4ch</li><li>Aromatherapie und Wellness-Pakete</li></ul>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Lust auf eine Massage?",
+        "text": "Melde dich bei mir und vereinbare deinen Termin.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Massagen \u2013 Runayoga",
+      "seoDescription": "Wohltuende Massagen in Berlin-Pankow: Entspannungs-, Pre- und Postnatal-Massagen. G\u00f6nne dir eine Auszeit bei Runayoga."
+    }
+  },
+  "zones": {}
+}

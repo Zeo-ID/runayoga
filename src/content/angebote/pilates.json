@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Pilates",
+        "subtitle": "St\u00e4rke deine Mitte",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Pilates ist ein wunderbares Training, das deinen gesamten K\u00f6rper kr\u00e4ftigt und gleichzeitig deine Beweglichkeit f\u00f6rdert. In meinen Kursen liegt der Fokus auf bewusster, kontrollierter Bewegung und einer tiefen Verbindung zu deiner K\u00f6rpermitte. Du lernst, dich von innen heraus zu stabilisieren -- und das sp\u00fcrst du nicht nur auf der Matte, sondern im ganzen Alltag.</p><p>Ob klassisches Pilates, R\u00fccken-fit oder spezielle Kurse f\u00fcr die Zeit vor und nach der Geburt -- ich passe mein Training individuell an deine Bed\u00fcrfnisse an. In kleinen Gruppen kann ich auf jede Teilnehmerin einzeln eingehen und \u00dcbungen bei Bedarf modifizieren. So trainierst du immer sicher und effektiv.</p><p>Auch meine Pilates-Kurse sind als Pr\u00e4ventionskurse nach \u00a720 SGB V zertifiziert. Das bedeutet, dass deine gesetzliche Krankenkasse einen Teil der Kosten \u00fcbernehmen kann. Frag gerne bei deiner Kasse nach oder sprich mich direkt an.</p><h2>Was dich erwartet</h2><ul><li>Zertifizierte Pr\u00e4ventionskurse mit Krankenkassenzuschuss</li><li>Fokus auf Core-Stabilit\u00e4t und gesunde Haltung</li><li>Kleine Gruppen f\u00fcr pers\u00f6nliche Betreuung</li><li>Individuell angepasste \u00dcbungen f\u00fcr jedes Level</li><li>Spezielle Kurse: R\u00fccken-fit, Pr\u00e4- und Postnatal</li></ul><h2>F\u00fcr wen ist Pilates geeignet?</h2><p>Pilates eignet sich hervorragend f\u00fcr alle, die ihre K\u00f6rpermitte st\u00e4rken und R\u00fcckenbeschwerden vorbeugen m\u00f6chten. Besonders beliebt ist das Training bei werdenden und frischgebackenen Mamas, die ihren Beckenboden und ihre Tiefenmuskulatur gezielt aufbauen wollen. Aber auch wenn du einfach fitter und beweglicher werden m\u00f6chtest, bist du bei mir genau richtig.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Interesse an Pilates?",
+        "text": "Melde dich bei mir und wir finden gemeinsam den passenden Kurs f\u00fcr dich.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Pilates \u2013 Runayoga",
+      "seoDescription": "Pilates-Kurse in Berlin-Pankow: St\u00e4rke deine K\u00f6rpermitte mit bewusster Bewegung. Zertifizierte Pr\u00e4ventionskurse bei Runayoga."
+    }
+  },
+  "zones": {}
+}

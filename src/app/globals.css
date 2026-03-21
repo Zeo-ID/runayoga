@@ -2,9 +2,9 @@
 
 /* ──── Theme Variables (overridden per customer via site.json) ──── */
 :root {
-  --color-primary: #5F7A5E;
+  --color-primary: #7a8b6f;
   --color-primary-light: #e8f0e7;
-  --color-accent: #D4A574;
+  --color-accent: #c4956a;
   --color-bg: #f5f0e8;
   --color-bg-alt: #ede7db;
   --color-text: #2d2d2d;

@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Heilraum f\u00fcr die Seele",
+        "subtitle": "Schamanische Energiemedizin",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Es gibt Momente im Leben, in denen wir sp\u00fcren, dass etwas Tieferes in uns nach Heilung ruft -- etwas, das \u00fcber den K\u00f6rper hinausgeht. In meinem Heilraum biete ich dir einen gesch\u00fctzten Ort, an dem du dich deiner Seelenarbeit widmen kannst. Mit schamanischer Energiemedizin und spiritueller Begleitung unterst\u00fctze ich dich auf deinem ganz pers\u00f6nlichen Heilungsweg.</p><p>Die schamanische Heilarbeit ist eine uralte Tradition, die den Menschen als Ganzes betrachtet -- K\u00f6rper, Geist und Seele. In den Sitzungen arbeite ich mit Energien, Zeremonien und Ritualen, um Blockaden zu l\u00f6sen, alte Wunden zu heilen und deine innere Kraft wieder zu erwecken. Dabei halte ich den Raum f\u00fcr dich, damit du dich sicher und getragen f\u00fchlen kannst.</p><p>Ob du dich in einer schwierigen Lebensphase befindest, nach tieferer Selbsterkenntnis suchst oder einfach das Gef\u00fchl hast, dass da noch etwas ist, das gesehen werden m\u00f6chte -- der Heilraum ist offen f\u00fcr dich. Jede Sitzung ist so einzigartig wie du selbst, und gemeinsam finden wir heraus, was deine Seele gerade braucht.</p><h2>Was dich erwartet</h2><ul><li>Schamanische Zeremonien und Rituale</li><li>Energetische Reinigung und Ausgleich</li><li>Spirituelle Begleitung in Lebenskrisen</li><li>Gesch\u00fctzter Raum in vertrauensvoller Atmosph\u00e4re</li><li>Individuelle Sitzungen nach pers\u00f6nlichem Vorgespr\u00e4ch</li></ul><h2>F\u00fcr wen ist der Heilraum geeignet?</h2><p>Der Heilraum richtet sich an alle, die das Bed\u00fcrfnis nach tieferer Heilung und spiritueller Begleitung sp\u00fcren. Vorkenntnisse brauchst du keine -- nur die Offenheit, dich auf den Prozess einzulassen. Die schamanische Arbeit kann wunderbar erg\u00e4nzend zu Yoga und anderen ganzheitlichen Praktiken wirken.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Interesse am Heilraum?",
+        "text": "Melde dich bei mir f\u00fcr ein unverbindliches Vorgespr\u00e4ch.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Heilraum f\u00fcr die Seele \u2013 Runayoga",
+      "seoDescription": "Heilraum f\u00fcr die Seele bei Runayoga: Schamanische Energiemedizin und spirituelle Begleitung in Berlin-Pankow f\u00fcr tiefe Heilung."
+    }
+  },
+  "zones": {}
+}

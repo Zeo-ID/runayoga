@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Yoga",
+        "subtitle": "Finde Gleichgewicht und innere Ruhe",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Yoga ist f\u00fcr mich weit mehr als K\u00f6rper\u00fcbungen auf der Matte. Es ist ein Weg zu dir selbst -- ein Raum, in dem du ankommen darfst, genau so wie du bist. In meinem Studio in Berlin-Pankow unterrichte ich Hatha Yoga, Vinyasa Flow und Yin Yoga in kleinen, pers\u00f6nlichen Gruppen. Dabei steht nicht die perfekte Haltung im Vordergrund, sondern dein ganz eigenes Erleben.</p><p>Meine Yogastunden sind von der \u00dcberzeugung getragen, dass jeder K\u00f6rper Yoga praktizieren kann. Ob du zum ersten Mal auf die Matte kommst oder schon jahrelang \u00fcbst -- ich hole dich dort ab, wo du gerade stehst. Mit Achtsamkeit, Atem\u00fcbungen und sanften Korrekturen begleite ich dich dabei, deinen K\u00f6rper neu zu entdecken und Spannungen loszulassen.</p><p>Meine Pr\u00e4ventionskurse sind nach \u00a720 SGB V zertifiziert und werden von den meisten gesetzlichen Krankenkassen bezuschusst. Dar\u00fcber hinaus biete ich auch Online-Yoga an, damit du auch von zu Hause aus \u00fcben kannst, wann immer es in deinen Alltag passt.</p><h2>Was dich erwartet</h2><ul><li>Kleine Gruppen f\u00fcr individuelle Betreuung</li><li>Alle Level willkommen -- vom Anf\u00e4nger bis Fortgeschrittene</li><li>Krankenkassenzertifizierte Pr\u00e4ventionskurse (\u00a720 SGB V)</li><li>Einzelstunden f\u00fcr deine pers\u00f6nliche Praxis m\u00f6glich</li><li>Online-Yoga als flexible Erg\u00e4nzung</li><li>Hatha, Vinyasa und Yin Yoga im Angebot</li></ul><h2>F\u00fcr wen ist Yoga geeignet?</h2><p>Yoga ist f\u00fcr alle da. Ob du nach Ausgleich zum stressigen Alltag suchst, R\u00fcckenschmerzen lindern m\u00f6chtest oder einfach etwas Gutes f\u00fcr dich tun willst -- du bist herzlich willkommen. Auch in der Schwangerschaft und nach der Geburt begleite ich dich gerne mit angepassten \u00dcbungen.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Interesse an Yoga?",
+        "text": "Melde dich bei mir und wir finden gemeinsam den passenden Kurs f\u00fcr dich.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yoga \u2013 Runayoga",
+      "seoDescription": "Hatha Yoga, Vinyasa Flow und Yin Yoga in kleinen Gruppen in Berlin-Pankow. Zertifizierte Pr\u00e4ventionskurse bei Runayoga."
+    }
+  },
+  "zones": {}
+}
