@@ -36,6 +36,7 @@
       ]
     },
     { "label": "Retreat", "href": "/retreat" },
+    { "label": "Preise", "href": "/preise" },
     { "label": "Blog", "href": "/blog" },
     { "label": "Kontakt", "href": "/kontakt" },
     { "label": "\u00dcber mich", "href": "/ueber-mich" }

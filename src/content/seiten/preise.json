@@ -1,0 +1,188 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-preise",
+        "title": "Preise & Pakete",
+        "subtitle": "Transparente Preise für dein Wohlbefinden",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-yoga",
+        "title": "Yoga-Kurse",
+        "subtitle": "Präventionskurse, Yin Yoga und mehr — für jedes Level",
+        "packages": [
+          {
+            "name": "Einzelstunde",
+            "price": "Auf Anfrage",
+            "period": "pro Einheit",
+            "features": ["60 Minuten Kurseinheit", "Alle Level willkommen", "Matten vorhanden", "Kleine Gruppen"],
+            "highlighted": false
+          },
+          {
+            "name": "5er-Karte",
+            "price": "Auf Anfrage",
+            "period": "5 Einheiten",
+            "features": ["5 x 60 Minuten", "Alle Level willkommen", "Matten vorhanden", "Kleine Gruppen", "Flexibel einlösbar"],
+            "highlighted": true
+          },
+          {
+            "name": "10er-Karte",
+            "price": "Auf Anfrage",
+            "period": "10 Einheiten",
+            "features": ["10 x 60 Minuten", "Alle Level willkommen", "Matten vorhanden", "Kleine Gruppen", "Flexibel einlösbar", "Bester Preis pro Einheit"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p1", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-pilates",
+        "title": "Pilates-Kurse",
+        "subtitle": "Stärke deine Körpermitte mit zertifizierten Präventionskursen",
+        "packages": [
+          {
+            "name": "Einzelstunde",
+            "price": "Auf Anfrage",
+            "period": "pro Einheit",
+            "features": ["75 Minuten Kurseinheit", "Alle Level willkommen", "Geräte vorhanden", "Kleine Gruppen"],
+            "highlighted": false
+          },
+          {
+            "name": "5er-Karte",
+            "price": "Auf Anfrage",
+            "period": "5 Einheiten",
+            "features": ["5 x 75 Minuten", "Alle Level willkommen", "Geräte vorhanden", "Kleine Gruppen", "Flexibel einlösbar"],
+            "highlighted": true
+          },
+          {
+            "name": "10er-Karte",
+            "price": "Auf Anfrage",
+            "period": "10 Einheiten",
+            "features": ["10 x 75 Minuten", "Alle Level willkommen", "Geräte vorhanden", "Kleine Gruppen", "Flexibel einlösbar", "Bester Preis pro Einheit"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p2", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-massagen",
+        "title": "Massage-Angebote",
+        "subtitle": "Entspannung und Wohlbefinden für Körper und Seele",
+        "packages": [
+          {
+            "name": "30 Minuten",
+            "price": "Auf Anfrage",
+            "period": "pro Sitzung",
+            "features": ["Klassisch oder Aromatherapie", "Wohlfühlatmosphäre", "Fokus auf Problemzonen"],
+            "highlighted": false
+          },
+          {
+            "name": "60 Minuten",
+            "price": "Auf Anfrage",
+            "period": "pro Sitzung",
+            "features": ["Klassisch oder Aromatherapie", "Wohlfühlatmosphäre", "Ganzkörperbehandlung", "Prä-/Postnatal möglich"],
+            "highlighted": true
+          },
+          {
+            "name": "90 Minuten",
+            "price": "Auf Anfrage",
+            "period": "pro Sitzung",
+            "features": ["Klassisch oder Aromatherapie", "Wohlfühlatmosphäre", "Intensive Ganzkörperbehandlung", "Prä-/Postnatal möglich", "Inklusive Nachruhezeit"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p3", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-heilraum",
+        "title": "Heilraum für die Seele",
+        "subtitle": "Schamanische Heilarbeit und spirituelle Begleitung",
+        "packages": [
+          {
+            "name": "Einzelsitzung",
+            "price": "Auf Anfrage",
+            "period": "pro Sitzung",
+            "features": ["60–90 Minuten pro Sitzung", "Schamanische Heilarbeit", "Individuell auf dich abgestimmt"],
+            "highlighted": false
+          },
+          {
+            "name": "3er-Paket",
+            "price": "Auf Anfrage",
+            "period": "3 Sitzungen",
+            "features": ["3 x 60–90 Minuten", "Schamanische Heilarbeit", "Individuell auf dich abgestimmt", "Vertiefende Begleitung"],
+            "highlighted": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p4", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-gemeinschaft",
+        "title": "Mantra & Jahreskreis",
+        "subtitle": "Gemeinsam singen, gemeinsam wachsen",
+        "packages": [
+          {
+            "name": "Mantra Einzeltermin",
+            "price": "Auf Anfrage",
+            "period": "pro Abend",
+            "features": ["Offene Runde", "Keine Vorkenntnisse nötig", "Mantrachanting & Medicine Songs"],
+            "highlighted": false
+          },
+          {
+            "name": "Jahreskreis für Frauen",
+            "price": "Auf Anfrage",
+            "period": "pro Kreis",
+            "features": ["Offene Runde", "Keine Vorkenntnisse nötig", "Rituale & Gemeinschaft", "Zyklisch durch das Jahr"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-preise",
+        "title": "Fragen zu Preisen?",
+        "text": "Kontaktiere mich gerne für aktuelle Preise und individuelle Angebote.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Preise & Pakete – Runayoga",
+      "seoDescription": "Transparente Preise bei Runayoga: Einzelstunden, 5er- und 10er-Karten für Yoga, Pilates und Massagen in Berlin-Pankow."
+    }
+  },
+  "zones": {}
+}
