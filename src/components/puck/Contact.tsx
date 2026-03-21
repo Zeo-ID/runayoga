@@ -11,7 +11,7 @@ export function Contact({
   showMap: boolean;
   mapEmbed: string;
 }) {
-  const contact = siteData.contact;
+  const contact = siteData.contact as Record<string, string | undefined>;
   const hours = siteData.openingHours;
 
   return (

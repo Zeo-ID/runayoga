@@ -1,7 +1,7 @@
 import siteData from "../../data/site.json";
 
 export function Footer() {
-  const contact = siteData.contact;
+  const contact = siteData.contact as Record<string, string | undefined>;
   const legal = siteData.footer?.legal || [];
 
   return (
