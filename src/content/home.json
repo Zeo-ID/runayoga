@@ -1,0 +1,65 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Willkommen",
+        "subtitle": "Ihre professionelle Website – einfach zu bearbeiten.",
+        "buttonText": "Angebot entdecken",
+        "buttonLink": "/angebote",
+        "secondButtonText": "Kontakt",
+        "secondButtonLink": "/kontakt",
+        "image": "/images/hero.jpg",
+        "imageAlt": "Hero Bild",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-001",
+        "title": "Unsere Angebote",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "Angebot 1",
+            "text": "Beschreibung Ihres ersten Angebots.",
+            "image": "",
+            "link": ""
+          },
+          {
+            "title": "Angebot 2",
+            "text": "Beschreibung Ihres zweiten Angebots.",
+            "image": "",
+            "link": ""
+          },
+          {
+            "title": "Angebot 3",
+            "text": "Beschreibung Ihres dritten Angebots.",
+            "image": "",
+            "link": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Bereit loszulegen?",
+        "text": "Kontaktieren Sie uns noch heute für ein unverbindliches Angebot.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Willkommen | Meine Website",
+      "seoDescription": "Professionelle Website – einfach bearbeiten mit dem Puck-Editor."
+    }
+  },
+  "zones": {}
+}

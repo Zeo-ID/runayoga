@@ -1,0 +1,18 @@
+{
+  "content": [
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<h2>Impressum</h2><p>Angaben gemäß § 5 TMG</p><p>[Hier Ihre Angaben einfügen]</p>"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Impressum",
+      "seoDescription": "Impressum und rechtliche Angaben."
+    }
+  },
+  "zones": {}
+}

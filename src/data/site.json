@@ -1,0 +1,36 @@
+{
+  "name": "Meine Website",
+  "tagline": "Willkommen auf meiner Website",
+  "logo": "/images/logo.svg",
+  "contact": {
+    "email": "info@example.de",
+    "phone": "+49 123 456 7890",
+    "address": "Berlin",
+    "whatsapp": "",
+    "instagram": ""
+  },
+  "openingHours": [
+    { "day": "Mo–Fr", "time": "9:00–18:00" },
+    { "day": "Sa", "time": "10:00–14:00" }
+  ],
+  "theme": {
+    "preset": "sage",
+    "primaryColor": "#5F7A5E",
+    "accentColor": "#D4A574",
+    "fontHeading": "Playfair Display",
+    "fontBody": "Open Sans"
+  },
+  "navigation": [
+    { "label": "Startseite", "href": "/" },
+    { "label": "Angebot", "href": "/angebote" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "Kontakt", "href": "/kontakt" }
+  ],
+  "footer": {
+    "legal": [
+      { "label": "Impressum", "href": "/impressum" },
+      { "label": "Datenschutz", "href": "/datenschutz" }
+    ],
+    "copyright": "© 2026 Meine Website. Alle Rechte vorbehalten."
+  }
+}

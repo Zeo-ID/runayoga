@@ -1,0 +1,18 @@
+{
+  "content": [
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-002",
+        "content": "<h2>Datenschutzerklärung</h2><p>[Hier Ihre Datenschutzerklärung einfügen]</p>"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Datenschutz",
+      "seoDescription": "Informationen zum Datenschutz."
+    }
+  },
+  "zones": {}
+}

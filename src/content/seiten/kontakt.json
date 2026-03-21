@@ -1,0 +1,21 @@
+{
+  "content": [
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-001",
+        "title": "Kontakt",
+        "text": "Wir freuen uns auf Ihre Nachricht.",
+        "showMap": false,
+        "mapEmbed": ""
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Kontakt",
+      "seoDescription": "Nehmen Sie Kontakt mit uns auf."
+    }
+  },
+  "zones": {}
+}
