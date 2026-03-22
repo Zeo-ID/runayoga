@@ -1,18 +1,19 @@
 /**
  * GitHub API client for content management.
- * Runs client-side — uses the GitHub token from localStorage (set during OAuth callback).
+ * Runs client-side — owner/repo/branch come from site.json, token from localStorage.
  */
+
+import siteData from "../data/site.json";
 
 const GITHUB_API = "https://api.github.com";
 
 function getConfig() {
   if (typeof window === "undefined") return null;
   const token = localStorage.getItem("github_token");
-  const owner = localStorage.getItem("github_owner");
-  const repo = localStorage.getItem("github_repo");
-  const branch = localStorage.getItem("github_branch") || "main";
-  if (!token || !owner || !repo) return null;
-  return { token, owner, repo, branch };
+  if (!token) return null;
+  const gh = (siteData as any).github;
+  if (!gh?.owner || !gh?.repo) return null;
+  return { token, owner: gh.owner, repo: gh.repo, branch: gh.branch || "main" };
 }
 
 function headers(token: string) {

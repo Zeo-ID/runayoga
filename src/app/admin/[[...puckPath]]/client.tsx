@@ -26,12 +26,10 @@ export function AdminClient() {
   const [message, setMessage] = useState("");
   const [configured, setConfigured] = useState(false);
 
-  // Check GitHub config
+  // Check GitHub config — only token needed (owner/repo from site.json)
   useEffect(() => {
     const token = localStorage.getItem("github_token");
-    const owner = localStorage.getItem("github_owner");
-    const repo = localStorage.getItem("github_repo");
-    setConfigured(!!token && !!owner && !!repo);
+    setConfigured(!!token);
   }, []);
 
   // Load page list
@@ -162,49 +160,33 @@ export function AdminClient() {
 
 function SetupForm({ onDone }: { onDone: () => void }) {
   const [token, setToken] = useState("");
-  const [owner, setOwner] = useState("");
-  const [repo, setRepo] = useState("");
 
   function save() {
     localStorage.setItem("github_token", token);
-    localStorage.setItem("github_owner", owner);
-    localStorage.setItem("github_repo", repo);
-    localStorage.setItem("github_branch", "main");
     onDone();
   }
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-50">
       <div className="bg-white rounded-xl shadow-lg p-8 max-w-md w-full space-y-4">
-        <h1 className="text-xl font-bold">GitHub-Verbindung einrichten</h1>
+        <h1 className="text-xl font-bold">Admin-Zugang</h1>
         <p className="text-sm text-gray-500">
-          Einmalige Einrichtung für die Content-Verwaltung.
+          Bitte gib deinen Zugangsschlüssel ein, um Inhalte zu bearbeiten.
         </p>
         <input
-          placeholder="GitHub Token"
+          placeholder="Zugangsschlüssel"
           type="password"
           value={token}
           onChange={(e) => setToken(e.target.value)}
           className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm"
-        />
-        <input
-          placeholder="Owner (z.B. Zeo-ID)"
-          value={owner}
-          onChange={(e) => setOwner(e.target.value)}
-          className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm"
-        />
-        <input
-          placeholder="Repo (z.B. runayoga)"
-          value={repo}
-          onChange={(e) => setRepo(e.target.value)}
-          className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm"
+          onKeyDown={(e) => e.key === "Enter" && token && save()}
         />
         <button
           onClick={save}
-          disabled={!token || !owner || !repo}
+          disabled={!token}
           className="w-full bg-blue-600 text-white font-semibold py-2.5 rounded-lg hover:bg-blue-700 disabled:opacity-50 transition-colors"
         >
-          Verbinden
+          Anmelden
         </button>
       </div>
     </div>

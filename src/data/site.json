@@ -41,6 +41,11 @@
     { "label": "Kontakt", "href": "/kontakt" },
     { "label": "\u00dcber mich", "href": "/ueber-mich" }
   ],
+  "github": {
+    "owner": "Zeo-ID",
+    "repo": "runayoga",
+    "branch": "main"
+  },
   "footer": {
     "legal": [
       { "label": "Impressum", "href": "/impressum" },
