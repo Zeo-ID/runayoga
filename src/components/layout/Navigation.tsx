@@ -26,36 +26,54 @@ export function Navigation() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[var(--color-border)]">
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+    <header
+      className="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+      style={{
+        background: "rgba(245,240,232,.75)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+      }}
+    >
+      <div className="max-w-[1200px] mx-auto flex items-center justify-between px-8 py-4">
         <a href="/" className="flex items-center gap-3">
           {siteData.logo && (
-            <img src={siteData.logo} alt={siteData.name} className="h-8" />
+            <img src={siteData.logo} alt={siteData.name} className="h-[45px] w-auto" />
           )}
-          <span className="font-heading font-bold text-lg text-[var(--color-text)]">
-            {siteData.name}
-          </span>
         </a>
 
         {/* Desktop */}
-        <nav className="hidden md:flex items-center gap-8" ref={dropdownRef}>
+        <nav className="hidden md:flex items-center gap-7" ref={dropdownRef}>
           {nav.map((item, i) =>
             item.children && item.children.length > 0 ? (
               <div key={i} className="relative">
                 <button
                   onClick={() => setOpenDropdown(openDropdown === i ? null : i)}
-                  className="text-sm font-medium text-[var(--color-text-light)] hover:text-[var(--color-primary)] transition-colors flex items-center gap-1"
+                  className="nav-link flex items-center gap-1"
                 >
                   {item.label}
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M3 5l3 3 3-3" />
-                  </svg>
+                  <span
+                    className="text-[.65rem] transition-transform duration-300"
+                    style={{ transform: openDropdown === i ? "rotate(180deg)" : "none" }}
+                  >
+                    ▼
+                  </span>
                 </button>
                 {openDropdown === i && (
-                  <div className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-[var(--color-border)] py-2 min-w-[180px]">
+                  <div
+                    className="absolute left-1/2 mt-3 min-w-[200px] py-2"
+                    style={{
+                      transform: "translateX(-50%)",
+                      background: "var(--color-bg-alt)",
+                      borderRadius: "12px",
+                      boxShadow: "var(--shadow-lg)",
+                    }}
+                  >
                     <a
                       href={item.href}
-                      className="block px-4 py-2 text-sm text-[var(--color-text-light)] hover:bg-[var(--color-bg)] hover:text-[var(--color-primary)]"
+                      className="block px-5 py-2 text-[.9rem] whitespace-nowrap hover:text-[var(--color-primary)]"
+                      style={{ transition: "background var(--transition), color var(--transition)" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(122,139,111,.08)")}
+                      onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                       onClick={() => setOpenDropdown(null)}
                     >
                       Alle {item.label}
@@ -64,7 +82,10 @@ export function Navigation() {
                       <a
                         key={j}
                         href={child.href}
-                        className="block px-4 py-2 text-sm text-[var(--color-text-light)] hover:bg-[var(--color-bg)] hover:text-[var(--color-primary)]"
+                        className="block px-5 py-2 text-[.9rem] whitespace-nowrap hover:text-[var(--color-primary)]"
+                        style={{ transition: "background var(--transition), color var(--transition)" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(122,139,111,.08)")}
+                        onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                         onClick={() => setOpenDropdown(null)}
                       >
                         {child.label}
@@ -74,11 +95,7 @@ export function Navigation() {
                 )}
               </div>
             ) : (
-              <a
-                key={i}
-                href={item.href}
-                className="text-sm font-medium text-[var(--color-text-light)] hover:text-[var(--color-primary)] transition-colors"
-              >
+              <a key={i} href={item.href} className="nav-link">
                 {item.label}
               </a>
             )
@@ -88,45 +105,95 @@ export function Navigation() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden p-2 text-[var(--color-text)]"
+          className="md:hidden p-1 cursor-pointer"
           aria-label="Menü"
         >
-          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
-            {menuOpen ? (
-              <path d="M6 6l12 12M6 18L18 6" />
-            ) : (
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
+          <div className="flex flex-col gap-[5px]">
+            <span
+              className="block w-6 h-[2px] rounded-sm transition-transform duration-300"
+              style={{
+                background: "var(--color-text)",
+                transform: menuOpen ? "translateY(7px) rotate(45deg)" : "none",
+              }}
+            />
+            <span
+              className="block w-6 h-[2px] rounded-sm transition-opacity duration-300"
+              style={{
+                background: "var(--color-text)",
+                opacity: menuOpen ? 0 : 1,
+              }}
+            />
+            <span
+              className="block w-6 h-[2px] rounded-sm transition-transform duration-300"
+              style={{
+                background: "var(--color-text)",
+                transform: menuOpen ? "translateY(-7px) rotate(-45deg)" : "none",
+              }}
+            />
+          </div>
         </button>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <nav className="md:hidden border-t border-[var(--color-border)] bg-white px-6 py-4 space-y-1">
+        <nav
+          className="md:hidden px-8 py-6 flex flex-col gap-0"
+          style={{
+            background: "var(--color-bg-alt)",
+            boxShadow: "var(--shadow-md)",
+            borderTop: "1px solid rgba(0,0,0,.05)",
+          }}
+        >
           {nav.map((item, i) => (
             <div key={i}>
               <a
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="block py-2 text-sm font-medium text-[var(--color-text-light)] hover:text-[var(--color-primary)]"
+                className="block py-3 text-[.95rem] font-normal hover:text-[var(--color-primary)] transition-colors"
               >
                 {item.label}
               </a>
-              {item.children && item.children.map((child, j) => (
-                <a
-                  key={j}
-                  href={child.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="block py-2 pl-4 text-sm text-[var(--color-text-light)] hover:text-[var(--color-primary)]"
-                >
-                  {child.label}
-                </a>
-              ))}
+              {item.children &&
+                item.children.map((child, j) => (
+                  <a
+                    key={j}
+                    href={child.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="block py-2 pl-4 text-[.9rem] hover:text-[var(--color-primary)] transition-colors"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    {child.label}
+                  </a>
+                ))}
             </div>
           ))}
         </nav>
       )}
+
+      <style>{`
+        .nav-link {
+          font-size: .92rem;
+          font-weight: 400;
+          color: var(--color-text);
+          position: relative;
+          transition: color var(--transition);
+          background: none;
+          border: none;
+          cursor: pointer;
+        }
+        .nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: var(--color-primary);
+          transition: width var(--transition);
+        }
+        .nav-link:hover { color: var(--color-primary); }
+        .nav-link:hover::after { width: 100%; }
+      `}</style>
     </header>
   );
 }

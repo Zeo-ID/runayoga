@@ -9,32 +9,41 @@ export function Quote({
 }) {
   if (variant === "decorative") {
     return (
-      <section className="section-padding bg-[var(--color-bg-alt)]">
-        <blockquote className="max-w-3xl mx-auto text-center">
-          <span className="text-6xl text-[var(--color-primary)] opacity-30 leading-none block mb-2">
-            &ldquo;
-          </span>
-          <p className="text-xl md:text-2xl italic text-[var(--color-text)] leading-relaxed mb-4">
-            {text}
-          </p>
+      <section
+        className="text-white text-center"
+        style={{ background: "var(--color-primary-dark)", padding: "5rem 2rem" }}
+      >
+        <div className="max-w-[800px] mx-auto">
+          <blockquote
+            className="font-heading italic mb-6"
+            style={{ fontSize: "2.2rem", lineHeight: 1.5, opacity: .95 }}
+          >
+            &ldquo;{text}&rdquo;
+          </blockquote>
           {source && (
-            <cite className="text-sm text-[var(--color-text-light)] not-italic">
+            <cite className="not-italic" style={{ opacity: .7, fontSize: "1rem" }}>
               — {source}
             </cite>
           )}
-        </blockquote>
+        </div>
       </section>
     );
   }
 
   return (
     <section className="section-padding">
-      <blockquote className="max-w-3xl mx-auto border-l-4 border-[var(--color-primary)] pl-6">
-        <p className="text-lg italic text-[var(--color-text)] leading-relaxed mb-2">
+      <blockquote
+        className="max-w-3xl mx-auto pl-6"
+        style={{ borderLeft: "4px solid var(--color-primary)" }}
+      >
+        <p
+          className="text-lg italic leading-relaxed mb-2"
+          style={{ color: "var(--color-text)" }}
+        >
           &ldquo;{text}&rdquo;
         </p>
         {source && (
-          <cite className="text-sm text-[var(--color-text-light)] not-italic">
+          <cite className="text-sm not-italic" style={{ color: "var(--color-text-light)" }}>
             — {source}
           </cite>
         )}

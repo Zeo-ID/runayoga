@@ -1,3 +1,5 @@
+"use client";
+
 export function Cards({
   title,
   columns = 3,
@@ -15,43 +17,77 @@ export function Cards({
       : "md:grid-cols-2 lg:grid-cols-3";
 
   return (
-    <section className="section-padding">
-      <div className="max-w-6xl mx-auto">
+    <section className="section-padding" style={{ background: "var(--color-bg-alt)" }}>
+      <div className="max-w-[1200px] mx-auto">
         {title && (
-          <h2 className="text-3xl font-bold font-heading text-center mb-10 text-[var(--color-text)]">
-            {title}
-          </h2>
-        )}
-        <div className={`grid grid-cols-1 ${colClass} gap-6`}>
-          {(cards || []).map((card, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl shadow-sm border border-[var(--color-border)] overflow-hidden hover:shadow-md transition-shadow"
+          <div className="text-center mb-12">
+            <h2
+              className="font-heading"
+              style={{ fontSize: "2.4rem", fontWeight: 500, lineHeight: 1.2, color: "var(--color-text)" }}
             >
-              {card.image && (
+              {title}
+            </h2>
+          </div>
+        )}
+        <div className={`grid grid-cols-1 ${colClass} gap-8`}>
+          {(cards || []).map((card, i) => (
+            <a
+              key={i}
+              href={card.link || undefined}
+              className="block text-center overflow-hidden"
+              style={{
+                background: "#fff",
+                borderRadius: "var(--radius)",
+                padding: "2.2rem",
+                transition: "transform var(--transition), box-shadow var(--transition)",
+                textDecoration: "none",
+                color: "inherit",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-6px)";
+                e.currentTarget.style.boxShadow = "var(--shadow-lg)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+            >
+              {card.image ? (
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover mb-5"
+                  style={{ borderRadius: "var(--radius)" }}
+                />
+              ) : (
+                <div
+                  className="mx-auto mb-5 flex items-center justify-center"
+                  style={{
+                    width: 70,
+                    height: 70,
+                    borderRadius: "50%",
+                    background: "linear-gradient(135deg, var(--color-primary-light), var(--color-primary))",
+                  }}
                 />
               )}
-              <div className="p-6">
-                <h3 className="text-lg font-semibold font-heading mb-2 text-[var(--color-text)]">
-                  {card.title}
-                </h3>
-                <p className="text-sm text-[var(--color-text-light)] mb-4">
-                  {card.text}
-                </p>
-                {card.link && (
-                  <a
-                    href={card.link}
-                    className="text-sm font-medium text-[var(--color-primary)] hover:underline"
-                  >
-                    Mehr erfahren →
-                  </a>
-                )}
-              </div>
-            </div>
+              <h3
+                className="font-heading mb-2"
+                style={{ fontSize: "1.3rem", fontWeight: 500, color: "var(--color-text)" }}
+              >
+                {card.title}
+              </h3>
+              <p className="mb-4" style={{ fontSize: ".93rem", color: "var(--color-text-light)" }}>
+                {card.text}
+              </p>
+              {card.link && (
+                <span
+                  className="inline-flex items-center gap-1"
+                  style={{ fontSize: ".88rem", fontWeight: 500, color: "var(--color-primary)" }}
+                >
+                  Mehr erfahren →
+                </span>
+              )}
+            </a>
           ))}
         </div>
       </div>

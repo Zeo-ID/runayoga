@@ -18,8 +18,8 @@
     "preset": "sage",
     "primaryColor": "#7a8b6f",
     "accentColor": "#c4956a",
-    "fontHeading": "Playfair Display",
-    "fontBody": "Open Sans"
+    "fontHeading": "Cormorant Garamond",
+    "fontBody": "Inter"
   },
   "navigation": [
     { "label": "Startseite", "href": "/" },

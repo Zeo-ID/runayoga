@@ -27,7 +27,7 @@ export function Hero({
       >
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center max-w-2xl px-6 py-20">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-heading">
+          <h1 className="font-heading text-4xl md:text-5xl mb-4" style={{ fontWeight: 500, lineHeight: 1.2 }}>
             {title}
           </h1>
           <p className="text-lg md:text-xl mb-8 opacity-90">{subtitle}</p>
@@ -49,40 +49,101 @@ export function Hero({
   }
 
   return (
-    <section className="section-padding">
+    <section
+      className="min-h-screen grid items-center gap-16 relative overflow-hidden"
+      style={{
+        gridTemplateColumns: "1fr 1fr",
+        padding: "8rem 2rem 4rem",
+        maxWidth: "1200px",
+        margin: "0 auto",
+      }}
+    >
+      {/* Organic blobs */}
       <div
-        className={`max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 ${
-          layout === "left" ? "md:flex-row-reverse" : ""
-        }`}
-      >
-        <div className="flex-1 space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold font-heading text-[var(--color-text)]">
-            {title}
-          </h1>
-          <p className="text-lg text-[var(--color-text-light)]">{subtitle}</p>
-          <div className="flex gap-4 flex-wrap">
-            {buttonText && (
-              <a href={buttonLink} className="btn-primary">
-                {buttonText}
-              </a>
-            )}
-            {secondButtonText && (
-              <a href={secondButtonLink} className="btn-secondary">
-                {secondButtonText}
-              </a>
-            )}
-          </div>
+        className="absolute pointer-events-none"
+        style={{
+          width: 400, height: 400,
+          borderRadius: "40% 60% 70% 30% / 40% 50% 60% 50%",
+          background: "rgba(122,139,111,.07)",
+          top: -100, right: -100,
+        }}
+      />
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          width: 300, height: 300,
+          borderRadius: "40% 60% 70% 30% / 40% 50% 60% 50%",
+          background: "rgba(196,149,106,.06)",
+          bottom: -80, left: -80,
+        }}
+      />
+
+      <div className={`relative z-10 ${layout === "left" ? "order-2" : ""}`}>
+        <h1
+          className="font-heading mb-5"
+          style={{ fontSize: "3.6rem", fontWeight: 500, lineHeight: 1.2, color: "var(--color-text)" }}
+        >
+          {title}
+        </h1>
+        <p
+          className="mb-8"
+          style={{ fontSize: "1.15rem", color: "var(--color-text-light)", maxWidth: 480 }}
+        >
+          {subtitle}
+        </p>
+        <div className="flex gap-4 flex-wrap">
+          {buttonText && (
+            <a href={buttonLink} className="btn-primary">
+              {buttonText}
+            </a>
+          )}
+          {secondButtonText && (
+            <a href={secondButtonLink} className="btn-secondary">
+              {secondButtonText}
+            </a>
+          )}
         </div>
-        {image && (
-          <div className="flex-1">
-            <img
-              src={image}
-              alt={imageAlt || title}
-              className="w-full rounded-2xl shadow-lg object-cover aspect-[4/3]"
-            />
-          </div>
-        )}
       </div>
+
+      {image && (
+        <div
+          className={`relative z-10 ${layout === "left" ? "order-1" : ""}`}
+          style={{
+            borderRadius: "40% 60% 70% 30% / 40% 50% 60% 50%",
+            overflow: "hidden",
+            aspectRatio: "4/5",
+          }}
+        >
+          <img
+            src={image}
+            alt={imageAlt || title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+
+      <style>{`
+        @media (max-width: 968px) {
+          section[style*="grid-template-columns: 1fr 1fr"] {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+            min-height: auto !important;
+            padding: 8rem 2rem 3rem !important;
+          }
+          section[style*="grid-template-columns: 1fr 1fr"] > div:last-child {
+            max-width: 400px;
+            margin: 0 auto;
+          }
+        }
+        @media (max-width: 600px) {
+          section[style*="grid-template-columns: 1fr 1fr"] {
+            padding: 7rem 1.2rem 2rem !important;
+          }
+          section[style*="grid-template-columns: 1fr 1fr"] h1 {
+            font-size: 2.2rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
