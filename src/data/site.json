@@ -1,7 +1,9 @@
 {
   "name": "Runayoga",
   "tagline": "Yoga, Pilates & Massagen in Berlin-Pankow",
+  "url": "https://runayoga.pages.dev",
   "logo": "/images/logo.png",
+  "ogImage": "/images/hero.jpg",
   "contact": {
     "email": "runabulla@gmail.com",
     "phone": "+49 163 139 1059",

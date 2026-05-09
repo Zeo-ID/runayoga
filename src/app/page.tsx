@@ -1,13 +1,35 @@
 import { getPage } from "../lib/get-page";
 import { PageClient } from "./[...puckPath]/client";
+import { JsonLd } from "../components/JsonLd";
+import {
+  buildOpenGraph,
+  buildTwitter,
+  findHero,
+  organizationJsonLd,
+} from "../lib/seo";
 
 export async function generateMetadata() {
   const data = getPage("/");
   const seoTitle = data?.root?.props?.seoTitle;
   const seoDesc = data?.root?.props?.seoDescription;
+  const hero = findHero(data?.content || []);
+  const image = hero?.image;
+
   return {
     title: seoTitle || "Startseite",
     description: seoDesc || "",
+    alternates: { canonical: "/" },
+    openGraph: buildOpenGraph({
+      title: seoTitle,
+      description: seoDesc,
+      path: "/",
+      image,
+    }),
+    twitter: buildTwitter({
+      title: seoTitle,
+      description: seoDesc,
+      image,
+    }),
   };
 }
 
@@ -27,5 +49,10 @@ export default function HomePage() {
     );
   }
 
-  return <PageClient data={data} />;
+  return (
+    <>
+      <JsonLd data={organizationJsonLd()} />
+      <PageClient data={data} />
+    </>
+  );
 }
