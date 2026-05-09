@@ -11,6 +11,9 @@ import {
   listContentFiles,
   deleteContent,
 } from "../../../lib/github";
+import { SiteSettings } from "../../../components/admin/SiteSettings";
+
+const SETTINGS_PATH = "__settings__";
 
 type PageType = "seite" | "blog" | "angebot";
 
@@ -109,6 +112,7 @@ export function AdminClient() {
     if (!configured) return;
     async function loadPages() {
       const allPages: { label: string; path: string }[] = [
+        { label: "⚙ Einstellungen", path: SETTINGS_PATH },
         { label: "Startseite", path: "/" },
       ];
 
@@ -141,6 +145,10 @@ export function AdminClient() {
   // Load selected page content
   useEffect(() => {
     if (!configured) return;
+    if (path === SETTINGS_PATH) {
+      setLoading(false);
+      return;
+    }
     async function load() {
       setLoading(true);
       const file = pathToContentFile(path);
@@ -242,15 +250,17 @@ export function AdminClient() {
           ))}
         </select>
 
-        <button
-          type="button"
-          onClick={() => setShowNew(true)}
-          className="text-sm bg-blue-600 text-white rounded-md px-3 py-1.5 hover:bg-blue-700"
-        >
-          + Neu
-        </button>
+        {path !== SETTINGS_PATH && (
+          <button
+            type="button"
+            onClick={() => setShowNew(true)}
+            className="text-sm bg-blue-600 text-white rounded-md px-3 py-1.5 hover:bg-blue-700"
+          >
+            + Neu
+          </button>
+        )}
 
-        {path !== "/" && (
+        {path !== "/" && path !== SETTINGS_PATH && (
           <button
             type="button"
             onClick={handleDelete}
@@ -272,14 +282,16 @@ export function AdminClient() {
             {message}
           </span>
         )}
-        <a
-          href={path}
-          target="_blank"
-          rel="noopener"
-          className="ml-auto text-sm text-blue-500 hover:underline"
-        >
-          Seite ansehen ↗
-        </a>
+        {path !== SETTINGS_PATH && (
+          <a
+            href={path}
+            target="_blank"
+            rel="noopener"
+            className="ml-auto text-sm text-blue-500 hover:underline"
+          >
+            Seite ansehen ↗
+          </a>
+        )}
       </div>
 
       {showNew && (
@@ -290,13 +302,17 @@ export function AdminClient() {
         />
       )}
 
-      {/* Puck editor */}
-      <div className="flex-1">
-        <Puck
-          config={config}
-          data={data as Data}
-          onPublish={handlePublish}
-        />
+      {/* Editor or Settings */}
+      <div className="flex-1 overflow-y-auto bg-neutral-100">
+        {path === SETTINGS_PATH ? (
+          <SiteSettings />
+        ) : (
+          <Puck
+            config={config}
+            data={data as Data}
+            onPublish={handlePublish}
+          />
+        )}
       </div>
     </div>
   );
