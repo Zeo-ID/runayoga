@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "slug": "atemtechnik-pranayama",
+      "href": "/blog/atemtechnik-pranayama",
+      "title": "Die Kraft der Atemtechnik: Pranayama für Anfänger",
+      "description": "Pranayama für Anfänger: Lerne die wichtigsten Atemtechniken im Yoga. Schritt-für-Schritt-Anleitung von Runayoga Berlin-Pankow.",
+      "image": "",
+      "date": "2026-03-21"
+    },
+    {
+      "slug": "retreat-erfahrung",
+      "href": "/blog/retreat-erfahrung",
+      "title": "Mein erstes Retreat: Eine Reise zu mir selbst",
+      "description": "Erfahrungsbericht: Mein erstes Yogaretreat mit Runayoga. Eine persönliche Reise zu mir selbst mit Yoga, Natur und Gemeinschaft.",
+      "image": "",
+      "date": "2026-03-21"
+    },
+    {
+      "slug": "yoga-im-alltag",
+      "href": "/blog/yoga-im-alltag",
+      "title": "5 Wege, Yoga in deinen Alltag zu integrieren",
+      "description": "5 einfache Wege, Yoga in deinen Alltag zu integrieren. Praktische Tipps von Runayoga für mehr Achtsamkeit und Balance jeden Tag.",
+      "image": "",
+      "date": "2026-03-21"
+    }
+  ]
+}

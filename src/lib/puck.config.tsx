@@ -12,6 +12,10 @@ import { Contact } from "../components/puck/Contact";
 import { Divider } from "../components/puck/Divider";
 import { Quote } from "../components/puck/Quote";
 import { Video } from "../components/puck/Video";
+import { BlogList } from "../components/puck/BlogList";
+import { Map as MapBlock } from "../components/puck/Map";
+import { imagePickerField } from "../components/fields/ImagePicker";
+import { richTextField } from "../components/fields/RichTextEditor";
 
 type Props = {
   Hero: {
@@ -90,6 +94,21 @@ type Props = {
     url: string;
     title: string;
   };
+  BlogList: {
+    title: string;
+    count: number;
+    layout: "grid" | "list";
+    showImage: boolean;
+    showDate: boolean;
+    showExcerpt: boolean;
+  };
+  Map: {
+    title: string;
+    address: string;
+    zoom: number;
+    height: number;
+    rounded: boolean;
+  };
 };
 
 const config: Config<Props> = {
@@ -104,11 +123,15 @@ const config: Config<Props> = {
     },
     medien: {
       title: "Medien",
-      components: ["Gallery", "Video"],
+      components: ["Gallery", "Video", "Map"],
     },
     geschaeft: {
       title: "Geschäft",
       components: ["Pricing"],
+    },
+    blog: {
+      title: "Blog",
+      components: ["BlogList"],
     },
     layout: {
       title: "Layout",
@@ -125,7 +148,7 @@ const config: Config<Props> = {
         buttonLink: { type: "text", label: "Button-Link" },
         secondButtonText: { type: "text", label: "2. Button (optional)" },
         secondButtonLink: { type: "text", label: "2. Button-Link" },
-        image: { type: "text", label: "Bild-URL" },
+        image: imagePickerField("Bild"),
         imageAlt: { type: "text", label: "Bild-Beschreibung" },
         layout: {
           type: "radio",
@@ -154,7 +177,7 @@ const config: Config<Props> = {
     RichText: {
       label: "Text-Block",
       fields: {
-        content: { type: "textarea", label: "Inhalt (HTML)" },
+        content: richTextField("Inhalt"),
       },
       defaultProps: {
         content: "<h2>Überschrift</h2><p>Ihr Text hier...</p>",
@@ -181,7 +204,7 @@ const config: Config<Props> = {
           arrayFields: {
             title: { type: "text", label: "Titel" },
             text: { type: "textarea", label: "Text" },
-            image: { type: "text", label: "Bild-URL" },
+            image: imagePickerField("Bild"),
             link: { type: "text", label: "Link" },
           },
         },
@@ -230,7 +253,7 @@ const config: Config<Props> = {
       fields: {
         title: { type: "text", label: "Überschrift" },
         text: { type: "textarea", label: "Text" },
-        image: { type: "text", label: "Bild-URL" },
+        image: imagePickerField("Bild"),
         imageAlt: { type: "text", label: "Bild-Beschreibung" },
         imagePosition: {
           type: "radio",
@@ -319,7 +342,7 @@ const config: Config<Props> = {
           type: "array",
           label: "Bilder",
           arrayFields: {
-            src: { type: "text", label: "Bild-URL" },
+            src: imagePickerField("Bild"),
             alt: { type: "text", label: "Beschreibung" },
             caption: { type: "text", label: "Bildunterschrift" },
           },
@@ -465,6 +488,81 @@ const config: Config<Props> = {
         title: "Video",
       },
       render: Video,
+    },
+
+    BlogList: {
+      label: "Blog-Übersicht",
+      fields: {
+        title: { type: "text", label: "Überschrift" },
+        count: { type: "number", label: "Anzahl Beiträge", min: 1, max: 24 },
+        layout: {
+          type: "radio",
+          label: "Layout",
+          options: [
+            { label: "Karten-Grid", value: "grid" },
+            { label: "Liste", value: "list" },
+          ],
+        },
+        showImage: {
+          type: "radio",
+          label: "Bild anzeigen",
+          options: [
+            { label: "Ja", value: true },
+            { label: "Nein", value: false },
+          ],
+        },
+        showDate: {
+          type: "radio",
+          label: "Datum anzeigen",
+          options: [
+            { label: "Ja", value: true },
+            { label: "Nein", value: false },
+          ],
+        },
+        showExcerpt: {
+          type: "radio",
+          label: "Auszug anzeigen",
+          options: [
+            { label: "Ja", value: true },
+            { label: "Nein", value: false },
+          ],
+        },
+      },
+      defaultProps: {
+        title: "Aus dem Blog",
+        count: 6,
+        layout: "grid",
+        showImage: true,
+        showDate: true,
+        showExcerpt: true,
+      },
+      render: BlogList,
+    },
+
+    Map: {
+      label: "Karte",
+      fields: {
+        title: { type: "text", label: "Überschrift" },
+        address: { type: "text", label: "Adresse" },
+        zoom: { type: "number", label: "Zoom (1-20)", min: 1, max: 20 },
+        height: { type: "number", label: "Höhe (px)", min: 200, max: 900 },
+        rounded: {
+          type: "radio",
+          label: "Abgerundete Ecken",
+          options: [
+            { label: "Ja", value: true },
+            { label: "Nein", value: false },
+          ],
+        },
+      },
+      defaultProps: {
+        title: "So findest du uns",
+        address: "Berlin-Pankow",
+        zoom: 14,
+        height: 420,
+        rounded: true,
+      },
+      render: MapBlock,
     },
   },
 
