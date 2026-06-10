@@ -4,12 +4,12 @@
       "type": "Hero",
       "props": {
         "id": "Hero-001",
-        "title": "Yoga",
-        "subtitle": "Finde Gleichgewicht und innere Ruhe",
+        "title": "Atme durch. Komm bei dir an.",
+        "subtitle": "Yoga in Berlin-Pankow – ein geschützter Raum, in dem dein Körper weicher wird, dein Atem ruhiger und dein Kopf endlich still.",
         "buttonText": "Jetzt anfragen",
         "buttonLink": "/kontakt",
-        "secondButtonText": "",
-        "secondButtonLink": "",
+        "secondButtonText": "Preise ansehen",
+        "secondButtonLink": "/preise",
         "image": "",
         "imageAlt": "",
         "layout": "right"
@@ -19,15 +19,26 @@
       "type": "RichText",
       "props": {
         "id": "RichText-001",
-        "content": "<p>Yoga ist f\u00fcr mich weit mehr als K\u00f6rper\u00fcbungen auf der Matte. Es ist ein Weg zu dir selbst -- ein Raum, in dem du ankommen darfst, genau so wie du bist. In meinem Studio in Berlin-Pankow unterrichte ich Hatha Yoga, Vinyasa Flow und Yin Yoga in kleinen, pers\u00f6nlichen Gruppen. Dabei steht nicht die perfekte Haltung im Vordergrund, sondern dein ganz eigenes Erleben.</p><p>Meine Yogastunden sind von der \u00dcberzeugung getragen, dass jeder K\u00f6rper Yoga praktizieren kann. Ob du zum ersten Mal auf die Matte kommst oder schon jahrelang \u00fcbst -- ich hole dich dort ab, wo du gerade stehst. Mit Achtsamkeit, Atem\u00fcbungen und sanften Korrekturen begleite ich dich dabei, deinen K\u00f6rper neu zu entdecken und Spannungen loszulassen.</p><p>Meine Pr\u00e4ventionskurse sind nach \u00a720 SGB V zertifiziert und werden von den meisten gesetzlichen Krankenkassen bezuschusst. Dar\u00fcber hinaus biete ich auch Online-Yoga an, damit du auch von zu Hause aus \u00fcben kannst, wann immer es in deinen Alltag passt.</p><h2>Was dich erwartet</h2><ul><li>Kleine Gruppen f\u00fcr individuelle Betreuung</li><li>Alle Level willkommen -- vom Anf\u00e4nger bis Fortgeschrittene</li><li>Krankenkassenzertifizierte Pr\u00e4ventionskurse (\u00a720 SGB V)</li><li>Einzelstunden f\u00fcr deine pers\u00f6nliche Praxis m\u00f6glich</li><li>Online-Yoga als flexible Erg\u00e4nzung</li><li>Hatha, Vinyasa und Yin Yoga im Angebot</li></ul><h2>F\u00fcr wen ist Yoga geeignet?</h2><p>Yoga ist f\u00fcr alle da. Ob du nach Ausgleich zum stressigen Alltag suchst, R\u00fcckenschmerzen lindern m\u00f6chtest oder einfach etwas Gutes f\u00fcr dich tun willst -- du bist herzlich willkommen. Auch in der Schwangerschaft und nach der Geburt begleite ich dich gerne mit angepassten \u00dcbungen.</p>"
+        "content": "<p>Kennst du das Gefühl, dass der Kopf nicht mehr aufhört zu rattern? Dass die Schultern bis zu den Ohren wandern, der Rücken zwickt und du dich nach einem Ort sehnst, an dem du einfach nur sein darfst? Genau diesen Ort schaffe ich für dich. Yoga ist für mich weit mehr als Körperübungen auf der Matte – es ist ein Nachhausekommen zu dir selbst. In meinem Studio in Berlin-Pankow unterrichte ich Hatha Yoga, Vinyasa Flow und Yin Yoga in kleinen, persönlichen Gruppen. Nicht die perfekte Haltung zählt, sondern dein ganz eigenes Erleben.</p><p>Stell dir vor, wie du nach einer Stunde von der Matte aufstehst: der Atem tief und ruhig, der Rücken länger und freier, der innere Lärm verstummt. Davon bin ich zutiefst überzeugt – jeder Körper kann Yoga praktizieren. Ob du zum ersten Mal auf die Matte kommst oder schon jahrelang übst, ich hole dich genau dort ab, wo du gerade stehst. Mit Achtsamkeit, bewusstem Atem und sanften, einfühlsamen Korrekturen begleite ich dich, deinen Körper neu zu spüren und alten Ballast loszulassen.</p><p>Du musst dafür nicht tief in die Tasche greifen: Meine Präventionskurse sind nach § 20 SGB V zertifiziert (Zentrale Prüfstelle Prävention) und werden von den meisten gesetzlichen Krankenkassen mit bis zu 80 % bezuschusst. Und wenn der Alltag mal keine Zeit für den Weg ins Studio lässt, üben wir online – damit deine Ruheinsel immer in Reichweite bleibt.</p><h2>Das schenkst du dir hier</h2><ul><li>Kleine Gruppen, in denen ich dich wirklich sehe und individuell begleite</li><li>Alle Level herzlich willkommen – vom ersten Atemzug bis zur geübten Praxis</li><li>Krankenkassenzertifizierte Präventionskurse (§ 20 SGB V) mit bis zu 80 % Erstattung – Gesundheit, die dich kaum etwas kostet</li><li>Einzelstunden für deinen ganz persönlichen Weg</li><li>Online-Yoga, das sich flexibel in dein Leben fügt</li><li>Hatha, Vinyasa und Yin Yoga – sanft kräftigend oder tief entspannend, ganz nach dem, was du gerade brauchst</li></ul><h2>Ist Yoga das Richtige für dich?</h2><p>Wenn du nach Ausgleich zum vollen Alltag suchst, deinen Rücken endlich entlasten oder einfach wieder durchatmen möchtest – ja, dann bist du hier genau richtig. Auch in der Schwangerschaft und nach der Geburt begleite ich dich behutsam mit angepassten Übungen. Du brauchst keine Vorkenntnisse und keine Beweglichkeit eines Profis. Du brauchst nur dich. Schreib mir, und wir finden gemeinsam heraus, was dir guttut.</p>"
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-kurs",
+        "title": "Dein Dienstagabend nur für dich – Yoga Yin & Yang",
+        "text": "<p>Sanft kräftigend und tief loslassend – perfekt für Anfänger und alle, die wieder einsteigen möchten. <strong>Dienstags 19:15–20:30 Uhr</strong>, als 8- oder 10-Wochen-Kurs, der dich verlässlich durch die Woche trägt.</p><p><strong>Kursblöcke 2026:</strong><br>14.04.–16.06.2026 (Pause in den Osterferien)<br>25.08.–17.11.2026 (kein Kurs 13.–27.10.2026)</p><p>ZPP-zertifiziert (§ 20 SGB V) · bis zu 80 % Kassenerstattung<br>Ort: Sinnergie, Schulzestr. 1, 13187 Berlin-Pankow</p><p>Die Plätze sind bewusst begrenzt, damit jede von euch gesehen wird. Sichere dir deinen Platz, solange er frei ist.</p>",
+        "image": "",
+        "imageAlt": "",
+        "imagePosition": "left"
       }
     },
     {
       "type": "CTA",
       "props": {
         "id": "CTA-001",
-        "title": "Interesse an Yoga?",
-        "text": "Melde dich bei mir und wir finden gemeinsam den passenden Kurs f\u00fcr dich.",
+        "title": "Gönn dir den ersten Atemzug",
+        "text": "Du musst dich nicht entscheiden, bevor du es gespürt hast. Schreib mir, und wir finden gemeinsam den Kurs, der sich für dich richtig anfühlt – ganz ohne Druck.",
         "buttonText": "Jetzt anfragen",
         "buttonLink": "/kontakt",
         "variant": "primary"
@@ -36,8 +47,8 @@
   ],
   "root": {
     "props": {
-      "seoTitle": "Yoga \u2013 Runayoga",
-      "seoDescription": "Hatha Yoga, Vinyasa Flow und Yin Yoga in kleinen Gruppen in Berlin-Pankow. Zertifizierte Pr\u00e4ventionskurse bei Runayoga."
+      "seoTitle": "Yoga in Berlin-Pankow – endlich durchatmen | Runayoga",
+      "seoDescription": "Hatha, Vinyasa & Yin Yoga in kleinen Gruppen in Berlin-Pankow. Lass Stress und Rückenschmerzen los und komm bei dir an. ZPP-zertifizierte Präventionskurse mit bis zu 80 % Kassenerstattung – jetzt Platz sichern bei Runayoga."
     }
   },
   "zones": {}

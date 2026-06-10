@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Was sind Mantren?",
+        "subtitle": "Heilige Silben, Worte und Verse, die seit Jahrtausenden den Geist fokussieren und positive Energien freisetzen. Eine sanfte Einführung in die Kraft der Klänge.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Vielleicht ist es dir in einer Yogastunde schon einmal begegnet: ein gemeinsam gesungener Klang zu Beginn, ein leises Summen, das den Raum erfüllt. Mantren begleiten viele Menschen auf ihrem Weg – und doch fragen sich die meisten beim ersten Mal: Was ist das eigentlich, und warum tut es so gut? Lass uns gemeinsam einen Blick darauf werfen.</p><h2>Was ist ein Mantra?</h2><p>Ein Mantra ist eine heilige Silbe, ein Wort oder ein ganzer Vers. Ursprünglich beschäftigten sich Menschen der indischen, tibetischen und mongolischen Völker mit Mantras. Damalige Seher entdeckten die Kraft von Klängen: Denn bestimmte Rhythmen und Klänge setzen positive Energien frei. Diese wurden auf Sanskrit, der altindischen Sprache, festgehalten und weitergegeben.</p><h2>Das wohl bekannteste Mantra: „Om“</h2><p>Das wohl bekannteste Mantra ist auch heute noch <strong>„Om“</strong>. Es soll den Klang des Universums beschreiben und steht für die reinste Form von Energie. Neben dem Mantra „Om“ gibt es natürlich noch eine ganze Menge weiterer Mantras, die für verschiedene Ziele eingesetzt werden.</p><h2>Wie Mantren geübt werden</h2><p>Mantras werden – laut oder leise – gesprochen, gesungen oder in Gedanken aufgesagt. Viele kommen zum ersten Mal bei einer Yoga-Stunde oder einer Meditations-Sitzung mit Mantras in Berührung. Zu Beginn, zum Ende oder auch immer wieder während der Stunde wird ein ausgewähltes Mantra zusammen gesungen oder gesprochen.</p><h2>Warum das Wiederholen so wirkt</h2><p>Das Wiederholen von Mantras dient dazu, den Geist beziehungsweise die Gedanken zu fokussieren und positive mentale Energien freizusetzen. Ziel ist also nicht, die Sanskrit-Wörter auf gedanklicher Ebene zu „verstehen“ oder zu übersetzen, sondern vielmehr die Wirkung auf energetischer Ebene zu entfachen.</p><p>Denn durch die Wiederholung der Klänge im gleichen Rhythmus entstehen Schwingungen, die unser und auch das räumliche Energiefeld verändern. Das kann den Geist beruhigen, Kraft spenden und den Körper in einen Entspannungszustand versetzen.</p><blockquote><p>„Bestimmte Rhythmen und Klänge setzen positive Energien frei.“</p></blockquote><p>Du musst kein Sanskrit beherrschen und nichts richtig machen. Lass dich beim nächsten Mal einfach auf den Klang ein, spüre die Schwingung in dir – und schau, was sich dabei für dich verändert.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Erlebe Mantren in einer Yogastunde",
+        "text": "Tauche in einer gemeinsamen Stunde bei Runayoga in Berlin-Pankow in die Kraft der Klänge ein – ganz ohne Vorkenntnisse.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Was sind Mantren? – Runayoga",
+      "seoDescription": "Was ist ein Mantra? Eine warme Einführung von Runayoga: Herkunft, das Mantra „Om“ und wie das Wiederholen den Geist fokussiert und Energie freisetzt.",
+      "date": "2024-03-19"
+    }
+  },
+  "zones": {}
+}

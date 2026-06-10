@@ -7,7 +7,7 @@
   "contact": {
     "email": "runabulla@gmail.com",
     "phone": "+49 163 139 1059",
-    "address": "Berlin-Pankow",
+    "address": "Schulzestr. 1, 13187 Berlin-Pankow",
     "whatsapp": "4901631391059",
     "instagram": "https://www.instagram.com/runayoga_berlin/"
   },
@@ -51,7 +51,8 @@
   "footer": {
     "legal": [
       { "label": "Impressum", "href": "/impressum" },
-      { "label": "Datenschutz", "href": "/datenschutz" }
+      { "label": "Datenschutz", "href": "/datenschutz" },
+      { "label": "AGB", "href": "/agb" }
     ],
     "copyright": "\u00a9 2026 Runayoga. Alle Rechte vorbehalten."
   }

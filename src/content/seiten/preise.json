@@ -4,37 +4,37 @@
       "type": "Hero",
       "props": {
         "id": "Hero-preise",
-        "title": "Preise & Pakete",
-        "subtitle": "Transparente Preise für dein Wohlbefinden",
+        "title": "Investiere in das, was dich trägt",
+        "subtitle": "Klare Preise, ehrliche Angebote – damit du in Ruhe ankommen kannst",
         "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-preise-intro",
+        "content": "<p style=\"text-align:center\">Du musst nicht alles allein tragen. Meine Yoga- und Pilates-Präventionskurse sind nach § 20 SGB V zertifiziert (Zentrale Prüfstelle Prävention) – die meisten gesetzlichen Krankenkassen übernehmen <strong>bis zu 80 %</strong> der Kosten. So wird Zeit für dich selbst leichter möglich, als du vielleicht denkst.</p>"
       }
     },
     {
       "type": "Pricing",
       "props": {
         "id": "Pricing-yoga",
-        "title": "Yoga-Kurse",
-        "subtitle": "Präventionskurse, Yin Yoga und mehr — für jedes Level",
+        "title": "Atme durch – Yoga, das den Alltag aus dir herauslässt",
+        "subtitle": "Yin & Yang für Einsteigerinnen und Wiedereinsteiger – sanft geführt, ZPP-zertifiziert",
         "packages": [
+          {
+            "name": "Präventionskurs",
+            "price": "240 €",
+            "period": "10 Einheiten (8- oder 10-Wochen-Kurs)",
+            "features": ["Dienstags 19:15–20:30 Uhr – dein fester Abend für dich", "Yin & Yang: kraftvoll und loslassend zugleich", "ZPP-zertifiziert (§ 20 SGB V)", "Bis zu 80 % Kassenerstattung", "Kleine Gruppen, in denen dich niemand übersieht"],
+            "highlighted": true
+          },
           {
             "name": "Einzelstunde",
             "price": "Auf Anfrage",
             "period": "pro Einheit",
-            "features": ["60 Minuten Kurseinheit", "Alle Level willkommen", "Matten vorhanden", "Kleine Gruppen"],
-            "highlighted": false
-          },
-          {
-            "name": "5er-Karte",
-            "price": "Auf Anfrage",
-            "period": "5 Einheiten",
-            "features": ["5 x 60 Minuten", "Alle Level willkommen", "Matten vorhanden", "Kleine Gruppen", "Flexibel einlösbar"],
-            "highlighted": true
-          },
-          {
-            "name": "10er-Karte",
-            "price": "Auf Anfrage",
-            "period": "10 Einheiten",
-            "features": ["10 x 60 Minuten", "Alle Level willkommen", "Matten vorhanden", "Kleine Gruppen", "Flexibel einlösbar", "Bester Preis pro Einheit"],
+            "features": ["60 Minuten ganz in deinem Tempo", "Egal, wo du gerade stehst – du bist willkommen", "Matten sind da, komm einfach", "Auch online, wenn dir das Zuhause lieber ist"],
             "highlighted": false
           }
         ]
@@ -48,28 +48,21 @@
       "type": "Pricing",
       "props": {
         "id": "Pricing-pilates",
-        "title": "Pilates-Kurse",
-        "subtitle": "Stärke deine Körpermitte mit zertifizierten Präventionskursen",
+        "title": "Stark aus der Mitte – Pilates für einen Rücken, der dich wieder trägt",
+        "subtitle": "Mehr Stabilität, weniger Verspannung – mit Kleingeräten, ZPP-zertifiziert",
         "packages": [
+          {
+            "name": "Präventionskurs",
+            "price": "200 €",
+            "period": "10 Einheiten",
+            "features": ["Dienstags 18:00–19:00 Uhr", "Gezieltes Training mit Kleingeräten für eine spürbar starke Mitte", "ZPP-zertifiziert (§ 20 SGB V)", "Bis zu 80 % Kassenerstattung", "Kleine Gruppen mit Blick für deine Haltung"],
+            "highlighted": true
+          },
           {
             "name": "Einzelstunde",
             "price": "Auf Anfrage",
             "period": "pro Einheit",
-            "features": ["75 Minuten Kurseinheit", "Alle Level willkommen", "Geräte vorhanden", "Kleine Gruppen"],
-            "highlighted": false
-          },
-          {
-            "name": "5er-Karte",
-            "price": "Auf Anfrage",
-            "period": "5 Einheiten",
-            "features": ["5 x 75 Minuten", "Alle Level willkommen", "Geräte vorhanden", "Kleine Gruppen", "Flexibel einlösbar"],
-            "highlighted": true
-          },
-          {
-            "name": "10er-Karte",
-            "price": "Auf Anfrage",
-            "period": "10 Einheiten",
-            "features": ["10 x 75 Minuten", "Alle Level willkommen", "Geräte vorhanden", "Kleine Gruppen", "Flexibel einlösbar", "Bester Preis pro Einheit"],
+            "features": ["75 Minuten ganz auf dich abgestimmt", "Egal, wo du gerade stehst – du bist willkommen", "Geräte sind vorhanden", "Persönliche Betreuung, die jede Bewegung begleitet"],
             "highlighted": false
           }
         ]
@@ -83,28 +76,56 @@
       "type": "Pricing",
       "props": {
         "id": "Pricing-massagen",
-        "title": "Massage-Angebote",
-        "subtitle": "Entspannung und Wohlbefinden für Körper und Seele",
+        "title": "Lass dich tragen – eine Stunde nur für deinen Körper",
+        "subtitle": "Lomi Lomi Nui, Ayurveda, Klangschalen, Fußreflexzonen u. v. m. – berührt, was Worte nicht erreichen",
         "packages": [
           {
-            "name": "30 Minuten",
-            "price": "Auf Anfrage",
-            "period": "pro Sitzung",
-            "features": ["Klassisch oder Aromatherapie", "Wohlfühlatmosphäre", "Fokus auf Problemzonen"],
+            "name": "Einzelmassage",
+            "price": "95 €",
+            "period": "60 Minuten",
+            "features": ["Deine Massageart, ganz nach deinem Gefühl", "Für Schwangere & postnatal liebevoll geeignet", "Warmer, geschützter Raum zum Ankommen", "Inkl. Vorgespräch – bitte 75 Min. einplanen"],
             "highlighted": false
           },
           {
-            "name": "60 Minuten",
-            "price": "Auf Anfrage",
-            "period": "pro Sitzung",
-            "features": ["Klassisch oder Aromatherapie", "Wohlfühlatmosphäre", "Ganzkörperbehandlung", "Prä-/Postnatal möglich"],
+            "name": "Einzelmassage",
+            "price": "135 €",
+            "period": "90 Minuten",
+            "features": ["Deine Massageart, ganz nach deinem Gefühl", "Intensive Ganzkörperbehandlung, in der jede Verspannung Zeit zum Lösen bekommt", "Für Schwangere & postnatal liebevoll geeignet", "Inkl. Vorgespräch – bitte 105 Min. einplanen"],
+            "highlighted": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p2b", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-massagepakete",
+        "title": "Gönn dir mehr als einen Moment – Massagepakete (3er)",
+        "subtitle": "Drei Behandlungen, die nachwirken – und 15 € günstiger als einzeln",
+        "packages": [
+          {
+            "name": "Mutterglück",
+            "price": "270 €",
+            "period": "statt 285 € · 3 × 60 Min.",
+            "features": ["3 × Massage für Schwangere", "Liebevolle Begleitung durch deine Schwangerschaft – für dich und dein Kind", "15 € Ersparnis"],
+            "highlighted": false
+          },
+          {
+            "name": "Klang und Relax",
+            "price": "270 €",
+            "period": "statt 285 € · 3 × 60 Min.",
+            "features": ["3 × Klangschalenmassage", "Tiefe Entspannung, die Körper und Geist nachschwingen lässt", "15 € Ersparnis"],
             "highlighted": true
           },
           {
-            "name": "90 Minuten",
-            "price": "Auf Anfrage",
-            "period": "pro Sitzung",
-            "features": ["Klassisch oder Aromatherapie", "Wohlfühlatmosphäre", "Intensive Ganzkörperbehandlung", "Prä-/Postnatal möglich", "Inklusive Nachruhezeit"],
+            "name": "Körper und Geist",
+            "price": "270 €",
+            "period": "statt 285 € · 3 × 60 Min.",
+            "features": ["3 × Massage nach Wahl", "Frei kombinierbar – ganz nach dem, was du gerade brauchst", "15 € Ersparnis"],
             "highlighted": false
           }
         ]
@@ -118,22 +139,29 @@
       "type": "Pricing",
       "props": {
         "id": "Pricing-heilraum",
-        "title": "Heilraum für die Seele",
-        "subtitle": "Schamanische Heilarbeit und spirituelle Begleitung",
+        "title": "Heilraum für die Seele – wenn das Innere Ruhe sucht",
+        "subtitle": "Schamanische Heilarbeit und achtsame Begleitung in einem geschützten Raum",
         "packages": [
           {
-            "name": "Einzelsitzung",
-            "price": "Auf Anfrage",
-            "period": "pro Sitzung",
-            "features": ["60–90 Minuten pro Sitzung", "Schamanische Heilarbeit", "Individuell auf dich abgestimmt"],
+            "name": "Schamanische Reise",
+            "price": "120 €",
+            "period": "ca. 75 Minuten",
+            "features": ["Begleitung mit Trommel, Stimme & Räucherung", "Begegnung mit deinem Krafttier, Antworten auf Lebensfragen", "Integrationsgespräch im Anschluss"],
+            "highlighted": true
+          },
+          {
+            "name": "Besprechen & Besingen",
+            "price": "60 €",
+            "period": "pro Einheit (30 Min.)",
+            "features": ["Alte mündliche Heiltradition mit Segensworten", "Oft als kleine Serie über 3–7 Tage", "Auf Wunsch auch als Fernbegleitung"],
             "highlighted": false
           },
           {
-            "name": "3er-Paket",
+            "name": "Heilzeremonie",
             "price": "Auf Anfrage",
-            "period": "3 Sitzungen",
-            "features": ["3 x 60–90 Minuten", "Schamanische Heilarbeit", "Individuell auf dich abgestimmt", "Vertiefende Begleitung"],
-            "highlighted": true
+            "period": "ca. 90–120 Minuten",
+            "features": ["Allein, zu zweit oder kleine Gruppe", "Rituale, Klang, Stille & bewusste Präsenz", "Unverbindliches Vorgespräch vorab"],
+            "highlighted": false
           }
         ]
       }
@@ -146,33 +174,40 @@
       "type": "Pricing",
       "props": {
         "id": "Pricing-gemeinschaft",
-        "title": "Mantra & Jahreskreis",
-        "subtitle": "Gemeinsam singen, gemeinsam wachsen",
+        "title": "Mantra & Jahreskreis – gemeinsam getragen",
+        "subtitle": "Singen, fühlen, verbunden sein – du musst nichts können, nur da sein",
         "packages": [
           {
             "name": "Mantra Einzeltermin",
             "price": "Auf Anfrage",
             "period": "pro Abend",
-            "features": ["Offene Runde", "Keine Vorkenntnisse nötig", "Mantrachanting & Medicine Songs"],
+            "features": ["Offene Runde – komm, wie du bist", "Keine Vorkenntnisse nötig, deine Stimme genügt", "Mantrachanting & Medicine Songs, die von innen wärmen"],
             "highlighted": false
           },
           {
             "name": "Jahreskreis für Frauen",
             "price": "Auf Anfrage",
             "period": "pro Kreis",
-            "features": ["Offene Runde", "Keine Vorkenntnisse nötig", "Rituale & Gemeinschaft", "Zyklisch durch das Jahr"],
+            "features": ["Offene Runde unter Frauen, die dich auffängt", "Keine Vorkenntnisse nötig, deine Stimme genügt", "Rituale & Gemeinschaft, die Halt geben", "Zyklisch durch das Jahr – im Rhythmus der Natur"],
             "highlighted": false
           }
         ]
       }
     },
     {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-preise-hinweise",
+        "content": "<h2>Gut zu wissen</h2><ul><li>Eine kurze Anmeldung sichert dir deinen Platz.</li><li>Die Massagepreise gelten nicht für Gesundheitsticket oder Machtfit.</li><li>Mehrfachkarten und Präventionskurse sind vor Kursbeginn in vollem Umfang zu bezahlen.</li><li>Alle Angaben ohne Gewähr – es gilt die jeweils aktuelle Ausschreibung.</li></ul>"
+      }
+    },
+    {
       "type": "CTA",
       "props": {
         "id": "CTA-preise",
-        "title": "Fragen zu Preisen?",
-        "text": "Kontaktiere mich gerne für aktuelle Preise und individuelle Angebote.",
-        "buttonText": "Jetzt anfragen",
+        "title": "Noch unsicher, was zu dir passt?",
+        "text": "Schreib mir einfach – wir finden gemeinsam heraus, was dir gerade guttut, und ich nenne dir die aktuellen Preise. Ganz ohne Druck.",
+        "buttonText": "Schreib mir",
         "buttonLink": "/kontakt",
         "variant": "primary"
       }
@@ -180,8 +215,8 @@
   ],
   "root": {
     "props": {
-      "seoTitle": "Preise & Pakete – Runayoga",
-      "seoDescription": "Transparente Preise bei Runayoga: Einzelstunden, 5er- und 10er-Karten für Yoga, Pilates und Massagen in Berlin-Pankow."
+      "seoTitle": "Preise – Yoga, Pilates & Massage in Berlin-Pankow | Runayoga",
+      "seoDescription": "Komm zur Ruhe bei Runayoga in Berlin-Pankow: Massage ab 95 €, 3er-Pakete 270 €, ZPP-zertifizierte Yoga- & Pilates-Präventionskurse mit bis zu 80 % Kassenerstattung. Jetzt deinen Platz sichern."
     }
   },
   "zones": {}

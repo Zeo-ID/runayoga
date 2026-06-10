@@ -4,8 +4,8 @@
       "type": "Hero",
       "props": {
         "id": "Hero-001",
-        "title": "Mein Angebot",
-        "subtitle": "Ein ganzheitliches Angebot f\u00fcr K\u00f6rper, Geist und Seele",
+        "title": "Komm an. Atme durch.",
+        "subtitle": "Ein gesch\u00fctzter Raum f\u00fcr deinen K\u00f6rper, deinen Geist und deine Seele \u2013 mitten in Berlin-Pankow.",
         "buttonText": "",
         "buttonLink": "",
         "secondButtonText": "",
@@ -19,7 +19,7 @@
       "type": "RichText",
       "props": {
         "id": "RichText-001",
-        "content": "<p>Entdecke mein ganzheitliches Angebot f\u00fcr K\u00f6rper, Geist und Seele. Von Yoga und Pilates \u00fcber Massagen bis hin zu schamanischer Heilarbeit, Mantra-Singen und dem Jahreskreis f\u00fcr Frauen -- bei mir findest du den passenden Weg zu mehr Wohlbefinden.</p>"
+        "content": "<p>Vielleicht kennst du das: der Kopf voll, die Schultern hochgezogen, der R\u00fccken meldet sich, und tief drinnen diese leise Sehnsucht nach Ruhe \u2013 nach einem Ort, an dem du einfach <em>du</em> sein darfst. Genau daf\u00fcr bin ich da.</p><p>Ich bin Runa, und ich begleite dich seit vielen Jahren mit Yoga, Pilates und Massagen, mit schamanischer Heilarbeit, Mantra-Singen und dem Jahreskreis f\u00fcr Frauen. Hier wirst du nicht bewertet, sondern gehalten. In kleinen Gruppen, in einem warmen, gesch\u00fctzten Raum, findest du Schritt f\u00fcr Schritt zur\u00fcck zu mehr Leichtigkeit, Kraft und Verbindung \u2013 mit dir selbst.</p><p><strong>Sp\u00fcr einfach hin, was dich gerade ruft.</strong> St\u00f6bere unten durch die Angebote \u2013 und wenn du magst, schreib mir. Wir finden gemeinsam heraus, was dir guttut.</p>"
       }
     },
     {
@@ -30,38 +30,38 @@
         "columns": 3,
         "cards": [
           {
-            "title": "Yoga",
-            "text": "Hatha, Vinyasa und Yin Yoga in kleinen Gruppen. Finde Gleichgewicht und innere Ruhe auf der Matte.",
+            "title": "Yoga \u2013 ankommen auf der Matte",
+            "text": "Atme tief durch, lass den Tag von dir abfallen. Hatha, Vinyasa und Yin in kleinen Gruppen \u2013 sanft genug f\u00fcr den Anfang, kraftvoll genug, um deinen R\u00fccken zu l\u00f6sen und den Kopf endlich leiser werden zu lassen.",
             "image": "",
             "link": "/angebote/yoga"
           },
           {
-            "title": "Pilates",
-            "text": "St\u00e4rke deine K\u00f6rpermitte mit bewusster, kontrollierter Bewegung. Zertifizierte Pr\u00e4ventionskurse.",
+            "title": "Pilates \u2013 Kraft aus der Mitte",
+            "text": "Eine stabile Mitte, ein aufrechter R\u00fccken, ein K\u00f6rper, der wieder tr\u00e4gt. Bewusste, kontrollierte Bewegung in ZPP-zertifizierten Pr\u00e4ventionskursen \u2013 deine Krankenkasse bezuschusst die Teilnahme.",
             "image": "",
             "link": "/angebote/pilates"
           },
           {
-            "title": "Massagen",
-            "text": "Wohltuende Massagen f\u00fcr K\u00f6rper und Seele. Spezialisiert auf Pre- und Postnatal-Massagen.",
+            "title": "Massagen \u2013 Zeit nur f\u00fcr dich",
+            "text": "Lass dich halten und loslassen. Wohltuende Ber\u00fchrung, die Verspannungen l\u00f6st und dich tief durchatmen l\u00e4sst \u2013 mit besonderer Erfahrung in Pre- und Postnatal-Massagen f\u00fcr werdende und frischgebackene Mamas.",
             "image": "",
             "link": "/angebote/massagen"
           },
           {
             "title": "Heilraum f\u00fcr die Seele",
-            "text": "Schamanische Energiemedizin und spirituelle Begleitung f\u00fcr tiefe Heilung und innere Kraft.",
+            "text": "Wenn etwas in dir nach Heilung ruft: ein gesch\u00fctzter Raum f\u00fcr schamanische Energiearbeit und einf\u00fchlsame Begleitung. Hier darfst du loslassen, was schwer geworden ist, und deiner inneren Kraft wieder begegnen.",
             "image": "",
             "link": "/angebote/heilraum"
           },
           {
-            "title": "Mantra singen",
-            "text": "Gemeinsames Singen von Mantras und Medicine Songs. Erlebe die heilende Kraft von Klang und Gemeinschaft.",
+            "title": "Mantra singen \u2013 Klang, der dich tr\u00e4gt",
+            "text": "Sp\u00fcr, wie Anspannung sich in deiner Stimme l\u00f6st. Gemeinsames Singen von Mantras und Medicine Songs \u2013 kein K\u00f6nnen n\u00f6tig, nur du, dein Atem und die w\u00e4rmende Kraft der Gemeinschaft.",
             "image": "",
             "link": "/angebote/mantra"
           },
           {
             "title": "Jahreskreis f\u00fcr Frauen",
-            "text": "Frauenkreis mit 8 Treffen im Jahr zu den keltischen Jahreskreisfesten. Rituale, Gemeinschaft und Verbindung.",
+            "text": "Ein Jahr lang gehalten in einem Kreis von Frauen: 8 Treffen zu den keltischen Jahreskreisfesten, mit Ritualen, ehrlichem Austausch und echter Verbindung. Ein Zuhause f\u00fcr deine Sehnsucht nach Tiefe und Zugeh\u00f6rigkeit.",
             "image": "",
             "link": "/angebote/jahreskreis"
           }
@@ -72,9 +72,9 @@
       "type": "CTA",
       "props": {
         "id": "CTA-001",
-        "title": "Fragen zu meinem Angebot?",
-        "text": "Ich berate dich gerne pers\u00f6nlich und finde mit dir gemeinsam das passende Angebot.",
-        "buttonText": "Jetzt anfragen",
+        "title": "Du bist dir noch nicht sicher? Lass uns reden.",
+        "text": "Manchmal braucht es nur ein erstes, ehrliches Gespr\u00e4ch. Schreib mir, was dich besch\u00e4ftigt \u2013 ich h\u00f6re zu und finde mit dir gemeinsam heraus, was dir gerade wirklich guttut. Ganz unverbindlich.",
+        "buttonText": "Schreib mir",
         "buttonLink": "/kontakt",
         "variant": "primary"
       }
@@ -82,8 +82,8 @@
   ],
   "root": {
     "props": {
-      "seoTitle": "Mein Angebot \u2013 Runayoga",
-      "seoDescription": "Entdecke das Angebot von Runayoga: Yoga, Pilates, Massagen, Heilraum, Mantra-Singen und Jahreskreis f\u00fcr Frauen in Berlin-Pankow."
+      "seoTitle": "Angebote \u2013 Yoga, Pilates & Heilarbeit in Berlin-Pankow | Runayoga",
+      "seoDescription": "Komm zur Ruhe in Berlin-Pankow: Yoga, Pilates (ZPP-zertifiziert, kassenbezuschusst), Massagen, schamanischer Heilraum, Mantra-Singen & Frauen-Jahreskreis \u2013 in kleinen Gruppen, einf\u00fchlsam begleitet von Runa."
     }
   },
   "zones": {}

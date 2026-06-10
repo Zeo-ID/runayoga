@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Hatha-Yoga bei Beckenendlage: Positionen, die dein Baby zur Drehung einladen",
+        "subtitle": "Immer wieder werde ich in meinen Kursen gefragt, welche Yoga-Positionen helfen können, das Baby aus der Beckenendlage sanft in die Geburtsposition zu animieren. Hier ein erster, behutsamer Blick darauf.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Immer wieder werde ich in meinen Kursen gefragt, welche Positionen für die Drehung des Babys möglich sind, um dein Baby zu animieren, in die Geburtsposition zu kommen. Damit ist gemeint, dass es mit dem Kopf in das kleine Becken rutscht. Es gibt dafür mehrere Möglichkeiten, Posen aus dem Hatha-Yoga zu praktizieren.</p><h2>Wenn das Baby in der Beckenendlage liegt</h2><p>Eine Beckenendlage bedeutet, dass dein Baby gegen Ende der Schwangerschaft nicht mit dem Kopf, sondern mit dem Po oder den Füßen nach unten liegt. Viele werdende Mamas wünschen sich dann, ihr Kind sanft dazu einzuladen, sich noch zu drehen. Aus dem Hatha-Yoga gibt es dafür mehrere Möglichkeiten, mit Achtsamkeit und Geduld zu arbeiten.</p><h2>Wichtig: Vorsicht bei Posen in der Rückenlage</h2><p>Bei einigen Übungen solltest du allerdings besonders bedacht sein.</p><blockquote><p>Gerade bei Posen in der Rückenlage solltest du bei einem Vena-Cava-Problem Alternativen aussuchen oder aber die Übungen verkürzen.</p></blockquote><p>Höre in solchen Momenten unbedingt auf deinen Körper und auf das, was deine Hebamme oder dein Arzt dir empfiehlt. Yoga in der Schwangerschaft lebt davon, dass du dir selbst mit Sanftheit und Aufmerksamkeit begegnest.</p><p><em>Hinweis: Dieser Beitrag ist als einleitender Text gedacht und führt in das Thema ein. Konkrete Anleitungen und einzelne Positionen besprechen wir am besten gemeinsam in einem Kurs, wo ich auf dich und deine ganz persönliche Situation eingehen kann.</em></p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Begleitung in der Schwangerschaft – ganz individuell",
+        "text": "Du möchtest mehr über sanfte Hatha-Yoga-Positionen in der Schwangerschaft erfahren und dich dabei gut aufgehoben fühlen? Schreib mir gerne – ich begleite dich achtsam auf deinem Weg.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Hatha-Yoga bei Beckenendlage: Positionen zur Drehung – Runayoga",
+      "seoDescription": "Welche Hatha-Yoga-Positionen können dein Baby aus der Beckenendlage sanft zur Drehung animieren? Ein behutsamer Einstieg von Runa Bulla – mit Hinweis zur Rückenlage.",
+      "date": "2021-07-05"
+    }
+  },
+  "zones": {}
+}

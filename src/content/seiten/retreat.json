@@ -5,7 +5,7 @@
       "props": {
         "id": "Hero-001",
         "title": "Yogaretreat 2026",
-        "subtitle": "Deine Auszeit vom Alltag",
+        "subtitle": "Sieben Tage nur für dich – atmen, loslassen, dich selbst wiederfinden",
         "buttonText": "Platz sichern",
         "buttonLink": "/kontakt",
         "secondButtonText": "",
@@ -19,24 +19,24 @@
       "type": "RichText",
       "props": {
         "id": "RichText-001",
-        "content": "<h2>Tauche tief ein</h2><p><em>Eine Reise zu dir selbst</em></p><p>Stell dir vor, du wachst auf mit dem Klang der Natur, beginnst den Tag mit einer sanften Yogapraxis bei Sonnenaufgang und l\u00e4sst den Abend mit Mantrachanting und Meditation ausklingen. Unser Yogaretreat ist mehr als ein Urlaub -- es ist eine Einladung, dich selbst wiederzufinden.</p><p>In einer kleinen, vertrauten Gruppe schaffen wir einen gesch\u00fctzten Raum, in dem du loslassen, auftanken und dich mit Gleichgesinnten verbinden kannst. Die Kombination aus t\u00e4glicher Yogapraxis, schamanischen Zeremonien, n\u00e4hrender Verpflegung und der Sch\u00f6nheit der Natur macht dieses Retreat zu einem unvergesslichen Erlebnis.</p><p>Ob du Anf\u00e4ngerin bist oder erfahrene Praktizierende -- das Retreat ist so gestaltet, dass jede Teilnehmerin ihren eigenen Rhythmus finden kann. Hier gibt es keinen Leistungsdruck, sondern nur die Einladung, ganz bei dir anzukommen.</p><h2>Was dich erwartet</h2><p>Eine ganzheitliche Erfahrung f\u00fcr K\u00f6rper, Geist und Seele:</p><ul><li>T\u00e4gliche Yoga- und Meditationspraxis</li><li>Schamanische Zeremonien</li><li>Mantrachanting und Medicine Songs</li><li>Vegetarische Vollverpflegung</li><li>Kleine, pers\u00f6nliche Gruppen (max. 12 Teilnehmer)</li><li>Freie Zeit f\u00fcr Wanderungen und Natur</li></ul><h2>Termine &amp; Ort</h2><p><strong>Fr\u00fchling 2026</strong> -- Termine werden bald bekannt gegeben.</p><p><strong>Ort:</strong> Mittelmeerraum -- genauer Ort wird noch bekannt gegeben</p><p><strong>Dauer:</strong> 7 Tage / 6 N\u00e4chte</p><p>Trage dich auf die Warteliste ein, um als Erste von den Terminen und dem genauen Ort zu erfahren.</p>"
+        "content": "<h2>Erlaube dir, ganz anzukommen</h2><p><em>Eine Woche, in der nichts von dir verlangt wird \u2013 au\u00dfer da zu sein.</em></p><p>Du sp\u00fcrst es schon l\u00e4nger: Der Kopf ist voll, die Schultern hochgezogen, die To-do-Liste endlos. Du funktionierst \u2013 aber du sehnst dich nach echter Ruhe, nach Tiefe, nach dem Gef\u00fchl, wieder bei dir selbst zu sein. Genau daf\u00fcr ist dieses Retreat da.</p><p>Stell dir vor: Du wachst auf mit dem Gesang der V\u00f6gel statt mit dem Wecker. Der Tag beginnt sanft auf der Matte, w\u00e4hrend die Sonne aufgeht und dein Atem ruhiger wird. Abends sitzt du im warmen Kreis, l\u00e4sst dich von Mantras und Stille tragen und f\u00fchlst, wie die Anspannung der letzten Monate Schicht f\u00fcr Schicht von dir abf\u00e4llt. Dieses Retreat ist kein Urlaub, den du \u201eabhakst\u201c \u2013 es ist eine liebevolle Einladung, wieder zu atmen.</p><p>In einer kleinen, vertrauten Runde halte ich einen gesch\u00fctzten Raum f\u00fcr dich: einen Ort ohne Erwartungen, an dem du loslassen, auftanken und dich mit anderen Frauen auf Augenh\u00f6he verbinden darfst. T\u00e4gliche Yogapraxis, schamanische Heilarbeit, n\u00e4hrendes Essen und die Stille der Natur weben sich zu einer Woche zusammen, die dich ver\u00e4ndert zur\u00fcckkehren l\u00e4sst \u2013 ger\u00e4umiger, weicher, ganz bei dir.</p><p>Und keine Sorge: Du musst nichts k\u00f6nnen. Ob du zum ersten Mal auf der Matte stehst oder seit Jahren \u00fcbst \u2013 ich hole dich dort ab, wo du gerade bist. Hier z\u00e4hlt kein Leistungsdruck, nur dein eigener Rhythmus.</p><h2>Was diese Woche f\u00fcr dich bereith\u00e4lt</h2><p>Ein rundum n\u00e4hrendes Erlebnis f\u00fcr K\u00f6rper, Herz und Seele:</p><ul><li>T\u00e4gliche Yoga- und Meditationspraxis, die dich erdet und l\u00f6st</li><li>Schamanische Zeremonien, die Altes loslassen helfen</li><li>Mantrachanting und Medicine Songs, die das Herz \u00f6ffnen</li><li>Liebevoll zubereitete vegetarische Vollverpflegung</li><li>Eine kleine, vertraute Gruppe (max. 12 Teilnehmerinnen) \u2013 damit echte N\u00e4he entstehen kann</li><li>Freie Zeit zum Wandern, Tr\u00e4umen und einfach Sein in der Natur</li></ul><h2>Termine &amp; Ort</h2><p><strong>Fr\u00fchling 2026</strong> – Termine werden bald bekannt gegeben.</p><p><strong>Ort:</strong> Mittelmeerraum – genauer Ort wird noch bekannt gegeben</p><p><strong>Dauer:</strong> 7 Tage / 6 N\u00e4chte</p><p>Die Pl\u00e4tze sind bewusst begrenzt \u2013 sie sind schnell vergeben. Trag dich jetzt unverbindlich auf die Warteliste ein und erfahre als Erste von Terminen, Ort und Fr\u00fchbucher-Pl\u00e4tzen.</p>"
       }
     },
     {
       "type": "Pricing",
       "props": {
         "id": "Pricing-001",
-        "title": "Retreat-Pakete",
+        "title": "Finde dein Paket \u2013 such dir den Raum, der zu dir passt",
         "packages": [
           {
             "name": "Fr\u00fchbucher",
             "price": "Preis auf Anfrage",
             "features": [
-              "7 Tage / 6 N\u00e4chte",
-              "Unterkunft im Mehrbettzimmer",
-              "Vegetarische Vollverpflegung",
+              "7 Tage / 6 N\u00e4chte voller Ruhe",
+              "Gem\u00fctliches Pl\u00e4tzchen im Mehrbettzimmer",
+              "Liebevolle vegetarische Vollverpflegung",
               "Alle Yoga- & Meditationseinheiten",
-              "Schamanische Zeremonien"
+              "Schamanische Zeremonien im Kreis"
             ],
             "buttonText": "Anfragen",
             "buttonLink": "/kontakt",
@@ -46,12 +46,12 @@
             "name": "Regular",
             "price": "Preis auf Anfrage",
             "features": [
-              "7 Tage / 6 N\u00e4chte",
+              "7 Tage / 6 N\u00e4chte voller Ruhe",
               "Unterkunft im Doppelzimmer",
-              "Vegetarische Vollverpflegung",
+              "Liebevolle vegetarische Vollverpflegung",
               "Alle Yoga- & Meditationseinheiten",
-              "Schamanische Zeremonien",
-              "1 Einzelmassage inklusive"
+              "Schamanische Zeremonien im Kreis",
+              "1 entspannende Einzelmassage inklusive"
             ],
             "buttonText": "Anfragen",
             "buttonLink": "/kontakt",
@@ -61,13 +61,13 @@
             "name": "Deluxe",
             "price": "Preis auf Anfrage",
             "features": [
-              "7 Tage / 6 N\u00e4chte",
-              "Unterkunft im Einzelzimmer",
-              "Vegetarische Vollverpflegung",
+              "7 Tage / 6 N\u00e4chte voller Ruhe",
+              "R\u00fcckzugsort im eigenen Einzelzimmer",
+              "Liebevolle vegetarische Vollverpflegung",
               "Alle Yoga- & Meditationseinheiten",
-              "Schamanische Zeremonien",
-              "2 Einzelmassagen inklusive",
-              "Pers\u00f6nliche Einzelsitzung mit Runa"
+              "Schamanische Zeremonien im Kreis",
+              "2 entspannende Einzelmassagen inklusive",
+              "Pers\u00f6nliche Einzelsitzung mit Runa \u2013 nur f\u00fcr dich"
             ],
             "buttonText": "Anfragen",
             "buttonLink": "/kontakt",
@@ -80,23 +80,23 @@
       "type": "FAQ",
       "props": {
         "id": "FAQ-001",
-        "title": "H\u00e4ufige Fragen zum Retreat",
+        "title": "Was du vielleicht noch wissen m\u00f6chtest",
         "items": [
           {
             "question": "Was ist im Preis enthalten?",
-            "answer": "Der Preis beinhaltet die Unterkunft, vegetarische Vollverpflegung, alle Yoga- und Meditationseinheiten, schamanische Zeremonien sowie Mantrachanting-Sessions. Je nach gew\u00e4hltem Paket sind zus\u00e4tzlich Einzelmassagen und pers\u00f6nliche Sitzungen enthalten. Die Anreise ist nicht im Preis inbegriffen."
+            "answer": "Damit du dich um nichts k\u00fcmmern musst: Im Preis sind deine Unterkunft, die liebevolle vegetarische Vollverpflegung, alle Yoga- und Meditationseinheiten, schamanische Zeremonien sowie die Mantrachanting-Sessions enthalten. Je nach gew\u00e4hltem Paket kommen entspannende Einzelmassagen und pers\u00f6nliche Sitzungen dazu. Lediglich die Anreise ist nicht im Preis inbegriffen."
           },
           {
             "question": "F\u00fcr wen ist das Retreat geeignet?",
-            "answer": "Das Retreat richtet sich an alle, die sich eine Auszeit vom Alltag w\u00fcnschen und offen sind f\u00fcr Yoga, Meditation und spirituelle Erfahrungen. Es ist ein Ort der Begegnung und des pers\u00f6nlichen Wachstums -- unabh\u00e4ngig von Alter, Geschlecht oder Erfahrungslevel."
+            "answer": "F\u00fcr dich, wenn du dich nach einer echten Auszeit vom Alltag sehnst und neugierig bist auf Yoga, Meditation und tiefere Erfahrungen. Es ist ein gesch\u00fctzter Ort der Begegnung und des sanften Wachstums \u2013 unabh\u00e4ngig von Alter, Geschlecht oder Erfahrungslevel. Du darfst genau so kommen, wie du bist."
           },
           {
             "question": "Muss ich Yoga-Erfahrung haben?",
-            "answer": "Nein, du brauchst keinerlei Vorkenntnisse. Die Yogaeinheiten werden so angeleitet, dass sowohl Anf\u00e4ngerinnen als auch erfahrene Praktizierende auf ihre Kosten kommen. Ich hole dich dort ab, wo du gerade stehst."
+            "answer": "Nein, gar nicht. Du brauchst keinerlei Vorkenntnisse. Ich leite die Einheiten so an, dass sich Anf\u00e4ngerinnen ebenso aufgehoben f\u00fchlen wie erfahrene Praktizierende. Ich hole dich dort ab, wo du gerade stehst \u2013 ohne Druck, in deinem eigenen Tempo."
           },
           {
             "question": "Wie komme ich zum Retreat-Ort?",
-            "answer": "Detaillierte Anreiseinformationen erh\u00e4ltst du nach deiner Buchung. In der Regel organisieren wir einen gemeinsamen Transfer vom n\u00e4chstgelegenen Flughafen oder Bahnhof zum Retreat-Ort. Die Transferkosten werden vorab bekannt gegeben."
+            "answer": "Darum k\u00fcmmern wir uns gemeinsam \u2013 du musst nicht alleine planen. Detaillierte Anreiseinformationen erh\u00e4ltst du nach deiner Buchung. In der Regel organisieren wir einen gemeinsamen Transfer vom n\u00e4chstgelegenen Flughafen oder Bahnhof zum Retreat-Ort. Die Transferkosten geben wir dir vorab bekannt."
           }
         ]
       }
@@ -105,8 +105,8 @@
       "type": "CTA",
       "props": {
         "id": "CTA-001",
-        "title": "Bereit f\u00fcr deine Auszeit?",
-        "text": "Sichere dir jetzt deinen Platz beim Yogaretreat 2026. Ich freue mich auf dich!",
+        "title": "Sp\u00fcrst du, dass es Zeit f\u00fcr dich ist?",
+        "text": "Die Pl\u00e4tze sind bewusst begrenzt, damit echte Tiefe entstehen kann. Sichere dir jetzt deinen Platz beim Yogaretreat 2026 \u2013 oder schreib mir einfach, wenn du noch Fragen hast. Ich freue mich darauf, dich kennenzulernen.",
         "buttonText": "Jetzt anfragen",
         "buttonLink": "/kontakt",
         "variant": "primary"
@@ -115,8 +115,8 @@
   ],
   "root": {
     "props": {
-      "seoTitle": "Yogaretreat 2026 \u2013 Runayoga",
-      "seoDescription": "Yogaretreat 2026 mit Runayoga: Deine Auszeit vom Alltag mit Yoga, Meditation, Mantras und Natur. Jetzt Platz sichern!"
+      "seoTitle": "Yogaretreat 2026 \u2013 Auszeit f\u00fcr Frauen | Runayoga",
+      "seoDescription": "7 Tage nur f\u00fcr dich: Yoga, Meditation, Mantras & schamanische Heilarbeit in kleiner Gruppe. Loslassen, auftanken, dich wiederfinden. Jetzt Platz auf der Warteliste sichern."
     }
   },
   "zones": {}

@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Yoga ist kein Sport: Wie sich deine Einstellung zum Körper verändern kann",
+        "subtitle": "Yoga hat so viel mehr zu bieten als Bewegung. Es schenkt dir Körperbewusstsein und hilft dir, deine ganz eigene Balance im Alltag zu finden.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p><em>Runa Bulla &bull; 29. Juli 2019</em></p><p><strong>Yoga ist kein Sport!</strong> Nein, Yoga hat viel mehr zu bieten.</p><p>K&ouml;rperbewusstsein ist in aller Munde, und dennoch ist es oft so, dass wir froh sind, dass unser K&ouml;rper funktioniert und leistungsf&auml;hig ist. Wir verlassen uns darauf, dass er einfach mitmacht, Tag f&uuml;r Tag, ohne dass wir ihm gro&szlig;e Aufmerksamkeit schenken.</p><p>Sp&auml;testens wenn sich Krankheiten melden und wir diese Zeichen nicht mehr ignorieren k&ouml;nnen, fangen wir an, dar&uuml;ber nachzudenken, warum das wohl so ist. Meistens sind die Begr&uuml;ndungen Stress, keine Zeit f&uuml;r langsame und gesunde Mahlzeiten, zu wenig Bewegung im Alltag.</p><h2>Jeder Mensch ist anders &ndash; und das ist gut so</h2><p>Jeder Mensch ist individuell und hat unterschiedliche Bed&uuml;rfnisse in allen Bereichen des Lebens. Was dem einen guttut, kann f&uuml;r die andere zu viel oder zu wenig sein. Genau deshalb gibt es kein Patentrezept, das f&uuml;r alle gilt.</p><p>Die Kunst ist, diese individuelle Balance mit viel Gef&uuml;hl und Geschick im Alltag zu leben. Dies ist eine Voraussetzung, um Gesundheit zu erhalten!</p><blockquote><p>Die Kunst ist, deine individuelle Balance mit viel Gef&uuml;hl und Geschick im Alltag zu leben.</p></blockquote><h2>Wie komme ich dahin?</h2><p>Zuerst einmal brauche ich ein Gef&uuml;hl daf&uuml;r, was und in welchem Ma&szlig;e meinem K&ouml;rper dient. Hier kommt Yoga ins Spiel.</p><p>Auf der Yogamatte praktiziere ich mit Aufmerksamkeit und viel Gef&uuml;hl f&uuml;r meinen K&ouml;rper. Ich lerne, meine pers&ouml;nlichen Grenzen auszuloten oder auch erst einmal kennenzulernen. Es geht nicht darum, etwas zu leisten oder besser zu werden als gestern. Es geht darum, hinzusp&uuml;ren und wahrzunehmen, was gerade da ist.</p><p>Genau diese achtsame Verbindung zu dir selbst ist es, die Yoga so wertvoll macht. Sie ist die Grundlage daf&uuml;r, deine eigene Balance zu finden und sie behutsam in deinen Alltag zu tragen.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Lerne deinen Körper achtsam kennen",
+        "text": "Magst du erleben, wie sich Yoga jenseits von Leistung anfühlt? Ich begleite dich gerne auf deinem Weg zu mehr Körperbewusstsein.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yoga ist kein Sport: Was es mit dem Körper macht – Runayoga",
+      "seoDescription": "Yoga ist kein Sport: Es fördert Körperbewusstsein und hilft dir, deine individuelle Balance im Alltag zu finden – als Voraussetzung, um Gesundheit zu erhalten.",
+      "date": "2019-07-29"
+    }
+  },
+  "zones": {}
+}

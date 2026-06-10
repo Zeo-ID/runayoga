@@ -1,174 +1,321 @@
 @import "tailwindcss";
 
-/* ──── Theme Variables (warm-organic design) ──── */
+/* ════════════════════════════════════════════════════════════════
+   RUNAYOGA — "Terracotta Studio"
+   Warm-editorial design system. Cream · Terracotta · Olive · Rosé.
+   Big Fraunces display type, asymmetric layouts, organic shapes,
+   paper grain. Modern, editorial, feminine-strong.
+   ════════════════════════════════════════════════════════════════ */
+
 :root {
-  --color-primary: #7a8b6f;
-  --color-primary-light: #9aab8f;
-  --color-primary-dark: #5a6b4f;
-  --color-accent: #c4956a;
-  --color-bg: #f5f0e8;
-  --color-bg-alt: #faf8f5;
-  --color-text: #2d2d2d;
-  --color-text-light: #555;
-  --color-text-muted: #888;
-  --color-border: #d4c5a9;
+  /* Palette */
+  --color-primary: #bf6a4a;        /* terracotta / clay — CTAs, accents */
+  --color-primary-light: #d4886a;
+  --color-primary-dark: #9f5036;
+  --color-accent: #3f4534;         /* deep olive — secondary accent */
+  --color-olive: #3f4534;
+  --color-olive-light: #5b6450;
+  --color-rose: #d9a98f;           /* powder rosé */
+  --color-rose-soft: #ecd3c4;
+
+  --color-bg: #f3ebe1;             /* warm cream */
+  --color-bg-alt: #ece0d1;         /* deeper cream — alt sections */
+  --color-bg-cream: #f7f1e8;
+  --color-ink: #2b2622;
+  --color-text: #2b2622;           /* ink */
+  --color-text-light: #5c5247;
+  --color-text-muted: #93897b;
+  --color-border: #e2d5c2;
   --color-white: #ffffff;
-  --radius: 20px;
-  --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
-  --shadow-md: 0 8px 30px rgba(0,0,0,.10);
-  --shadow-lg: 0 16px 48px rgba(0,0,0,.14);
-  --transition: .3s ease;
+
+  /* Form */
+  --radius: 16px;
+  --radius-sm: 8px;
+  --radius-lg: 28px;
+
+  /* Warm shadows */
+  --shadow-sm: 0 2px 10px rgba(72, 45, 28, .06);
+  --shadow-md: 0 14px 40px rgba(72, 45, 28, .12);
+  --shadow-lg: 0 30px 70px rgba(72, 45, 28, .18);
+
+  --transition: .35s cubic-bezier(.2, .7, .2, 1);
+
+  --maxw: 1240px;
 }
 
-/* ──── Custom theme tokens for Tailwind v4 ──── */
+/* Tailwind v4 token bridge */
 @theme inline {
   --color-primary: var(--color-primary);
   --color-accent: var(--color-accent);
   --color-background: var(--color-bg);
   --color-foreground: var(--color-text);
+  --font-heading: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
 }
 
-/* ──── Base Styles ──── */
+/* ──────────────── Base ──────────────── */
+* { box-sizing: border-box; }
+
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  line-height: 1.7;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.72;
+  color: var(--color-text);
+  background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  position: relative;
 }
 
-.font-heading {
-  font-family: 'Cormorant Garamond', serif;
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* ──────────────── Typography ──────────────── */
+.font-heading,
+h1, h2, h3, h4 {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+}
+
+.font-body { font-family: "Inter", sans-serif; }
+
+/* Editorial display headline */
+.display {
+  font-family: "Fraunces", serif;
   font-weight: 500;
+  font-size: clamp(2.9rem, 7.5vw, 6.4rem);
+  line-height: .98;
+  letter-spacing: -.025em;
+  color: var(--color-text);
 }
 
-.font-body {
-  font-family: 'Inter', sans-serif;
+.display-sm {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  line-height: 1.04;
+  letter-spacing: -.02em;
+  color: var(--color-text);
 }
 
-/* ──── Buttons (pill-shaped) ──── */
+/* Eyebrow / kicker */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: .72rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+.kicker::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--color-primary);
+  display: inline-block;
+}
+
+.serif-italic {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ──────────────── Buttons ──────────────── */
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
-  padding: .85rem 2rem;
-  border-radius: 50px;
+  gap: .6rem;
+  padding: 1rem 2.1rem;
+  border-radius: 100px;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: .95rem;
-  letter-spacing: .02em;
+  letter-spacing: .01em;
   background: var(--color-primary);
   color: #fff;
-  border: 2px solid var(--color-primary);
+  border: 1.5px solid var(--color-primary);
   transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
   cursor: pointer;
   text-decoration: none;
+  will-change: transform;
 }
-
+.btn-primary::after {
+  content: "→";
+  font-size: 1.05em;
+  transition: transform var(--transition);
+}
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(159, 80, 54, .32);
   background: var(--color-primary-dark);
   border-color: var(--color-primary-dark);
 }
+.btn-primary:hover::after { transform: translateX(4px); }
 
 .btn-secondary {
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
-  padding: .85rem 2rem;
-  border-radius: 50px;
+  gap: .55rem;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: .95rem;
-  letter-spacing: .02em;
+  letter-spacing: .01em;
   background: transparent;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
-  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
+  color: var(--color-text);
+  border: 1.5px solid var(--color-text);
+  transition: transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
   cursor: pointer;
   text-decoration: none;
 }
-
 .btn-secondary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  background: var(--color-primary);
-  color: #fff;
+  transform: translateY(-3px);
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-color: var(--color-text);
 }
 
-/* ──── Section Padding ──── */
-.section-padding {
-  padding: 5rem 2rem;
-}
-
-@media (max-width: 600px) {
-  .section-padding {
-    padding: 3.5rem 1.2rem;
-  }
-}
-
-/* ──── Prose overrides ──── */
-.prose h2 {
-  font-family: 'Cormorant Garamond', serif;
-  color: var(--color-text);
-  font-size: 2.4rem;
+/* Inline text link with arrow */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
   font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color var(--transition), gap var(--transition);
+}
+.link-arrow:hover { border-color: var(--color-primary); gap: .65rem; }
+
+/* ──────────────── Layout helpers ──────────────── */
+.section-padding { padding: clamp(4rem, 9vw, 8rem) clamp(1.2rem, 5vw, 2.5rem); }
+.container { max-width: var(--maxw); margin-inline: auto; }
+
+.bg-alt { background: var(--color-bg-alt); }
+.bg-olive { background: var(--color-olive); color: var(--color-bg); }
+
+/* Organic image frame */
+.organic-img {
+  overflow: hidden;
+  border-radius: 52% 48% 47% 53% / 58% 54% 46% 42%;
+}
+.organic-img-soft { overflow: hidden; border-radius: var(--radius-lg); }
+
+/* Blobs */
+.blob {
+  position: absolute;
+  pointer-events: none;
+  filter: blur(2px);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
 }
 
+/* Number index (editorial) */
+.index-num {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-primary);
+  opacity: .55;
+}
+
+/* Hairline */
+.hairline { height: 1px; background: var(--color-border); border: 0; }
+
+/* ──────────────── Prose ──────────────── */
+.prose { color: var(--color-text-light); }
+.prose h2 {
+  font-family: "Fraunces", serif;
+  color: var(--color-text);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -.015em;
+  margin: 2.2rem 0 .9rem;
+}
 .prose h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Fraunces", serif;
   color: var(--color-text);
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 0.5rem;
+  margin: 1.6rem 0 .5rem;
+}
+.prose p { color: var(--color-text-light); line-height: 1.78; margin-bottom: 1.1rem; }
+.prose a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; }
+.prose strong { color: var(--color-text); font-weight: 600; }
+.prose ul, .prose ol { color: var(--color-text-light); padding-left: 1.3rem; margin-bottom: 1.1rem; }
+.prose ul { list-style: none; padding-left: 0; }
+.prose ul li {
+  position: relative;
+  padding-left: 1.7rem;
+  margin-bottom: .55rem;
+}
+.prose ul li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .62em;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+.prose ol li { margin-bottom: .5rem; }
+.prose blockquote {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--color-text);
+  border-left: 3px solid var(--color-primary);
+  padding-left: 1.4rem;
+  margin: 1.8rem 0;
 }
 
-.prose p {
-  color: var(--color-text-light);
-  line-height: 1.7;
-  margin-bottom: 1rem;
-}
-
-.prose a {
-  color: var(--color-primary);
-  text-decoration: underline;
-}
-
-.prose ul, .prose ol {
-  color: var(--color-text-light);
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.prose li {
-  margin-bottom: 0.25rem;
-}
-
-/* ──── Animations ──── */
-.fade-in {
+/* ──────────────── Scroll reveal ──────────────── */
+.js-reveal main section,
+.js-reveal [data-reveal] {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity .7s ease, transform .7s ease;
+  transform: translateY(28px);
+  transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
 }
-
-.fade-in.visible {
+.js-reveal main section.is-visible,
+.js-reveal [data-reveal].is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal main section,
+  .js-reveal [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
 }
 
-/* ──── Admin: hide nav/footer ──── */
+/* ──────────────── Paper grain overlay ──────────────── */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: .045;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ──────────────── Admin: hide nav/footer/grain ──────────────── */
 body:has(.puck-Root) header,
-body:has(.puck-Root) footer {
-  display: none;
-}
-
-body:has(.puck-Root) main {
-  height: 100vh;
-}
+body:has(.puck-Root) footer,
+body:has(.puck-Root) .grain { display: none; }
+body:has(.puck-Root) main { height: 100vh; }

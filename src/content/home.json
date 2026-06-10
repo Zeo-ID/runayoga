@@ -4,11 +4,11 @@
       "type": "Hero",
       "props": {
         "id": "Hero-001",
-        "title": "Finde deine innere Harmonie",
-        "subtitle": "Yoga, Pilates und Massagen in Berlin-Pankow. Deine Reise zu mehr Wohlbefinden beginnt hier und jetzt.",
-        "buttonText": "Angebot entdecken",
+        "title": "Komm an. Atme. Sei wieder ganz bei dir.",
+        "subtitle": "Wenn der Alltag dich auslaugt und du dich nach Ruhe sehnst: In meinem Studio in Berlin-Pankow findest du einen geschützten Raum, in dem dein Körper weicher wird, dein Kopf still und dein Atem tief. Yoga, Pilates, Massagen und Heilarbeit – ganz in deinem Tempo.",
+        "buttonText": "Mein Angebot entdecken",
         "buttonLink": "/angebote",
-        "secondButtonText": "Termin vereinbaren",
+        "secondButtonText": "Schreib mir",
         "secondButtonLink": "/kontakt",
         "image": "/images/hero.jpg",
         "imageAlt": "Runa beim Yoga im Bambuswald",
@@ -19,42 +19,42 @@
       "type": "Cards",
       "props": {
         "id": "Cards-001",
-        "title": "Was dich bei mir erwartet",
+        "title": "Wo darf deine Reise beginnen?",
         "columns": 3,
         "cards": [
           {
             "title": "Yoga",
-            "text": "Hatha, Vinyasa und Yin Yoga in kleinen Gruppen. Finde Gleichgewicht und innere Ruhe auf der Matte.",
+            "text": "Hatha, Vinyasa und Yin Yoga in kleinen Gruppen – hier wirst du gesehen. Spür, wie Verspannungen sich lösen, dein Atem tiefer geht und der innere Lärm endlich leiser wird.",
             "image": "",
             "link": "/angebote/yoga"
           },
           {
             "title": "Pilates",
-            "text": "St\u00e4rke deine K\u00f6rpermitte mit bewusster, kontrollierter Bewegung. Zertifizierte Pr\u00e4ventionskurse.",
+            "text": "Eine starke, schmerzfreie Mitte beginnt mit bewusster, kontrollierter Bewegung. Stärke deinen Rücken sanft und nachhaltig – in zertifizierten Präventionskursen, bei denen sich deine Kasse beteiligen kann.",
             "image": "",
             "link": "/angebote/pilates"
           },
           {
             "title": "Massagen",
-            "text": "Wohltuende Massagen f\u00fcr K\u00f6rper und Seele. Spezialisiert auf Pre- und Postnatal-Massagen.",
+            "text": "Eine Stunde nur für dich, in der du nichts musst und alles loslassen darfst. Wohltuende Berührung für Körper und Seele – mit besonderer Erfahrung in Pre- und Postnatal-Massagen.",
             "image": "",
             "link": "/angebote/massagen"
           },
           {
             "title": "Heilraum",
-            "text": "Schamanische Energiemedizin und spirituelle Begleitung f\u00fcr tiefe Heilung und innere Kraft.",
+            "text": "Wenn du spürst, dass tiefer etwas heilen möchte: Schamanische Energiearbeit und behutsame Begleitung für die Themen, die dich wirklich bewegen. Achtsam, geerdet, ganz bei dir.",
             "image": "",
             "link": "/angebote/heilraum"
           },
           {
             "title": "Mantra singen",
-            "text": "Gemeinsames Singen von Mantras und Medicine Songs. Erlebe die heilende Kraft von Klang und Gemeinschaft.",
+            "text": "Lass deine Stimme frei und fühl, wie Klang dich von innen löst. Gemeinsames Singen von Mantras und Medicine Songs – getragen von der wärmenden Kraft der Gemeinschaft.",
             "image": "",
             "link": "/angebote/mantra"
           },
           {
             "title": "Jahreskreis",
-            "text": "Frauenkreis mit 8 Treffen im Jahr zu den keltischen Jahreskreisfesten. Rituale, Gemeinschaft und Verbindung.",
+            "text": "Ein Kreis von Frauen, der dich durch das Jahr trägt: 8 Treffen zu den keltischen Jahreskreisfesten. Rituale, ehrliche Verbindung und das gute Gefühl, nicht allein zu gehen.",
             "image": "",
             "link": "/angebote/jahreskreis"
           }
@@ -65,8 +65,8 @@
       "type": "TextImage",
       "props": {
         "id": "TextImage-001",
-        "title": "Namaste, ich bin Runa",
-        "text": "<p>Ich freue mich darauf, dich auf deiner Reise zu mehr innerer Harmonie und Wohlbefinden zu begleiten. In meinem Studio in Berlin-Pankow biete ich dir einen gesch\u00fctzten Raum f\u00fcr Yoga, Pilates und ganzheitliche Heilarbeit.</p><p>Mit Leidenschaft und Erfahrung unterst\u00fctze ich dich dabei, deinen K\u00f6rper zu st\u00e4rken, deinen Geist zu beruhigen und deine Seele zu n\u00e4hren.</p>",
+        "title": "Schön, dass du da bist – ich bin Runa",
+        "text": "<p>Vielleicht kennst du das Gefühl: ständig in Bewegung, ständig für andere da, und trotzdem nie wirklich angekommen. Genau hier setze ich an. In meinem Studio in Berlin-Pankow halte ich einen geschützten Raum für dich – für Yoga, Pilates und ganzheitliche Heilarbeit, ganz ohne Leistungsdruck.</p><p>Mit langjähriger Erfahrung und viel Herz begleite ich dich dabei, deinen Körper zu stärken, deinen Geist zur Ruhe kommen zu lassen und deiner Seele wieder Raum zu geben. Du musst nichts können und nichts mitbringen – außer dich selbst.</p>",
         "image": "/images/about.jpg",
         "imageAlt": "Runa in der Natur",
         "imagePosition": "right"
@@ -85,20 +85,20 @@
       "type": "Testimonials",
       "props": {
         "id": "Testimonials-001",
-        "title": "Was meine Teilnehmer sagen",
+        "title": "Stimmen aus meinem Studio",
         "items": [
           {
-            "text": "Die Yogastunden bei Runa sind ein Highlight meiner Woche. Ich f\u00fchle mich danach immer geerdet und voller Energie.",
+            "text": "Die Yogastunden bei Runa sind das Highlight meiner Woche. Danach fühle ich mich immer geerdet, gelöst und voller Energie – als hätte ich tief durchgeatmet.",
             "name": "Maria S.",
             "rating": 4
           },
           {
-            "text": "Die Massagen sind einfach wunderbar. Runa hat magische H\u00e4nde und schafft eine unglaublich entspannende Atmosph\u00e4re.",
+            "text": "Die Massagen sind einfach wunderbar. Runa hat ein unglaubliches Gespür und schafft eine so geborgene Atmosphäre, dass ich völlig loslassen kann.",
             "name": "Kathrin L.",
             "rating": 5
           },
           {
-            "text": "Das Retreat war eine lebensver\u00e4ndernde Erfahrung. Die Kombination aus Yoga, Natur und Gemeinschaft war perfekt.",
+            "text": "Das Retreat war eine lebensverändernde Erfahrung. Die Verbindung aus Yoga, Natur und Gemeinschaft hat mich tief berührt und mir wieder Kraft gegeben.",
             "name": "Sandra B.",
             "rating": 5
           }
@@ -109,9 +109,9 @@
       "type": "CTA",
       "props": {
         "id": "CTA-001",
-        "title": "Bereit f\u00fcr deine Reise?",
-        "text": "Melde dich bei mir und wir finden gemeinsam das passende Angebot f\u00fcr dich.",
-        "buttonText": "Jetzt anfragen",
+        "title": "Bereit, wieder ganz bei dir anzukommen?",
+        "text": "Du musst dich noch nicht festlegen. Schreib mir einfach, was dich gerade bewegt – wir finden gemeinsam und ganz in Ruhe heraus, was dir jetzt guttut.",
+        "buttonText": "Schreib mir – unverbindlich",
         "buttonLink": "/kontakt",
         "variant": "primary"
       }
@@ -119,8 +119,8 @@
   ],
   "root": {
     "props": {
-      "seoTitle": "Runayoga \u2013 Yoga, Pilates & Massagen in Berlin-Pankow",
-      "seoDescription": "Runayoga in Berlin-Pankow: Yoga, Pilates, Massagen und ganzheitliche Heilarbeit. Finde innere Harmonie in pers\u00f6nlichen Kursen und Retreats."
+      "seoTitle": "Runayoga – Yoga, Pilates & Massagen in Berlin-Pankow | Runa Bulla",
+      "seoDescription": "Yoga, Pilates, Massagen & Heilarbeit in Berlin-Pankow. Komm zur Ruhe, löse Verspannungen und tank neue Kraft – in kleinen Gruppen, geschützt und achtsam. Zertifizierte Präventionskurse mit Kassenzuschuss. Schreib mir."
     }
   },
   "zones": {}

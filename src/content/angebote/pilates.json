@@ -4,12 +4,12 @@
       "type": "Hero",
       "props": {
         "id": "Hero-001",
-        "title": "Pilates",
-        "subtitle": "St\u00e4rke deine Mitte",
-        "buttonText": "Jetzt anfragen",
+        "title": "Pilates – Kraft, die von innen kommt",
+        "subtitle": "Eine starke Mitte trägt dich durch jeden Tag – aufrecht, beweglich, schmerzfrei.",
+        "buttonText": "Platz sichern",
         "buttonLink": "/kontakt",
-        "secondButtonText": "",
-        "secondButtonLink": "",
+        "secondButtonText": "Preise ansehen",
+        "secondButtonLink": "/preise",
         "image": "",
         "imageAlt": "",
         "layout": "right"
@@ -19,15 +19,26 @@
       "type": "RichText",
       "props": {
         "id": "RichText-001",
-        "content": "<p>Pilates ist ein wunderbares Training, das deinen gesamten K\u00f6rper kr\u00e4ftigt und gleichzeitig deine Beweglichkeit f\u00f6rdert. In meinen Kursen liegt der Fokus auf bewusster, kontrollierter Bewegung und einer tiefen Verbindung zu deiner K\u00f6rpermitte. Du lernst, dich von innen heraus zu stabilisieren -- und das sp\u00fcrst du nicht nur auf der Matte, sondern im ganzen Alltag.</p><p>Ob klassisches Pilates, R\u00fccken-fit oder spezielle Kurse f\u00fcr die Zeit vor und nach der Geburt -- ich passe mein Training individuell an deine Bed\u00fcrfnisse an. In kleinen Gruppen kann ich auf jede Teilnehmerin einzeln eingehen und \u00dcbungen bei Bedarf modifizieren. So trainierst du immer sicher und effektiv.</p><p>Auch meine Pilates-Kurse sind als Pr\u00e4ventionskurse nach \u00a720 SGB V zertifiziert. Das bedeutet, dass deine gesetzliche Krankenkasse einen Teil der Kosten \u00fcbernehmen kann. Frag gerne bei deiner Kasse nach oder sprich mich direkt an.</p><h2>Was dich erwartet</h2><ul><li>Zertifizierte Pr\u00e4ventionskurse mit Krankenkassenzuschuss</li><li>Fokus auf Core-Stabilit\u00e4t und gesunde Haltung</li><li>Kleine Gruppen f\u00fcr pers\u00f6nliche Betreuung</li><li>Individuell angepasste \u00dcbungen f\u00fcr jedes Level</li><li>Spezielle Kurse: R\u00fccken-fit, Pr\u00e4- und Postnatal</li></ul><h2>F\u00fcr wen ist Pilates geeignet?</h2><p>Pilates eignet sich hervorragend f\u00fcr alle, die ihre K\u00f6rpermitte st\u00e4rken und R\u00fcckenbeschwerden vorbeugen m\u00f6chten. Besonders beliebt ist das Training bei werdenden und frischgebackenen Mamas, die ihren Beckenboden und ihre Tiefenmuskulatur gezielt aufbauen wollen. Aber auch wenn du einfach fitter und beweglicher werden m\u00f6chtest, bist du bei mir genau richtig.</p>"
+        "content": "<p>Du kennst dieses Ziehen im unteren Rücken nach einem langen Tag? Das Gefühl, irgendwie zusammengesunken durchs Leben zu gehen? Pilates setzt genau dort an, wo deine Kraft entsteht – in deiner Mitte. Wir arbeiten mit bewusster, kontrollierter Bewegung und mit dem Atem, der jede Übung trägt. Du spürst, wie sich dein Körper von innen heraus aufrichtet.</p><p>Und das bleibt nicht auf der Matte. Nach wenigen Wochen merkst du es im Alltag: Du stehst aufrechter, hebst die Einkaufstüten leichter, sitzt länger ohne Verspannung. Dein Rücken wird ruhiger, dein Stand sicherer – als hättest du einen inneren Halt gefunden, der dich trägt.</p><p>Ob klassisches Pilates, gezieltes Rücken-fit oder behutsames Training für die Zeit vor und nach der Geburt – ich hole dich genau dort ab, wo du gerade stehst. In kleinen Gruppen sehe ich jede Teilnehmerin, korrigiere sanft und passe jede Übung an deinen Körper an. Hier musst du nichts können und nichts beweisen. Du darfst dich sicher fühlen und in deinem Tempo wachsen.</p><p>Meine Pilates-Kurse sind als Präventionskurse nach § 20 SGB V zertifiziert (Zentrale Prüfstelle Prävention). Das heißt: Deine gesetzliche Krankenkasse übernimmt bis zu 80 % der Kosten. Frag einfach bei deiner Kasse nach – oder schreib mir, ich helfe dir gern weiter.</p><h2>Was dich auf der Matte erwartet</h2><ul><li>Zertifizierte Präventionskurse – bis zu 80 % Zuschuss von deiner Krankenkasse</li><li>Sanftes Training mit Kleingeräten, das deine Tiefenmuskulatur weckt</li><li>Eine stabile Mitte und eine aufrechte, schmerzfreie Haltung</li><li>Kleine Gruppen, in denen du wirklich gesehen wirst</li><li>Übungen, die zu deinem Körper passen – egal, ob Einsteigerin oder geübt</li><li>Spezielle Kurse: Rücken-fit sowie Prä- und Postnatal für werdende und frischgebackene Mamas</li></ul>"
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-kurs",
+        "title": "Dein nächster Kursblock – sichere dir deinen Platz",
+        "text": "<p><strong>10 Einheiten · 200 €</strong> – bis zu 80 % erstattet dir deine Krankenkasse. Oft bleibt für dich nur ein kleiner Eigenanteil.</p><p>Dienstags 18:00–19:00 Uhr · mit Kleingeräten<br>Nächster Kursblock: 25.08.–17.11.2026 (Pause 13.–17.10.2026)</p><p>Die Gruppe ist bewusst klein – sei früh dabei, solange noch Plätze frei sind.</p><p>Ort: Sinnergie, Schulzestr. 1, 13187 Berlin-Pankow</p><p><em>„Physical fitness is the first requisite of happiness.“ – Joseph Pilates</em></p>",
+        "image": "",
+        "imageAlt": "",
+        "imagePosition": "left"
       }
     },
     {
       "type": "CTA",
       "props": {
         "id": "CTA-001",
-        "title": "Interesse an Pilates?",
-        "text": "Melde dich bei mir und wir finden gemeinsam den passenden Kurs f\u00fcr dich.",
+        "title": "Bereit für eine starke, freie Mitte?",
+        "text": "Schreib mir kurz – ich erzähle dir gern, wie der Kurs abläuft, und sichere dir deinen Platz. Unverbindlich und ganz in deinem Tempo.",
         "buttonText": "Jetzt anfragen",
         "buttonLink": "/kontakt",
         "variant": "primary"
@@ -36,8 +47,8 @@
   ],
   "root": {
     "props": {
-      "seoTitle": "Pilates \u2013 Runayoga",
-      "seoDescription": "Pilates-Kurse in Berlin-Pankow: St\u00e4rke deine K\u00f6rpermitte mit bewusster Bewegung. Zertifizierte Pr\u00e4ventionskurse bei Runayoga."
+      "seoTitle": "Pilates in Berlin-Pankow – starke Mitte, freier Rücken | Runayoga",
+      "seoDescription": "Sanfte Pilates-Präventionskurse in Berlin-Pankow für eine starke Mitte und einen schmerzfreien Rücken. 10 Einheiten für 200 €, ZPP-zertifiziert, bis zu 80 % Kassenzuschuss, kleine Gruppen. Sichere dir deinen Platz bei Runayoga."
     }
   },
   "zones": {}

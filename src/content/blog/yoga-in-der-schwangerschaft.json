@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Warum Yoga in der Schwangerschaft so gut tut",
+        "subtitle": "Von Achtsamkeit und Körperbewusstsein bis Nadi Shodana – wie Yoga dich in einem körperlich und emotional intensiven Lebensabschnitt sanft begleitet und auf die Geburt vorbereitet.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Die Zeit der Schwangerschaft und die Vorbereitung auf die Geburt sind für viele Frauen ein ganz besonderer Lebensabschnitt. Der Wechsel und die Veränderungen – ob im privaten Umfeld oder in allen anderen Lebensbereichen – sind allumfassend. Dein eigener Körper tritt augenscheinlich in den Mittelpunkt, und die Veränderungen sind nicht nur im physischen, sondern ganz besonders auch im emotionalen Bereich enorm.</p><h2>Ein guter Zeitpunkt, dich liebevoll um dich zu kümmern</h2><p>Jetzt ist ein guter Zeitpunkt, um dich gut und liebevoll um deinen eigenen Körper zu kümmern. Die Kraft fließt in die Tiefe des Weiblichen, ins „Frausein“ und in die innewohnende Schöpferkraft der Frau.</p><blockquote><p>Gebären ist manifeste Schöpferkraft!</p></blockquote><h2>Was Yoga aus seiner jahrtausendealten Tradition zu bieten hat</h2><p>Um dies zu entdecken und eine gute Geburtsvorbereitung zu erfahren, hat Yoga in seiner jahrtausendealten Tradition einiges zu bieten:</p><ul><li><strong>Die tiefe, yogische Bauchatmung</strong> hilft, deinen Körper und das Baby gut mit Sauerstoff und Lebensenergie zu versorgen.</li><li><strong>Die Entspannung</strong>, so wichtig für diese Zeit und für die Geburt, ist essentiell.</li><li><strong>Viele Asanas sind Geburtspositionen</strong> und werden schon mal geübt.</li><li><strong>Die mentale Vorbereitung</strong> auf einen positiven und selbstbestimmten Geburtsverlauf ist ein tragender Pfeiler der yogischen Geburtsvorbereitung.</li></ul><p>Nicht zuletzt helfen gesungene Mantra dabei, das Herz zu öffnen und alle Energiekanäle zu reinigen. Probiere es doch einfach mal aus!</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Begleite deine Schwangerschaft mit Yoga",
+        "text": "Du möchtest dich achtsam auf die Geburt vorbereiten und liebevoll mit deinem Körper in Verbindung gehen? Ich begleite dich gern auf diesem Weg.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Warum Yoga in der Schwangerschaft so gut tut – Runayoga",
+      "seoDescription": "Wie Yoga Schwangere begleitet: tiefe Bauchatmung, Entspannung, Asanas als Geburtspositionen und mentale Vorbereitung auf eine selbstbestimmte Geburt.",
+      "date": "2019-10-06"
+    }
+  },
+  "zones": {}
+}

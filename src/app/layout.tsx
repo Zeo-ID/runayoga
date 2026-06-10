@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navigation } from "../components/layout/Navigation";
 import { Footer } from "../components/layout/Footer";
+import { ScrollReveal } from "../components/layout/ScrollReveal";
 import siteData from "../data/site.json";
 
 export const metadata: Metadata = {
@@ -23,14 +24,16 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col font-body" style={{ background: "var(--color-bg)", color: "var(--color-text)" }}>
+      <body className="min-h-full flex flex-col font-body">
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ScrollReveal />
+        <div className="grain" aria-hidden="true" />
       </body>
     </html>
   );

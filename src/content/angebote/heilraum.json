@@ -4,9 +4,9 @@
       "type": "Hero",
       "props": {
         "id": "Hero-001",
-        "title": "Heilraum f\u00fcr die Seele",
-        "subtitle": "Schamanische Energiemedizin",
-        "buttonText": "Jetzt anfragen",
+        "title": "Komm zur Ruhe. Komm zu dir.",
+        "subtitle": "Schamanische Heilarbeit & spirituelle Begleitung im gesch\u00fctzten Raum",
+        "buttonText": "Vorgespr\u00e4ch anfragen",
         "buttonLink": "/kontakt",
         "secondButtonText": "",
         "secondButtonLink": "",
@@ -19,16 +19,47 @@
       "type": "RichText",
       "props": {
         "id": "RichText-001",
-        "content": "<p>Es gibt Momente im Leben, in denen wir sp\u00fcren, dass etwas Tieferes in uns nach Heilung ruft -- etwas, das \u00fcber den K\u00f6rper hinausgeht. In meinem Heilraum biete ich dir einen gesch\u00fctzten Ort, an dem du dich deiner Seelenarbeit widmen kannst. Mit schamanischer Energiemedizin und spiritueller Begleitung unterst\u00fctze ich dich auf deinem ganz pers\u00f6nlichen Heilungsweg.</p><p>Die schamanische Heilarbeit ist eine uralte Tradition, die den Menschen als Ganzes betrachtet -- K\u00f6rper, Geist und Seele. In den Sitzungen arbeite ich mit Energien, Zeremonien und Ritualen, um Blockaden zu l\u00f6sen, alte Wunden zu heilen und deine innere Kraft wieder zu erwecken. Dabei halte ich den Raum f\u00fcr dich, damit du dich sicher und getragen f\u00fchlen kannst.</p><p>Ob du dich in einer schwierigen Lebensphase befindest, nach tieferer Selbsterkenntnis suchst oder einfach das Gef\u00fchl hast, dass da noch etwas ist, das gesehen werden m\u00f6chte -- der Heilraum ist offen f\u00fcr dich. Jede Sitzung ist so einzigartig wie du selbst, und gemeinsam finden wir heraus, was deine Seele gerade braucht.</p><h2>Was dich erwartet</h2><ul><li>Schamanische Zeremonien und Rituale</li><li>Energetische Reinigung und Ausgleich</li><li>Spirituelle Begleitung in Lebenskrisen</li><li>Gesch\u00fctzter Raum in vertrauensvoller Atmosph\u00e4re</li><li>Individuelle Sitzungen nach pers\u00f6nlichem Vorgespr\u00e4ch</li></ul><h2>F\u00fcr wen ist der Heilraum geeignet?</h2><p>Der Heilraum richtet sich an alle, die das Bed\u00fcrfnis nach tieferer Heilung und spiritueller Begleitung sp\u00fcren. Vorkenntnisse brauchst du keine -- nur die Offenheit, dich auf den Prozess einzulassen. Die schamanische Arbeit kann wunderbar erg\u00e4nzend zu Yoga und anderen ganzheitlichen Praktiken wirken.</p>"
+        "content": "<p>Kennst du diese leise innere Unruhe, die auch dann bleibt, wenn \u00e4u\u00dferlich alles in Ordnung scheint? Dieses Gef\u00fchl von Ersch\u00f6pfung, das tiefer sitzt als blo\u00dfe M\u00fcdigkeit – als w\u00fcrde ein Teil von dir nach Ruhe und Verbindung rufen. Genau hier \u00f6ffnet sich mein Heilraum: ein gesch\u00fctzter, warmer Ort, an dem du einfach ankommen darfst. Ohne Erwartung, ohne Maske. Nur du, dein Atem und die Stille.</p><p>Die schamanische Heilarbeit ist eine uralte Tradition, die dich als ganzen Menschen sieht – K\u00f6rper, Geist und Seele. In einer Sitzung halte ich den Raum f\u00fcr dich: behutsam, klar und pr\u00e4sent. Wir l\u00f6sen, was sich verdichtet hat, lassen Anspannung weichen und lauschen dem, was gesehen werden m\u00f6chte. Viele Frauen beschreiben das Danach als ein tiefes Aufatmen – leichter, geerdeter, wieder verbunden mit der eigenen Kraft.</p><p>Ob du gerade durch eine schwierige Phase gehst, dich nach mehr Klarheit sehnst oder einfach sp\u00fcrst, dass da noch etwas ist: Du musst diesen Weg nicht allein gehen. Jede Sitzung ist so einzigartig wie du – gemeinsam finden wir in einem ruhigen Vorgespr\u00e4ch heraus, was dir gerade gut tut.</p><h2>Was dich in deiner Sitzung erwartet</h2><ul><li>Ein gesch\u00fctzter Raum, in dem du ganz du selbst sein darfst</li><li>Behutsame schamanische Zeremonien und Rituale, in deinem Tempo</li><li>Energetisches L\u00f6sen und Ausgleich, das sich wie Aufatmen anf\u00fchlt</li><li>Einf\u00fchlsame Begleitung durch herausfordernde Lebensphasen</li><li>Eine individuelle Sitzung, die ganz auf dich abgestimmt ist</li></ul><h2>Ist der Heilraum das Richtige f\u00fcr dich?</h2><p>Der Heilraum ist f\u00fcr dich da, wenn du dich nach mehr innerer Ruhe, Klarheit und Verbindung sehnst. Vorkenntnisse brauchst du keine – nur die Offenheit, dich einzulassen. Die schamanische Arbeit verbindet sich wunderbar mit Yoga und anderen achtsamen Wegen zu dir selbst. Wenn dein Herz beim Lesen leise Ja sagt, schreib mir einfach – der erste Schritt ist ganz unverbindlich.</p>"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-heilraum",
+        "title": "Meine Angebote im Heilraum",
+        "columns": 3,
+        "cards": [
+          { "title": "Die Schamanische Reise", "text": "Mit Trommel, Stimme und Räucherung begleite ich dich in einen inneren Raum jenseits des Verstandes – zu deinem Krafttier, zu Antworten und verloren geglaubter Kraft. ca. 75 Min · 120 €", "image": "", "link": "/kontakt" },
+          { "title": "Besprechen & Besingen", "text": "Eine alte mündliche Heiltradition aus Segensworten und Klang – ein leises, kraftvolles Ritual, wenn andere Wege nicht gegriffen haben. 30 Min, oft als Serie · ab 60 € · auch als Fernbegleitung", "image": "", "link": "/kontakt" },
+          { "title": "Heilzeremonien", "text": "Geschützte Räume für Wandlung und Rückverbindung – mit Ritualen, Klang, Stille und bewusster Präsenz. Allein, zu zweit oder in kleiner Gruppe. ca. 90–120 Min · auf Anfrage", "image": "", "link": "/kontakt" },
+          { "title": "Ahnenarbeit", "text": "Sanfte Begleitung, um den Frieden mit deinen Wurzeln zu finden und das weiterzugeben, was nähren darf – und loszulassen, was schwer geworden ist.", "image": "", "link": "/kontakt" },
+          { "title": "Reiki", "text": "Feinfühlige Energiearbeit, die deine Selbstheilungskräfte aktiviert, Anspannung löst und dich tief entspannen lässt.", "image": "", "link": "/kontakt" }
+        ]
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-sitzung",
+        "content": "<h2>Was in einer Sitzung geschieht</h2><p>So unterschiedlich jeder Mensch ist, so individuell gestalte ich auch jede Begegnung. Und doch tragen alle Sitzungen dasselbe Herz:</p><ul><li>Tiefgehende energetische Reinigung</li><li>Das Lösen alter, blockierender Muster</li><li>Erdung und energetische Stabilisierung</li><li>Verbindung zu deinen spirituellen Helfern und Ahnen</li></ul><p>Ich verbinde schamanische Traditionen mit meinem Wissen aus energetischer Heilkunst und Meditation – getragen von tiefem Respekt vor der Natur, der spirituellen Welt und deiner ganz persönlichen Reise. Vorab nehmen wir uns Zeit für ein ruhiges, unverbindliches Vorgespräch.</p>"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "id": "Quote-heilraum",
+        "text": "Es gibt Zeiten, da braucht die Seele Rituale, um sich neu zu ordnen.",
+        "source": "Runa Bulla",
+        "variant": "decorative"
       }
     },
     {
       "type": "CTA",
       "props": {
         "id": "CTA-001",
-        "title": "Interesse am Heilraum?",
-        "text": "Melde dich bei mir f\u00fcr ein unverbindliches Vorgespr\u00e4ch.",
-        "buttonText": "Jetzt anfragen",
+        "title": "Bereit, wieder bei dir anzukommen?",
+        "text": "Schreib mir f\u00fcr ein ruhiges, unverbindliches Vorgespr\u00e4ch – wir schauen gemeinsam, was du gerade brauchst. Ganz ohne Druck, ganz in deinem Tempo.",
+        "buttonText": "Vorgespr\u00e4ch anfragen",
         "buttonLink": "/kontakt",
         "variant": "primary"
       }
@@ -36,8 +67,8 @@
   ],
   "root": {
     "props": {
-      "seoTitle": "Heilraum f\u00fcr die Seele \u2013 Runayoga",
-      "seoDescription": "Heilraum f\u00fcr die Seele bei Runayoga: Schamanische Energiemedizin und spirituelle Begleitung in Berlin-Pankow f\u00fcr tiefe Heilung."
+      "seoTitle": "Heilraum: Schamanische Heilarbeit in Berlin-Pankow \u2013 Runayoga",
+      "seoDescription": "Komm zur Ruhe in Runas Heilraum in Berlin-Pankow: schamanische Heilarbeit & einf\u00fchlsame spirituelle Begleitung im gesch\u00fctzten Raum. Jetzt unverbindliches Vorgespr\u00e4ch anfragen."
     }
   },
   "zones": {}

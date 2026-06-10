@@ -6,7 +6,7 @@
       "title": "Die Kraft der Atemtechnik: Pranayama für Anfänger",
       "description": "Pranayama für Anfänger: Lerne die wichtigsten Atemtechniken im Yoga. Schritt-für-Schritt-Anleitung von Runayoga Berlin-Pankow.",
       "image": "",
-      "date": "2026-03-21"
+      "date": "2026-06-10"
     },
     {
       "slug": "retreat-erfahrung",
@@ -14,7 +14,7 @@
       "title": "Mein erstes Retreat: Eine Reise zu mir selbst",
       "description": "Erfahrungsbericht: Mein erstes Yogaretreat mit Runayoga. Eine persönliche Reise zu mir selbst mit Yoga, Natur und Gemeinschaft.",
       "image": "",
-      "date": "2026-03-21"
+      "date": "2026-06-10"
     },
     {
       "slug": "yoga-im-alltag",
@@ -22,7 +22,55 @@
       "title": "5 Wege, Yoga in deinen Alltag zu integrieren",
       "description": "5 einfache Wege, Yoga in deinen Alltag zu integrieren. Praktische Tipps von Runayoga für mehr Achtsamkeit und Balance jeden Tag.",
       "image": "",
-      "date": "2026-03-21"
+      "date": "2026-06-10"
+    },
+    {
+      "slug": "was-sind-mantren",
+      "href": "/blog/was-sind-mantren",
+      "title": "Was sind Mantren?",
+      "description": "Was ist ein Mantra? Eine warme Einführung von Runayoga: Herkunft, das Mantra „Om“ und wie das Wiederholen den Geist fokussiert und Energie freisetzt.",
+      "image": "",
+      "date": "2024-03-19"
+    },
+    {
+      "slug": "yoga-bei-beckenendlage",
+      "href": "/blog/yoga-bei-beckenendlage",
+      "title": "Hatha-Yoga bei Beckenendlage: Positionen, die dein Baby zur Drehung einladen",
+      "description": "Welche Hatha-Yoga-Positionen können dein Baby aus der Beckenendlage sanft zur Drehung animieren? Ein behutsamer Einstieg von Runa Bulla – mit Hinweis zur Rückenlage.",
+      "image": "",
+      "date": "2021-07-05"
+    },
+    {
+      "slug": "atmen-und-toenen-zur-geburt",
+      "href": "/blog/atmen-und-toenen-zur-geburt",
+      "title": "Atmen und Tönen für die Geburt",
+      "description": "Wie tiefe Bauchatmung und Tönen die Geburt unterstützen: Der Atem hilft den Wehen, das lange Ausatmen hält präsent und löst Becken und Muttermund.",
+      "image": "",
+      "date": "2021-06-18"
+    },
+    {
+      "slug": "yoga-in-der-schwangerschaft",
+      "href": "/blog/yoga-in-der-schwangerschaft",
+      "title": "Warum Yoga in der Schwangerschaft so gut tut",
+      "description": "Wie Yoga Schwangere begleitet: tiefe Bauchatmung, Entspannung, Asanas als Geburtspositionen und mentale Vorbereitung auf eine selbstbestimmte Geburt.",
+      "image": "",
+      "date": "2019-10-06"
+    },
+    {
+      "slug": "yoga-ist-kein-sport",
+      "href": "/blog/yoga-ist-kein-sport",
+      "title": "Yoga ist kein Sport: Wie sich deine Einstellung zum Körper verändern kann",
+      "description": "Yoga ist kein Sport: Es fördert Körperbewusstsein und hilft dir, deine individuelle Balance im Alltag zu finden – als Voraussetzung, um Gesundheit zu erhalten.",
+      "image": "",
+      "date": "2019-07-29"
+    },
+    {
+      "slug": "yoga-uebungen-fuer-zuhause",
+      "href": "/blog/yoga-uebungen-fuer-zuhause",
+      "title": "Yoga-Übungen für zu Hause: deine 15-Minuten-Routine",
+      "description": "Yoga-Übungen für zu Hause: Mit 15 Minuten täglich von Aufwärmen über Katze/Kuh, Hund und Krieger bis zur Heuschreckenpose. Deine einfache Routine von Runayoga.",
+      "image": "",
+      "date": "2019-07-28"
     }
   ]
 }

@@ -1,0 +1,43 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-blog",
+        "title": "Innehalten & Lesen",
+        "subtitle": "Sanfte Impulse für mehr Ruhe, einen entspannten Rücken und ein gutes Gefühl im eigenen Körper – Gedanken aus meiner Praxis für deinen Alltag.",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "BlogList",
+      "props": {
+        "id": "BlogList-blog",
+        "title": "",
+        "count": 12,
+        "layout": "grid",
+        "showImage": true,
+        "showDate": true,
+        "showExcerpt": true
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-blog",
+        "title": "Lust, es selbst zu spüren?",
+        "text": "Worte auf einem Bildschirm sind das eine – das tiefe Durchatmen auf der Matte das andere. Komm in einer kleinen, geschützten Gruppe an, lass den Tag von dir abfallen und finde wieder zu dir. Schreib mir einfach, ich freue mich auf dich.",
+        "buttonText": "Schreib mir",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Blog – Yoga, Achtsamkeit & innere Ruhe | Runayoga Berlin-Pankow",
+      "seoDescription": "Sanfte Impulse für weniger Stress, einen entspannten Rücken und mehr Ruhe im Alltag: der Runayoga-Blog von Runa Bulla rund um Yoga, Atem und Achtsamkeit in Berlin-Pankow."
+    }
+  },
+  "zones": {}
+}

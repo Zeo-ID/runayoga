@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Yoga-Übungen für zu Hause: deine 15-Minuten-Routine",
+        "subtitle": "Mit nur 15 Minuten am Tag, deiner Matte und bequemer Kleidung holst du dir eine einfache Yoga-Routine nach Hause – vom Aufwärmen bis zur Heuschreckenpose.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Yoga in deinen Alltag zu integrieren ist wie ein „Turbolader“ – es zeigt sehr schnell seine segensreichen Auswirkungen. Und wie so oft liegt auch hier der Schlüssel in der Regelmäßigkeit. Du brauchst kein Studio und keine Stunde Zeit: 15 Minuten am Tag reichen vollkommen aus, um wundervolle Resultate zu erleben. Alles, was du benötigst, ist deine Yoga-Matte und bequeme Kleidung.</p><p>Ein kleiner Hinweis, der dir das Üben leicht macht: Wenn nicht anders angegeben, hältst du jede Position drei Atemzüge lang und gehst dann fließend in die nächste über. Lass den Atem dich führen, ganz ohne Druck.</p><h2>Aufwärmen</h2><p>Setz dich mit gekreuzten Beinen hin und atme zwei Minuten lang entspannt durch die Nase. Spür, wie du im Hier und Jetzt ankommst. Anschließend schaukelst du 15 Atemzüge lang sanft nach links und rechts, während du ausatmest. So bereitest du Körper und Geist liebevoll auf das Folgende vor.</p><h2>Nach dem Aufwärmen</h2><h3>Katze und Kuh</h3><p>Atme aus und wechsle in die <strong>Katzenposition</strong>. Stütz dich auf Hände und Knie, senke den Kopf, während du den Bauch anhebst und einen Katzenbuckel machst. Gehe anschließend in die <strong>Kuhposition</strong>: Biege deinen Rücken nach unten, hebe den Kopf und bewege die Schultern nach außen. Diese Übung wärmt und dehnt die Hüften, Schultern, Bauchmuskeln sowie die Wirbelsäule.</p><h3>Der herabschauende Hund</h3><p>Atme in der Katzenposition aus und drück den Po nach oben, sodass eine umgekehrte V-Form entsteht. Das ist die <strong>Hundestellung</strong>. Sie stärkt deine Arm- und Beinmuskulatur. Mach am besten fünf Wiederholungen.</p><h3>Der Krieger</h3><p>Steh auf und neige das rechte Bein nach vorne. Nun senkst du die linke Ferse und die Zehen in einem 45-Grad-Winkel zum Boden. Streck den linken Arm nach oben, sodass Hand und Knöchel eine gerade Linie bilden. Diese Übung dehnt und stärkt Oberschenkel, Schultern, Rücken und Hüften.</p><p>Wiederhole die Übungen anschließend in umgekehrter Form (linkes Bein statt rechtes Bein und so weiter), um die andere Körperseite einzubeziehen. So bleibt dein Körper schön im Gleichgewicht.</p><h3>Die Heuschreckenpose</h3><p>Dein Workout endet mit der <strong>Heuschreckenpose</strong>: Leg dich auf den Rücken, die Arme vom Körper abgespreizt. Nimm zwei tiefe Atemzüge und hebe dabei Schultern, Kopf und Arme an. Anschließend senkst du Kopf und Arme und hebst dabei die Beine. Verharre zwei Atemzüge in dieser Haltung.</p><p>Bleib danach noch ein paar Minuten entspannt auf dem Rücken liegen. Spür nach, wie sich dein Körper anfühlt, und genieße diesen Moment der Stille.</p><blockquote><p>„Der Schlüssel liegt in der Regelmäßigkeit – nicht in der Dauer. 15 achtsame Minuten am Tag verändern mehr, als du denkst.“</p></blockquote><p>Probier diese kleine Routine einfach aus – heute, morgen, immer wieder. Du wirst überrascht sein, wie schnell sich diese 15 Minuten zu deinem liebsten Anker im Tag entwickeln. Atemzug für Atemzug, Tag für Tag.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Lust auf gemeinsames Üben?",
+        "text": "Wenn du Begleitung auf deinem Yogaweg suchst, bin ich gern für dich da. Lass uns deine Praxis Schritt für Schritt aufbauen.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yoga-Übungen für zu Hause – Runayoga",
+      "seoDescription": "Yoga-Übungen für zu Hause: Mit 15 Minuten täglich von Aufwärmen über Katze/Kuh, Hund und Krieger bis zur Heuschreckenpose. Deine einfache Routine von Runayoga.",
+      "date": "2019-07-28"
+    }
+  },
+  "zones": {}
+}

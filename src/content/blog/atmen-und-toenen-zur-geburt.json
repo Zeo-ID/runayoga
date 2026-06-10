@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Atmen und Tönen für die Geburt",
+        "subtitle": "Wie dich tiefe Bauchatmung und das Tönen durch die Wehen tragen, dich präsent halten und Becken und Muttermund sanft lösen.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "",
+        "imageAlt": "",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Für viele Frauen, die am Anfang ihrer Schwangerschaft stehen und mit einem Yoga-Kurs beginnen, ist die tiefe Bauchatmung etwas ganz Neues. Erfahrene Yoginis haben hier einen kleinen Vorsprung, denn es ist eine Sache der Übung, sich im Alltag immer wieder seines Atems bewusst zu werden. Doch keine Sorge: Jeder Atemzug, den du bewusst nimmst, ist schon ein Schritt auf diesem Weg.</p><h2>Der Atem als Begleiter durch die Wehen</h2><p>Im Hinblick auf die Geburt ist der Atem eine wunderbare Unterstützung für die Wehen. Er ist immer bei dir, du brauchst nichts mitzubringen und nichts zu lernen, das dir fremd bleibt. Du musst dich nur erinnern, ihn fließen zu lassen.</p><p>Durch die tiefe Bauchatmung zum Baby hin wird die Kontraktion der Gebärmutter unterstützt. Dein Atem und die Arbeit deines Körpers gehen Hand in Hand, anstatt gegeneinander zu wirken.</p><h2>Präsent bleiben durch das lange Ausatmen</h2><p>Das lange Ausatmen auf einen Ton oder mit deinem Geburtsmantra hält dich präsent in deinem Körper und mental bewusst bei der Geburtsarbeit. Statt dich in Anspannung oder Angst zu verlieren, kommst du mit jedem Ausatmen wieder zurück zu dir und zu deinem Baby.</p><h3>Warum das Tönen den Körper löst</h3><p>Beim Tönen mit einem lockeren Kiefergelenk bleiben auch das Becken und der Muttermund gelöst. Kiefer und Becken sind auf eine feine Weise miteinander verbunden: Wo der Kiefer weich wird, darf sich auch das Becken öffnen.</p><h2>Töne und Mantras, die dich tragen</h2><p>Dabei ist das Tönen eines langen <strong>A</strong> sehr hilfreich. Genauso kann dich aber auch dein <strong>Geburtsmantra</strong> begleiten, etwa das Einatmen auf <em>ich</em> und das Ausatmen auf <em>ich öffne mich</em> &ndash; oder einfach ein positives <em>Ja</em>.</p><ul><li><strong>Tiefe Bauchatmung zum Baby:</strong> unterstützt die Kontraktion der Gebärmutter.</li><li><strong>Langes Ausatmen auf einen Ton oder dein Mantra:</strong> hält dich präsent in Körper und Geist.</li><li><strong>Tönen mit lockerem Kiefer:</strong> hält Becken und Muttermund gelöst.</li><li><strong>Ein langes A, ein Mantra oder ein positives Ja:</strong> Worte und Töne, die dich tragen.</li></ul><blockquote><p>Wo der Kiefer weich wird, darf sich auch das Becken öffnen.</p></blockquote><p>Probiere die tiefe Bauchatmung und das Tönen schon in der Schwangerschaft in deiner Yoga-Praxis aus, damit sie dir am Tag der Geburt vertraut sind. So wird aus etwas Neuem mit der Zeit ein ruhiger, kraftvoller Begleiter &ndash; Atemzug für Atemzug, Ton für Ton.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Bereite dich sanft auf deine Geburt vor",
+        "text": "In den Schwangerschaftskursen von Runayoga in Berlin-Pankow lernst du tiefe Bauchatmung und das Tönen ganz in deinem Tempo kennen. Schreib mir gern, wenn du dabei sein möchtest.",
+        "buttonText": "Jetzt anfragen",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Atmen und Tönen für die Geburt – Runayoga",
+      "seoDescription": "Wie tiefe Bauchatmung und Tönen die Geburt unterstützen: Der Atem hilft den Wehen, das lange Ausatmen hält präsent und löst Becken und Muttermund.",
+      "date": "2021-06-18"
+    }
+  },
+  "zones": {}
+}
