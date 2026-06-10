@@ -1,0 +1,168 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Yoga retreat 2026",
+        "subtitle": "Siedem dni tylko dla Ciebie – oddychaj, odpuszczaj, odnajduj samą siebie",
+        "buttonText": "Zarezerwuj miejsce",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-terrasse-am-see.webp",
+        "imageAlt": "Taras z widokiem na jezioro",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<h2>Pozwól sobie w pełni dotrzeć na miejsce</h2><p><em>Tydzień, w którym nic od Ciebie się nie wymaga – poza tym, by po prostu być.</em></p><p>Czujesz to już od dłuższego czasu: głowa pełna myśli, ramiona uniesione w napięciu, lista zadań bez końca. Funkcjonujesz – ale tęsknisz za prawdziwym spokojem, za głębią, za uczuciem powrotu do siebie samej. Właśnie po to jest ten retreat.</p><p>Wyobraź sobie: budzisz się przy śpiewie ptaków zamiast przy budziku. Dzień zaczyna się łagodnie na macie, podczas gdy słońce wschodzi, a Twój oddech staje się spokojniejszy. Wieczorem siedzisz w ciepłym kręgu, dajesz się unieść mantrom i ciszy i czujesz, jak napięcie ostatnich miesięcy opada z Ciebie warstwa po warstwie. Ten retreat to nie urlop, który „odhaczasz“ – to pełne miłości zaproszenie, by znów oddychać.</p><p>W małym, zaufanym gronie trzymam dla Ciebie chronioną przestrzeń: miejsce bez oczekiwań, w którym możesz odpuścić, naładować się i połączyć z innymi kobietami na równym poziomie. Codzienna praktyka jogi, szamańska praca uzdrawiająca, odżywcze posiłki i cisza natury splatają się w tydzień, z którego wracasz odmieniona – bardziej przestronna, miękka, w pełni przy sobie.</p><p>I nie martw się: nie musisz nic umieć. Czy stajesz na macie po raz pierwszy, czy ćwiczysz od lat – odbieram Cię tam, gdzie właśnie jesteś. Tutaj nie liczy się presja osiągnięć, tylko Twój własny rytm.</p><h2>Co przygotowałam dla Ciebie na ten tydzień</h2><p>Wszechstronne, odżywcze doświadczenie dla ciała, serca i duszy:</p><ul><li>Codzienna praktyka jogi i medytacji, która uziemia i rozluźnia</li><li>Szamańskie ceremonie pomagające odpuścić to, co stare</li><li>Mantrachanting i Medicine Songs, które otwierają serce</li><li>Z miłością przygotowane pełne wyżywienie wegetariańskie</li><li>Mała, zaufana grupa (maks. 12 uczestniczek) – aby mogła powstać prawdziwa bliskość</li><li>Wolny czas na wędrówki, marzenia i po prostu bycie w naturze</li></ul><h2>Terminy i miejsce</h2><p><strong>Wiosna 2026</strong> – terminy zostaną wkrótce ogłoszone.</p><p><strong>Miejsce:</strong> rejon śródziemnomorski – dokładne miejsce zostanie jeszcze ogłoszone</p><p><strong>Czas trwania:</strong> 7 dni / 6 nocy</p><p>Liczba miejsc jest świadomie ograniczona – rozchodzą się szybko. Zapisz się teraz niezobowiązująco na listę oczekujących i jako pierwsza dowiedz się o terminach, miejscu i miejscach w cenie dla wczesnych rezerwacji.</p>"
+      }
+    },
+    {
+      "type": "Gallery",
+      "props": {
+        "id": "Gallery-retreat",
+        "title": "Impresje",
+        "columns": 3,
+        "images": [
+          {
+            "src": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+            "alt": "Sala seminaryjna z matami do jogi w kręgu",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-yurte-savasana.webp",
+            "alt": "Savasana w jurcie",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-steg-herbstsee.webp",
+            "alt": "Drewniany pomost nad jesiennym jeziorem",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-see-schilf.webp",
+            "alt": "Jezioro z trzciną",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-gartentafel.webp",
+            "alt": "Wspólny stół w ogrodzie",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-herbstspaziergang-2.webp",
+            "alt": "Uważny spacer jesienią",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+            "alt": "Ołtarz rytualny z misami dźwiękowymi",
+            "caption": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-001",
+        "title": "Znajdź swój pakiet – wybierz przestrzeń, która do Ciebie pasuje",
+        "packages": [
+          {
+            "name": "Frühbucher",
+            "price": "Cena na zapytanie",
+            "features": [
+              "7 dni / 6 nocy pełnych spokoju",
+              "Przytulne miejsce w pokoju wieloosobowym",
+              "Pełne wegetariańskie wyżywienie z miłością",
+              "Wszystkie zajęcia jogi i medytacji",
+              "Szamańskie ceremonie w kręgu"
+            ],
+            "buttonText": "Zapytaj",
+            "buttonLink": "/kontakt",
+            "highlighted": false
+          },
+          {
+            "name": "Regular",
+            "price": "Cena na zapytanie",
+            "features": [
+              "7 dni / 6 nocy pełnych spokoju",
+              "Zakwaterowanie w pokoju dwuosobowym",
+              "Pełne wegetariańskie wyżywienie z miłością",
+              "Wszystkie zajęcia jogi i medytacji",
+              "Szamańskie ceremonie w kręgu",
+              "1 relaksujący masaż indywidualny w cenie"
+            ],
+            "buttonText": "Zapytaj",
+            "buttonLink": "/kontakt",
+            "highlighted": true
+          },
+          {
+            "name": "Deluxe",
+            "price": "Cena na zapytanie",
+            "features": [
+              "7 dni / 6 nocy pełnych spokoju",
+              "Miejsce wyciszenia we własnym pokoju jednoosobowym",
+              "Pełne wegetariańskie wyżywienie z miłością",
+              "Wszystkie zajęcia jogi i medytacji",
+              "Szamańskie ceremonie w kręgu",
+              "2 relaksujące masaże indywidualne w cenie",
+              "Osobista sesja indywidualna z Runa – tylko dla Ciebie"
+            ],
+            "buttonText": "Zapytaj",
+            "buttonLink": "/kontakt",
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "FAQ",
+      "props": {
+        "id": "FAQ-001",
+        "title": "Co może jeszcze chciałabyś wiedzieć",
+        "items": [
+          {
+            "question": "Co jest wliczone w cenę?",
+            "answer": "Abyś nie musiała się o nic troszczyć: w cenę wliczone są Twoje zakwaterowanie, pełne wegetariańskie wyżywienie przygotowane z miłością, wszystkie zajęcia jogi i medytacji, szamańskie ceremonie oraz sesje mantrachantingu. W zależności od wybranego pakietu dochodzą relaksujące masaże indywidualne i osobiste sesje. Jedynie dojazd nie jest wliczony w cenę."
+          },
+          {
+            "question": "Dla kogo jest ten retreat?",
+            "answer": "Dla Ciebie, jeśli tęsknisz za prawdziwą przerwą od codzienności i jesteś ciekawa jogi, medytacji oraz głębszych doświadczeń. To chronione miejsce spotkania i łagodnego rozwoju – niezależnie od wieku, płci czy poziomu doświadczenia. Możesz przyjść dokładnie taką, jaka jesteś."
+          },
+          {
+            "question": "Czy muszę mieć doświadczenie w jodze?",
+            "answer": "Nie, wcale nie. Nie potrzebujesz żadnej wcześniejszej wiedzy. Prowadzę zajęcia tak, aby początkujące czuły się równie zaopiekowane jak doświadczone praktykujące. Odbieram Cię tam, gdzie właśnie jesteś – bez presji, w Twoim własnym tempie."
+          },
+          {
+            "question": "Jak dotrę na miejsce retreatu?",
+            "answer": "Zajmiemy się tym wspólnie – nie musisz planować sama. Szczegółowe informacje o dojazdzie otrzymasz po dokonaniu rezerwacji. Zazwyczaj organizujemy wspólny transfer z najbliższego lotniska lub dworca kolejowego do miejsca retreatu. Koszty transferu podajemy z wyprzedzeniem."
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Czujesz, że to czas dla Ciebie?",
+        "text": "Liczba miejsc jest świadomie ograniczona, aby mogła powstać prawdziwa głębia. Zarezerwuj teraz swoje miejsce na yoga retreacie 2026 – albo po prostu napisz do mnie, jeśli masz jeszcze pytania. Cieszę się na poznanie Ciebie.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yoga retreat 2026 – czas dla kobiet | Runayoga",
+      "seoDescription": "7 dni tylko dla Ciebie: joga, medytacja, mantry i szamańska praca uzdrawiająca w małej grupie. Odpuść, naładuj się, odnajdź samą siebie. Zarezerwuj teraz miejsce na liście oczekujących."
+    }
+  },
+  "zones": {}
+}

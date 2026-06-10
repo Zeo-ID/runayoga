@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Mantra söylemek – sesinin seni taşımasına izin ver",
+        "subtitle": "Aklın bırakamadığını içeriden çözen ses",
+        "buttonText": "Bana yaz – seni görmeyi çok isterim",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/runa-monochord-abendlicht.webp",
+        "imageAlt": "Akşam ışığında monokordla Runa",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Akşamları bir türlü dinginleşmek istemeyen o içsel huzursuzluğu tanır mısın? Beden çoktan yorulmuşken durmadan koşmaya devam eden aklı? Birlikte söylediğimizde, tam da oraya dokunan bir şey gerçekleşir. Sesin, en köklü enstrümanlarından biridir ve mantralar, zihnin onları anlamadan önce göğüs boşluğunda hissettiğin bir titreşim taşır. Mantra akşamlarımda bir araya gelir, ses ve titreşim aracılığıyla durur – ve yeniden hem kendimizle hem birbirimizle bağlanırız.</p><p>İster Yoga geleneğinden gelen geleneksel mantralar, ister farklı kültürlerden şifalı Medicine Songs, ister birlikte Kirtan söylemek olsun – bu asla güzel söylemekle ilgili değildir. Kendi sesinin tınısı aracılığıyla kendini hissetmek ve gün boyu taşıdığını bırakmakla ilgilidir. Melodiler basittir ve tekrar eder, böylece hiçbir şey bilmene gerek kalmaz – kendini öylece bırakabilirsin. Her tonla nefes derinleşir, omuzlar gevşer ve bir an için orada yalnızca bu sıcak, ortak ses kalır.</p><p>Bu akşamlar benim için gerçek bir gönül meselesi. Topluluk içinde, her bir kişiyi taşıyan bir ses dokusu oluşur – seni de, özellikle kendini sessiz hissettiğin anlarda. Çoğu kişi birlikte söylemeyi derinden dokunucu ve iyi gelen bir deneyim olarak tanımlar; bazıları tükenmiş gelir ve tuhaf bir hafiflikle evine döner. Ne müzikal ön bilgiye ne de özel bir sese ihtiyacın var – yalnızca bir akşam boyunca kendini bırakma isteğine. Mekân küçük, samimi ve korunaklıdır; kimse sana bakmaz, herkes söyler.</p><h2>Bu akşam seni neler bekliyor</h2><ul><li>Samimi, güvenli bir çemberde birlikte söylemek – her ses öylece var olabilir</li><li>Seni içeriden dokunan, farklı geleneklerden gelen şifalı Medicine Songs</li><li>Ön bilgi gerekmez – hiçbir şey bilmen ve hiçbir şey başarman gerekmez</li><li>Açık bir çember: olduğun gibi öylece gel</li><li>Seni katman katman gevşeten Mantrachanting ve Kirtan</li><li>Nazikçe taşıyan, tamamlayıcı bir deneyim olarak Sound Healing</li></ul><p>Huzura ve bağa olan özlemin şu an usulca kapıyı çalıyorsa – onu izle. Bana yaz, sana bir sonraki akşamın ne zaman olduğunu söyleyeyim.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Sadece eşlik etme özlemini hissediyor musun?",
+        "text": "Bana kısaca yaz – sana bir sonraki Mantra akşamının ne zaman olduğunu söyleyeyim, sesini çemberde duymaktan mutluluk duyarım.",
+        "buttonText": "Yerini ayırt",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Berlin-Pankow'da mantra söylemek – sesle huzur bulmak | Runayoga",
+      "seoDescription": "Berlin-Pankow'da Runayoga'da Mantra akşamları ve Medicine Songs. Bırak, içsel huzuru ve bağı bul – hem de ön bilgiye gerek olmadan. Bir sonraki tarih için bana yaz."
+    }
+  },
+  "zones": {}
+}

@@ -1,0 +1,55 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Breathe deeply. Arrive within yourself.",
+        "subtitle": "Yoga in Berlin-Pankow – a protected space where your body softens, your breath calms, and your mind finally grows still.",
+        "buttonText": "Enquire now",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "View prices",
+        "secondButtonLink": "/preise",
+        "image": "/images/runa/retreat-yurte-savasana.webp",
+        "imageAlt": "Deep relaxation in Savasana",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Do you know that feeling when your mind just won't stop racing? When your shoulders creep up to your ears, your back aches, and you long for a place where you are simply allowed to be? That is exactly the place I create for you. For me, yoga is far more than physical exercises on the mat – it is a coming home to yourself. In my studio in Berlin-Pankow I teach Hatha Yoga, Vinyasa Flow and Yin Yoga in small, personal groups. It's not the perfect posture that matters, but your very own experience.</p><p>Imagine how you rise from the mat after an hour: your breath deep and calm, your back longer and freer, the inner noise gone quiet. I am deeply convinced of this – every body can practise yoga. Whether you step onto the mat for the very first time or have been practising for years, I meet you exactly where you are right now. With mindfulness, conscious breath and gentle, sensitive adjustments, I accompany you in feeling your body anew and letting go of old ballast.</p><p>You don't have to dig deep into your pocket for this: my prevention courses are certified under § 20 SGB V (Zentrale Prüfstelle Prävention) and are subsidised by most statutory health insurers by up to 80 %. And when everyday life leaves no time for the trip to the studio, we practise online – so your island of calm always stays within reach.</p><h2>What you give yourself here</h2><ul><li>Small groups, in which I truly see you and accompany you individually</li><li>All levels warmly welcome – from the first breath to a seasoned practice</li><li>Health-insurance-certified prevention courses (§ 20 SGB V) with up to 80 % reimbursement – health that costs you almost nothing</li><li>Private sessions for your very own personal path</li><li>Online yoga that fits flexibly into your life</li><li>Hatha, Vinyasa and Yin Yoga – gently strengthening or deeply relaxing, just as you need it right now</li></ul><h2>Is yoga the right thing for you?</h2><p>If you are looking for balance to a full daily life, want to finally relieve your back or simply breathe freely again – then yes, you are exactly in the right place here. During pregnancy and after birth too, I accompany you gently with adapted exercises. You need no prior knowledge and no professional's flexibility. You only need yourself. Write to me, and together we will find out what is good for you.</p>"
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-kurs",
+        "title": "Your Tuesday evening just for you – Yoga Yin & Yang",
+        "text": "<p>Gently strengthening and deeply releasing – perfect for beginners and anyone who would like to return. <strong>Tuesdays 19:15–20:30</strong>, as an 8- or 10-week course that reliably carries you through the week.</p><p><strong>Course blocks 2026:</strong><br>14.04.–16.06.2026 (break during the Easter holidays)<br>25.08.–17.11.2026 (no course 13.–27.10.2026)</p><p>ZPP-certified (§ 20 SGB V) · up to 80 % health insurance reimbursement<br>Location: Sinnergie, Schulzestr. 1, 13187 Berlin-Pankow</p><p>The places are deliberately limited so that each of you is seen. Secure your spot while it is still available.</p>",
+        "image": "",
+        "imageAlt": "",
+        "imagePosition": "left"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Treat yourself to the first breath",
+        "text": "You don't have to decide before you have felt it. Write to me, and together we will find the course that feels right for you – entirely without pressure.",
+        "buttonText": "Enquire now",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yoga in Berlin-Pankow – breathe freely at last | Runayoga",
+      "seoDescription": "Hatha, Vinyasa & Yin Yoga in small groups in Berlin-Pankow. Let go of stress and back pain and arrive within yourself. ZPP-certified prevention courses with up to 80 % health insurance reimbursement – secure your place now at Runayoga."
+    }
+  },
+  "zones": {}
+}

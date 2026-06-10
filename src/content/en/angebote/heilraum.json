@@ -1,0 +1,100 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Come to rest. Come home to yourself.",
+        "subtitle": "Shamanic healing work & spiritual guidance in a protected space",
+        "buttonText": "Request an initial conversation",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+        "imageAlt": "Ritual altar with singing bowls and candles",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Do you know that quiet inner restlessness that lingers even when everything seems fine on the outside? That feeling of exhaustion that sits deeper than mere tiredness – as if a part of you were calling out for rest and connection? This is exactly where my healing space opens up: a protected, warm place where you are simply allowed to arrive. Without expectation, without a mask. Just you, your breath and the stillness.</p><p>Shamanic healing work is an ancient tradition that sees you as a whole person – body, mind and soul. In a session I hold the space for you: gently, clearly and present. We release what has become dense, let tension soften and listen to what wants to be seen. Many women describe the time afterwards as a deep sigh of relief – lighter, more grounded, reconnected with their own strength.</p><p>Whether you are going through a difficult phase, longing for more clarity or simply sensing that there is still something there: you don't have to walk this path alone. Every session is as unique as you are – together, in a calm initial conversation, we find out what feels good for you right now.</p><h2>What awaits you in your session</h2><ul><li>A protected space in which you are allowed to be fully yourself</li><li>Gentle shamanic ceremonies and rituals, at your own pace</li><li>Energetic release and balancing that feels like a sigh of relief</li><li>Compassionate guidance through challenging phases of life</li><li>An individual session that is entirely tailored to you</li></ul><h2>Is the healing space right for you?</h2><p>The healing space is here for you when you long for more inner calm, clarity and connection. You don't need any prior experience – only the openness to let yourself in. Shamanic work combines wonderfully with yoga and other mindful paths to yourself. If your heart quietly says yes as you read this, simply write to me – the first step is completely non-binding.</p>"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-heilraum",
+        "title": "My offerings in the healing space",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "The Shamanic Journey",
+            "text": "With drum, voice and smudging I guide you into an inner space beyond the mind – to your power animal, to answers and to strength you thought was lost. approx. 75 min · 120 €",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Charming & Singing Over",
+            "text": "An old oral healing tradition of words of blessing and sound – a quiet, powerful ritual when other ways have not taken hold. 30 min, often as a series · from 60 € · also as remote guidance",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Healing Ceremonies",
+            "text": "Protected spaces for transformation and reconnection – with rituals, sound, stillness and conscious presence. Alone, as a pair or in a small group. approx. 90–120 min · on request",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Ancestral Work",
+            "text": "Gentle guidance to find peace with your roots and to pass on what may nourish – and to let go of what has become heavy.",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Reiki",
+            "text": "Sensitive energy work that activates your self-healing powers, releases tension and lets you relax deeply.",
+            "image": "",
+            "link": "/kontakt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-sitzung",
+        "content": "<h2>What happens in a session</h2><p>As different as each person is, I shape each encounter just as individually. And yet all sessions share the same heart:</p><ul><li>Deep energetic cleansing</li><li>The release of old, blocking patterns</li><li>Grounding and energetic stabilisation</li><li>Connection to your spiritual helpers and ancestors</li></ul><p>I combine shamanic traditions with my knowledge of energetic healing arts and meditation – carried by a deep respect for nature, the spiritual world and your very own personal journey. Beforehand we take time for a calm, non-binding initial conversation.</p>"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "id": "Quote-heilraum",
+        "text": "There are times when the soul needs rituals in order to reorder itself.",
+        "source": "Runa Bulla",
+        "variant": "decorative"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Ready to come home to yourself again?",
+        "text": "Write to me for a calm, non-binding initial conversation – together we'll look at what you need right now. Without any pressure, entirely at your own pace.",
+        "buttonText": "Request an initial conversation",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Healing Space: Shamanic Healing Work in Berlin-Pankow – Runayoga",
+      "seoDescription": "Come to rest in Runa's healing space in Berlin-Pankow: shamanic healing work & compassionate spiritual guidance in a protected space. Request a non-binding initial conversation now."
+    }
+  },
+  "zones": {}
+}

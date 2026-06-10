@@ -1,0 +1,223 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-preise",
+        "title": "Seni taşıyan şeye yatırım yap",
+        "subtitle": "Net fiyatlar, dürüst teklifler – böylece huzur içinde kendine gelebilirsin",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-preise-intro",
+        "content": "<p style=\"text-align:center\">Her şeyi tek başına taşımak zorunda değilsin. Yoga ve Pilates önleyici kurslarım § 20 SGB V uyarınca sertifikalıdır (Zentrale Prüfstelle Prävention) – çoğu yasal sağlık sigortası masrafların <strong>%80'e kadarını</strong> karşılar. Böylece kendine zaman ayırmak, belki düşündüğünden daha kolay mümkün olur.</p>"
+      }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-yoga",
+        "title": "Derin bir nefes al – günlük yaşamı içinden çıkaran Yoga",
+        "subtitle": "Yeni başlayanlar ve yeniden başlayanlar için Yin & Yang – nazikçe yönlendirilen, ZPP sertifikalı",
+        "packages": [
+          {
+            "name": "Önleyici kurs",
+            "price": "240 €",
+            "period": "10 ünite (8 veya 10 haftalık kurs)",
+            "features": ["Salı günleri 19:15–20:30 – kendine ayırdığın sabit akşamın", "Yin & Yang: aynı anda hem güçlü hem bırakan", "ZPP sertifikalı (§ 20 SGB V)", "%80'e kadar sigorta geri ödemesi", "Kimsenin seni gözden kaçırmadığı küçük gruplar"],
+            "highlighted": true
+          },
+          {
+            "name": "Özel ders",
+            "price": "90 €",
+            "period": "Özel ders · 60 dk.",
+            "features": ["Tamamen odakta: sadece sen ve pratiğin", "Kendi temponda 60 dakika", "Nazik bir başlangıç ya da belirli konular için ideal", "Çevrimiçi de mümkün"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p1", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-pilates",
+        "title": "Merkezden güçlü – seni yeniden taşıyan bir sırt için Pilates",
+        "subtitle": "Daha fazla denge, daha az gerginlik – küçük aletlerle, ZPP sertifikalı",
+        "packages": [
+          {
+            "name": "Önleyici kurs",
+            "price": "200 €",
+            "period": "10 ünite",
+            "features": ["Salı günleri 18:00–19:00", "Hissedilir derecede güçlü bir merkez için küçük aletlerle hedefe yönelik antrenman", "ZPP sertifikalı (§ 20 SGB V)", "%80'e kadar sigorta geri ödemesi", "Duruşuna dikkat eden küçük gruplar"],
+            "highlighted": true
+          },
+          {
+            "name": "Özel ders",
+            "price": "95 €",
+            "period": "Özel ders · 60 dk.",
+            "features": ["Tamamen sana uyarlanmış kişisel rehberlik", "Kendi temponda 60 dakika", "Aletler mevcut", "Her hareket bireysel olarak eşlik edilir"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p2", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-massagen",
+        "title": "Kendini bırak – sadece bedenin için bir saat",
+        "subtitle": "Lomi Lomi Nui, Ayurveda, ses kâseleri, ayak refleksoloji ve çok daha fazlası – kelimelerin ulaşamadığına dokunur",
+        "packages": [
+          {
+            "name": "Tekil masaj",
+            "price": "95 €",
+            "period": "60 dakika",
+            "features": ["Tamamen hissine göre masaj türün", "Hamileler ve doğum sonrası için sevgiyle uygun", "Kendine gelmen için sıcak, korunaklı bir alan", "Ön görüşme dahil – lütfen 75 dk. planla"],
+            "highlighted": false
+          },
+          {
+            "name": "Tekil masaj",
+            "price": "135 €",
+            "period": "90 dakika",
+            "features": ["Tamamen hissine göre masaj türün", "Her gerginliğin çözülmek için zaman bulduğu yoğun tüm vücut uygulaması", "Hamileler ve doğum sonrası için sevgiyle uygun", "Ön görüşme dahil – lütfen 105 dk. planla"],
+            "highlighted": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p2b", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-massagepakete",
+        "title": "Kendine bir andan fazlasını arma – Masaj paketleri (3'lü)",
+        "subtitle": "Etkisi süren üç uygulama – ve tek tek almaktan 15 € daha uygun",
+        "packages": [
+          {
+            "name": "Annelik mutluluğu",
+            "price": "270 €",
+            "period": "285 € yerine · 3 × 60 dk.",
+            "features": ["3 × hamileler için masaj", "Hamileliğin boyunca sevgi dolu eşlik – sen ve çocuğun için", "15 € tasarruf"],
+            "highlighted": false
+          },
+          {
+            "name": "Ses ve Rahatlama",
+            "price": "270 €",
+            "period": "285 € yerine · 3 × 60 dk.",
+            "features": ["3 × ses kâsesi masajı", "Beden ve zihni titreşimde bırakan derin rahatlama", "15 € tasarruf"],
+            "highlighted": true
+          },
+          {
+            "name": "Beden ve Zihin",
+            "price": "270 €",
+            "period": "285 € yerine · 3 × 60 dk.",
+            "features": ["3 × dilediğin masaj", "Serbestçe birleştirilebilir – tam o an neye ihtiyacın varsa", "15 € tasarruf"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p3", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-heilraum",
+        "title": "Ruh için şifa alanı – iç dünyan huzur aradığında",
+        "subtitle": "Korunaklı bir alanda şamanik şifa çalışması ve dikkatli eşlik",
+        "packages": [
+          {
+            "name": "Şamanik yolculuk",
+            "price": "120 €",
+            "period": "yaklaşık 75 dakika",
+            "features": ["Davul, ses ve tütsü ile eşlik", "Güç hayvanınla buluşma, yaşam sorularına yanıtlar", "Ardından entegrasyon görüşmesi"],
+            "highlighted": true
+          },
+          {
+            "name": "Okuma ve Söyleme",
+            "price": "60 €",
+            "period": "ünite başına (30 dk.)",
+            "features": ["Kutsama sözleriyle eski sözlü şifa geleneği", "Çoğunlukla 3–7 gün boyunca küçük bir seri olarak", "İstenirse uzaktan eşlik olarak da"],
+            "highlighted": false
+          },
+          {
+            "name": "Şifa töreni",
+            "price": "Talep üzerine",
+            "period": "yaklaşık 90–120 dakika",
+            "features": ["Tek başına, ikili veya küçük grup", "Ritüeller, ses, sessizlik ve bilinçli varoluş", "Önceden bağlayıcı olmayan ön görüşme"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p4", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-gemeinschaft",
+        "title": "Mantra & Yıl Çemberi – birlikte taşınan",
+        "subtitle": "Söylemek, hissetmek, bağlı olmak – bir şey bilmene gerek yok, sadece orada ol",
+        "packages": [
+          {
+            "name": "Mantra tekil seans",
+            "price": "Talep üzerine",
+            "period": "akşam başına",
+            "features": ["Açık çember – olduğun gibi gel", "Ön bilgiye gerek yok, sesin yeter", "İçten ısıtan Mantra chanting & Medicine Songs"],
+            "highlighted": false
+          },
+          {
+            "name": "Kadınlar için Yıl Çemberi",
+            "price": "Talep üzerine",
+            "period": "çember başına",
+            "features": ["Seni sarıp sarmalayan kadınlar arasında açık çember", "Ön bilgiye gerek yok, sesin yeter", "Tutunmanı sağlayan ritüeller ve topluluk", "Yıl boyunca döngüsel – doğanın ritminde"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-preise-hinweise",
+        "content": "<h2>Bilmekte fayda var</h2><ul><li>Kısa bir kayıt yerini güvenceye alır.</li><li>Masaj fiyatları Gesundheitsticket veya Machtfit için geçerli değildir.</li><li>Çoklu kartlar ve önleyici kurslar kurs başlamadan önce tamamen ödenmelidir.</li><li>Tüm bilgiler garanti edilmez – her zaman güncel duyuru geçerlidir.</li></ul>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-preise",
+        "title": "Sana neyin uyduğundan hâlâ emin değil misin?",
+        "text": "Bana yazman yeter – şu an sana neyin iyi geldiğini birlikte buluruz ve sana güncel fiyatları söylerim. Hiçbir baskı olmadan.",
+        "buttonText": "Bana yaz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Fiyatlar – Berlin-Pankow'da Yoga, Pilates & Masaj - Runayoga",
+      "seoDescription": "Berlin-Pankow'daki Runayoga'da huzur bul: 95 €'dan başlayan masaj, 270 €'luk 3'lü paketler, %80'e kadar sigorta geri ödemeli ZPP sertifikalı Yoga & Pilates önleyici kursları. Yerini şimdi güvenceye al."
+    }
+  },
+  "zones": {}
+}

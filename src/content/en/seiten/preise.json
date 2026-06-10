@@ -1,0 +1,223 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-preise",
+        "title": "Invest in what carries you",
+        "subtitle": "Clear prices, honest offers – so you can arrive in peace",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-preise-intro",
+        "content": "<p style=\"text-align:center\">You don't have to carry everything alone. My yoga and Pilates prevention courses are certified under § 20 SGB V (Zentrale Prüfstelle Prävention) – most statutory health insurers cover <strong>up to 80 %</strong> of the costs. This makes time for yourself more achievable than you might think.</p>"
+      }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-yoga",
+        "title": "Breathe deeply – yoga that lets the everyday flow out of you",
+        "subtitle": "Yin & Yang for beginners and returners – gently guided, ZPP-certified",
+        "packages": [
+          {
+            "name": "Prevention course",
+            "price": "240 €",
+            "period": "10 sessions (8- or 10-week course)",
+            "features": ["Tuesdays 19:15–20:30 – your fixed evening for yourself", "Yin & Yang: powerful and letting go at once", "ZPP-certified (§ 20 SGB V)", "Up to 80 % insurance reimbursement", "Small groups where no one overlooks you"],
+            "highlighted": true
+          },
+          {
+            "name": "Single session",
+            "price": "90 €",
+            "period": "Single session · 60 min.",
+            "features": ["Fully focused: just you and your practice", "60 minutes at your own pace", "Ideal for a gentle start or specific topics", "Also available online"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p1", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-pilates",
+        "title": "Strong from the center – Pilates for a back that carries you again",
+        "subtitle": "More stability, less tension – with small equipment, ZPP-certified",
+        "packages": [
+          {
+            "name": "Prevention course",
+            "price": "200 €",
+            "period": "10 sessions",
+            "features": ["Tuesdays 18:00–19:00", "Targeted training with small equipment for a noticeably strong center", "ZPP-certified (§ 20 SGB V)", "Up to 80 % insurance reimbursement", "Small groups with an eye on your posture"],
+            "highlighted": true
+          },
+          {
+            "name": "Single session",
+            "price": "95 €",
+            "period": "Single session · 60 min.",
+            "features": ["Personal support, fully tailored to you", "60 minutes at your own pace", "Equipment is provided", "Every movement is individually guided"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p2", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-massagen",
+        "title": "Let yourself be carried – an hour just for your body",
+        "subtitle": "Lomi Lomi Nui, Ayurveda, singing bowls, reflexology and much more – touching what words cannot reach",
+        "packages": [
+          {
+            "name": "Single massage",
+            "price": "95 €",
+            "period": "60 minutes",
+            "features": ["Your type of massage, entirely by feel", "Lovingly suitable for pregnant women & postnatal", "A warm, protected space to arrive in", "Incl. preliminary consultation – please allow 75 min."],
+            "highlighted": false
+          },
+          {
+            "name": "Single massage",
+            "price": "135 €",
+            "period": "90 minutes",
+            "features": ["Your type of massage, entirely by feel", "Intensive full-body treatment in which every tension gets time to release", "Lovingly suitable for pregnant women & postnatal", "Incl. preliminary consultation – please allow 105 min."],
+            "highlighted": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p2b", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-massagepakete",
+        "title": "Treat yourself to more than a moment – massage packages (set of 3)",
+        "subtitle": "Three treatments that linger – and 15 € cheaper than booked individually",
+        "packages": [
+          {
+            "name": "Mother's joy",
+            "price": "270 €",
+            "period": "instead of 285 € · 3 × 60 min.",
+            "features": ["3 × massage for pregnant women", "Loving support through your pregnancy – for you and your child", "15 € savings"],
+            "highlighted": false
+          },
+          {
+            "name": "Sound and relax",
+            "price": "270 €",
+            "period": "instead of 285 € · 3 × 60 min.",
+            "features": ["3 × singing bowl massage", "Deep relaxation that lets body and mind keep resonating", "15 € savings"],
+            "highlighted": true
+          },
+          {
+            "name": "Body and mind",
+            "price": "270 €",
+            "period": "instead of 285 € · 3 × 60 min.",
+            "features": ["3 × massage of your choice", "Freely combinable – entirely according to what you need right now", "15 € savings"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p3", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-heilraum",
+        "title": "Healing space for the soul – when the inner self seeks peace",
+        "subtitle": "Shamanic healing work and mindful guidance in a protected space",
+        "packages": [
+          {
+            "name": "Shamanic journey",
+            "price": "120 €",
+            "period": "approx. 75 minutes",
+            "features": ["Guidance with drum, voice & smudging", "An encounter with your power animal, answers to life's questions", "Integration conversation afterwards"],
+            "highlighted": true
+          },
+          {
+            "name": "Speaking & singing over you",
+            "price": "60 €",
+            "period": "per session (30 min.)",
+            "features": ["Ancient oral healing tradition with words of blessing", "Often as a small series over 3–7 days", "On request also as remote guidance"],
+            "highlighted": false
+          },
+          {
+            "name": "Healing ceremony",
+            "price": "On request",
+            "period": "approx. 90–120 minutes",
+            "features": ["Alone, as a pair or a small group", "Rituals, sound, silence & conscious presence", "Non-binding preliminary conversation beforehand"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p4", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-gemeinschaft",
+        "title": "Mantra & wheel of the year – carried together",
+        "subtitle": "Sing, feel, be connected – you don't have to be able to do anything, just be there",
+        "packages": [
+          {
+            "name": "Mantra single date",
+            "price": "On request",
+            "period": "per evening",
+            "features": ["Open circle – come as you are", "No prior experience needed, your voice is enough", "Mantra chanting & medicine songs that warm you from within"],
+            "highlighted": false
+          },
+          {
+            "name": "Wheel of the year for women",
+            "price": "On request",
+            "period": "per circle",
+            "features": ["Open circle among women that catches you", "No prior experience needed, your voice is enough", "Rituals & community that give support", "Cyclical through the year – in the rhythm of nature"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-preise-hinweise",
+        "content": "<h2>Good to know</h2><ul><li>A short registration secures your spot.</li><li>The massage prices do not apply to Gesundheitsticket or Machtfit.</li><li>Multi-class cards and prevention courses must be paid in full before the course begins.</li><li>All information without guarantee – the current course listing applies.</li></ul>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-preise",
+        "title": "Still unsure what suits you?",
+        "text": "Just write to me – together we'll find out what's good for you right now, and I'll tell you the current prices. With no pressure at all.",
+        "buttonText": "Write to me",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Prices – Yoga, Pilates & Massage in Berlin-Pankow | Runayoga",
+      "seoDescription": "Find peace at Runayoga in Berlin-Pankow: massage from 95 €, sets of 3 for 270 €, ZPP-certified yoga & Pilates prevention courses with up to 80 % insurance reimbursement. Secure your spot now."
+    }
+  },
+  "zones": {}
+}

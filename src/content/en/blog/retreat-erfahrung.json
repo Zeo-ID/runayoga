@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "My First Retreat: A Journey to Myself",
+        "subtitle": "Experience report: My first yoga retreat with Runayoga. A personal journey to myself with yoga, nature and community.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/stock-thumbnail-2.webp",
+        "imageAlt": "Retreat house in nature",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p><em>A personal experience report by Lena, participant in the Autumn Retreat 2025.</em></p><p>When I signed up for the retreat with Runa, I didn't know exactly what to expect. I only knew that I needed a break. Not the usual vacation packed with activities, but real stillness. Room to breathe. A place where I didn't have to be anything except myself. What followed touched me more deeply than I could ever have imagined.</p><h2>Arriving and Letting Go</h2><p>Even the journey there had something meditative about it. The further I moved away from the city, the calmer it became – not only outside, but also within me. When I arrived, Runa was standing in front of the house and welcomed us with a warm smile. No small talk, no program meant to keep us busy right away. Instead, a simple invitation: “Arrive. Just leave everything you bring with you here.”</p><p>The room was simple and cozy. Wooden furniture, a bed that smelled of lavender, a window with a view of old trees. I placed my phone in the drawer and closed it. For the first time in months, I had no notifications, no appointments, no reason to look at a screen. It felt strange – and at the same time like a liberation.</p><h2>The Rhythm of the Days</h2><p>Every morning we started at seven with a gentle yoga session. No acrobatic poses, no performance – instead slow, mindful movements, accompanied by Runa's calm voice. It was as if she lined the room with an invisible blanket of safety.</p><p>After our shared breakfast we had free time. Some strolled through the forest, others read or simply sat and gazed at the sky. In the afternoon there was a deeper practice: Yin Yoga, Pranayama or guided meditations. Each session had a theme – trust, compassion, letting go. Runa spoke little, but every word landed.</p><p>In the evenings we sang mantras together. I had never sung mantras before and felt self-conscious at first. But when the voices of the group merged into one sound, something dissolved within me. The words were in Sanskrit, but my heart understood them anyway.</p><h2>The Shamanic Ceremony</h2><p>On Saturday evening Runa invited us to a shamanic ceremony. Candles, incense, a circle of cushions. I had no expectations and at the same time I was nervous. Runa explained that the ceremony was about getting in touch with the deeper layers of our soul – not through the mind, but through the body and intuition.</p><p>What followed is hard to put into words. Through drumbeats, song and guided inner contemplation, I found myself in a place within me that I had long forgotten. Tears flowed without my knowing exactly why. It wasn't sad – it was liberating. As if my body had been waiting for this moment to release something I had been carrying around with me for far too long.</p><p>Runa held the space with a presence that impressed me deeply. She was there without pushing. She saw without judging. In this protected setting I could let myself fall – perhaps for the first time truly.</p><h2>What I Took With Me</h2><p>On Sunday morning, as I packed my bag, I felt like a different person. Not because I had had some great insight, not because everything had suddenly changed. But because I had once again sensed who I really am beneath all the functioning. Beneath the roles, the duties, the daily noise.</p><p>What I took with me fits in no suitcase. It is a feeling of stillness that I can now call upon again and again. When everyday life gets too loud, I close my eyes and I am back there: in the circle, by the candles, with the sound of the mantras in my ear and the deep certainty that everything I need is already within me.</p><blockquote><p>“Sometimes you have to go away in order to arrive back at yourself.”</p></blockquote><p>If you're wondering whether a retreat is something for you: Do it. Not someday. Not when everything fits. Now. Your future self will thank you.</p><p><em>-- Lena M., Berlin</em></p>"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "My First Retreat: A Journey to Myself - Runayoga",
+      "seoDescription": "Experience report: My first yoga retreat with Runayoga. A personal journey to myself with yoga, nature and community."
+    }
+  },
+  "zones": {}
+}

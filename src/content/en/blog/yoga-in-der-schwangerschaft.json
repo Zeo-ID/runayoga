@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Why Yoga Feels So Good During Pregnancy",
+        "subtitle": "From mindfulness and body awareness to Nadi Shodana – how yoga gently accompanies you through a physically and emotionally intense phase of life and prepares you for birth.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-tonfigur-schwangere.webp",
+        "imageAlt": "Clay figure of a pregnant woman",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>The time of pregnancy and the preparation for birth are a very special phase of life for many women. The shifts and changes – whether in your personal environment or in all other areas of life – are all-encompassing. Your own body visibly moves into the centre, and the changes are enormous not only on a physical level but especially on an emotional one.</p><h2>A good time to care lovingly for yourself</h2><p>Now is a good time to care well and lovingly for your own body. Your strength flows into the depth of the feminine, into \"being a woman\" and into the woman's inherent creative power.</p><blockquote><p>Giving birth is creative power made manifest!</p></blockquote><h2>What yoga has to offer from its age-old tradition</h2><p>To discover this and to experience good preparation for birth, yoga has much to offer from its age-old tradition:</p><ul><li><strong>The deep, yogic belly breathing</strong> helps to supply your body and the baby well with oxygen and life energy.</li><li><strong>Relaxation</strong>, so important for this time and for the birth, is essential.</li><li><strong>Many asanas are birthing positions</strong> and can already be practised.</li><li><strong>The mental preparation</strong> for a positive and self-determined course of birth is a supporting pillar of yogic birth preparation.</li></ul><p>Last but not least, sung mantra help to open the heart and cleanse all energy channels. Why not simply give it a try!</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Accompany Your Pregnancy with Yoga",
+        "text": "Would you like to prepare mindfully for birth and connect lovingly with your body? I would be glad to accompany you on this path.",
+        "buttonText": "Make an enquiry now",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Why Yoga Feels So Good During Pregnancy – Runayoga",
+      "seoDescription": "How yoga accompanies pregnant women: deep belly breathing, relaxation, asanas as birthing positions and mental preparation for a self-determined birth.",
+      "date": "2019-10-06"
+    }
+  },
+  "zones": {}
+}

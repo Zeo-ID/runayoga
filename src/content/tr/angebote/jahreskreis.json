@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Kadınların Yıl Çemberi: Varış, Nefes Alış, Bağlı Olmak",
+        "subtitle": "Yılda sekiz kez yalnızca sana ait korunaklı bir çember – günlük gürültüden uzakta, kendine ve seni taşıyan bir topluluğa doğru.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-gartentafel.webp",
+        "imageAlt": "Bahçe masasında kadın çemberi",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Sürekli işlev görme hissini tanıyor musun? Herkes için orada olmak – ama nadiren kendin için? Kadınların Yıl Çemberi, tam da bu hiç bitmeyen koşudan bilinçli bir mola senin için. Yılda sekiz kez, yılın büyük dönüm noktalarını birlikte kutlamak için bir araya geliyoruz. Kelt yıl çemberi bayramları ve doğanın ritimlerinden esinlenerek, hiçbir şey başarmak zorunda olmadığın bir alan doğuyor – sadece varabileceğin, derin nefes alabileceğin ve tutulduğunu hissedebileceğin bir alan.</p><p>Her buluşma, mevsime göre nefes alan kendi temasını taşır. İlkbaharda yeni başlangıç ve büyüme, yazda bolluk ve yaşam sevinci, sonbaharda şükran ve ağırlaşan şeyleri bırakmak, kışta ise sessizlik ve içe dönüş söz konusudur. Yumuşak ritüeller, sakin meditasyonlar ve içten sohbetlerle yeniden kendine varırsın – ve içindeki huzursuzluğun nasıl dindiğini, yerine sıcak ve bağlı bir şeyin geldiğini hissedersin.</p><p>Kadın çemberi, olduğun gibi olabileceğin korunaklı bir alandır. Burada doğru ya da yanlış yoktur, değerlendirme yoktur, kıyaslama yoktur. Çemberde konuşulan çemberde kalır – buna güvenebilirsin. Kadınların topluluğunda sessiz, taşıyan bir güç yatar: Boş olduğunda seni besler ve yıl boyunca yalnız yürümediğini sana hatırlatır.</p><h2>Seni neler bekliyor</h2><ul><li>Yıl çemberi bayramlarında yılda 8 buluşma – sevinerek beklediğin sabit çıpalar</li><li>Mevsime uygun, seni topraklayan yumuşak ritüeller ve törenler</li><li>Yalnızca kadınlar için – korunaklı, gizli bir alan</li><li>Boş laf yerine gerçek bağ: seni tutan bir topluluk</li><li>Gerçekten duyulduğun meditasyonlar ve derin sohbetler</li><li>Önbilgi gerekmez – sadece olduğun gibi gel</li></ul><h2>Yıl Çemberi kimin için yapıldı?</h2><p>Bağlılık özlemi duyuyorsan, hayatında daha fazla huzur ve derinlik istiyorsan ve daha büyük bir şeyin parçası olduğunu yeniden hissetmek hoşuna gidiyorsa – doğanın döngülerinin ve seni anlayan bir kadın grubunun parçası. Önbilgiye ya da belirli bir manevi yönelime ihtiyacın yok. Tek önemli olan açıklığın ve gelmekte olan yılı yalnız değil, taşınarak geçirmeye dair sessiz arzun.</p><p>Bu, şu an özlemini çektiğin şeye benziyor mu? <a href=\"/kontakt\">Bana yaz</a> – bir sonraki çemberin ne zaman başlayacağını sana memnuniyetle anlatırım.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Önümüzdeki yıla yalnız girme",
+        "text": "Çemberdeki yerler, her birimizin gerçekten alanı olsun diye bilinçli olarak sınırlı tutuluyor. Bana yaz ve yerini garantiye al – bir sonraki tarihlerle sana geri dönerim.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Kadınların Yıl Çemberi Berlin-Pankow – Korunaklı Kadın Çemberi | Runayoga",
+      "seoDescription": "Berlin-Pankow'da Runayoga'da Kadınların Yıl Çemberi: Korunaklı bir kadın çemberinde yılda 8 buluşma. Yumuşak ritüeller, gerçek bağ ve senin için huzur – olduğun gibi gel."
+    }
+  },
+  "zones": {}
+}

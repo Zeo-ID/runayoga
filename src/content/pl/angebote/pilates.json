@@ -1,0 +1,55 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Pilates – siła, która płynie z wnętrza",
+        "subtitle": "Silne centrum niesie cię przez każdy dzień – wyprostowanie, ruchomość, bez bólu.",
+        "buttonText": "Zarezerwuj miejsce",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "Zobacz ceny",
+        "secondButtonLink": "/preise",
+        "image": "/images/runa/deko-tennisball.webp",
+        "imageAlt": "Trening z małymi przyborami",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Znasz to ciągnięcie w dolnej części pleców po długim dniu? To uczucie, jakbyś szła przez życie jakoś zgarbiona? Pilates działa dokładnie tam, gdzie powstaje twoja siła – w twoim centrum. Pracujemy ze świadomym, kontrolowanym ruchem oraz z oddechem, który niesie każde ćwiczenie. Czujesz, jak twoje ciało prostuje się od środka.</p><p>I to nie zostaje tylko na macie. Po kilku tygodniach zauważysz to w codzienności: stoisz bardziej wyprostowana, łatwiej podnosisz torby z zakupami, dłużej siedzisz bez napięcia. Twoje plecy stają się spokojniejsze, twoja postawa pewniejsza – jakbyś znalazła wewnętrzne oparcie, które cię niesie.</p><p>Czy to klasyczny pilates, ukierunkowany trening dla pleców, czy delikatny trening na czas przed i po porodzie – odbieram cię dokładnie tam, gdzie aktualnie jesteś. W małych grupach widzę każdą uczestniczkę, koryguję łagodnie i dopasowuję każde ćwiczenie do twojego ciała. Tutaj nie musisz nic umieć ani niczego udowadniać. Możesz czuć się bezpiecznie i rosnąć we własnym tempie.</p><p>Moje kursy pilates są certyfikowane jako kursy profilaktyczne zgodnie z § 20 SGB V (Zentrale Prüfstelle Prävention). To znaczy: twoja ustawowa kasa chorych pokrywa do 80 % kosztów. Po prostu zapytaj w swojej kasie – albo napisz do mnie, chętnie ci pomogę.</p><h2>Co czeka cię na macie</h2><ul><li>Certyfikowane kursy profilaktyczne – do 80 % dofinansowania od twojej kasy chorych</li><li>Delikatny trening z małymi przyborami, który budzi twoje mięśnie głębokie</li><li>Stabilne centrum oraz wyprostowana, wolna od bólu postawa</li><li>Małe grupy, w których jesteś naprawdę widziana</li><li>Ćwiczenia dopasowane do twojego ciała – niezależnie od tego, czy jesteś początkująca, czy zaawansowana</li><li>Specjalne kursy: trening dla pleców oraz prenatalny i postnatalny dla przyszłych i świeżo upieczonych mam</li></ul>"
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-kurs",
+        "title": "Twój kolejny blok kursowy – zarezerwuj sobie miejsce",
+        "text": "<p><strong>10 jednostek · 200 €</strong> – do 80 % zwróci ci twoja kasa chorych. Często zostaje dla ciebie tylko niewielki wkład własny.</p><p>Wtorki 18:00–19:00 · z małymi przyborami<br>Kolejny blok kursowy: 25.08.–17.11.2026 (przerwa 13.–17.10.2026)</p><p>Grupa jest celowo mała – bądź wcześnie, dopóki są jeszcze wolne miejsca.</p><p>Miejsce: Sinnergie, Schulzestr. 1, 13187 Berlin-Pankow</p><p><em>„Physical fitness is the first requisite of happiness.“ – Joseph Pilates</em></p>",
+        "image": "",
+        "imageAlt": "",
+        "imagePosition": "left"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Gotowa na silne, wolne centrum?",
+        "text": "Napisz do mnie krótko – chętnie opowiem ci, jak przebiega kurs, i zarezerwuję dla ciebie miejsce. Bez zobowiązań i całkowicie w twoim tempie.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Pilates w Berlin-Pankow – silne centrum, wolne plecy | Runayoga",
+      "seoDescription": "Delikatne kursy profilaktyczne pilates w Berlin-Pankow dla silnego centrum i wolnych od bólu pleców. 10 jednostek za 200 €, certyfikowane przez ZPP, do 80 % dofinansowania od kasy chorych, małe grupy. Zarezerwuj sobie miejsce w Runayoga."
+    }
+  },
+  "zones": {}
+}

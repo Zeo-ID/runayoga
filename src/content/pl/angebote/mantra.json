@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Śpiewanie mantr – pozwól, by głos cię poniósł",
+        "subtitle": "Dźwięk, który od wewnątrz uwalnia to, czego głowa nie potrafi puścić",
+        "buttonText": "Napisz do mnie – cieszę się na spotkanie z tobą",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/runa-monochord-abendlicht.webp",
+        "imageAlt": "Runa z monochordem w wieczornym świetle",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Znasz ten wewnętrzny niepokój, który wieczorem nie chce się uciszyć? Tę głowę, która wciąż pracuje, choć ciało jest już dawno zmęczone? Kiedy śpiewamy razem, dzieje się coś, co sięga dokładnie do tego miejsca. Twój głos to jeden z twoich najpierwotniejszych instrumentów, a mantry niosą w sobie wibrację, którą czujesz w klatce piersiowej, zanim twój umysł ją zrozumie. Na moich wieczorach mantr spotykamy się, by przez dźwięk i wibrację zatrzymać się w sobie – i na nowo połączyć się z samym sobą oraz ze sobą nawzajem.</p><p>Czy to tradycyjne mantry z tradycji jogi, uzdrawiające Medicine Songs z różnych kultur, czy wspólne śpiewanie kirtanu – nigdy nie chodzi o to, by ładnie śpiewać. Chodzi o to, by poczuć się przez dźwięk własnego głosu i puścić to, co nosiłeś przez cały dzień. Melodie są proste i powtarzają się, więc nie musisz nic umieć – możesz po prostu pozwolić sobie w nie wpaść. Z każdym dźwiękiem oddech staje się głębszy, ramiona opadają, a przez chwilę jest tylko ten ciepły, wspólny dźwięk.</p><p>Te wieczory są dla mnie prawdziwą sprawą serca. We wspólnocie powstaje dywan dźwięku, który niesie każdą i każdego z osobna – także ciebie, właśnie wtedy, gdy czujesz się cicho. Wielu opisuje wspólne śpiewanie jako głęboko poruszające i kojące; niektórzy przychodzą wyczerpani, a wracają do domu dziwnie lekko. Nie potrzebujesz ani muzycznego przygotowania, ani szczególnego głosu – tylko gotowości, by na jeden wieczór się otworzyć. Przestrzeń jest niewielka, serdeczna i bezpieczna, nikt na ciebie nie patrzy, wszyscy śpiewają.</p><h2>Co czeka cię tego wieczoru</h2><ul><li>Wspólne śpiewanie w serdecznym, bezpiecznym gronie – każdy głos po prostu może być</li><li>Uzdrawiające Medicine Songs z różnych tradycji, które poruszają cię od wewnątrz</li><li>Bez potrzeby wcześniejszego doświadczenia – nie musisz nic umieć ani niczego osiągać</li><li>Otwarte spotkanie: przyjdź po prostu, taki, jaki właśnie jesteś</li><li>Mantra-chanting i kirtan, które rozluźniają cię warstwa po warstwie</li><li>Sound Healing jako delikatnie niosące, uzupełniające doświadczenie</li></ul><p>Jeśli twoja tęsknota za spokojem i połączeniem właśnie cicho puka – podążaj za nią. Napisz do mnie, a powiem ci, kiedy jest najbliższy wieczór.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Czujesz tęsknotę, by po prostu śpiewać razem?",
+        "text": "Napisz do mnie krótko – powiem ci, kiedy jest najbliższy wieczór mantr, i ucieszę się, słysząc twój głos w kręgu.",
+        "buttonText": "Zarezerwuj swoje miejsce",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Śpiewanie mantr w Berlin-Pankow – znajdź spokój dzięki głosowi | Runayoga",
+      "seoDescription": "Wieczory mantr i Medicine Songs w Runayoga w Berlin-Pankow. Puść, znajdź wewnętrzny spokój i połączenie – całkiem bez wcześniejszego doświadczenia. Napisz do mnie po najbliższy termin."
+    }
+  },
+  "zones": {}
+}

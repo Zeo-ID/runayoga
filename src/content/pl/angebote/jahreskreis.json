@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Kobiecy krąg roku: przybyć, odetchnąć, poczuć więź",
+        "subtitle": "Osiem razy w roku bezpieczny krąg tylko dla ciebie – z dala od zgiełku codzienności, w stronę siebie samej i wspólnoty, która cię niesie.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-gartentafel.webp",
+        "imageAlt": "Krąg kobiet przy ogrodowym stole",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Znasz to uczucie nieustannego funkcjonowania? Bycia dla wszystkich – a tylko rzadko dla siebie samej? Kobiecy krąg roku to twój świadomy czas wytchnienia właśnie od tego ciągłego biegu. Osiem razy w roku spotykamy się, by wspólnie świętować wielkie punkty zwrotne roku. Inspirowany celtyckimi świętami kręgu roku i rytmami natury powstaje przestrzeń, w której nie musisz nic osiągać – lecz możesz po prostu przybyć, odetchnąć i poczuć się otoczona troską.</p><p>Każde spotkanie niesie swój własny temat, który oddycha w rytm pory roku. Wiosną chodzi o nowy początek i wzrost, latem o obfitość i radość życia, jesienią o wdzięczność i uwalnianie tego, co stało się ciężkie, a zimą o ciszę i wewnętrzne skupienie. Dzięki łagodnym rytuałom, spokojnym medytacjom i szczerym rozmowom znów wracasz do siebie – i czujesz, jak wewnętrzny niepokój opada, a jego miejsce zajmuje coś ciepłego i połączonego.</p><p>Krąg kobiet to bezpieczna przestrzeń, w której wolno ci być taką, jaka jesteś. Tu nie ma dobrze ani źle, nie ma oceniania, nie ma porównywania. To, co zostaje powiedziane w kręgu, pozostaje w kręgu – na tym możesz polegać. We wspólnocie kobiet kryje się cicha, niosąca siła: karmi, gdy jesteś pusta, i przypomina ci, że nie idziesz przez rok sama.</p><h2>Co cię czeka</h2><ul><li>8 spotkań w roku w święta kręgu roku – stałe kotwice, na które możesz się cieszyć</li><li>Łagodne rytuały i ceremonie dopasowane do pory roku, które cię uziemiają</li><li>Tylko dla kobiet – bezpieczna, poufna przestrzeń</li><li>Prawdziwa więź zamiast pogawędek: wspólnota, która cię złapie</li><li>Medytacje i głębokie rozmowy, w których naprawdę zostajesz wysłuchana</li><li>Nie jest potrzebna żadna wcześniejsza wiedza – przyjdź po prostu taka, jaka jesteś</li></ul><h2>Dla kogo jest stworzony krąg roku?</h2><p>Dla ciebie, jeśli tęsknisz za poczuciem więzi, pragniesz więcej spokoju i głębi w swoim życiu i chętnie znów czujesz, że jesteś częścią czegoś większego – cyklów natury i grona kobiet, które cię rozumieją. Nie potrzebujesz żadnej wcześniejszej wiedzy ani określonego nastawienia duchowego. Liczy się tylko twoja otwartość i ciche pragnienie, by przejść nadchodzący rok nie samotnie, lecz niesiona.</p><p>Brzmi to jak to, za czym właśnie tęsknisz? <a href=\"/kontakt\">Napisz do mnie</a> – chętnie opowiem ci, kiedy zaczyna się kolejny krąg.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Nie idź w kolejny rok sama",
+        "text": "Liczba miejsc w kręgu jest świadomie ograniczona, aby każda z nas miała naprawdę swoją przestrzeń. Napisz do mnie i zarezerwuj sobie miejsce – odezwę się do ciebie z najbliższymi terminami.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Kobiecy krąg roku Berlin-Pankow – bezpieczny krąg kobiet | Runayoga",
+      "seoDescription": "Kobiecy krąg roku w Runayoga w Berlin-Pankow: 8 spotkań w roku w bezpiecznym kręgu kobiet. Łagodne rytuały, prawdziwa więź i spokój dla ciebie – przyjdź taka, jaka jesteś."
+    }
+  },
+  "zones": {}
+}

@@ -1,0 +1,43 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-blog",
+        "title": "Dur ve Oku",
+        "subtitle": "Daha fazla huzur, rahatlamış bir sırt ve kendi bedeninde iyi bir his için nazik ilhamlar – günlük yaşamın için kendi pratiğimden düşünceler.",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "BlogList",
+      "props": {
+        "id": "BlogList-blog",
+        "title": "",
+        "count": 12,
+        "layout": "grid",
+        "showImage": true,
+        "showDate": true,
+        "showExcerpt": true
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-blog",
+        "title": "Bunu kendin hissetmek ister misin?",
+        "text": "Bir ekrandaki kelimeler bir şeydir – mat üzerinde derin nefes almak ise başka bir şey. Küçük, korunaklı bir grupta yerini al, günün üzerinden akıp gitmesine izin ver ve yeniden kendine dön. Bana yaz yeter, seni görmekten mutluluk duyarım.",
+        "buttonText": "Bana yaz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Blog – Yoga, Farkındalık & İç Huzur | Runayoga Berlin-Pankow",
+      "seoDescription": "Daha az stres, rahatlamış bir sırt ve günlük yaşamda daha fazla huzur için nazik ilhamlar: Runa Bulla'nın Berlin-Pankow'daki yoga, nefes ve farkındalık üzerine Runayoga blogu."
+    }
+  },
+  "zones": {}
+}

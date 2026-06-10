@@ -1,0 +1,100 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Huzura gel. Kendine gel.",
+        "subtitle": "Korunaklı bir alanda şamanik şifa çalışması ve ruhsal eşlik",
+        "buttonText": "Ön görüşme talep et",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+        "imageAlt": "Tibet çanları ve mumlarla ritüel sunağı",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Dışarıdan her şey yolundaymış gibi göründüğünde bile kalan o sessiz iç huzursuzluğu tanıyor musun? Sıradan yorgunluktan daha derinde oturan bu tükenmişlik hissini – sanki içindeki bir parça huzur ve bağ için sesleniyormuş gibi. İşte tam burada benim şifa alanım açılıyor: sadece gelip var olmana izin verilen, korunaklı, sıcak bir yer. Beklentisiz, maskesiz. Yalnızca sen, nefesin ve sessizlik.</p><p>Şamanik şifa çalışması, seni bütün bir insan olarak gören kadim bir gelenektir – beden, zihin ve ruh. Bir seansta alanı senin için tutarım: nazikçe, berrak ve şimdi ve burada. Yoğunlaşmış olanı çözer, gerginliğin yumuşamasına izin verir ve görülmek isteyene kulak veririz. Birçok kadın sonrasını derin bir oh çekiş olarak tarif eder – daha hafif, daha topraklanmış, kendi gücüyle yeniden bağlı.</p><p>İster zorlu bir dönemden geçiyor ol, ister daha fazla berraklık özle ya da sadece orada hâlâ bir şey olduğunu sez: Bu yolda yalnız yürümek zorunda değilsin. Her seans senin kadar eşsizdir – sakin bir ön görüşmede birlikte, şu an sana neyin iyi geldiğini buluruz.</p><h2>Seansında seni neler bekliyor</h2><ul><li>Tamamen kendin olabileceğin korunaklı bir alan</li><li>Kendi temponda, nazik şamanik törenler ve ritüeller</li><li>Oh çekmek gibi hissettiren enerjisel çözülme ve denge</li><li>Zorlayıcı yaşam evrelerinde duyarlı eşlik</li><li>Tamamen sana göre düzenlenmiş bireysel bir seans</li></ul><h2>Şifa alanı senin için doğru olan mı?</h2><p>Şifa alanı, daha fazla iç huzur, berraklık ve bağ özlediğinde senin için buradadır. Ön bilgiye ihtiyacın yok – sadece kendini bırakma açıklığına. Şamanik çalışma, yoga ve kendine giden diğer farkındalıklı yollarla harika bir şekilde birleşir. Okurken kalbin sessizce evet diyorsa, bana yazman yeterli – ilk adım tamamen bağlayıcı değildir.</p>"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-heilraum",
+        "title": "Şifa alanındaki sunumlarım",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "Şamanik Yolculuk",
+            "text": "Davul, ses ve tütsüyle sana zihnin ötesindeki içsel bir alana eşlik ederim – güç hayvanına, cevaplara ve kaybolduğu sanılan güce. yaklaşık 75 dk · 120 €",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Okuma & Ezgiyle Şifa",
+            "text": "Dua sözlerinden ve sesten oluşan kadim sözlü bir şifa geleneği – diğer yollar işe yaramadığında sessiz, güçlü bir ritüel. 30 dk, çoğu zaman bir seri olarak · 60 €'dan itibaren · uzaktan eşlik olarak da",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Şifa Törenleri",
+            "text": "Dönüşüm ve yeniden bağlanma için korunaklı alanlar – ritüeller, ses, sessizlik ve bilinçli mevcudiyetle. Tek başına, ikili ya da küçük bir grupta. yaklaşık 90–120 dk · talep üzerine",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Ata Çalışması",
+            "text": "Köklerinle barışı bulmak, besleyebilecek olanı aktarmak ve ağırlaşmış olanı bırakmak için nazik bir eşlik.",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Reiki",
+            "text": "Kendini iyileştirme güçlerini harekete geçiren, gerginliği çözen ve seni derinlemesine gevşeten duyarlı enerji çalışması.",
+            "image": "",
+            "link": "/kontakt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-sitzung",
+        "content": "<h2>Bir seansta neler olur</h2><p>Her insan ne kadar farklıysa, her karşılaşmayı da o kadar bireysel olarak biçimlendiririm. Yine de tüm seanslar aynı kalbi taşır:</p><ul><li>Derinlemesine enerjisel arınma</li><li>Eski, engelleyici kalıpların çözülmesi</li><li>Topraklanma ve enerjisel istikrar</li><li>Ruhsal yardımcılarınla ve atalarınla bağ</li></ul><p>Şamanik gelenekleri, enerjisel şifa sanatı ve meditasyon bilgimle birleştiririm – doğaya, ruhsal dünyaya ve senin tamamen kişisel yolculuğuna duyduğum derin saygıyla taşınarak. Öncesinde sakin, bağlayıcı olmayan bir ön görüşme için zaman ayırırız.</p>"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "id": "Quote-heilraum",
+        "text": "Öyle zamanlar vardır ki, ruh kendini yeniden düzenlemek için ritüellere ihtiyaç duyar.",
+        "source": "Runa Bulla",
+        "variant": "decorative"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Yeniden kendine gelmeye hazır mısın?",
+        "text": "Sakin, bağlayıcı olmayan bir ön görüşme için bana yaz – şu an neye ihtiyacın olduğuna birlikte bakarız. Hiçbir baskı olmadan, tamamen kendi temponda.",
+        "buttonText": "Ön görüşme talep et",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Şifa Alanı: Berlin-Pankow'da Şamanik Şifa Çalışması – Runayoga",
+      "seoDescription": "Berlin-Pankow'daki Runa'nın şifa alanında huzura gel: korunaklı bir alanda şamanik şifa çalışması ve duyarlı ruhsal eşlik. Şimdi bağlayıcı olmayan bir ön görüşme talep et."
+    }
+  },
+  "zones": {}
+}

@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Burada olman ne güzel",
+        "subtitle": "Ben Runa – ve senin için yeniden huzura kavuşabileceğin bir alan tutuyorum.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/runa-monochord-abendlicht.webp",
+        "imageAlt": "Akşam ışığında monokordla Runa",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<h2>Bedeninin huzur için seslendiği o hissi tanıyor musun?</h2><p>Ense gerilir, sırt kendini hatırlatır, düşünceler akşamları bir türlü dinginleşmez. İşlevini yerine getiriyorsun – ama derinlerde hafif bir özlem hissediyorsun: huzura, nefese, kendinle gerçek bir bağa. İşte tam bunun için Berlin-Pankow'daki alanım var. Burada ağırlaşmış olanı bırakabilir ve tamamen kendinle olmanın nasıl bir his olduğunu yeniden duyumsayabilirsin.</p><p>Yolum 1994'te masöz ve tıbbi banyo görevlisi eğitimiyle başladı; bu eğitimi 1997'de tamamladım – bir Berlin hastanesindeki stajla da pekiştirdim. Daha o zamanlar beni beden, zihin ve ruhun ne kadar iç içe olduğu büyülemişti: gevşemiş omuzların çoğu zaman gevşemiş bir kalp anlamına geldiği. Klasik bir masözden, yıllar içinde, seni deneyimle ve özün için ince bir sezgiyle yanında taşıyan bütüncül çalışan bir terapiste dönüştüm.</p><p>Bende mesele kusursuz duruşlar ya da performans değil. Mesele farkındalıkla duyumsamak, kendinle sevgi dolu bir karşılaşma – ve nefesinin derinleştiği, gerginliğin üzerinden düştüğü o iç ferahlatıcı an. Küçük, korunaklı gruplarda tamamen kendin olabileceğin bir yer buluyorsun. Bugün nasıl geliyorsan, tam da öyle doğrusun.</p><h2>Güvenebileceğin bir deneyim</h2><p>Otuz yılı aşkın bir süredir öğrendim, hissettim ve aktardım. Bende geçirdiğin her saatin arkasında bu nitelikler var:</p><ul><li>Masöz ve tıbbi banyo görevlisi (eğitim 1994–1997)</li><li>Sertifikalı yoga eğitmeni (BDY / E-RYT 500)</li><li>Yin Yoga eğitimi</li><li>Pilates eğitmeni</li><li>Hawai Lomi Lomi Nui masajı</li><li>Reiki (tüm dereceler)</li><li>Ayak refleks bölgesi terapisi</li><li>Manuel lenf drenajı</li><li>Ses masajı</li><li>Fasya antrenmanı</li><li>Şamanik-enerjetik şifa çalışması</li><li>Doğa koçluğu</li><li>Terramedus Akademisi'nde öğretim görevliliği</li><li>Sertifikalı önleme kursu eğitmeni (sağlık sigortası onayı, § 20 SGB V)</li></ul><p>Sertifikalı önleme kursu eğitmeni olduğum için sağlık sigortan önleme kurslarına katkıda bulunuyor – hem sırtın hem de cüzdanın için iyi.</p><h2>Bende ne bulacaksın</h2><p>Gerçek esenliğin bütüncül biçimde doğduğuna içtenlikle inanıyorum – bedende, nefeste, kalpte. Yoga benim için matın üzerindeki hareketten çok daha fazlası: hayatın içinden daha fazla farkındalık ve şefkatle geçmek için nazik bir davet. Çalışmamda birçok geleneğin bilgeliğini, seni besleyen ve güçlendiren bir şeyde birleştiriyorum – topraklı ve içten, dogmasız.</p><p>Seni tam da bulunduğun yerden alıyorum – ister ilk kez bir yoga matına adım at, ister yıllardır pratik yap. Hiçbir şey yapabilmen ve kendinden başka hiçbir şey getirmen gerekmiyor. Hadi birlikte sana gerçekten iyi geleni keşfedelim. <strong>Bana yazman yeterli – seni tanımaktan mutluluk duyarım.</strong></p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Gel, bir kez derin bir nefes al",
+        "text": "Bedenin huzura ve harekete özlem duyuyor – yeniden tamamen kendine varman için sana eşlik ediyorum. Bana yaz, sana neyin iyi geldiğini birlikte bulalım.",
+        "buttonText": "Bana yaz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Hakkımda – Runa Bulla | Berlin-Pankow'da Yoga, Pilates ve Masaj - Runayoga",
+      "seoDescription": "Runa Bulla'yı tanı: Berlin-Pankow'da yoga eğitmeni (BDY/E-RYT 500), masöz ve bütüncül terapist. 30 yılı aşkın deneyim, küçük gruplar, sağlık sigortası katkılı ZPP sertifikalı. Huzura kavuş ve kendine dön."
+    }
+  },
+  "zones": {}
+}

@@ -19,8 +19,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className="h-full">
+    <html lang="de" className="h-full" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var m=location.pathname.match(/^\\/(en|pl|tr|ru|ar)(\\/|$)/);var l=m?m[1]:'de';var e=document.documentElement;e.lang=l;e.dir=(l==='ar')?'rtl':'ltr';})();",
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

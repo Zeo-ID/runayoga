@@ -1,0 +1,100 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Wycisz się. Wróć do siebie.",
+        "subtitle": "Szamańska praca uzdrawiająca i duchowe wsparcie w bezpiecznej przestrzeni",
+        "buttonText": "Zapytaj o rozmowę wstępną",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+        "imageAlt": "Ołtarz rytualny z misami dźwiękowymi i świecami",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Czy znasz ten cichy wewnętrzny niepokój, który pozostaje nawet wtedy, gdy z zewnątrz wszystko wydaje się w porządku? To uczucie wyczerpania, które sięga głębiej niż zwykłe zmęczenie – jakby jakaś część ciebie wołała o spokój i połączenie. Właśnie tutaj otwiera się moja przestrzeń uzdrawiania: bezpieczne, ciepłe miejsce, w którym możesz po prostu być. Bez oczekiwań, bez maski. Tylko ty, twój oddech i cisza.</p><p>Szamańska praca uzdrawiająca to pradawna tradycja, która widzi cię jako całego człowieka – ciało, umysł i duszę. Podczas sesji trzymam dla ciebie przestrzeń: delikatnie, jasno i z obecnością. Rozpuszczamy to, co się zagęściło, pozwalamy napięciu ustąpić i wsłuchujemy się w to, co chce zostać dostrzeżone. Wiele kobiet opisuje stan po sesji jako głębokie odetchnięcie – lżejsze, bardziej ugruntowane, ponownie połączone z własną siłą.</p><p>Czy przechodzisz właśnie przez trudny etap, tęsknisz za większą jasnością, czy po prostu czujesz, że jest jeszcze coś więcej: nie musisz iść tą drogą sama. Każda sesja jest tak wyjątkowa jak ty – wspólnie odkryjemy w spokojnej rozmowie wstępnej, co teraz dobrze ci zrobi.</p><h2>Co czeka cię podczas twojej sesji</h2><ul><li>Bezpieczna przestrzeń, w której możesz być w pełni sobą</li><li>Delikatne szamańskie ceremonie i rytuały, w twoim tempie</li><li>Energetyczne rozpuszczanie i równoważenie, które przynosi ulgę jak odetchnięcie</li><li>Empatyczne wsparcie w trudnych etapach życia</li><li>Indywidualna sesja, w pełni dostosowana do ciebie</li></ul><h2>Czy przestrzeń uzdrawiania jest dla ciebie odpowiednia?</h2><p>Przestrzeń uzdrawiania jest dla ciebie, jeśli tęsknisz za większym wewnętrznym spokojem, jasnością i połączeniem. Nie potrzebujesz żadnego wcześniejszego doświadczenia – wystarczy otwartość, by się temu poddać. Praca szamańska cudownie łączy się z jogą i innymi uważnymi drogami do siebie. Jeśli twoje serce cicho mówi „tak” podczas czytania, po prostu napisz do mnie – pierwszy krok jest całkowicie niezobowiązujący.</p>"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-heilraum",
+        "title": "Moje oferty w przestrzeni uzdrawiania",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "Podróż szamańska",
+            "text": "Z bębnem, głosem i okadzaniem prowadzę cię do wewnętrznej przestrzeni poza umysłem – do twojego zwierzęcia mocy, do odpowiedzi i do siły, którą uważałaś za utraconą. ok. 75 min · 120 €",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Zamawianie i zaśpiewywanie",
+            "text": "Dawna ustna tradycja uzdrawiania ze słów błogosławieństwa i dźwięku – cichy, pełen mocy rytuał, gdy inne drogi nie przyniosły efektu. 30 min, często w serii · od 60 € · także jako wsparcie na odległość",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Ceremonie uzdrawiające",
+            "text": "Bezpieczne przestrzenie dla przemiany i ponownego połączenia – z rytuałami, dźwiękiem, ciszą i świadomą obecnością. Samotnie, we dwoje lub w małej grupie. ok. 90–120 min · na zapytanie",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Praca z przodkami",
+            "text": "Łagodne wsparcie, by odnaleźć pokój ze swoimi korzeniami i przekazać dalej to, co może odżywiać – a wypuścić to, co stało się ciężarem.",
+            "image": "",
+            "link": "/kontakt"
+          },
+          {
+            "title": "Reiki",
+            "text": "Subtelna praca z energią, która aktywuje twoje siły samouzdrawiania, rozpuszcza napięcie i pozwala ci głęboko się odprężyć.",
+            "image": "",
+            "link": "/kontakt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-sitzung",
+        "content": "<h2>Co dzieje się podczas sesji</h2><p>Tak jak różny jest każdy człowiek, tak indywidualnie kształtuję każde spotkanie. A jednak wszystkie sesje noszą to samo serce:</p><ul><li>Głębokie energetyczne oczyszczenie</li><li>Rozpuszczanie starych, blokujących wzorców</li><li>Ugruntowanie i energetyczna stabilizacja</li><li>Połączenie z twoimi duchowymi pomocnikami i przodkami</li></ul><p>Łączę tradycje szamańskie z moją wiedzą z zakresu energetycznej sztuki uzdrawiania i medytacji – niesiona głębokim szacunkiem dla natury, świata duchowego i twojej całkiem osobistej podróży. Wcześniej znajdziemy czas na spokojną, niezobowiązującą rozmowę wstępną.</p>"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "id": "Quote-heilraum",
+        "text": "Są czasy, gdy dusza potrzebuje rytuałów, by uporządkować się na nowo.",
+        "source": "Runa Bulla",
+        "variant": "decorative"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Gotowa, by znów wrócić do siebie?",
+        "text": "Napisz do mnie w sprawie spokojnej, niezobowiązującej rozmowy wstępnej – wspólnie przyjrzymy się temu, czego teraz potrzebujesz. Bez żadnej presji, całkowicie w twoim tempie.",
+        "buttonText": "Zapytaj o rozmowę wstępną",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Przestrzeń uzdrawiania: szamańska praca uzdrawiająca w Berlin-Pankow – Runayoga",
+      "seoDescription": "Wycisz się w przestrzeni uzdrawiania Runy w Berlin-Pankow: szamańska praca uzdrawiająca i empatyczne duchowe wsparcie w bezpiecznej przestrzeni. Zapytaj teraz o niezobowiązującą rozmowę wstępną."
+    }
+  },
+  "zones": {}
+}

@@ -1,0 +1,127 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Przyjdź. Oddychaj. Bądź znów w pełni sobą.",
+        "subtitle": "Gdy codzienność cię wyczerpuje i tęsknisz za spokojem: w moim studiu w Berlin-Pankow znajdziesz bezpieczną przestrzeń, w której twoje ciało staje się miększe, umysł cichnie, a oddech pogłębia. Joga, pilates, masaże i praca uzdrawiająca – całkowicie w twoim tempie.",
+        "buttonText": "Odkryj moją ofertę",
+        "buttonLink": "/angebote",
+        "secondButtonText": "Napisz do mnie",
+        "secondButtonLink": "/kontakt",
+        "image": "/images/runa/retreat-steg-herbstsee.webp",
+        "imageAlt": "Drewniany pomost nad jesiennym jeziorem",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-001",
+        "title": "Gdzie może rozpocząć się twoja podróż?",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "Joga",
+            "text": "Hatha, Vinyasa i Yin Yoga w małych grupach – tutaj jesteś dostrzeżona. Poczuj, jak napięcia się rozpuszczają, twój oddech się pogłębia, a wewnętrzny zgiełk wreszcie cichnie.",
+            "image": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+            "link": "/angebote/yoga"
+          },
+          {
+            "title": "Pilates",
+            "text": "Silne, wolne od bólu centrum zaczyna się od świadomego, kontrolowanego ruchu. Wzmocnij swoje plecy łagodnie i trwale – na certyfikowanych kursach profilaktycznych, w których twoja kasa chorych może partycypować.",
+            "image": "/images/runa/retreat-yurte-savasana.webp",
+            "link": "/angebote/pilates"
+          },
+          {
+            "title": "Masaże",
+            "text": "Godzina tylko dla ciebie, w której nie musisz nic i wszystko możesz puścić. Dobroczynny dotyk dla ciała i duszy – ze szczególnym doświadczeniem w masażach prenatalnych i postnatalnych.",
+            "image": "/images/runa/klangschalenmassage.webp",
+            "link": "/angebote/massagen"
+          },
+          {
+            "title": "Przestrzeń uzdrawiania",
+            "text": "Gdy czujesz, że coś głębszego chce się uzdrowić: szamańska praca z energią i delikatne towarzyszenie w tematach, które naprawdę cię poruszają. Uważnie, z ugruntowaniem, w pełni przy sobie.",
+            "image": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+            "link": "/angebote/heilraum"
+          },
+          {
+            "title": "Śpiewanie mantr",
+            "text": "Uwolnij swój głos i poczuj, jak dźwięk rozpuszcza cię od wewnątrz. Wspólne śpiewanie mantr i Medicine Songs – niesione rozgrzewającą siłą wspólnoty.",
+            "image": "/images/runa/runa-monochord-abendlicht.webp",
+            "link": "/angebote/mantra"
+          },
+          {
+            "title": "Krąg roku",
+            "text": "Krąg kobiet, który niesie cię przez rok: 8 spotkań przy celtyckich świętach kręgu roku. Rytuały, szczere połączenie i dobre uczucie, że nie idziesz sama.",
+            "image": "/images/runa/retreat-gartentafel.webp",
+            "link": "/angebote/jahreskreis"
+          }
+        ]
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-001",
+        "title": "Cieszę się, że tu jesteś – jestem Runa",
+        "text": "<p>Może znasz to uczucie: ciągle w ruchu, ciągle dla innych, a mimo to nigdy naprawdę u siebie. Właśnie tu zaczynam. W moim studiu w Berlin-Pankow utrzymuję dla ciebie bezpieczną przestrzeń – dla jogi, pilatesu i całościowej pracy uzdrawiającej, zupełnie bez presji osiągnięć.</p><p>Z wieloletnim doświadczeniem i wielkim sercem towarzyszę ci we wzmacnianiu twojego ciała, wyciszaniu umysłu i przywracaniu przestrzeni twojej duszy. Nie musisz nic umieć ani nic ze sobą przynosić – poza sobą samą.</p>",
+        "image": "/images/runa/retreat-herbstspaziergang.webp",
+        "imageAlt": "Runa, uśmiechnięta w siadzie skrzyżnym na macie",
+        "imagePosition": "right"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "id": "Quote-001",
+        "text": "Joga jest podróżą jaźni, przez siebie, do siebie.",
+        "source": "Bhagavad Gita",
+        "variant": "decorative"
+      }
+    },
+    {
+      "type": "Testimonials",
+      "props": {
+        "id": "Testimonials-001",
+        "title": "Głosy z mojego studia",
+        "items": [
+          {
+            "text": "Zajęcia jogi u Runy to najpiękniejszy moment mojego tygodnia. Po nich zawsze czuję się ugruntowana, rozluźniona i pełna energii – jakbym głęboko odetchnęła.",
+            "name": "Maria S.",
+            "rating": 4
+          },
+          {
+            "text": "Masaże są po prostu cudowne. Runa ma niesamowite wyczucie i tworzy tak bezpieczną atmosferę, że mogę całkowicie się rozluźnić.",
+            "name": "Kathrin L.",
+            "rating": 5
+          },
+          {
+            "text": "Retreat było doświadczeniem, które zmieniło życie. Połączenie jogi, natury i wspólnoty poruszyło mnie głęboko i przywróciło mi siłę.",
+            "name": "Sandra B.",
+            "rating": 5
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Gotowa, by znów w pełni przyjść do siebie?",
+        "text": "Nie musisz jeszcze niczego ustalać. Po prostu napisz do mnie, co cię teraz porusza – wspólnie i w spokoju odkryjemy, co teraz ci służy.",
+        "buttonText": "Napisz do mnie – bez zobowiązań",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Joga, pilates i masaże w Berlin-Pankow | Runa Bulla - Runayoga",
+      "seoDescription": "Joga, pilates, masaże i praca uzdrawiająca w Berlin-Pankow. Wycisz się, rozpuść napięcia i nabierz nowych sił – w małych grupach, bezpiecznie i uważnie. Certyfikowane kursy profilaktyczne z dopłatą kasy chorych. Napisz do mnie."
+    }
+  },
+  "zones": {}
+}

@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Ćwiczenia jogi w domu: twoja 15-minutowa rutyna",
+        "subtitle": "Wystarczy 15 minut dziennie, twoja mata i wygodne ubranie, aby zabrać do domu prostą rutynę jogi – od rozgrzewki po pozycję szarańczy.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-yurte-savasana.webp",
+        "imageAlt": "Relaks w pozycji Savasana",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Włączenie jogi do codzienności jest jak „turbodoładowanie” – bardzo szybko pokazuje swoje dobroczynne działanie. I jak to często bywa, również tutaj klucz tkwi w regularności. Nie potrzebujesz studia ani godziny czasu: 15 minut dziennie w zupełności wystarczy, by doświadczyć cudownych rezultatów. Wszystko, czego potrzebujesz, to twoja mata do jogi i wygodne ubranie.</p><p>Mała wskazówka, która ułatwi ci praktykę: jeśli nie zaznaczono inaczej, każdą pozycję utrzymujesz przez trzy oddechy, a następnie płynnie przechodzisz do kolejnej. Pozwól, by oddech cię prowadził, zupełnie bez presji.</p><h2>Rozgrzewka</h2><p>Usiądź ze skrzyżowanymi nogami i oddychaj przez dwie minuty spokojnie przez nos. Poczuj, jak zakorzeniasz się w tu i teraz. Następnie przez 15 oddechów łagodnie kołysz się w lewo i w prawo, wydychając powietrze. W ten sposób z miłością przygotowujesz ciało i umysł na to, co nastąpi dalej.</p><h2>Po rozgrzewce</h2><h3>Kot i krowa</h3><p>Wydychaj powietrze i przejdź do <strong>pozycji kota</strong>. Oprzyj się na dłoniach i kolanach, opuść głowę, jednocześnie unosząc brzuch i robiąc koci grzbiet. Następnie przejdź do <strong>pozycji krowy</strong>: wygnij plecy w dół, unieś głowę i odwiedź ramiona na zewnątrz. To ćwiczenie rozgrzewa i rozciąga biodra, ramiona, mięśnie brzucha oraz kręgosłup.</p><h3>Pies z głową w dół</h3><p>W pozycji kota wydychaj powietrze i wypchnij pośladki do góry, tak aby powstał kształt odwróconej litery V. To <strong>pozycja psa</strong>. Wzmacnia mięśnie ramion i nóg. Najlepiej zrób pięć powtórzeń.</p><h3>Wojownik</h3><p>Wstań i wysuń prawą nogę do przodu. Teraz opuść lewą piętę i palce stóp pod kątem 45 stopni do podłoża. Wyciągnij lewe ramię w górę, tak aby dłoń i kostka tworzyły prostą linię. To ćwiczenie rozciąga i wzmacnia uda, ramiona, plecy i biodra.</p><p>Następnie powtórz ćwiczenia w odwrotnej formie (lewa noga zamiast prawej i tak dalej), aby zaangażować drugą stronę ciała. Dzięki temu twoje ciało pozostaje pięknie w równowadze.</p><h3>Pozycja szarańczy</h3><p>Twój trening kończy się <strong>pozycją szarańczy</strong>: połóż się na plecach, ramiona odsunięte od ciała. Weź dwa głębokie oddechy i przy tym unieś ramiona, głowę i ręce. Następnie opuść głowę i ręce, a jednocześnie unieś nogi. Pozostań w tej pozycji przez dwa oddechy.</p><p>Potem zostań jeszcze przez kilka minut zrelaksowany, leżąc na plecach. Wczuj się w to, jak czuje się twoje ciało, i delektuj się tą chwilą ciszy.</p><blockquote><p>„Klucz tkwi w regularności – nie w czasie trwania. 15 uważnych minut dziennie zmienia więcej, niż myślisz.”</p></blockquote><p>Po prostu wypróbuj tę małą rutynę – dziś, jutro, raz za razem. Będziesz zaskoczony, jak szybko te 15 minut stanie się twoją ulubioną kotwicą w ciągu dnia. Oddech po oddechu, dzień po dniu.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Masz ochotę poćwiczyć razem?",
+        "text": "Jeśli szukasz wsparcia na swojej drodze jogi, chętnie będę przy tobie. Budujmy twoją praktykę krok po kroku.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Ćwiczenia jogi w domu – Runayoga",
+      "seoDescription": "Ćwiczenia jogi w domu: 15 minut dziennie – od rozgrzewki przez kota/krowę, psa i wojownika po pozycję szarańczy. Twoja prosta rutyna od Runayoga.",
+      "date": "2019-07-28"
+    }
+  },
+  "zones": {}
+}

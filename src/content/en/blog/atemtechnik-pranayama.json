@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "The Power of Breathwork: Pranayama for Beginners",
+        "subtitle": "Pranayama for beginners: Learn the most important breathing techniques in yoga. Step-by-step guide from Runayoga Berlin-Pankow.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/vorschau-1.webp",
+        "imageAlt": "Calm and breath outdoors",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>We breathe about 20,000 times a day – mostly without noticing it. But what happens when we begin to consciously guide our breath? In yoga we call this Pranayama: the art of breath control. „Prana“ means life energy, „Ayama“ stands for expansion or control. So Pranayama is much more than deep inhaling and exhaling. It is a tool that can calm your nervous system, sharpen your concentration and restore your inner balance.</p><h2>What is Pranayama?</h2><p>Pranayama is one of the eight limbs of classical yoga according to Patanjali and forms the bridge between the physical exercises (Asanas) and meditation (Dhyana). At its core, it is about regulating the breath through certain techniques – consciously controlling the pace, the depth and the rhythm.</p><p>Its effect is by no means merely esoteric: modern studies show that controlled breathing slows the heartbeat, lowers blood pressure and increases the activity of the vagus nerve. Your body shifts from fight-or-flight mode into a state of regeneration. It is one of the fastest methods available to you for reducing stress – and you need nothing more than yourself.</p><h2>Nadi Shodana – Alternate Nostril Breathing</h2><p>Nadi Shodana is the queen of breathing exercises and at the same time one of the gentlest. The name means „cleansing of the energy channels“, and that is exactly how it feels: clarifying, balancing, calming.</p><p>Here is how it works: Sit comfortably upright. Place your right thumb against your right nostril and breathe in through the left. Then close the left nostril with your ring finger and breathe out through the right. Breathe in again on the right, close the right and breathe out on the left. That is one round. Repeat eight to ten rounds in a calm, even rhythm.</p><p>Alternate nostril breathing brings the two hemispheres of the brain into balance and calms the mind in an almost magical way. It is especially well suited before meditation or as an evening practice.</p><h2>Ujjayi – The Sound of the Ocean</h2><p>Ujjayi means „the victorious one“ and is often called ocean breath, because the gentle rushing sound in the throat is reminiscent of the sea. You create this technique by slightly narrowing the glottis in the throat – similar to whispering, only with a closed mouth.</p><p>Breathe slowly and deeply in and out through the nose while maintaining this gentle friction sound in the throat. The sound serves as your anchor: as long as you hear it, you are with your breath. Ujjayi warms the body from within, promotes concentration and is used throughout the entire practice in many Vinyasa classes.</p><p>When you try Ujjayi for the first time, begin while seated. Breathe out a few times through the open mouth, as if you were fogging up a mirror. Feel the narrowing in the throat. Then close the mouth and keep this narrowing while you breathe in and out through the nose.</p><h2>Kapalabhati – The Breath of Fire</h2><p>Kapalabhati is an activating breathing technique that translates literally as „shining skull“. It consists of short, powerful exhalations through the nose, while the inhalation happens passively and automatically. The engine is the diaphragm: with each exhalation you draw the navel toward the spine and release a short burst of breath.</p><p>Begin with 20 cycles, followed by a deep inhalation and a short breath retention. Slowly increase to three rounds of 30 to 40 cycles each. Kapalabhati cleanses the airways, brings warmth into the body and creates a feeling of clarity and alertness.</p><p><strong>Important:</strong> Kapalabhati is not suitable for everyone. If you are pregnant, suffer from high blood pressure or have problems with the abdominal area, please skip this exercise and instead choose one of the gentler techniques.</p><h2>Tips for Getting Started</h2><ul><li><strong>Begin slowly:</strong> Start with Nadi Shodana or Ujjayi before venturing into more active techniques. Three to five minutes a day are completely enough.</li><li><strong>Practice on an empty stomach:</strong> Pranayama works best in the morning before breakfast or at least two hours after your last meal.</li><li><strong>Sit upright:</strong> An upright spine lets the breath flow freely. Whether on a cushion on the floor or on a chair – the main thing is that you sit comfortably and straight.</li><li><strong>Force nothing:</strong> If dizziness, restlessness or discomfort arise, return immediately to your normal breathing. Pranayama should feel good.</li><li><strong>Seek guidance:</strong> Especially in the beginning it helps to practice under guidance. In my yoga classes I integrate Pranayama regularly, so that you can learn the techniques safely.</li></ul><blockquote><p>„When the breath wanders, the mind is restless. When the breath is still, the mind too is still.“ – Hatha Yoga Pradipika</p></blockquote><p>Pranayama is a gift you can give yourself every day. It costs nothing, needs no space and works immediately. Try it out – your breath is already waiting for you.</p>"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "The Power of Breathwork: Pranayama for Beginners - Runayoga",
+      "seoDescription": "Pranayama for beginners: Learn the most important breathing techniques in yoga. Step-by-step guide from Runayoga Berlin-Pankow."
+    }
+  },
+  "zones": {}
+}

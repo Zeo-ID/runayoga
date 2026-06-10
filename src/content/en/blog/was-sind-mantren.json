@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "What are mantras?",
+        "subtitle": "Sacred syllables, words and verses that have focused the mind and released positive energies for thousands of years. A gentle introduction to the power of sound.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/runa-monochord-abendlicht.webp",
+        "imageAlt": "Runa with monochord in the evening light",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Perhaps you have already encountered it in a yoga class: a sound sung together at the beginning, a soft humming that fills the room. Mantras accompany many people on their journey – and yet most ask themselves the first time: what actually is this, and why does it feel so good? Let's take a look at it together.</p><h2>What is a mantra?</h2><p>A mantra is a sacred syllable, a word or an entire verse. Originally, people of the Indian, Tibetan and Mongolian peoples engaged with mantras. Seers of that time discovered the power of sounds: because certain rhythms and sounds release positive energies. These were recorded and passed on in Sanskrit, the ancient Indian language.</p><h2>The best-known mantra: „Om“</h2><p>The best-known mantra to this day is <strong>„Om“</strong>. It is said to describe the sound of the universe and stands for the purest form of energy. Besides the mantra „Om“ there are of course a whole host of other mantras that are used for various purposes.</p><h2>How mantras are practised</h2><p>Mantras are spoken, sung or recited in the mind – loudly or softly. Many come into contact with mantras for the first time in a yoga class or a meditation session. At the beginning, at the end or also again and again during the class, a chosen mantra is sung or spoken together.</p><h2>Why the repetition works so well</h2><p>The repetition of mantras serves to focus the mind, or the thoughts, and to release positive mental energies. The goal is therefore not to „understand“ or translate the Sanskrit words on a mental level, but rather to kindle the effect on an energetic level.</p><p>Because through the repetition of the sounds in the same rhythm, vibrations arise that change our own and also the spatial energy field. This can calm the mind, give strength and put the body into a state of relaxation.</p><blockquote><p>„Certain rhythms and sounds release positive energies.“</p></blockquote><p>You don't need to master Sanskrit and don't have to do anything right. Next time, simply let yourself sink into the sound, feel the vibration within you – and see what changes for you in the process.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Experience mantras in a yoga class",
+        "text": "Immerse yourself in the power of sound in a shared class at Runayoga in Berlin-Pankow – with no prior experience needed.",
+        "buttonText": "Make an enquiry now",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "What are mantras? – Runayoga",
+      "seoDescription": "What is a mantra? A warm introduction from Runayoga: origin, the „Om“ mantra and how repetition focuses the mind and releases energy.",
+      "date": "2024-03-19"
+    }
+  },
+  "zones": {}
+}

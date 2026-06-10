@@ -1,0 +1,55 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Odetchnij głęboko. Wróć do siebie.",
+        "subtitle": "Joga w Berlin-Pankow – bezpieczna przestrzeń, w której twoje ciało staje się miększe, oddech spokojniejszy, a głowa wreszcie cicha.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "Zobacz ceny",
+        "secondButtonLink": "/preise",
+        "image": "/images/runa/retreat-yurte-savasana.webp",
+        "imageAlt": "Głębokie odprężenie w Savasana",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Znasz to uczucie, gdy głowa nie przestaje kołatać? Gdy ramiona wędrują aż do uszu, plecy pobolewają, a ty tęsknisz za miejscem, w którym możesz po prostu być? Właśnie takie miejsce tworzę dla ciebie. Joga jest dla mnie czymś o wiele więcej niż ćwiczeniami ciała na macie – to powrót do domu, do samej siebie. W moim studiu w Berlin-Pankow uczę Hatha Yoga, Vinyasa Flow oraz Yin Yoga w małych, kameralnych grupach. Nie liczy się idealna pozycja, lecz twoje całkiem własne doświadczenie.</p><p>Wyobraź sobie, jak po godzinie podnosisz się z maty: oddech głęboki i spokojny, plecy dłuższe i swobodniejsze, wewnętrzny hałas ucichł. Jestem o tym głęboko przekonana – każde ciało może praktykować jogę. Czy przychodzisz na matę po raz pierwszy, czy ćwiczysz już od lat, odbieram cię dokładnie tam, gdzie właśnie jesteś. Z uważnością, świadomym oddechem i delikatnymi, pełnymi empatii korektami towarzyszę ci, byś na nowo poczuła swoje ciało i uwolniła się od dawnego balastu.</p><p>Nie musisz przy tym sięgać głęboko do kieszeni: moje kursy prewencyjne są certyfikowane zgodnie z § 20 SGB V (Zentrale Prüfstelle Prävention) i większość ustawowych kas chorych dofinansowuje je nawet do 80 %. A gdy codzienność nie zostawia czasu na drogę do studia, ćwiczymy online – aby twoja wyspa spokoju zawsze była w zasięgu ręki.</p><h2>To podarujesz tutaj sobie</h2><ul><li>Małe grupy, w których naprawdę cię widzę i indywidualnie ci towarzyszę</li><li>Wszystkie poziomy serdecznie mile widziane – od pierwszego wdechu po wprawioną praktykę</li><li>Certyfikowane przez kasy chorych kursy prewencyjne (§ 20 SGB V) ze zwrotem do 80 % – zdrowie, które niemal nic cię nie kosztuje</li><li>Zajęcia indywidualne dla twojej całkiem osobistej drogi</li><li>Joga online, która elastycznie wpasowuje się w twoje życie</li><li>Hatha, Vinyasa i Yin Yoga – delikatnie wzmacniająca lub głęboko odprężająca, w zależności od tego, czego właśnie potrzebujesz</li></ul><h2>Czy joga jest tym właściwym dla ciebie?</h2><p>Jeśli szukasz równowagi wobec pełnej codzienności, chcesz wreszcie odciążyć plecy albo po prostu znów odetchnąć – tak, to jesteś tutaj we właściwym miejscu. Również w ciąży i po porodzie towarzyszę ci ostrożnie, z dostosowanymi ćwiczeniami. Nie potrzebujesz żadnej wcześniejszej wiedzy ani gibkości zawodowca. Potrzebujesz tylko siebie. Napisz do mnie, a wspólnie odkryjemy, co ci dobrze służy.</p>"
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-kurs",
+        "title": "Twój wtorkowy wieczór tylko dla ciebie – Joga Yin & Yang",
+        "text": "<p>Delikatnie wzmacniająca i głęboko uwalniająca – idealna dla początkujących i dla wszystkich, którzy chcą znów zacząć. <strong>We wtorki 19:15–20:30</strong>, jako kurs 8- lub 10-tygodniowy, który niezawodnie przeprowadzi cię przez tydzień.</p><p><strong>Bloki kursowe 2026:</strong><br>14.04.–16.06.2026 (przerwa w ferie wielkanocne)<br>25.08.–17.11.2026 (brak kursu 13.–27.10.2026)</p><p>Certyfikat ZPP (§ 20 SGB V) · zwrot z kasy chorych do 80 %<br>Miejsce: Sinnergie, Schulzestr. 1, 13187 Berlin-Pankow</p><p>Liczba miejsc jest świadomie ograniczona, aby każda z was była zauważona. Zarezerwuj swoje miejsce, dopóki jest wolne.</p>",
+        "image": "",
+        "imageAlt": "",
+        "imagePosition": "left"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Podaruj sobie pierwszy oddech",
+        "text": "Nie musisz decydować, zanim tego nie poczujesz. Napisz do mnie, a wspólnie znajdziemy kurs, który będzie dla ciebie odpowiedni – całkiem bez presji.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Joga w Berlin-Pankow – wreszcie odetchnij | Runayoga",
+      "seoDescription": "Hatha, Vinyasa i Yin Yoga w małych grupach w Berlin-Pankow. Uwolnij się od stresu i bólu pleców i wróć do siebie. Certyfikowane przez ZPP kursy prewencyjne ze zwrotem z kasy chorych do 80 % – zarezerwuj miejsce teraz w Runayoga."
+    }
+  },
+  "zones": {}
+}

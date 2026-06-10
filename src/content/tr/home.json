@@ -1,0 +1,127 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Gel. Nefes al. Yeniden bütünüyle kendinle ol.",
+        "subtitle": "Gündelik hayat seni tükettiğinde ve huzura özlem duyduğunda: Berlin-Pankow'daki stüdyomda, bedeninin yumuşadığı, zihninin durulduğu ve nefesinin derinleştiği korunaklı bir alan bulacaksın. Yoga, Pilates, masajlar ve şifa çalışması – tamamen kendi temponda.",
+        "buttonText": "Sunduklarımı keşfet",
+        "buttonLink": "/angebote",
+        "secondButtonText": "Bana yaz",
+        "secondButtonLink": "/kontakt",
+        "image": "/images/runa/retreat-steg-herbstsee.webp",
+        "imageAlt": "Sonbahar gölünde ahşap iskele",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-001",
+        "title": "Yolculuğun nereden başlamak ister?",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "Yoga",
+            "text": "Küçük gruplarda Hatha, Vinyasa ve Yin Yoga – burada görülürsün. Gerginliklerin nasıl çözüldüğünü, nefesinin nasıl derinleştiğini ve içindeki gürültünün nihayet nasıl dindiğini hisset.",
+            "image": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+            "link": "/angebote/yoga"
+          },
+          {
+            "title": "Pilates",
+            "text": "Güçlü, ağrısız bir merkez, bilinçli ve kontrollü hareketle başlar. Sırtını nazikçe ve kalıcı olarak güçlendir – sigortanın katkı sağlayabileceği sertifikalı önleyici kurslarda.",
+            "image": "/images/runa/retreat-yurte-savasana.webp",
+            "link": "/angebote/pilates"
+          },
+          {
+            "title": "Masajlar",
+            "text": "Hiçbir şey yapman gerekmeyen ve her şeyi bırakabileceğin, yalnızca sana ait bir saat. Beden ve ruh için iyileştirici dokunuş – pre- ve postnatal masajlarda özel deneyimle.",
+            "image": "/images/runa/klangschalenmassage.webp",
+            "link": "/angebote/massagen"
+          },
+          {
+            "title": "Şifa odası",
+            "text": "İçinde daha derin bir şeyin iyileşmek istediğini hissediyorsan: Şamanik enerji çalışması ve seni gerçekten etkileyen meseleler için özenli bir eşlik. Farkındalıkla, topraklanmış ve tamamen kendinle.",
+            "image": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+            "link": "/angebote/heilraum"
+          },
+          {
+            "title": "Mantra söyleme",
+            "text": "Sesini özgür bırak ve sesin seni içten nasıl çözdüğünü hisset. Mantraların ve Medicine Songs'un birlikte söylenmesi – topluluğun ısıtan gücüyle taşınarak.",
+            "image": "/images/runa/runa-monochord-abendlicht.webp",
+            "link": "/angebote/mantra"
+          },
+          {
+            "title": "Yıl çemberi",
+            "text": "Seni yıl boyunca taşıyan bir kadınlar çemberi: Kelt yıl çemberi bayramlarına dair 8 buluşma. Ritüeller, içten bir bağ ve yalnız yürümediğin o güzel duygu.",
+            "image": "/images/runa/retreat-gartentafel.webp",
+            "link": "/angebote/jahreskreis"
+          }
+        ]
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-001",
+        "title": "Burada olman ne güzel – ben Runa",
+        "text": "<p>Belki bu duyguyu biliyorsundur: sürekli hareket halinde, sürekli başkaları için orada ve yine de hiçbir zaman gerçekten varmamış. İşte tam burada devreye giriyorum. Berlin-Pankow'daki stüdyomda senin için korunaklı bir alan tutuyorum – yoga, Pilates ve bütüncül şifa çalışması için, hiçbir performans baskısı olmadan.</p><p>Uzun yılların deneyimi ve bolca yürekle, bedenini güçlendirmen, zihninin huzura kavuşması ve ruhuna yeniden alan açman için sana eşlik ediyorum. Hiçbir şey bilmen ve yanında hiçbir şey getirmen gerekmiyor – yalnızca kendinden başka.</p>",
+        "image": "/images/runa/retreat-herbstspaziergang.webp",
+        "imageAlt": "Runa, mat üzerinde bağdaş kurmuş, gülümsüyor",
+        "imagePosition": "right"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "id": "Quote-001",
+        "text": "Yoga, benliğin kendisi aracılığıyla kendine yaptığı yolculuktur.",
+        "source": "Bhagavad Gita",
+        "variant": "decorative"
+      }
+    },
+    {
+      "type": "Testimonials",
+      "props": {
+        "id": "Testimonials-001",
+        "title": "Stüdyomdan sesler",
+        "items": [
+          {
+            "text": "Runa'daki yoga dersleri haftamın en güzel anı. Sonrasında her zaman kendimi topraklanmış, çözülmüş ve enerji dolu hissediyorum – sanki derin bir nefes almışım gibi.",
+            "name": "Maria S.",
+            "rating": 4
+          },
+          {
+            "text": "Masajlar gerçekten harika. Runa'nın inanılmaz bir sezgisi var ve öyle güvenli bir atmosfer yaratıyor ki tamamen bırakabiliyorum.",
+            "name": "Kathrin L.",
+            "rating": 5
+          },
+          {
+            "text": "Retreat hayatımı değiştiren bir deneyim oldu. Yoga, doğa ve topluluğun birleşimi beni derinden etkiledi ve bana yeniden güç verdi.",
+            "name": "Sandra B.",
+            "rating": 5
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Yeniden bütünüyle kendine varmaya hazır mısın?",
+        "text": "Henüz bir karar vermen gerekmiyor. Şu an seni neyin etkilediğini bana yaz – birlikte ve hiç acele etmeden, şimdi sana neyin iyi geleceğini buluruz.",
+        "buttonText": "Bana yaz – hiçbir yükümlülük olmadan",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Berlin-Pankow'da Yoga, Pilates ve Masajlar | Runa Bulla - Runayoga",
+      "seoDescription": "Berlin-Pankow'da yoga, Pilates, masajlar ve şifa çalışması. Huzura kavuş, gerginlikleri çöz ve yeniden güç topla – küçük gruplarda, korunaklı ve farkındalıkla. Sigorta katkılı sertifikalı önleyici kurslar. Bana yaz."
+    }
+  },
+  "zones": {}
+}

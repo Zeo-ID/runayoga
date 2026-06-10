@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getPage, getAllPaths } from "../../lib/get-page";
+import { getPage, getAllStaticParams } from "../../lib/get-page";
 import { PageClient } from "./client";
 import { JsonLd } from "../../components/JsonLd";
 import {
@@ -10,12 +10,17 @@ import {
   findHero,
 } from "../../lib/seo";
 import siteData from "../../data/site.json";
+import { splitLocale, localizedHref, LOCALES, DEFAULT_LOCALE } from "../../lib/i18n";
 
 export async function generateStaticParams() {
-  const paths = getAllPaths().filter((p) => p !== "/");
-  return paths.map((p) => ({
-    puckPath: p.replace(/^\//, "").split("/"),
-  }));
+  return getAllStaticParams().map((puckPath) => ({ puckPath }));
+}
+
+function hreflangAlternates(basePath: string) {
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) languages[l.code] = localizedHref(l.code, basePath);
+  languages["x-default"] = localizedHref(DEFAULT_LOCALE, basePath);
+  return languages;
 }
 
 export async function generateMetadata({
@@ -25,17 +30,20 @@ export async function generateMetadata({
 }) {
   const { puckPath } = await params;
   const urlPath = `/${puckPath.join("/")}`;
+  const { basePath } = splitLocale(urlPath);
   const data = getPage(urlPath);
   const seoTitle = data?.root?.props?.seoTitle;
   const seoDesc = data?.root?.props?.seoDescription;
   const hero = findHero(data?.content || []);
   const image = hero?.image;
-  const isBlog = puckPath[0] === "blog";
+  const isBlog = basePath.startsWith("/blog");
 
   return {
-    title: seoTitle || hero?.title || urlPath,
+    // seoTitle trägt bereits den Markenzusatz "– Runayoga" → absolut setzen,
+    // damit das Layout-Template "%s | Runayoga" ihn nicht verdoppelt.
+    title: seoTitle ? { absolute: seoTitle } : (hero?.title || urlPath),
     description: seoDesc || hero?.subtitle || "",
-    alternates: { canonical: urlPath },
+    alternates: { canonical: urlPath, languages: hreflangAlternates(basePath) },
     openGraph: buildOpenGraph({
       title: seoTitle || hero?.title,
       description: seoDesc || hero?.subtitle,
@@ -58,6 +66,7 @@ export default async function Page({
 }) {
   const { puckPath } = await params;
   const urlPath = `/${puckPath.join("/")}`;
+  const { basePath } = splitLocale(urlPath);
   const data = getPage(urlPath);
 
   if (!data) notFound();
@@ -65,8 +74,8 @@ export default async function Page({
   const hero = findHero(data?.content || []);
   const seoTitle = data?.root?.props?.seoTitle;
   const seoDesc = data?.root?.props?.seoDescription;
-  const isBlog = puckPath[0] === "blog";
-  const isAngebot = puckPath[0] === "angebote";
+  const isBlog = basePath.startsWith("/blog");
+  const isAngebot = basePath.startsWith("/angebote");
 
   const ldBlocks: object[] = [];
 

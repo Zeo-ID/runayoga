@@ -1,0 +1,168 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Yoga İnzivası 2026",
+        "subtitle": "Yalnızca senin için yedi gün – nefes al, bırak, kendini yeniden bul",
+        "buttonText": "Yerini ayırt",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-terrasse-am-see.webp",
+        "imageAlt": "Göl manzaralı teras",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<h2>Tamamen var olmana izin ver</h2><p><em>Senden hiçbir şey istenmediği bir hafta – sadece orada olman dışında.</em></p><p>Bunu bir süredir hissediyorsun: Kafan dolu, omuzların gergin, yapılacaklar listen bitmek bilmiyor. İşliyorsun – ama gerçek bir huzuru, derinliği, yeniden kendinle olma duygusunu özlüyorsun. İşte bu inziva tam da bunun için var.</p><p>Bir düşün: Alarm saatiyle değil, kuşların şarkısıyla uyanıyorsun. Gün, güneş doğarken matın üzerinde yumuşakça başlıyor ve nefesin sakinleşiyor. Akşamları sıcak bir çemberde oturuyor, kendini mantralara ve sessizliğe bırakıyor ve son ayların gerginliğinin katman katman üzerinden döküldüğünü hissediyorsun. Bu inziva, „tamamlayıp“ geçtiğin bir tatil değil – yeniden nefes almaya sevgi dolu bir davettir.</p><p>Küçük, samimi bir grup içinde senin için korunaklı bir alan tutuyorum: beklentilerin olmadığı, bırakabileceğin, yeniden dolabileceğin ve diğer kadınlarla eşit düzeyde bağ kurabileceğin bir yer. Günlük yoga pratiği, şamanik şifa çalışması, besleyici yemekler ve doğanın sessizliği, seni değişmiş olarak geri dönmeye bırakan bir haftaya birlikte örülüyor – daha ferah, daha yumuşak, tamamen kendinle.</p><p>Ve merak etme: Hiçbir şey yapabilmen gerekmiyor. İlk kez matın üzerinde duruyor ol ya da yıllardır pratik yapıyor ol – seni bulunduğun yerden alıyorum. Burada performans baskısı yok, yalnızca senin kendi ritmin geçerli.</p><h2>Bu haftanın senin için sunduğu</h2><p>Beden, kalp ve ruh için tamamen besleyici bir deneyim:</p><ul><li>Seni topraklayan ve gevşeten günlük yoga ve meditasyon pratiği</li><li>Eskiyi bırakmaya yardımcı olan şamanik törenler</li><li>Kalbi açan mantra chanting ve Medicine Songs</li><li>Sevgiyle hazırlanmış vejetaryen tam pansiyon</li><li>Küçük, samimi bir grup (en fazla 12 katılımcı) – gerçek bir yakınlığın oluşabilmesi için</li><li>Doğada yürümek, hayal kurmak ve sadece var olmak için serbest zaman</li></ul><h2>Tarihler &amp; Yer</h2><p><strong>İlkbahar 2026</strong> – Tarihler yakında duyurulacaktır.</p><p><strong>Yer:</strong> Akdeniz bölgesi – kesin yer henüz duyurulacaktır</p><p><strong>Süre:</strong> 7 gün / 6 gece</p><p>Yerler bilinçli olarak sınırlıdır – hızla doluyorlar. Şimdi hiçbir yükümlülük olmadan bekleme listesine kaydol ve tarihler, yer ve erken rezervasyon yerleri hakkında ilk öğrenen ol.</p>"
+      }
+    },
+    {
+      "type": "Gallery",
+      "props": {
+        "id": "Gallery-retreat",
+        "title": "İzlenimler",
+        "columns": 3,
+        "images": [
+          {
+            "src": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+            "alt": "Çember halinde yoga matları olan seminer salonu",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-yurte-savasana.webp",
+            "alt": "Yurtta Savasana",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-steg-herbstsee.webp",
+            "alt": "Sonbahar gölündeki ahşap iskele",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-see-schilf.webp",
+            "alt": "Sazlıklı göl",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-gartentafel.webp",
+            "alt": "Bahçede ortak sofra",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-herbstspaziergang-2.webp",
+            "alt": "Sonbaharda farkındalıklı yürüyüş",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+            "alt": "Ses çanakları olan ritüel sunağı",
+            "caption": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-001",
+        "title": "Paketini bul – sana uygun olan alanı seç",
+        "packages": [
+          {
+            "name": "Erken Rezervasyon",
+            "price": "Fiyat talep üzerine",
+            "features": [
+              "7 gün / 6 gece dolu dolu huzur",
+              "Çok yataklı odada rahat bir köşe",
+              "Sevgiyle hazırlanmış vejetaryen tam pansiyon",
+              "Tüm yoga ve meditasyon seansları",
+              "Çemberde şamanik törenler"
+            ],
+            "buttonText": "Sor",
+            "buttonLink": "/kontakt",
+            "highlighted": false
+          },
+          {
+            "name": "Regular",
+            "price": "Fiyat talep üzerine",
+            "features": [
+              "7 gün / 6 gece dolu dolu huzur",
+              "İki kişilik odada konaklama",
+              "Sevgiyle hazırlanmış vejetaryen tam pansiyon",
+              "Tüm yoga ve meditasyon seansları",
+              "Çemberde şamanik törenler",
+              "1 rahatlatıcı bireysel masaj dahil"
+            ],
+            "buttonText": "Sor",
+            "buttonLink": "/kontakt",
+            "highlighted": true
+          },
+          {
+            "name": "Deluxe",
+            "price": "Fiyat talep üzerine",
+            "features": [
+              "7 gün / 6 gece dolu dolu huzur",
+              "Kendi tek kişilik odanda bir inziva köşesi",
+              "Sevgiyle hazırlanmış vejetaryen tam pansiyon",
+              "Tüm yoga ve meditasyon seansları",
+              "Çemberde şamanik törenler",
+              "2 rahatlatıcı bireysel masaj dahil",
+              "Runa ile kişisel birebir seans – yalnızca senin için"
+            ],
+            "buttonText": "Sor",
+            "buttonLink": "/kontakt",
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "FAQ",
+      "props": {
+        "id": "FAQ-001",
+        "title": "Belki de hâlâ bilmek istediklerin",
+        "items": [
+          {
+            "question": "Fiyata neler dahil?",
+            "answer": "Hiçbir şeyle uğraşmana gerek kalmaması için: Fiyata konaklaman, sevgiyle hazırlanmış vejetaryen tam pansiyon, tüm yoga ve meditasyon seansları, şamanik törenler ve mantra chanting seansları dahildir. Seçtiğin pakete göre rahatlatıcı bireysel masajlar ve kişisel seanslar da eklenir. Yalnızca ulaşım fiyata dahil değildir."
+          },
+          {
+            "question": "İnziva kimler için uygun?",
+            "answer": "Günlük hayattan gerçek bir mola özlüyor ve yoga, meditasyon ile daha derin deneyimlere merak duyuyorsan, tam senin için. Yaş, cinsiyet ya da deneyim seviyesinden bağımsız olarak buluşmanın ve nazik bir büyümenin korunaklı bir yeridir. Tam da olduğun gibi gelebilirsin."
+          },
+          {
+            "question": "Yoga deneyimim olması gerekiyor mu?",
+            "answer": "Hayır, hiç gerekmiyor. Hiçbir ön bilgiye ihtiyacın yok. Seansları, yeni başlayanların da deneyimli uygulayıcılar kadar kendilerini güvende hissedecekleri şekilde yönetiyorum. Seni bulunduğun yerden alıyorum – baskı olmadan, kendi temponda."
+          },
+          {
+            "question": "İnziva yerine nasıl ulaşırım?",
+            "answer": "Bununla birlikte ilgileniyoruz – tek başına plan yapmana gerek yok. Ayrıntılı ulaşım bilgilerini rezervasyonundan sonra alırsın. Genellikle en yakın havalimanı veya tren istasyonundan inziva yerine ortak bir transfer organize ediyoruz. Transfer masraflarını sana önceden bildiriyoruz."
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Senin için zamanın geldiğini hissediyor musun?",
+        "text": "Gerçek bir derinliğin oluşabilmesi için yerler bilinçli olarak sınırlıdır. Şimdi Yoga İnzivası 2026'daki yerini ayırt – ya da hâlâ soruların varsa bana yaz. Seni tanımayı dört gözle bekliyorum.",
+        "buttonText": "Şimdi sor",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yoga İnzivası 2026 – Kadınlar için bir mola | Runayoga",
+      "seoDescription": "Yalnızca senin için 7 gün: Küçük grupta yoga, meditasyon, mantralar ve şamanik şifa çalışması. Bırak, yeniden dolan, kendini yeniden bul. Şimdi bekleme listesinde yerini ayırt."
+    }
+  },
+  "zones": {}
+}

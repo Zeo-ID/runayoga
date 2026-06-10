@@ -1,15 +1,20 @@
+import { t } from "../../data/ui";
+import type { Locale } from "../../lib/i18n";
+
 export function Map({
   title,
   address,
   zoom,
   height,
   rounded,
+  locale = "de",
 }: {
   title: string;
   address: string;
   zoom: number;
   height: number;
   rounded: boolean;
+  locale?: Locale;
 }) {
   if (!address) {
     return (
@@ -24,7 +29,7 @@ export function Map({
   const z = Math.max(1, Math.min(20, zoom || 15));
   const src = `https://maps.google.com/maps?q=${encodeURIComponent(
     address
-  )}&z=${z}&hl=de&output=embed`;
+  )}&z=${z}&hl=${locale}&output=embed`;
 
   return (
     <section className="section-padding">
@@ -58,7 +63,7 @@ export function Map({
             rel="noopener noreferrer"
             className="text-[var(--color-primary)] hover:underline"
           >
-            In Google Maps öffnen ↗
+            {t("In Google Maps öffnen", locale)} ↗
           </a>
           <a
             href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
@@ -68,7 +73,7 @@ export function Map({
             rel="noopener noreferrer"
             className="text-[var(--color-primary)] hover:underline"
           >
-            Mit Öffentlichen (BVG) ↗
+            {t("Mit Öffentlichen (BVG)", locale)} ↗
           </a>
         </p>
       </div>

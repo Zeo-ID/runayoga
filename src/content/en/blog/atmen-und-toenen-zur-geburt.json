@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Breathing and Toning for Birth",
+        "subtitle": "How deep belly breathing and toning carry you through the contractions, keep you present and gently release the pelvis and cervix.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-tonfigur-schwangere.webp",
+        "imageAlt": "Clay figure of a pregnant woman",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>For many women who are at the beginning of their pregnancy and starting a yoga course, deep belly breathing is something entirely new. Experienced yoginis have a small head start here, because becoming aware of your breath again and again in everyday life is a matter of practice. But don't worry: every breath you take consciously is already a step along this path.</p><h2>The breath as a companion through the contractions</h2><p>With regard to birth, the breath is a wonderful support for the contractions. It is always with you, you don't need to bring anything along and don't need to learn anything that stays foreign to you. You only have to remember to let it flow.</p><p>Through deep belly breathing toward the baby, the contraction of the uterus is supported. Your breath and the work of your body go hand in hand, instead of working against each other.</p><h2>Staying present through the long exhale</h2><p>The long exhale on a tone or with your birth mantra keeps you present in your body and mentally aware during the work of birth. Instead of losing yourself in tension or fear, with every exhale you come back again to yourself and to your baby.</p><h3>Why toning releases the body</h3><p>When toning with a loose jaw joint, the pelvis and the cervix also stay released. The jaw and the pelvis are connected with each other in a subtle way: where the jaw softens, the pelvis may open too.</p><h2>Tones and mantras that carry you</h2><p>Toning a long <strong>A</strong> is very helpful here. Just as well, your <strong>birth mantra</strong> can accompany you, for instance inhaling on <em>I</em> and exhaling on <em>I open myself</em> &ndash; or simply a positive <em>Yes</em>.</p><ul><li><strong>Deep belly breathing toward the baby:</strong> supports the contraction of the uterus.</li><li><strong>Long exhale on a tone or your mantra:</strong> keeps you present in body and mind.</li><li><strong>Toning with a loose jaw:</strong> keeps the pelvis and cervix released.</li><li><strong>A long A, a mantra or a positive Yes:</strong> words and tones that carry you.</li></ul><blockquote><p>Where the jaw softens, the pelvis may open too.</p></blockquote><p>Try out deep belly breathing and toning already during pregnancy in your yoga practice, so that they are familiar to you on the day of birth. That way, over time, something new becomes a calm, powerful companion &ndash; breath by breath, tone by tone.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Prepare gently for your birth",
+        "text": "In the pregnancy courses of Runayoga in Berlin-Pankow you get to know deep belly breathing and toning entirely at your own pace. Feel free to write to me if you would like to join.",
+        "buttonText": "Inquire now",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Breathing and Toning for Birth - Runayoga",
+      "seoDescription": "How deep belly breathing and toning support birth: the breath helps the contractions, the long exhale keeps you present and releases the pelvis and cervix.",
+      "date": "2021-06-18"
+    }
+  },
+  "zones": {}
+}

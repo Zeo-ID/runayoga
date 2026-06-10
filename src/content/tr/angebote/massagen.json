@@ -1,0 +1,74 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Masajlar",
+        "subtitle": "Bedenin nihayet bırakabildiğinde – dokunulmuş, taşınmış, tamamen kendinle",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "Fiyatları gör",
+        "secondButtonLink": "/preise",
+        "image": "/images/runa/wellness-rose-in-haenden.webp",
+        "imageAlt": "Ellerde tutulan bir gül",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Çok şey taşıyorsun – günlük yaşamı, boyun ve omuzlardaki gerginliği, hiçbir zaman tam olarak dinmeyen iç huzursuzluğu. Bazen beden, nihayet bırakabilmek için dikkatli, sevgi dolu bir dokunuştan başka bir şeye ihtiyaç duymaz. Masajlarım kas çalışmasından çok daha fazlasıdır. Kendini bırakmaya, derin bir nefes almaya ve bir süreliğine hiçbir şey başarmak zorunda olmamaya bir davettir.</p><p>Berlin-Pankow'daki korunaklı masaj odamda seni sıcaklık, sessizlik ve yalnızca sana ait bir alan bekliyor. Gerginliklerin sıcak ellerin altında çözüldüğünü, nefesinin derinleştiğini ve tüm bedenine hoş bir ağırlık hissinin yayıldığını hayal et. Eve sadece daha rahatlamış olarak dönmüyorsun – kendinle yeniden bağlanmış olarak dönüyorsun.</p><p>Her masajı kişisel bir ön görüşmenin ardından tamamen sana ve ihtiyaçlarına göre uyarlıyorum. Hamileler için masajlarım ve doğum sonrası yenilenme bana özellikle yakın gelir: Hamilelik ve doğumdan sonraki dönem öyle kıymetli, bazen de zorlayıcı evrelerdir. Anlayışlı bir masaj seni bu süreçte taşıyabilir. Bunun için özel olarak eğitildim – böylece her evrede kendini güvende, tutulmuş ve iyi ellerde hissedersin.</p><h2>Sana iyi gelen dokunuşu bul</h2><ul><li><strong>Lomi Lomi Nui</strong> – uzun, akıcı sıvazlamalarla seni derin, meditatif bir hâle taşıyan geleneksel Hawaii tapınak masajı</li><li><strong>Ayurveda masajı</strong> – Ayurveda geleneğine göre yapılan, bedeni ve zihni dengeye getiren sıcak, iyi gelen yağ masajı</li><li><strong>Hamileler için masaj</strong> – hamileliğinin her evresinde nazik, güvenli ve sevgiyle eşlik eden masaj</li><li><strong>Doğum sonrası yenilenme masajı</strong> – doğumdan sonra yeniden güç kazanman ve kendine gelmen için</li><li><strong>Ses çanağı masajı</strong> – ses ve titreşim aracılığıyla hücrelere kadar ulaşan derin gevşeme</li><li><strong>Ayak refleksoloji masajı</strong> – ayaklar üzerinden tüm bedeni harekete geçirir ve sıkışıp kalanı çözer</li><li><strong>Sırt masajı</strong> – gerginlik ve sırt ağrısı taşıyan herkes için özel olarak</li><li><strong>Tıbbi masajlar</strong> – belirli şikâyetlerde sağlam bir destek</li></ul><h2>Seni bekleyenler</h2><ul><li>Tekli masaj 95 € (60 dk.) veya 135 € (90 dk.) başlangıç fiyatıyla</li><li>270 € (285 € yerine) avantajlı 3'lü paketler – böylece bırakmak sevgi dolu bir alışkanlık olur</li><li>Tamamen sana ait, korunaklı bir alanda sıcak bir huzur atmosferi</li><li>Kişisel bir ön görüşmenin ardından tamamen sana göre uyarlanmış bireysel bir uygulama</li><li>Lütfen 60 dk.'lık masajlar için 75 dk., 90 dk.'lık masajlar için 105 dk. ayırın (ön görüşme dâhil)</li></ul><p>Kendine nihayet iyi gelecek bir şey yapma isteğinden başka hiçbir şey getirmene gerek yok. Bana yaz – tam şu anda sana doğru gelen masajı seninle birlikte bulayım.</p>"
+      }
+    },
+    {
+      "type": "Gallery",
+      "props": {
+        "id": "Gallery-massagen",
+        "title": "Çalışmama dair izlenimler",
+        "columns": 2,
+        "images": [
+          {
+            "src": "/images/runa/klangschalenmassage.webp",
+            "alt": "Ses çanağı masajı",
+            "caption": "Ses çanağı masajı"
+          },
+          {
+            "src": "/images/runa/ayurveda-oelmassage-ruecken.webp",
+            "alt": "Sırta Ayurveda yağ masajı",
+            "caption": "Ayurveda yağ masajı"
+          },
+          {
+            "src": "/images/runa/lymphdrainage-fuss.webp",
+            "alt": "Ayak ve lenf drenajı",
+            "caption": "Ayak refleksoloji & lenf drenajı"
+          },
+          {
+            "src": "/images/runa/wochenbettmassage-lotus.webp",
+            "alt": "Hamileler ve doğum sonrası için masaj",
+            "caption": "Hamileler & doğum sonrası için"
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Bedenine bu saati armağan et",
+        "text": "Bir kez tamamen bırakmayı hak ettin. Bana yaz, birlikte randevunu bulalım – seni görmeyi sabırsızlıkla bekliyorum. Kayıt rica olunur.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Berlin-Pankow'da masajlar – nihayet bırakmak | Runayoga",
+      "seoDescription": "Berlin-Pankow'da dikkatli masajlar: Lomi Lomi Nui, Ayurveda, ses çanağı, ayak refleksoloji ve hamileler & doğum sonrası için anlayışlı masajlar. Korunaklı alan, tamamen sana göre uyarlanmış – Runayoga'da 95 € başlangıç fiyatıyla. Hemen randevu için sor."
+    }
+  },
+  "zones": {}
+}

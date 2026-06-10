@@ -1,0 +1,90 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Przyjdź. Odetchnij głęboko.",
+        "subtitle": "Bezpieczna przestrzeń dla Twojego ciała, umysłu i duszy – w samym sercu Berlin-Pankow.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/teaser-2.webp",
+        "imageAlt": "",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Może to znasz: głowa pełna myśli, ramiona uniesione, plecy dają o sobie znać, a gdzieś głęboko w środku to ciche pragnienie spokoju – miejsca, w którym możesz być po prostu <em>sobą</em>. Właśnie po to tu jestem.</p><p>Jestem Runa i od wielu lat towarzyszę Ci przez jogę, pilates i masaże, przez szamańską pracę uzdrawiającą, śpiewanie mantr i krąg roczny dla kobiet. Tutaj nie jesteś oceniana, lecz otulona. W małych grupach, w ciepłej, bezpiecznej przestrzeni, krok po kroku odnajdujesz drogę z powrotem do większej lekkości, siły i połączenia – z samą sobą.</p><p><strong>Po prostu poczuj, co Cię teraz woła.</strong> Przejrzyj poniżej ofertę – a jeśli masz ochotę, napisz do mnie. Wspólnie odkryjemy, co Ci dobrze zrobi.</p>"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-001",
+        "title": "",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "Joga – znaleźć się na macie",
+            "text": "Odetchnij głęboko, pozwól, by dzień z Ciebie opadł. Hatha, Vinyasa i Yin w małych grupach – wystarczająco łagodne na początek, wystarczająco mocne, by rozluźnić plecy i wreszcie wyciszyć głowę.",
+            "image": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+            "link": "/angebote/yoga"
+          },
+          {
+            "title": "Pilates – siła ze środka",
+            "text": "Stabilne centrum, wyprostowane plecy, ciało, które znów Cię nosi. Świadomy, kontrolowany ruch w certyfikowanych przez ZPP kursach profilaktycznych – Twoja kasa chorych dofinansowuje uczestnictwo.",
+            "image": "/images/runa/retreat-yurte-savasana.webp",
+            "link": "/angebote/pilates"
+          },
+          {
+            "title": "Masaże – czas tylko dla Ciebie",
+            "text": "Pozwól się otulić i puścić. Dobroczynny dotyk, który rozluźnia napięcia i pozwala Ci odetchnąć głęboko – ze szczególnym doświadczeniem w masażach prenatalnych i poporodowych dla przyszłych i świeżo upieczonych mam.",
+            "image": "/images/runa/klangschalenmassage.webp",
+            "link": "/angebote/massagen"
+          },
+          {
+            "title": "Przestrzeń uzdrawiania dla duszy",
+            "text": "Gdy coś w Tobie woła o uzdrowienie: bezpieczna przestrzeń dla szamańskiej pracy z energią i pełnego empatii towarzyszenia. Tutaj możesz puścić to, co stało się ciężkie, i na nowo spotkać swoją wewnętrzną siłę.",
+            "image": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+            "link": "/angebote/heilraum"
+          },
+          {
+            "title": "Śpiewanie mantr – dźwięk, który Cię niesie",
+            "text": "Poczuj, jak napięcie rozluźnia się w Twoim głosie. Wspólne śpiewanie mantr i Medicine Songs – nie trzeba żadnych umiejętności, tylko Ty, Twój oddech i ogrzewająca siła wspólnoty.",
+            "image": "/images/runa/runa-monochord-abendlicht.webp",
+            "link": "/angebote/mantra"
+          },
+          {
+            "title": "Krąg roczny dla kobiet",
+            "text": "Przez cały rok otulona w kręgu kobiet: 8 spotkań przy celtyckich świętach kręgu rocznego, z rytuałami, szczerą wymianą i prawdziwym połączeniem. Dom dla Twojego pragnienia głębi i przynależności.",
+            "image": "/images/runa/retreat-gartentafel.webp",
+            "link": "/angebote/jahreskreis"
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Nie masz jeszcze pewności? Porozmawiajmy.",
+        "text": "Czasem wystarczy pierwsza, szczera rozmowa. Napisz mi, co Cię zaprząta – wysłucham i wspólnie z Tobą odkryję, co naprawdę teraz Ci dobrze zrobi. Całkowicie niezobowiązująco.",
+        "buttonText": "Napisz do mnie",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Oferta – joga, pilates i praca uzdrawiająca w Berlin-Pankow - Runayoga",
+      "seoDescription": "Wycisz się w Berlin-Pankow: joga, pilates (certyfikowany przez ZPP, dofinansowany przez kasę chorych), masaże, szamańska przestrzeń uzdrawiania, śpiewanie mantr i krąg roczny dla kobiet – w małych grupach, z empatią prowadzone przez Runę."
+    }
+  },
+  "zones": {}
+}

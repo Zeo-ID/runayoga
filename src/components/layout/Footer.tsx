@@ -3,14 +3,18 @@
 import { usePathname } from "next/navigation";
 import siteData from "../../data/site.json";
 import { Glyph, type BrandIcon } from "../icons";
+import { splitLocale, localizedHref } from "../../lib/i18n";
+import { t } from "../../data/ui";
 
 export function Footer() {
-  const pathname = usePathname();
+  const pathname = usePathname() || "/";
+  const { locale, basePath } = splitLocale(pathname);
+  const L = (href: string) => localizedHref(locale, href);
   const contact = siteData.contact as Record<string, string | undefined>;
   const legal = siteData.footer?.legal || [];
   const nav = siteData.navigation || [];
 
-  if (pathname?.startsWith("/links")) return null;
+  if (basePath.startsWith("/links")) return null;
 
   const socials = [
     contact.instagram && { href: contact.instagram, icon: "instagram" as BrandIcon, label: "Instagram" },
@@ -52,17 +56,17 @@ export function Footer() {
 
           {/* Entdecken */}
           <div>
-            <h4 className="footer-h">Entdecken</h4>
+            <h4 className="footer-h">{t("Entdecken", locale)}</h4>
             <div className="flex flex-col gap-2">
               {nav.slice(0, 6).map((item, i) => (
-                <a key={i} href={item.href} className="footer-link">{item.label}</a>
+                <a key={i} href={L(item.href)} className="footer-link">{t(item.label, locale)}</a>
               ))}
             </div>
           </div>
 
           {/* Kontakt */}
           <div>
-            <h4 className="footer-h">Kontakt</h4>
+            <h4 className="footer-h">{t("Kontakt", locale)}</h4>
             <div className="flex flex-col gap-2">
               {contact.email && <a href={`mailto:${contact.email}`} className="footer-link">{contact.email}</a>}
               {contact.phone && <a href={`tel:${contact.phone}`} className="footer-link">{contact.phone}</a>}
@@ -72,17 +76,17 @@ export function Footer() {
 
           {/* Alle Wege zu mir (QR-Hub) */}
           <div>
-            <h4 className="footer-h">Alle Wege zu mir</h4>
+            <h4 className="footer-h">{t("Alle Wege zu mir", locale)}</h4>
             <div className="flex items-start gap-4">
-              <a href="/links" aria-label="Alle Links öffnen" style={{ background: "#fff", borderRadius: 14, padding: 9, lineHeight: 0, boxShadow: "0 10px 28px rgba(0,0,0,.22)", flexShrink: 0 }}>
-                <img src="/images/qr-links.svg" alt="QR-Code zu allen Links" width={96} height={96} style={{ display: "block" }} />
+              <a href="/links" aria-label={t("Alle Links", locale)} style={{ background: "#fff", borderRadius: 14, padding: 9, lineHeight: 0, boxShadow: "0 10px 28px rgba(0,0,0,.22)", flexShrink: 0 }}>
+                <img src="/images/qr-links.svg" alt="QR-Code" width={96} height={96} style={{ display: "block" }} />
               </a>
               <div>
                 <p style={{ fontSize: ".85rem", color: "rgba(255,255,255,.6)", margin: "0 0 .85rem", lineHeight: 1.55 }}>
-                  Scanne den Code für WhatsApp, Instagram, Anfahrt & mehr.
+                  {t("Scanne den Code für WhatsApp, Instagram, Anfahrt & mehr.", locale)}
                 </p>
                 <a href="/links" style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "var(--color-primary)", color: "#fff", fontWeight: 600, padding: ".55rem 1.05rem", borderRadius: 50, textDecoration: "none", fontSize: ".82rem" }}>
-                  Alle Links →
+                  {t("Alle Links", locale)} →
                 </a>
               </div>
             </div>
@@ -91,15 +95,15 @@ export function Footer() {
 
         <div className="pt-8 flex flex-wrap items-center justify-between gap-3" style={{ borderTop: "1px solid rgba(255,255,255,.12)", fontSize: ".82rem", color: "rgba(255,255,255,.5)" }}>
           <p>
-            {siteData.footer?.copyright}
+            {t(siteData.footer?.copyright || "", locale)}
             {legal.map((item, i) => (
               <span key={i}>
                 {" · "}
-                <a href={item.href} className="footer-legal">{item.label}</a>
+                <a href={L(item.href)} className="footer-legal">{t(item.label, locale)}</a>
               </span>
             ))}
           </p>
-          <p style={{ fontStyle: "italic", fontFamily: "Fraunces, serif" }}>Mit Achtsamkeit gemacht in Berlin-Pankow.</p>
+          <p style={{ fontStyle: "italic", fontFamily: "Fraunces, serif" }}>{t("Mit Achtsamkeit gemacht in Berlin-Pankow.", locale)}</p>
         </div>
       </div>
 

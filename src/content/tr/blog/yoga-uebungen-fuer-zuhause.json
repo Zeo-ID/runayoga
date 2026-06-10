@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Evde yoga egzersizleri: 15 dakikalik rutinin",
+        "subtitle": "Gunde sadece 15 dakika, matinla ve rahat kiyafetlerinle, isinmadan cekirge duruşuna kadar basit bir yoga rutinini evine getiriyorsun.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-yurte-savasana.webp",
+        "imageAlt": "Savasana'da rahatlama",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Yogayi gunluk yaşamina katmak adeta bir „turboşarj“ gibidir; faydali etkilerini cok hizli bir şekilde gosterir. Ve cogu zaman oldugu gibi, burada da anahtar duzenlilikte yatar. Bir studyoya ve bir saatlik zamana ihtiyacin yok: harika sonuclar yaşamak icin gunde 15 dakika fazlasiyla yeterli. Ihtiyacin olan tek şey yoga matin ve rahat kiyafetler.</p><p>Pratik yapmani kolaylaştiracak kucuk bir ipucu: aksi belirtilmedikce, her pozisyonu uc nefes boyunca tut ve ardindan akici bir şekilde bir sonrakine gec. Birakin nefes sana yol gostersin, hicbir baski olmadan.</p><h2>Isinma</h2><p>Bacaklarini caprazlayarak otur ve iki dakika boyunca burnundan rahatca nefes al. Şimdi ve burada bulundugunu hisset. Ardindan nefes verirken 15 nefes boyunca nazikce sola ve saga salin. Boylece bedenini ve zihnini sevgiyle ardindan gelecek olana hazirlarsin.</p><h2>Isinmadan sonra</h2><h3>Kedi ve inek</h3><p>Nefes ver ve <strong>kedi pozisyonuna</strong> gec. Ellerinin ve dizlerinin uzerine yaslan, karnini yukari kaldirip kambur yaparken başini aşagi indir. Ardindan <strong>inek pozisyonuna</strong> gec: sirtini aşagi dogru bukerek başini kaldir ve omuzlarini dişa dogru hareket ettir. Bu egzersiz kalcalari, omuzlari, karin kaslarini ve omurgayi isitir ve esnetir.</p><h3>Aşagi bakan kopek</h3><p>Kedi pozisyonunda nefes ver ve kalcani yukari it, boylece ters bir V şekli oluşsun. Bu <strong>kopek duruşudur</strong>. Kol ve bacak kaslarini guclendirir. En iyisi beş tekrar yap.</p><h3>Savaşci</h3><p>Ayaga kalk ve sag bacagini one egil. Şimdi sol topugunu ve parmak uclarini yere 45 derecelik bir aciyla indir. Sol kolunu yukari uzat, boylece el ve ayak bilegi duz bir cizgi oluştursun. Bu egzersiz uyluklari, omuzlari, sirti ve kalcalari esnetir ve guclendirir.</p><p>Ardindan egzersizleri ters şekilde tekrarla (sag bacak yerine sol bacak vesaire), bedenin diger tarafini da dahil etmek icin. Boylece bedenin guzel bir dengede kalir.</p><h3>Cekirge duruşu</h3><p>Antrenmanin <strong>cekirge duruşuyla</strong> sona erer: sirtustu uzan, kollarini bedeninden ayri tut. Iki derin nefes al ve bu sirada omuzlarini, başini ve kollarini kaldir. Ardindan başini ve kollarini indir ve bu sirada bacaklarini kaldir. Iki nefes boyunca bu duruşta kal.</p><p>Bundan sonra birkac dakika daha sirtustu rahatca uzanmaya devam et. Bedeninin nasil hissettigini ic ve bu sessizlik anini tadini cikar.</p><blockquote><p>„Anahtar duzenlilikte yatar, surede degil. Gunde 15 farkindalikli dakika, duşunduğunden daha fazlasini degiştirir.“</p></blockquote><p>Bu kucuk rutini hemen dene; bugun, yarin, tekrar tekrar. Bu 15 dakikanin gununun en sevdigin demir atma anina ne kadar hizli donuştugune şaşiracaksin. Nefes nefes, gun gun.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Birlikte pratik yapmaya ne dersin?",
+        "text": "Yoga yolculugunda eşlik aradiysan, senin icin seve seve buradayim. Pratigini adim adim birlikte kuralim.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Evde yoga egzersizleri – Runayoga",
+      "seoDescription": "Evde yoga egzersizleri: gunde 15 dakika ile isinmadan kedi/inek, kopek ve savaşci uzerinden cekirge duruşuna kadar. Runayoga'dan basit rutinin.",
+      "date": "2019-07-28"
+    }
+  },
+  "zones": {}
+}

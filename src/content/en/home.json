@@ -1,0 +1,127 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Arrive. Breathe. Be fully with yourself again.",
+        "subtitle": "When everyday life drains you and you long for calm: In my studio in Berlin-Pankow you'll find a protected space where your body softens, your mind grows quiet and your breath deepens. Yoga, Pilates, massages and healing work – entirely at your own pace.",
+        "buttonText": "Discover my offerings",
+        "buttonLink": "/angebote",
+        "secondButtonText": "Write to me",
+        "secondButtonLink": "/kontakt",
+        "image": "/images/runa/retreat-steg-herbstsee.webp",
+        "imageAlt": "Wooden jetty at the autumnal lake",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-001",
+        "title": "Where may your journey begin?",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "Yoga",
+            "text": "Hatha, Vinyasa and Yin Yoga in small groups – here you are truly seen. Feel how tension dissolves, your breath deepens and the inner noise finally grows quieter.",
+            "image": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+            "link": "/angebote/yoga"
+          },
+          {
+            "title": "Pilates",
+            "text": "A strong, pain-free core begins with conscious, controlled movement. Strengthen your back gently and lastingly – in certified prevention courses where your health insurance may contribute to the cost.",
+            "image": "/images/runa/retreat-yurte-savasana.webp",
+            "link": "/angebote/pilates"
+          },
+          {
+            "title": "Massages",
+            "text": "An hour just for you, in which you have to do nothing and may let everything go. Soothing touch for body and soul – with special experience in pre- and postnatal massages.",
+            "image": "/images/runa/klangschalenmassage.webp",
+            "link": "/angebote/massagen"
+          },
+          {
+            "title": "Healing Room",
+            "text": "When you sense that something deeper wants to heal: shamanic energy work and gentle guidance for the themes that truly move you. Mindful, grounded, fully with yourself.",
+            "image": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+            "link": "/angebote/heilraum"
+          },
+          {
+            "title": "Singing Mantras",
+            "text": "Let your voice flow free and feel how sound releases you from within. Singing Mantras and Medicine Songs together – carried by the warming power of community.",
+            "image": "/images/runa/runa-monochord-abendlicht.webp",
+            "link": "/angebote/mantra"
+          },
+          {
+            "title": "Wheel of the Year",
+            "text": "A circle of women that carries you through the year: 8 gatherings at the Celtic Wheel of the Year festivals. Rituals, honest connection and the good feeling of not walking alone.",
+            "image": "/images/runa/retreat-gartentafel.webp",
+            "link": "/angebote/jahreskreis"
+          }
+        ]
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-001",
+        "title": "How lovely that you're here – I'm Runa",
+        "text": "<p>Maybe you know this feeling: always in motion, always there for others, and yet never truly arrived. This is exactly where I begin. In my studio in Berlin-Pankow I hold a protected space for you – for Yoga, Pilates and holistic healing work, entirely without pressure to perform.</p><p>With many years of experience and a great deal of heart, I accompany you in strengthening your body, letting your mind come to rest and giving your soul room again. You don't need to be able to do anything or bring anything – except yourself.</p>",
+        "image": "/images/runa/retreat-herbstspaziergang.webp",
+        "imageAlt": "Runa, smiling cross-legged on the mat",
+        "imagePosition": "right"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "id": "Quote-001",
+        "text": "Yoga is the journey of the self, through the self, to the self.",
+        "source": "Bhagavad Gita",
+        "variant": "decorative"
+      }
+    },
+    {
+      "type": "Testimonials",
+      "props": {
+        "id": "Testimonials-001",
+        "title": "Voices from my studio",
+        "items": [
+          {
+            "text": "The yoga classes with Runa are the highlight of my week. Afterwards I always feel grounded, relaxed and full of energy – as if I had taken a deep breath.",
+            "name": "Maria S.",
+            "rating": 4
+          },
+          {
+            "text": "The massages are simply wonderful. Runa has an incredible intuition and creates such a sheltering atmosphere that I can let go completely.",
+            "name": "Kathrin L.",
+            "rating": 5
+          },
+          {
+            "text": "The retreat was a life-changing experience. The combination of yoga, nature and community touched me deeply and gave me new strength.",
+            "name": "Sandra B.",
+            "rating": 5
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Ready to fully arrive with yourself again?",
+        "text": "You don't have to commit just yet. Simply write to me about what's on your mind right now – together and in all calm we'll find out what's good for you now.",
+        "buttonText": "Write to me – no obligation",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Runayoga – Yoga, Pilates & Massages in Berlin-Pankow | Runa Bulla",
+      "seoDescription": "Yoga, Pilates, massages & healing work in Berlin-Pankow. Come to rest, release tension and gather new strength – in small groups, protected and mindful. Certified prevention courses with health insurance contribution. Write to me."
+    }
+  },
+  "zones": {}
+}

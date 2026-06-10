@@ -10,8 +10,8 @@
         "buttonLink": "/kontakt",
         "secondButtonText": "Preise ansehen",
         "secondButtonLink": "/preise",
-        "image": "",
-        "imageAlt": "",
+        "image": "/images/runa/deko-tennisball.webp",
+        "imageAlt": "Training mit Kleingeräten",
         "layout": "right"
       }
     },

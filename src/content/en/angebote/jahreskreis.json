@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Women's Wheel of the Year: Arriving, Breathing, Feeling Connected",
+        "subtitle": "Eight times a year a protected circle just for you – away from the noise of everyday life, back to yourself and to a community that holds you.",
+        "buttonText": "Make an enquiry now",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-gartentafel.webp",
+        "imageAlt": "Women's circle at the garden table",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Do you know that feeling of constantly functioning? Being there for everyone – but only rarely for yourself? The Women's Wheel of the Year is your conscious time-out from exactly this endless running. Eight times a year we come together to celebrate the great turning points of the year as one. Inspired by the Celtic Wheel of the Year festivals and the rhythms of nature, a space arises in which you don't have to achieve anything – you may simply arrive, breathe deeply and feel held.</p><p>Each gathering carries its own theme that breathes with the season. In spring it is about new beginnings and growth, in summer about abundance and joy of life, in autumn about gratitude and letting go of what has become heavy, and in winter about stillness and reflection. With gentle rituals, calm meditations and honest conversations you come back to yourself – and feel how the inner restlessness settles and something warm and connected takes its place.</p><p>The women's circle is a protected space in which you may be exactly as you are. Here there is no right or wrong, no judging, no comparing. What is spoken in the circle stays in the circle – you can rely on that. In the community of women lies a quiet, carrying strength: it nourishes you when you are empty, and reminds you that you don't walk through the year alone.</p><h2>What awaits you</h2><ul><li>8 gatherings a year at the Wheel of the Year festivals – firm anchors to look forward to</li><li>Gentle rituals and ceremonies fitting to the season that ground you</li><li>For women only – a protected, confidential space</li><li>Real connection instead of small talk: a community that catches you</li><li>Meditations and deep conversations in which you are truly heard</li><li>No prior knowledge needed – just come exactly as you are</li></ul><h2>Who is the Wheel of the Year made for?</h2><p>For you, if you long for connection, wish for more calm and depth in your life and would love to feel once again that you are part of something greater – the cycles of nature and a circle of women who understand you. You need no prior knowledge and no particular spiritual orientation. All that counts is your openness and the quiet wish to walk through the coming year not alone, but carried.</p><p>Does that sound like what you are longing for right now? <a href=\"/kontakt\">Write to me</a> – I'll gladly tell you when the next circle begins.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Don't walk into the next year alone",
+        "text": "The places in the circle are deliberately limited so that each of us truly has space. Write to me and secure your place – I'll get in touch with the next dates.",
+        "buttonText": "Make an enquiry now",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Women's Wheel of the Year Berlin-Pankow – Protected Women's Circle | Runayoga",
+      "seoDescription": "Women's Wheel of the Year at Runayoga in Berlin-Pankow: 8 gatherings a year in a protected women's circle. Gentle rituals, real connection and calm for you – come exactly as you are."
+    }
+  },
+  "zones": {}
+}

@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "İlk inzivam: Kendime doğru bir yolculuk",
+        "subtitle": "Deneyim raporu: Runayoga ile ilk yoga inzivam. Yoga, doğa ve topluluk eşliğinde kendime doğru kişisel bir yolculuk.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/stock-thumbnail-2.webp",
+        "imageAlt": "Doğanın içinde inziva evi",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p><em>2025 Sonbahar İnzivası katılımcısı Lena'dan kişisel bir deneyim raporu.</em></p><p>Runa'nın inzivasına kaydolduğumda beni neyin beklediğini tam olarak bilmiyordum. Sadece bir molaya ihtiyacım olduğunu biliyordum. Programı tıka basa dolu olağan bir tatil değil, gerçek bir sessizlik. Derin bir nefes almak için alan. Kendimden başka hiçbir şey olmak zorunda olmadığım bir yer. Ardından gelen şey ise beni hayal edebileceğimden çok daha derinden etkiledi.</p><h2>Gelmek ve bırakmak</h2><p>Yolculuğun kendisinde bile meditatif bir şey vardı. Şehirden uzaklaştıkça etraf daha da sakinleşiyordu – yalnızca dışarıda değil, içimde de. Vardığımda Runa evin önünde duruyordu ve bizi sıcak bir gülümsemeyle karşıladı. Ne havadan sudan sohbet, ne de bizi hemen meşgul etmesi gereken bir program. Bunun yerine basit bir davet: „Gel. Yanında getirdiğin her şeyi öylece burada bırak.“</p><p>Oda sade ve rahattı. Ahşap mobilyalar, lavanta kokan bir yatak, eski ağaçlara bakan bir pencere. Telefonumu çekmeceye koydum ve kapattım. Aylardır ilk kez hiç bildirim, hiç randevu yoktu; bir ekrana bakmak için hiçbir nedenim yoktu. Bu tuhaf hissettiriyordu – ve aynı zamanda bir özgürleşme gibiydi.</p><h2>Günlerin ritmi</h2><p>Her sabah yedide nazik bir yoga seansıyla başladık. Ne akrobatik duruşlar, ne performans – bunun yerine yavaş, bilinçli hareketler, Runa'nın sakin sesi eşliğinde. Sanki o, alanı görünmez bir güven battaniyesiyle örtüyordu.</p><p>Ortak kahvaltıdan sonra boş zamanımız vardı. Kimisi ormanda yürüyüşe çıktı, kimisi kitap okudu ya da öylece oturup gökyüzüne baktı. Öğleden sonra daha derin bir uygulama vardı: Yin Yoga, Pranayama ya da rehberli meditasyonlar. Her seansın bir teması vardı – güven, şefkat, bırakmak. Runa az konuşuyordu, ama her kelimesi yerini buluyordu.</p><p>Akşamları birlikte mantralar söyledik. Daha önce hiç mantra söylememiştim ve başlangıçta kendimi çekingen hissettim. Ama grubun sesleri tek bir ahenkte birleştiğinde içimde bir şey çözüldü. Sözler Sanskritçeydi, ama kalbim onları yine de anladı.</p><h2>Şamanik tören</h2><p>Cumartesi akşamı Runa bir şamanik törene davet etti. Mumlar, tütsü, minderlerden oluşan bir çember. Hiçbir beklentim yoktu ve aynı zamanda gergindim. Runa, törenin amacının ruhumuzun daha derin katmanlarıyla temasa geçmek olduğunu açıkladı – akılla değil, beden ve sezgi aracılığıyla.</p><p>Ardından gelenleri kelimelere dökmek zor. Davul sesleri, şarkı ve rehberli iç gözlem aracılığıyla, kendi içimde uzun zamandır unuttuğum bir yere geri döndüm. Gözyaşları aktı, neden olduğunu tam olarak bilmeden. Üzücü değildi – özgürleştiriciydi. Sanki bedenim, çok uzun süredir taşıdığım bir şeyi bırakabilmek için bu anı bekliyordu.</p><p>Runa, beni derinden etkileyen bir mevcudiyetle alanı tuttu. Zorlamadan oradaydı. Yargılamadan gördü. Bu korunaklı çerçevede kendimi bırakabildim – belki de ilk kez gerçekten.</p><h2>Yanımda götürdüklerim</h2><p>Pazar sabahı çantamı toparlarken kendimi bambaşka bir insan gibi hissettim. Büyük bir aydınlanma yaşadığım için değil, aniden her şey değiştiği için değil. Tüm o işlevsellik altında aslında kim olduğumu yeniden hissettiğim için. Rollerin, görevlerin, günlük gürültünün altında.</p><p>Yanımda götürdüklerim hiçbir valize sığmaz. Bu, artık her an yeniden çağırabildiğim bir sessizlik duygusu. Gündelik hayat fazla gürültülü olduğunda gözlerimi kapatıyorum ve yine oradayım: o çemberde, mumların yanında, kulağımda mantraların sesi ve ihtiyacım olan her şeyin zaten içimde olduğuna dair derin kesinlikle.</p><blockquote><p>„Bazen kendine yeniden ulaşmak için uzaklaşman gerekir.“</p></blockquote><p>Bir inzivanın senin için olup olmadığını düşünüyorsan: Yap. Bir gün değil. Her şey yerli yerine oturduğunda değil. Şimdi. Gelecekteki sen sana minnettar olacak.</p><p><em>-- Lena M., Berlin</em></p>"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "İlk inzivam: Kendime doğru bir yolculuk – Runayoga",
+      "seoDescription": "Deneyim raporu: Runayoga ile ilk yoga inzivam. Yoga, doğa ve topluluk eşliğinde kendime doğru kişisel bir yolculuk."
+    }
+  },
+  "zones": {}
+}

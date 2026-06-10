@@ -1,0 +1,55 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Pilates – Strength that comes from within",
+        "subtitle": "A strong centre carries you through every day – upright, mobile, free of pain.",
+        "buttonText": "Reserve your spot",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "View prices",
+        "secondButtonLink": "/preise",
+        "image": "/images/runa/deko-tennisball.webp",
+        "imageAlt": "Training with small equipment",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Do you know that pulling sensation in your lower back after a long day? That feeling of going through life somehow slumped over? Pilates works exactly where your strength is created – in your centre. We work with conscious, controlled movement and with the breath that carries every exercise. You feel how your body rises up from within.</p><p>And that doesn't stay on the mat. After just a few weeks you notice it in everyday life: you stand taller, lift the shopping bags more easily, sit longer without tension. Your back becomes calmer, your stance more secure – as if you had found an inner support that carries you.</p><p>Whether classic Pilates, targeted back fitness or gentle training for the time before and after birth – I meet you exactly where you are right now. In small groups I see every participant, correct gently and adapt every exercise to your body. Here you don't have to be able to do anything and you don't have to prove anything. You may feel safe and grow at your own pace.</p><p>My Pilates courses are certified as prevention courses under § 20 SGB V (Zentrale Prüfstelle Prävention). This means: your statutory health insurance covers up to 80 % of the costs. Just ask your health insurance fund – or write to me, I'll be happy to help.</p><h2>What awaits you on the mat</h2><ul><li>Certified prevention courses – up to 80 % subsidy from your health insurance fund</li><li>Gentle training with small equipment that wakes up your deep muscles</li><li>A stable centre and an upright, pain-free posture</li><li>Small groups in which you are truly seen</li><li>Exercises that suit your body – whether you're a beginner or experienced</li><li>Special courses: back fitness as well as pre- and postnatal for expectant and new mums</li></ul>"
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-kurs",
+        "title": "Your next course block – secure your spot",
+        "text": "<p><strong>10 sessions · 200 €</strong> – up to 80 % reimbursed by your health insurance fund. Often only a small personal contribution remains for you.</p><p>Tuesdays 18:00–19:00 · with small equipment<br>Next course block: 25.08.–17.11.2026 (break 13.–17.10.2026)</p><p>The group is deliberately small – join early while spots are still available.</p><p>Location: Sinnergie, Schulzestr. 1, 13187 Berlin-Pankow</p><p><em>„Physical fitness is the first requisite of happiness.“ – Joseph Pilates</em></p>",
+        "image": "",
+        "imageAlt": "",
+        "imagePosition": "left"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Ready for a strong, free centre?",
+        "text": "Drop me a quick message – I'll be happy to tell you how the course works and secure your spot. No obligation and entirely at your own pace.",
+        "buttonText": "Enquire now",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Pilates in Berlin-Pankow – strong centre, free back | Runayoga",
+      "seoDescription": "Gentle Pilates prevention courses in Berlin-Pankow for a strong centre and a pain-free back. 10 sessions for 200 €, ZPP-certified, up to 80 % health insurance subsidy, small groups. Secure your spot at Runayoga."
+    }
+  },
+  "zones": {}
+}

@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Dlaczego joga w ciąży tak dobrze działa",
+        "subtitle": "Od uważności i świadomości ciała po Nadi Shodana – jak joga łagodnie towarzyszy ci w fizycznie i emocjonalnie intensywnym okresie życia i przygotowuje cię do porodu.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-tonfigur-schwangere.webp",
+        "imageAlt": "Gliniana figurka kobiety w ciąży",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Czas ciąży i przygotowania do porodu są dla wielu kobiet zupełnie szczególnym okresem życia. Przemiana i zmiany – czy to w sferze prywatnej, czy we wszystkich innych obszarach życia – są wszechobejmujące. Twoje własne ciało wyraźnie staje się centrum uwagi, a zmiany są ogromne nie tylko w sferze fizycznej, lecz w szczególności również w emocjonalnej.</p><h2>Dobry moment, by z miłością zatroszczyć się o siebie</h2><p>Teraz jest dobry moment, by dobrze i z miłością zatroszczyć się o własne ciało. Siła wpływa w głębię kobiecości, w „bycie kobietą” i w drzemiącą w kobiecie moc twórczą.</p><blockquote><p>Rodzenie to ucieleśniona moc twórcza!</p></blockquote><h2>Co joga ma do zaoferowania ze swojej liczącej tysiące lat tradycji</h2><p>Aby to odkryć i doświadczyć dobrego przygotowania do porodu, joga w swojej liczącej tysiące lat tradycji ma niejedno do zaoferowania:</p><ul><li><strong>Głębokie, jogiczne oddychanie brzuszne</strong> pomaga dobrze zaopatrzyć twoje ciało i dziecko w tlen oraz energię życiową.</li><li><strong>Relaks</strong>, tak ważny w tym czasie i podczas porodu, jest niezbędny.</li><li><strong>Wiele asan to pozycje porodowe</strong> i można je już wcześniej poćwiczyć.</li><li><strong>Mentalne przygotowanie</strong> do pozytywnego i samostanowiącego przebiegu porodu jest jednym z filarów jogicznego przygotowania do porodu.</li></ul><p>Nie bez znaczenia są też śpiewane mantry, które pomagają otworzyć serce i oczyścić wszystkie kanały energetyczne. Po prostu spróbuj!</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Towarzysz swojej ciąży z jogą",
+        "text": "Chcesz uważnie przygotować się do porodu i z miłością połączyć się ze swoim ciałem? Chętnie towarzyszę ci na tej drodze.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Dlaczego joga w ciąży tak dobrze działa – Runayoga",
+      "seoDescription": "Jak joga towarzyszy kobietom w ciąży: głębokie oddychanie brzuszne, relaks, asany jako pozycje porodowe i mentalne przygotowanie do samostanowiącego porodu.",
+      "date": "2019-10-06"
+    }
+  },
+  "zones": {}
+}

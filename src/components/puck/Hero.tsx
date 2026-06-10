@@ -1,4 +1,6 @@
 import siteData from "../../data/site.json";
+import { t } from "../../data/ui";
+import type { Locale } from "../../lib/i18n";
 
 function SpinBadge() {
   return (
@@ -48,6 +50,7 @@ export function Hero({
   image,
   imageAlt,
   layout = "right",
+  locale = "de",
 }: {
   title: string;
   subtitle: string;
@@ -58,6 +61,7 @@ export function Hero({
   image: string;
   imageAlt: string;
   layout: "left" | "right" | "center";
+  locale?: Locale;
 }) {
   const buttons = (
     <div className="flex gap-4 flex-wrap" style={{ marginTop: "2.4rem" }}>
@@ -100,7 +104,7 @@ export function Hero({
         )}
         <div className="relative z-10 text-center" style={{ maxWidth: 820 }}>
           <span className="kicker" style={hasImg ? { color: "var(--color-rose)" } : undefined}>
-            {siteData.tagline}
+            {t(siteData.tagline, locale)}
           </span>
           <h1 className="display" style={{ marginTop: "1.4rem", color: hasImg ? "#fff" : "var(--color-text)" }}>
             {title}

@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Yoga bir spor değildir: Bedenine karşı tutumun nasıl değişebilir",
+        "subtitle": "Yoganın sunacağı, hareketten çok daha fazlası var. Sana beden farkındalığı kazandırır ve günlük yaşamda kendine özgü dengeni bulmana yardımcı olur.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/deko-palmblaetter.webp",
+        "imageAlt": "Işıkta palmiye yaprakları",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p><em>Runa Bulla &bull; 29. Temmuz 2019</em></p><p><strong>Yoga bir spor değildir!</strong> Hayır, yoganın sunacağı çok daha fazlası var.</p><p>Beden farkındalığı herkesin dilinde, yine de çoğu zaman bedenimizin çalışıyor ve verimli olmasından memnun oluyoruz. Ona büyük bir önem vermeden, gün be gün öylece bizimle birlikte gitmesine güveniyoruz.</p><p>En geç hastalıklar kendini gösterdiğinde ve bu işaretleri artık görmezden gelemediğimizde, bunun neden böyle olduğunu düşünmeye başlıyoruz. Çoğunlukla gerekçeler stres, yavaş ve sağlıklı öğünler için zaman olmaması, günlük yaşamda çok az hareket olur.</p><h2>Her insan farklıdır &ndash; ve bu iyi bir şey</h2><p>Her insan bireyseldir ve yaşamın tüm alanlarında farklı ihtiyaçlara sahiptir. Birine iyi gelen, bir başkası için çok fazla ya da çok az olabilir. İşte tam da bu yüzden herkes için geçerli olan tek bir reçete yoktur.</p><p>Sanat, bu bireysel dengeyi çok fazla duyguyla ve ustalıkla günlük yaşamda yaşamaktır. Bu, sağlığı korumanın bir ön koşuludur!</p><blockquote><p>Sanat, kendi bireysel dengeni çok fazla duyguyla ve ustalıkla günlük yaşamda yaşamaktır.</p></blockquote><h2>Buna nasıl ulaşırım?</h2><p>Öncelikle, bedenime neyin ve ne ölçüde hizmet ettiğine dair bir hisse ihtiyacım var. İşte burada yoga devreye girer.</p><p>Yoga matının üzerinde, bedenime karşı dikkatle ve çok fazla duyguyla pratik yaparım. Kişisel sınırlarımı yoklamayı ya da onları öncelikle tanımayı öğrenirim. Mesele bir şey başarmak ya da dünden daha iyi olmak değildir. Mesele, şu anda var olanı hissetmek ve algılamaktır.</p><p>İşte kendinle kurulan bu özenli bağ, yogayı bu kadar değerli kılan şeydir. Bu, kendi dengeni bulmanın ve onu özenle günlük yaşamına taşımanın temelidir.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Bedenini özenle tanı",
+        "text": "Yoganın performansın ötesinde nasıl hissettirdiğini deneyimlemek ister misin? Daha fazla beden farkındalığına giden yolunda sana seve seve eşlik ederim.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yoga bir spor değildir: Bedene ne yapar – Runayoga",
+      "seoDescription": "Yoga bir spor değildir: Beden farkındalığını destekler ve günlük yaşamda kendi bireysel dengeni bulmana yardımcı olur – sağlığı korumanın bir ön koşulu olarak.",
+      "date": "2019-07-29"
+    }
+  },
+  "zones": {}
+}

@@ -1,0 +1,168 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Yoga Retreat 2026",
+        "subtitle": "Seven days just for you – breathe, let go, find your way back to yourself",
+        "buttonText": "Reserve your spot",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-terrasse-am-see.webp",
+        "imageAlt": "Terrace overlooking the lake",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<h2>Allow yourself to fully arrive</h2><p><em>A week in which nothing is asked of you – except to be here.</em></p><p>You've sensed it for a while now: your mind is full, your shoulders are tense, your to-do list is endless. You keep functioning – but you long for real calm, for depth, for the feeling of being with yourself again. This is exactly what this retreat is for.</p><p>Imagine: you wake up to the song of birds instead of an alarm clock. The day begins gently on the mat while the sun rises and your breath grows calmer. In the evening you sit in a warm circle, carried by mantras and stillness, and feel the tension of the past months falling away from you layer by layer. This retreat isn't a vacation to “tick off” – it is a loving invitation to breathe again.</p><p>In a small, intimate group I hold a protected space for you: a place without expectations, where you may let go, recharge and connect with other women as equals. Daily yoga practice, shamanic healing work, nourishing food and the stillness of nature weave together into a week that sends you home changed – more spacious, softer, fully at one with yourself.</p><p>And don't worry: you don't need to be able to do anything. Whether you're stepping onto the mat for the first time or have been practising for years – I meet you exactly where you are. Here there's no pressure to perform, only your own rhythm.</p><h2>What this week holds for you</h2><p>An all-round nourishing experience for body, heart and soul:</p><ul><li>Daily yoga and meditation practice that grounds and releases you</li><li>Shamanic ceremonies that help let go of the old</li><li>Mantra chanting and Medicine Songs that open the heart</li><li>Lovingly prepared vegetarian full board</li><li>A small, intimate group (max. 12 participants) – so that genuine closeness can arise</li><li>Free time to hike, dream and simply be in nature</li></ul><h2>Dates &amp; Location</h2><p><strong>Spring 2026</strong> – dates will be announced soon.</p><p><strong>Location:</strong> Mediterranean region – exact location to be announced</p><p><strong>Duration:</strong> 7 days / 6 nights</p><p>Places are deliberately limited – they fill up quickly. Add yourself to the waiting list now, without obligation, and be the first to hear about dates, location and early-bird spots.</p>"
+      }
+    },
+    {
+      "type": "Gallery",
+      "props": {
+        "id": "Gallery-retreat",
+        "title": "Impressions",
+        "columns": 3,
+        "images": [
+          {
+            "src": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+            "alt": "Seminar room with yoga mats arranged in a circle",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-yurte-savasana.webp",
+            "alt": "Savasana in the yurt",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-steg-herbstsee.webp",
+            "alt": "Wooden jetty on an autumn lake",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-see-schilf.webp",
+            "alt": "Lake with reeds",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-gartentafel.webp",
+            "alt": "Shared table in the garden",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-herbstspaziergang-2.webp",
+            "alt": "Mindful walk in autumn",
+            "caption": ""
+          },
+          {
+            "src": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+            "alt": "Ritual altar with singing bowls",
+            "caption": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-001",
+        "title": "Find your package – choose the space that suits you",
+        "packages": [
+          {
+            "name": "Frühbucher",
+            "price": "Price on request",
+            "features": [
+              "7 days / 6 nights full of calm",
+              "A cosy spot in a shared room",
+              "Lovingly prepared vegetarian full board",
+              "All yoga & meditation sessions",
+              "Shamanic ceremonies in the circle"
+            ],
+            "buttonText": "Enquire",
+            "buttonLink": "/kontakt",
+            "highlighted": false
+          },
+          {
+            "name": "Regular",
+            "price": "Price on request",
+            "features": [
+              "7 days / 6 nights full of calm",
+              "Accommodation in a double room",
+              "Lovingly prepared vegetarian full board",
+              "All yoga & meditation sessions",
+              "Shamanic ceremonies in the circle",
+              "1 relaxing individual massage included"
+            ],
+            "buttonText": "Enquire",
+            "buttonLink": "/kontakt",
+            "highlighted": true
+          },
+          {
+            "name": "Deluxe",
+            "price": "Price on request",
+            "features": [
+              "7 days / 6 nights full of calm",
+              "A retreat of your own in a single room",
+              "Lovingly prepared vegetarian full board",
+              "All yoga & meditation sessions",
+              "Shamanic ceremonies in the circle",
+              "2 relaxing individual massages included",
+              "Personal one-to-one session with Runa – just for you"
+            ],
+            "buttonText": "Enquire",
+            "buttonLink": "/kontakt",
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "FAQ",
+      "props": {
+        "id": "FAQ-001",
+        "title": "What you might still want to know",
+        "items": [
+          {
+            "question": "What is included in the price?",
+            "answer": "So that you don't have to worry about a thing: the price includes your accommodation, the lovingly prepared vegetarian full board, all yoga and meditation sessions, shamanic ceremonies as well as the mantra chanting sessions. Depending on the package you choose, relaxing individual massages and personal sessions are added. Only travel to the retreat is not included in the price."
+          },
+          {
+            "question": "Who is the retreat for?",
+            "answer": "For you, if you long for a real break from everyday life and are curious about yoga, meditation and deeper experiences. It is a protected place of encounter and gentle growth – regardless of age, gender or level of experience. You may come exactly as you are."
+          },
+          {
+            "question": "Do I need to have yoga experience?",
+            "answer": "No, not at all. You don't need any prior knowledge. I guide the sessions so that beginners feel just as held as experienced practitioners. I meet you exactly where you are – without pressure, at your own pace."
+          },
+          {
+            "question": "How do I get to the retreat location?",
+            "answer": "We'll take care of that together – you don't have to plan on your own. You'll receive detailed travel information after your booking. As a rule, we organise a joint transfer from the nearest airport or train station to the retreat location. We'll let you know the transfer costs in advance."
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Do you sense that it's time for you?",
+        "text": "Places are deliberately limited so that real depth can arise. Secure your spot at the Yoga Retreat 2026 now – or simply write to me if you still have questions. I look forward to getting to know you.",
+        "buttonText": "Enquire now",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yoga Retreat 2026 – A Break for Women | Runayoga",
+      "seoDescription": "7 days just for you: yoga, meditation, mantras & shamanic healing work in a small group. Let go, recharge, find yourself again. Secure your place on the waiting list now."
+    }
+  },
+  "zones": {}
+}

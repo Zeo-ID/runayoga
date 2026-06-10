@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Makat Pozisyonunda Hatha Yoga: Bebeğini Dönmeye Davet Eden Pozisyonlar",
+        "subtitle": "Derslerimde bana sık sık, bebeği makat pozisyonundan nazikçe doğum pozisyonuna geçmeye hangi yoga pozisyonlarının teşvik edebileceği soruluyor. İşte buna dair ilk, ihtiyatlı bir bakış.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/wochenbettmassage-lotus.webp",
+        "imageAlt": "Hamilelikte nazik eşlik",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Derslerimde bana sık sık, bebeğinin dönmesi için, onu doğum pozisyonuna gelmeye teşvik etmek üzere hangi pozisyonların mümkün olduğu soruluyor. Bununla, bebeğin başının küçük leğen kemiğine doğru kayması kastediliyor. Bunun için Hatha Yoga'dan pozları uygulamanın birkaç yolu vardır.</p><h2>Bebek Makat Pozisyonunda Olduğunda</h2><p>Makat pozisyonu, bebeğinin hamileliğin sonuna doğru başıyla değil, popo veya ayaklarıyla aşağı doğru yatması anlamına gelir. Pek çok anne adayı o zaman, çocuğunu hâlâ dönmeye nazikçe davet etmeyi diler. Hatha Yoga'dan bunun için, dikkat ve sabırla çalışmanın birkaç yolu vardır.</p><h2>Önemli: Sırtüstü Yatış Pozlarında Dikkat</h2><p>Bazı egzersizlerde ise özellikle dikkatli olmalısın.</p><blockquote><p>Özellikle sırtüstü yatış pozlarında, bir Vena Cava sorununda alternatifler seçmeli ya da egzersizleri kısaltmalısın.</p></blockquote><p>Böyle anlarda mutlaka kendi bedenini ve ebeninin ya da doktorunun sana önerdiğini dinle. Hamilelikte yoga, kendine yumuşaklık ve dikkatle yaklaşmandan beslenir.</p><p><em>Not: Bu yazı giriş niteliğinde bir metin olarak düşünülmüştür ve konuya giriş yapar. Somut yönergeleri ve tek tek pozisyonları, sana ve tamamen kişisel durumuna eğilebileceğim bir derste birlikte ele almamız en iyisidir.</em></p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Hamilelikte eşlik – tamamen kişiye özel",
+        "text": "Hamilelikte nazik Hatha Yoga pozisyonları hakkında daha fazla bilgi edinmek ve bu süreçte kendini iyi hissetmek mi istiyorsun? Bana yazmaktan çekinme – yolunda sana dikkatle eşlik ediyorum.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Makat Pozisyonunda Hatha Yoga: Dönme İçin Pozisyonlar - Runayoga",
+      "seoDescription": "Hangi Hatha Yoga pozisyonları bebeğini makat pozisyonundan nazikçe dönmeye teşvik edebilir? Runa Bulla'dan ihtiyatlı bir başlangıç – sırtüstü yatışa dair bir notla.",
+      "date": "2021-07-05"
+    }
+  },
+  "zones": {}
+}

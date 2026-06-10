@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "5 sposobów na włączenie jogi do codzienności",
+        "subtitle": "5 prostych sposobów na włączenie jogi do codziennego życia. Praktyczne wskazówki od Runayoga dla większej uważności i równowagi każdego dnia.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+        "imageAlt": "Maty do jogi w studiu",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Ręka na sercu: jak często postanawiałeś sobie regularnie ćwiczyć jogę, a potem zawsze coś stawało na przeszkodzie? Codzienność jest pełna, lista zadań długa, a w pewnym momencie mata do jogi spada na dalszy plan. A przecież joga wcale nie wymaga dużo czasu. Wymaga jedynie gotowości, by wpleść małe chwile uważności w swój dzień. Oto pięć sposobów, które ci w tym pomogą.</p><h2>1. Poranna rutyna: 5 do 10 minut powitania słońca</h2><p>Poranek należy do ciebie. Zanim sięgniesz po telefon czy zaparzysz kawę, rozwiń matę i przywitaj dzień kilkoma rundami Surya Namaskar. Powitanie słońca to jedna z najbardziej kompletnych sekwencji ćwiczeń w jodze: rozgrzewa całe ciało, rozciąga mięśnie i pobudza krążenie.</p><p>Zacznij od trzech powolnych rund i zwiększaj liczbę według własnego upodobania. Już po tygodniu zauważysz, jak zmienia się twój poranek. Zaczynasz dzień bardziej rozbudzony, skupiony i z poczuciem własnej sprawczości. Najpiękniejsze jest to, że nie potrzebujesz ani dużo miejsca, ani specjalnego stroju. W zupełności wystarczy ręcznik na podłodze w sypialni.</p><h2>2. Ćwiczenia oddechowe w biurze: pranayama przy biurku</h2><p>Między dwoma spotkaniami albo po wyczerpującej telekonferencji możesz przywrócić swojemu umysłowi spokój za pomocą prostego ćwiczenia oddechowego. Usiądź prosto, zamknij oczy i wdychaj przez cztery sekundy, zatrzymaj oddech na cztery sekundy i wydychaj przez sześć sekund. Powtórz to pięć do ośmiu razy.</p><p>Ta technika aktywuje twój układ przywspółczulny – system w twoim ciele odpowiedzialny za relaks. Zauważysz, że rozluźniają się twoje ramiona, odpręża szczęka, a myśli stają się spokojniejsze. Nikt z twojego otoczenia tego nie zauważy, ale ty od razu poczujesz różnicę.</p><h2>3. Wieczorna joga Yin na wyciszenie</h2><p>Dzień zbliża się ku końcowi, a twój układ nerwowy nadal działa na najwyższych obrotach? Wtedy podaruj sobie 15 do 20 minut jogi Yin przed snem. Joga Yin pracuje z długimi, pasywnymi rozciąganiami, które utrzymujesz przez trzy do pięciu minut. Nie chodzi o osiągnięcia, lecz o puszczanie.</p><p>Szczególnie kojące wieczorem są skłony w przód, takie jak gąsienica (Caterpillar), otwieracze bioder, takie jak motyl, oraz delikatne skręty w leżeniu na plecach. Pozwól sobie zatonąć w każdej pozycji, oddychaj głęboko i pozwól swojemu ciału oddać napięcie dnia. Twój sen będzie głębszy i bardziej regenerujący, jeśli uczynisz z tego rytuału swój nawyk.</p><h2>4. Uważne chodzenie</h2><p>Joga nie odbywa się tylko na macie. Każdy spacer może stać się ćwiczeniem uważności, jeśli ukształtujesz go świadomie. Poczuj, jak twoje stopy dotykają podłoża. Zauważ, jak powietrze działa na twoją skórę. Słuchaj dźwięków wokół siebie, nie oceniając ich.</p><p>W Berlin-Pankow mamy to szczęście, że tuż za progiem mamy przepiękne parki. Wykorzystaj drogę do pracy, przerwę na lunch albo wieczorny spacer, by chodzić w pełni świadomie. Zostaw telefon w kieszeni i podaruj sobie ten czas cichej uwagi. Zdumiewające, ile spokoju może kryć się w czymś tak codziennym jak chodzenie.</p><h2>5. Mini-medytacje</h2><p>Medytacja nie musi trwać pół godziny. Nawet dwie minuty świadomego zatrzymania mogą zrobić odczuwalną różnicę. Rozmieść w ciągu dnia małe kotwice: przed jedzeniem na chwilę zamknij oczy i weź trzy głębokie oddechy. Na czerwonym świetle poczuj dłonie na kierownicy i świadomie zrób wydech. Wieczorem w łóżku przepuść dzień przez myśli, nie oceniając.</p><p>Te mikro-chwile ciszy sumują się. Trenują twój umysł, by raz po raz wracał do teraźniejszości, zamiast pogrążać się w spiralach myśli. I właśnie o to chodzi w jodze: nie o idealną pozycję, lecz o połączenie z samym sobą – oddech po oddechu.</p><blockquote><p>„Joga to nie to, co robisz na macie. To to, co potem niesiesz w świat.”</p></blockquote><p>Wypróbuj jeden lub dwa z tych pomysłów w nadchodzącym tygodniu i obserwuj, co się zmieni. Będziesz zaskoczony, jak szybko joga w całkowicie naturalny sposób wpasuje się w twoją codzienność – bez presji, bez perfekcji, po prostu krok po kroku.</p>"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "5 sposobów na włączenie jogi do codzienności – Runayoga",
+      "seoDescription": "5 prostych sposobów na włączenie jogi do codziennego życia. Praktyczne wskazówki od Runayoga dla większej uważności i równowagi każdego dnia."
+    }
+  },
+  "zones": {}
+}

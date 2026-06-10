@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Yogayı Günlük Hayatına Katmanın 5 Yolu",
+        "subtitle": "Yogayı günlük hayatına katmanın 5 basit yolu. Her gün daha fazla farkındalık ve denge için Runayoga'dan pratik ipuçları.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+        "imageAlt": "Stüdyodaki yoga matları",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Elini vicdanına koy: Düzenli olarak yoga yapmayı kaç kez kendine söz verdin de hep araya bir şey girdi? Günlük hayat dolu, yapılacaklar listesi uzun ve bir noktada yoga matı geri planda kalıyor. Oysa yoga hiç de çok zaman gerektirmez. Sadece güne küçük farkındalık anları katma isteğini gerektirir. İşte bunu yapmana yardımcı olacak beş yol.</p><h2>1. Sabah rutini: 5 ila 10 dakika güneşe selam</h2><p>Sabah sana ait. Daha telefonuna uzanmadan ya da kahveni hazırlamadan, matını ser ve günü birkaç tur Surya Namaskar ile selamla. Güneşe selam, yogadaki en eksiksiz hareket dizilerinden biridir: Tüm vücudu ısıtır, kasları esnetir ve dolaşımı canlandırır.</p><p>Üç yavaş turla başla ve keyfine göre arttır. Bir hafta sonra bile sabahının nasıl değiştiğini fark edeceksin. Güne daha uyanık, daha merkezlenmiş ve bir öz-yeterlilik duygusuyla başlayacaksın. İşin güzel yanı: Ne çok yere ne de özel kıyafete ihtiyacın var. Yatak odası zeminine serilen bir havlu fazlasıyla yeterli.</p><h2>2. Ofiste nefes egzersizleri: Masa başında pranayama</h2><p>İki toplantı arasında ya da yorucu bir telefon konferansının ardından zihnini basit bir nefes egzersiziyle tekrar huzura kavuşturabilirsin. Dik otur, gözlerini kapat ve dört saniye boyunca nefes al, dört saniye tut ve altı saniye boyunca nefes ver. Bunu beş ila sekiz kez tekrarla.</p><p>Bu teknik parasempatik sinir sistemini etkinleştirir – vücudundaki rahatlamadan sorumlu olan sistem. Omuzlarının gevşediğini, çenenin rahatladığını ve düşüncelerinin sakinleştiğini göreceksin. Etrafındaki kimse bunu fark etmeyecek, ama sen farkı anında hissedeceksin.</p><h2>3. Sakinleşmek için akşam Yin Yogası</h2><p>Gün sona ererken sinir sistemin hâlâ tam gaz mı çalışıyor? O zaman uyumadan önce kendine 15 ila 20 dakika Yin Yogası armağan et. Yin Yogası, üç ila beş dakika tuttuğun uzun, pasif esnemelerle çalışır. Mesele performans değil, bırakmaktır.</p><p>Akşamları özellikle iyi gelen pozlar, tırtıl (Caterpillar) gibi öne eğilmeler, kelebek gibi kalça açıcılar ve sırtüstü yatarak yapılan nazik dönüşlerdir. Her pozun içine kendini bırak, derin nefes al ve vücuduna günün gerginliğini salma izni ver. Bu ritüeli alışkanlık hâline getirirsen uykun daha derin ve daha dinlendirici olacak.</p><h2>4. Farkındalıkla yürümek</h2><p>Yoga yalnızca matın üzerinde gerçekleşmez. Bilinçli bir şekilde yaparsan her yürüyüş bir farkındalık egzersizine dönüşebilir. Ayaklarının yere değişini hisset. Havanın teninde nasıl hissettirdiğini algıla. Etrafındaki sesleri yargılamadan dinle.</p><p>Berlin-Pankow'da kapımızın hemen önünde harika parklara sahip olma şansımız var. İşe giderken yürüdüğün yolu, öğle molasını ya da iş çıkışı yürüyüşünü tümüyle bilinçli yürümek için kullan. Telefonu cebinde bırak ve bu sessiz dikkat zamanını kendine armağan et. Yürümek gibi bunca sıradan bir şeyde ne kadar çok huzur olabildiği şaşırtıcı.</p><h2>5. Mini meditasyonlar</h2><p>Meditasyon yarım saat sürmek zorunda değil. İki dakikalık bilinçli bir duruş bile hissedilir bir fark yaratabilir. Güne yayılmış küçük çapalar koy kendine: yemekten önce kısaca gözlerini kapat ve üç derin nefes al. Kırmızı ışıkta direksiyondaki ellerini hisset ve bilinçli olarak nefes ver. Akşam yatakta günü yargılamadan gözden geçir.</p><p>Bu mikro sessizlik anları birikir. Düşünce sarmallarına gömülmek yerine zihnini tekrar tekrar şimdiki ana dönmeye alıştırırlar. Ve yogada asıl mesele tam da budur: Mükemmel poz değil, kendinle olan bağlantı – her bir nefeste.</p><blockquote><p>„Yoga, matın üzerinde yaptığın şey değildir. Yoga, ondan sonra dünyaya taşıdığın şeydir.“</p></blockquote><p>Bu fikirlerden bir ya da ikisini önümüzdeki hafta dene ve neyin değiştiğini gözlemle. Yoganın hiçbir baskı olmadan, mükemmellik olmadan, basitçe adım adım, ne kadar çabuk kendiliğinden günlük hayatına yerleştiğine şaşıracaksın.</p>"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yogayı Günlük Hayatına Katmanın 5 Yolu – Runayoga",
+      "seoDescription": "Yogayı günlük hayatına katmanın 5 basit yolu. Her gün daha fazla farkındalık ve denge için Runayoga'dan pratik ipuçları."
+    }
+  },
+  "zones": {}
+}

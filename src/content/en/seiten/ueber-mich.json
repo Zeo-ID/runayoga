@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Lovely that you're here",
+        "subtitle": "I'm Runa – and I hold a space for you where you may find your way back to stillness.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/runa-monochord-abendlicht.webp",
+        "imageAlt": "Runa with monochord in the evening light",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<h2>Do you know that feeling when your body is crying out for rest?</h2><p>Your neck is tense, your back makes itself known, your thoughts find no rest in the evening. You function – but deep inside you sense a quiet longing: for stillness, for breath, for a real connection to yourself. That is exactly what my space in Berlin-Pankow is here for. Here you may set down what has grown heavy, and feel once again what it is like to be fully with yourself.</p><p>My path began in 1994 with my training as a masseuse and medical bath attendant, which I completed in 1997 – complemented by an internship at a Berlin hospital. Even back then I was fascinated by how closely body, mind and soul are connected: that relaxed shoulders often mean a relaxed heart. Over the years, the classical masseuse became a holistically working therapist who accompanies you with experience and a fine sense for what truly matters.</p><p>With me, it's not about perfect postures or performance. It's about mindful sensing, about the loving encounter with yourself – and about that blissful moment when your breath deepens and the tension falls away from you. In small, protected groups you'll find room to be entirely yourself. Just as you come today, you are exactly right.</p><h2>Experience you can trust</h2><p>Over three decades I have learned, felt and passed on. These qualifications stand behind every session you spend with me:</p><ul><li>Masseuse & medical bath attendant (training 1994–1997)</li><li>Certified yoga teacher (BDY / E-RYT 500)</li><li>Yin Yoga training</li><li>Pilates trainer</li><li>Hawaiian Lomi Lomi Nui massage</li><li>Reiki (all levels)</li><li>Foot reflexology therapy</li><li>Manual lymphatic drainage</li><li>Sound massage</li><li>Fascia training</li><li>Shamanic energy healing work</li><li>Nature coaching</li><li>Teaching at the Terramedus Academy</li><li>Certified prevention course instructor (health insurance approval, § 20 SGB V)</li></ul><p>Because I am a certified prevention course instructor, your health insurance subsidises the prevention courses – good for your back and for your wallet.</p><h2>What you'll find with me</h2><p>I deeply believe that true wellbeing arises holistically – in the body, in the breath, in the heart. For me, yoga is far more than movement on the mat: it is a gentle invitation to move through life with more mindfulness and compassion. In my work I weave together the wisdom of many traditions into something that nourishes and strengthens you – earthy and warm, without dogma.</p><p>I meet you right where you are – whether you're stepping onto a yoga mat for the first time or have been practising for years. You don't need to be able to do anything, and you need to bring nothing but yourself. Let's discover together what truly does you good. <strong>Just write to me – I look forward to getting to know you.</strong></p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Come, take one deep breath",
+        "text": "Your body longs for rest and movement – I accompany you in finding your way back fully to yourself. Write to me, and together we'll figure out what does you good.",
+        "buttonText": "Write to me",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "About Me – Runa Bulla | Yoga, Pilates & Massage in Berlin-Pankow",
+      "seoDescription": "Get to know Runa Bulla: yoga teacher (BDY/E-RYT 500), masseuse & holistic therapist in Berlin-Pankow. Over 30 years of experience, small groups, ZPP-certified with health insurance subsidy. Come to rest and find your way back to yourself."
+    }
+  },
+  "zones": {}
+}

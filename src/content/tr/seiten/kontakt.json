@@ -1,0 +1,32 @@
+{
+  "content": [
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-001",
+        "title": "Hadi iletişime geçelim",
+        "text": "Bazen değişim tek bir cümleyle başlar. Uzun, yoğun günlerin ardından daha fazla huzur istiyorsan, sırtını hissediyorsan ya da sadece yeniden kendine dönmek istiyorsan – bana yaz. Şu an sana neyin iyi geldiğini hiçbir baskı olmadan birlikte buluruz. Bana +49 163 139 1059 numarasından telefonla ve WhatsApp üzerinden ya da runabulla@gmail.com adresine e-posta yoluyla ulaşabilirsin. Stüdyomu Sinnergie'de, Schulzestr. 1, 13187 Berlin-Pankow adresinde bulabilirsin – olduğun gibi var olabileceğin, korunaklı ve sıcak bir alan. Bir çay içmeye uğramaktan çekinme. Seni görmek için sabırsızlanıyorum. Kayıt rica olunur.",
+        "showMap": false,
+        "mapEmbed": ""
+      }
+    },
+    {
+      "type": "Map",
+      "props": {
+        "id": "Map-kontakt",
+        "title": "Senin yerin burada seni bekliyor",
+        "address": "Schulzestr. 1, 13187 Berlin-Pankow",
+        "zoom": 15,
+        "height": 420,
+        "rounded": true
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "İletişim – Runayoga | Berlin-Pankow'da Yoga & Şifa Alanı",
+      "seoDescription": "Runayoga'da huzura kavuş: Berlin-Pankow'da yoga, pilates, masajlar & şamanik şifa çalışması. Bana WhatsApp, e-posta ya da telefonla yaz. Stüdyo Sinnergie'de, Schulzestr. 1, 13187 Berlin. Yerin seni bekliyor."
+    }
+  },
+  "zones": {}
+}

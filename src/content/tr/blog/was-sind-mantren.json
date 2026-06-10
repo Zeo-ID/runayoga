@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Mantralar nedir?",
+        "subtitle": "Binlerce yıldır zihni odaklayan ve olumlu enerjileri açığa çıkaran kutsal heceler, sözcükler ve dizeler. Seslerin gücüne nazik bir giriş.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/runa-monochord-abendlicht.webp",
+        "imageAlt": "Akşam ışığında monokord ile Runa",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Belki bir yoga dersinde daha önce karşına çıkmıştır: başlangıçta birlikte söylenen bir ses, mekânı dolduran hafif bir mırıltı. Mantralar birçok insana yolculuğunda eşlik eder – yine de çoğu kişi ilk seferinde kendine şunu sorar: Bu aslında nedir ve neden bu kadar iyi gelir? Gel buna birlikte bir göz atalım.</p><h2>Mantra nedir?</h2><p>Bir mantra kutsal bir hece, bir sözcük ya da bütün bir dizedir. Mantralarla ilk olarak Hint, Tibet ve Moğol halklarından insanlar ilgilenmiştir. O dönemin kâhinleri seslerin gücünü keşfettiler: Çünkü belirli ritimler ve sesler olumlu enerjileri açığa çıkarır. Bunlar eski Hint dili olan Sanskritçe ile kayda geçirilmiş ve aktarılmıştır.</p><h2>En çok bilinen mantra: „Om“</h2><p>En çok bilinen mantra bugün de hâlâ <strong>„Om“</strong>'dur. Evrenin sesini tanımladığına inanılır ve enerjinin en saf hâlini temsil eder. „Om“ mantrasının yanı sıra elbette farklı amaçlar için kullanılan daha pek çok mantra vardır.</p><h2>Mantralar nasıl çalışılır</h2><p>Mantralar – yüksek sesle ya da kısık sesle – söylenir, şarkı gibi okunur veya zihinde tekrar edilir. Birçok kişi mantralarla ilk kez bir yoga dersinde ya da bir meditasyon seansında tanışır. Dersin başında, sonunda ya da ders boyunca tekrar tekrar seçilmiş bir mantra birlikte söylenir veya seslendirilir.</p><h2>Tekrarlamanın neden bu kadar etkili olduğu</h2><p>Mantraların tekrarlanması, zihni yani düşünceleri odaklamaya ve olumlu zihinsel enerjileri açığa çıkarmaya hizmet eder. Yani amaç, Sanskritçe sözcükleri düşünsel düzeyde „anlamak“ ya da çevirmek değil, daha çok etkilerini enerjetik düzeyde tutuşturmaktır.</p><p>Çünkü seslerin aynı ritimde tekrarlanmasıyla, hem bizim hem de mekânın enerji alanını değiştiren titreşimler oluşur. Bu, zihni sakinleştirebilir, güç verebilir ve bedeni bir gevşeme hâline geçirebilir.</p><blockquote><p>„Belirli ritimler ve sesler olumlu enerjileri açığa çıkarır.“</p></blockquote><p>Sanskritçe bilmene ve hiçbir şeyi doğru yapmana gerek yok. Bir sonraki sefere kendini sadece sese bırak, içindeki titreşimi hisset – ve bunun senin için neyi değiştirdiğine bak.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Mantraları bir yoga dersinde deneyimle",
+        "text": "Berlin-Pankow'daki Runayoga'da ortak bir derste seslerin gücüne dal – hem de hiçbir ön bilgi gerekmeden.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Mantralar nedir? – Runayoga",
+      "seoDescription": "Mantra nedir? Runayoga'dan sıcak bir giriş: kökeni, „Om“ mantrası ve tekrarlamanın zihni nasıl odakladığı ve enerjiyi nasıl açığa çıkardığı.",
+      "date": "2024-03-19"
+    }
+  },
+  "zones": {}
+}

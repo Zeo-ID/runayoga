@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "5 Ways to Integrate Yoga Into Your Everyday Life",
+        "subtitle": "5 simple ways to integrate yoga into your everyday life. Practical tips from Runayoga for more mindfulness and balance every day.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+        "imageAlt": "Yoga mats in the studio",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Hand on heart: how often have you resolved to do yoga regularly, only to have something always get in the way? Everyday life is full, the to-do list is long, and at some point the yoga mat falls by the wayside. Yet yoga doesn't take much time at all. It only takes the willingness to weave small moments of mindfulness into your day. Here are five ways to help you do just that.</p><h2>1. Morning Routine: 5 to 10 Minutes of Sun Salutation</h2><p>The morning belongs to you. Before you even reach for your phone or put on the coffee, roll out your mat and greet the day with a few rounds of Surya Namaskar. The sun salutation is one of the most complete sequences in yoga: it warms up the entire body, stretches the muscles and gets your circulation going.</p><p>Begin with three slow rounds and increase as you feel inspired. After just one week you will notice how your morning changes. You start the day more awake, more centred and with a sense of self-efficacy. The wonderful thing about it: you need neither much space nor special clothing. A towel on the bedroom floor is perfectly enough.</p><h2>2. Breathing Exercises at the Office: Pranayama at Your Desk</h2><p>Between two meetings or after a stressful conference call, you can bring your mind back to calm with a simple breathing exercise. Sit up straight, close your eyes and breathe in for four seconds, hold for four seconds and breathe out for six seconds. Repeat this five to eight times.</p><p>This technique activates your parasympathetic nervous system – the system in your body responsible for relaxation. You will notice your shoulders loosening, your jaw relaxing and your thoughts becoming calmer. No one around you will notice a thing, but you will feel the difference right away.</p><h2>3. Evening Yin Yoga to Wind Down</h2><p>The day is drawing to a close and your nervous system is still running at full speed? Then treat yourself to 15 to 20 minutes of Yin Yoga before going to bed. Yin Yoga works with long, passive stretches that you hold for three to five minutes. It is not about performance, but about letting go.</p><p>Especially soothing in the evening are forward bends such as the Caterpillar, hip openers such as the Butterfly and gentle twists while lying on your back. Allow yourself to sink into each posture, breathe deeply and let your body release the tension of the day. Your sleep will be deeper and more restful once you make this ritual a habit.</p><h2>4. Mindful Walking</h2><p>Yoga does not only happen on the mat. Every walk can become a mindfulness exercise if you approach it consciously. Feel how your feet touch the ground. Notice how the air feels on your skin. Listen to the sounds around you without judging them.</p><p>In Berlin-Pankow we are fortunate to have beautiful parks right on our doorstep. Use your way to work, your lunch break or your evening stroll to walk with full awareness. Leave your phone in your pocket and give yourself this time of quiet attention. It is astonishing how much calm can be found in something as everyday as walking.</p><h2>5. Mini Meditations</h2><p>Meditation does not have to last half an hour. Even two minutes of conscious pause can make a noticeable difference. Set yourself small anchors throughout the day: before eating, briefly close your eyes and take three deep breaths. At a red light, feel your hands on the steering wheel and consciously breathe out. In the evening in bed, review the day without judging it.</p><p>These micro-moments of stillness add up. They train your mind to return to the present again and again, instead of getting lost in spirals of thought. And that is exactly what yoga is about: not the perfect posture, but the connection to yourself – breath by breath.</p><blockquote><p>“Yoga is not what you do on the mat. It is what you carry out into the world afterwards.”</p></blockquote><p>Try one or two of these ideas in the coming week and observe what changes. You will be surprised how quickly yoga settles quite naturally into your everyday life – without pressure, without perfection, simply step by step.</p>"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "5 Ways to Integrate Yoga Into Your Everyday Life – Runayoga",
+      "seoDescription": "5 simple ways to integrate yoga into your everyday life. Practical tips from Runayoga for more mindfulness and balance every day."
+    }
+  },
+  "zones": {}
+}

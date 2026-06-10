@@ -1,0 +1,32 @@
+{
+  "content": [
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-001",
+        "title": "Nawiążmy kontakt",
+        "text": "Czasami zmiana zaczyna się od jednego zdania. Jeśli po długich, wypełnionych dniach pragniesz więcej spokoju, czujesz swoje plecy albo po prostu chcesz znów wrócić do siebie – napisz do mnie. Wspólnie odkryjemy, co właśnie teraz ci służy, całkiem bez presji. Możesz się ze mną skontaktować telefonicznie i przez WhatsApp pod numerem +49 163 139 1059 lub mailowo na runabulla@gmail.com. Moje studio znajdziesz w Sinnergie, Schulzestr. 1, 13187 Berlin-Pankow – chronione, ciepłe miejsce, w którym możesz być taka, jaka jesteś. Wpadnij chętnie na herbatę. Cieszę się na spotkanie z tobą. Zapisy mile widziane.",
+        "showMap": false,
+        "mapEmbed": ""
+      }
+    },
+    {
+      "type": "Map",
+      "props": {
+        "id": "Map-kontakt",
+        "title": "Tutaj czeka na ciebie twoje miejsce",
+        "address": "Schulzestr. 1, 13187 Berlin-Pankow",
+        "zoom": 15,
+        "height": 420,
+        "rounded": true
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Kontakt – Runayoga | Joga i przestrzeń uzdrawiania w Berlin-Pankow",
+      "seoDescription": "Wycisz się w Runayoga: joga, pilates, masaże i szamańska praca uzdrawiająca w Berlin-Pankow. Napisz do mnie przez WhatsApp, e-mail lub zadzwoń. Studio w Sinnergie, Schulzestr. 1, 13187 Berlin. Twoje miejsce czeka."
+    }
+  },
+  "zones": {}
+}

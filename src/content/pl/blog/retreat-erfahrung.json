@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Moje pierwsze retreat: Podróż do samej siebie",
+        "subtitle": "Relacja z doświadczenia: Moje pierwsze retreat jogowe z Runayoga. Osobista podróż do samej siebie z jogą, naturą i wspólnotą.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/stock-thumbnail-2.webp",
+        "imageAlt": "Dom retreatowy w naturze",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p><em>Osobista relacja z doświadczenia Leny, uczestniczki jesiennego retreatu 2025.</em></p><p>Kiedy zapisałam się na retreat u Runy, nie wiedziałam dokładnie, co mnie czeka. Wiedziałam tylko, że potrzebuję przerwy. Nie zwykłego urlopu z napiętym programem, lecz prawdziwej ciszy. Przestrzeni, by zaczerpnąć oddechu. Miejsca, w którym nie musiałam być nikim innym niż sobą. To, co potem nastąpiło, poruszyło mnie głębiej, niż kiedykolwiek mogłabym sobie wyobrazić.</p><h2>Przybycie i odpuszczenie</h2><p>Już sam dojazd miał w sobie coś medytacyjnego. Im bardziej oddalałam się od miasta, tym ciszej się robiło – nie tylko na zewnątrz, ale i we mnie. Gdy dotarłam, Runa stała przed domem i powitała nas ciepłym uśmiechem. Żadnych pogawędek, żadnego programu, który miałby nas od razu zająć. Zamiast tego proste zaproszenie: „Przybądź. Zostaw tutaj po prostu wszystko, co ze sobą przynosisz.“</p><p>Pokój był prosty i przytulny. Drewniane meble, łóżko pachnące lawendą, okno z widokiem na stare drzewa. Schowałam telefon do szuflady i zamknęłam ją. Po raz pierwszy od miesięcy nie miałam żadnych powiadomień, żadnych terminów, żadnego powodu, by patrzeć na ekran. Czułam się dziwnie – a jednocześnie jak uwolniona.</p><h2>Rytm dni</h2><p>Każdego ranka zaczynaliśmy o siódmej łagodną sesją jogi. Żadnych akrobatycznych pozycji, żadnych osiągnięć – zamiast tego powolne, świadome ruchy, którym towarzyszył spokojny głos Runy. To było tak, jakby wyściełała przestrzeń niewidzialnym kocem poczucia bezpieczeństwa.</p><p>Po wspólnym śniadaniu mieliśmy wolny czas. Niektórzy spacerowali po lesie, inni czytali albo po prostu siedzieli i patrzyli w niebo. Po południu odbywała się głębsza praktyka: Yin Yoga, Pranayama albo prowadzone medytacje. Każda sesja miała swój temat – zaufanie, współczucie, odpuszczanie. Runa mówiła niewiele, ale każde słowo trafiało w sedno.</p><p>Wieczorami wspólnie śpiewaliśmy Mantra. Nigdy wcześniej nie śpiewałam Mantry i na początku czułam się skrępowana. Ale gdy głosy grupy połączyły się w jedno brzmienie, coś we mnie się rozpuściło. Słowa były w sanskrycie, ale moje serce i tak je rozumiało.</p><h2>Ceremonia szamańska</h2><p>W sobotni wieczór Runa zaprosiła na ceremonię szamańską. Świece, kadzidło, krąg z poduszek. Nie miałam żadnych oczekiwań, a zarazem byłam zdenerwowana. Runa wyjaśniła, że ceremonia ma na celu wejście w kontakt z głębszymi warstwami naszej duszy – nie poprzez rozum, lecz poprzez ciało i intuicję.</p><p>To, co potem nastąpiło, trudno ująć w słowa. Poprzez dźwięki bębnów, śpiew i prowadzone spojrzenie w głąb siebie odnalazłam w sobie miejsce, o którym dawno zapomniałam. Łzy płynęły, choć nie wiedziałam dokładnie dlaczego. Nie było to smutne – było wyzwalające. Tak jakby moje ciało czekało na ten moment, by uwolnić coś, co zbyt długo ze sobą nosiłam.</p><p>Runa trzymała przestrzeń z obecnością, która głęboko mnie poruszyła. Była przy nas, nie naciskając. Widziała, nie oceniając. W tych bezpiecznych ramach mogłam się poddać – być może po raz pierwszy naprawdę.</p><h2>Co wzięłam ze sobą</h2><p>W niedzielny poranek, gdy pakowałam torbę, czułam się jak inny człowiek. Nie dlatego, że doznałam jakiegoś wielkiego olśnienia, nie dlatego, że nagle wszystko się zmieniło. Lecz dlatego, że znów poczułam, kim tak naprawdę jestem pod całym tym funkcjonowaniem. Pod rolami, obowiązkami, codziennym zgiełkiem.</p><p>To, co wzięłam ze sobą, nie zmieści się w żadnej walizce. To uczucie ciszy, które teraz mogę przywołać w każdej chwili. Gdy codzienność staje się zbyt głośna, zamykam oczy i znów tam jestem: w tym kręgu, przy świecach, z dźwiękiem Mantry w uszach i głęboką pewnością, że wszystko, czego potrzebuję, już jest we mnie.</p><blockquote><p>„Czasem musisz się oddalić, by znów dotrzeć do siebie.“</p></blockquote><p>Jeśli zastanawiasz się, czy retreat jest czymś dla ciebie: zrób to. Nie kiedyś. Nie wtedy, gdy wszystko będzie pasować. Teraz. Twoje przyszłe „ja“ będzie ci wdzięczne.</p><p><em>-- Lena M., Berlin</em></p>"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Moje pierwsze retreat: Podróż do samej siebie – Runayoga",
+      "seoDescription": "Relacja z doświadczenia: Moje pierwsze retreat jogowe z Runayoga. Osobista podróż do samej siebie z jogą, naturą i wspólnotą."
+    }
+  },
+  "zones": {}
+}

@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Joga to nie sport: Jak może się zmienić twoje nastawienie do ciała",
+        "subtitle": "Joga ma o wiele więcej do zaoferowania niż ruch. Daje ci świadomość ciała i pomaga znaleźć twoją własną równowagę w codziennym życiu.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/deko-palmblaetter.webp",
+        "imageAlt": "Liście palmowe w świetle",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p><em>Runa Bulla &bull; 29 lipca 2019</em></p><p><strong>Joga to nie sport!</strong> Nie, joga ma o wiele więcej do zaoferowania.</p><p>Świadomość ciała jest na ustach wszystkich, a mimo to często bywa tak, że cieszymy się, że nasze ciało funkcjonuje i jest sprawne. Polegamy na tym, że po prostu współgra, dzień po dniu, bez tego, byśmy poświęcali mu większą uwagę.</p><p>Najpóźniej wtedy, gdy dają o sobie znać choroby i nie możemy już ignorować tych znaków, zaczynamy zastanawiać się, dlaczego tak właściwie jest. Najczęściej wyjaśnieniami są stres, brak czasu na powolne i zdrowe posiłki, zbyt mało ruchu w codziennym życiu.</p><h2>Każdy człowiek jest inny &ndash; i to jest dobrze</h2><p>Każdy człowiek jest indywidualny i ma różne potrzeby we wszystkich dziedzinach życia. To, co służy jednemu, dla drugiej może być zbyt wiele lub zbyt mało. Właśnie dlatego nie istnieje uniwersalny przepis, który obowiązuje wszystkich.</p><p>Sztuką jest życie tą indywidualną równowagą z dużym wyczuciem i zręcznością w codziennym życiu. To jest warunek, by zachować zdrowie!</p><blockquote><p>Sztuką jest życie twoją indywidualną równowagą z dużym wyczuciem i zręcznością w codziennym życiu.</p></blockquote><h2>Jak do tego dojść?</h2><p>Przede wszystkim potrzebuję wyczucia, co i w jakim stopniu służy mojemu ciału. Tutaj do gry wchodzi joga.</p><p>Na macie do jogi praktykuję z uwagą i dużym wyczuciem dla mojego ciała. Uczę się badać moje osobiste granice lub też dopiero je poznawać. Nie chodzi o to, by coś osiągnąć ani by być lepszym niż wczoraj. Chodzi o to, by wsłuchać się i dostrzec, co właśnie jest.</p><p>Właśnie to uważne połączenie z samym sobą sprawia, że joga jest tak cenna. Jest podstawą tego, by znaleźć swoją własną równowagę i ostrożnie przenosić ją do codziennego życia.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Poznaj swoje ciało z uważnością",
+        "text": "Chcesz doświadczyć, jak joga czuje się poza wymiarem osiągnięć? Chętnie towarzyszę ci na twojej drodze ku większej świadomości ciała.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Joga to nie sport: Co robi z ciałem – Runayoga",
+      "seoDescription": "Joga to nie sport: Wspiera świadomość ciała i pomaga znaleźć twoją indywidualną równowagę w codziennym życiu – jako warunek zachowania zdrowia.",
+      "date": "2019-07-29"
+    }
+  },
+  "zones": {}
+}

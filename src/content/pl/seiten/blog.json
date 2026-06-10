@@ -1,0 +1,43 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-blog",
+        "title": "Zatrzymaj się i czytaj",
+        "subtitle": "Delikatne impulsy dla większego spokoju, rozluźnionych pleców i dobrego samopoczucia we własnym ciele – myśli z mojej praktyki dla Twojej codzienności.",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "BlogList",
+      "props": {
+        "id": "BlogList-blog",
+        "title": "",
+        "count": 12,
+        "layout": "grid",
+        "showImage": true,
+        "showDate": true,
+        "showExcerpt": true
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-blog",
+        "title": "Masz ochotę poczuć to samodzielnie?",
+        "text": "Słowa na ekranie to jedno – głębokie oddychanie na macie to coś zupełnie innego. Przyjdź do małej, bezpiecznej grupy, pozwól, by dzień z Ciebie opadł, i odnajdź drogę z powrotem do siebie. Po prostu do mnie napisz, cieszę się na Ciebie.",
+        "buttonText": "Napisz do mnie",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Blog – joga, uważność i wewnętrzny spokój | Runayoga Berlin-Pankow",
+      "seoDescription": "Delikatne impulsy dla mniejszego stresu, rozluźnionych pleców i większego spokoju w codzienności: blog Runayoga autorstwa Runa Bulla o jodze, oddechu i uważności w Berlin-Pankow."
+    }
+  },
+  "zones": {}
+}

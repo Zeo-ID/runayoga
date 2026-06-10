@@ -1,0 +1,55 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Pilates – İçeriden gelen güç",
+        "subtitle": "Güçlü bir merkez seni her gün boyunca taşır – dik, hareketli, ağrısız.",
+        "buttonText": "Yerini ayırt",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "Fiyatları gör",
+        "secondButtonLink": "/preise",
+        "image": "/images/runa/deko-tennisball.webp",
+        "imageAlt": "Küçük aletlerle antrenman",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Uzun bir günün ardından belinin alt kısmındaki o çekilme hissini bilir misin? Bir şekilde çökmüş halde hayatın içinden geçme duygusunu? Pilates tam da gücünün doğduğu yerden başlar – merkezinden. Bilinçli, kontrollü hareketle ve her egzersizi taşıyan nefesle çalışıyoruz. Bedeninin içeriden dışarıya doğru nasıl dikleştiğini hissedersin.</p><p>Ve bu yalnızca matla sınırlı kalmaz. Birkaç hafta sonra bunu günlük hayatında fark edersin: Daha dik durursun, alışveriş torbalarını daha kolay kaldırırsın, gerginlik olmadan daha uzun süre oturursun. Belin daha sakin, duruşun daha emin olur – sanki seni taşıyan içsel bir dayanak bulmuş gibi.</p><p>İster klasik Pilates, ister hedefe yönelik sırt-fit, ister doğum öncesi ve sonrası için nazik bir antrenman olsun – seni tam olarak bulunduğun yerden alırım. Küçük gruplarda her katılımcıyı görür, nazikçe düzeltir ve her egzersizi senin bedenine uyarlarım. Burada hiçbir şey yapabilmek ve hiçbir şey kanıtlamak zorunda değilsin. Kendini güvende hissedebilir ve kendi tempında büyüyebilirsin.</p><p>Pilates kurslarım § 20 SGB V uyarınca önleme kursları olarak sertifikalandırılmıştır (Zentrale Prüfstelle Prävention). Yani: Yasal sağlık sigortan masrafların %80'ine kadarını üstlenir. Sadece sigortana sor – ya da bana yaz, sana memnuniyetle yardımcı olurum.</p><h2>Matta seni neler bekliyor</h2><ul><li>Sertifikalı önleme kursları – sağlık sigortandan %80'e kadar destek</li><li>Derin kaslarını uyandıran, küçük aletlerle nazik antrenman</li><li>Sağlam bir merkez ve dik, ağrısız bir duruş</li><li>Gerçekten görüldüğün küçük gruplar</li><li>Bedenine uygun egzersizler – ister yeni başlayan ister deneyimli ol</li><li>Özel kurslar: Sırt-fit ile müstakbel ve yeni anneler için prenatal ve postnatal</li></ul>"
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-kurs",
+        "title": "Bir sonraki kurs bloğun – yerini ayırt",
+        "text": "<p><strong>10 ünite · 200 €</strong> – sağlık sigortan sana %80'e kadarını geri öder. Çoğu zaman sana yalnızca küçük bir katkı payı kalır.</p><p>Salı günleri 18:00–19:00 · küçük aletlerle<br>Bir sonraki kurs bloğu: 25.08.–17.11.2026 (Ara 13.–17.10.2026)</p><p>Grup bilinçli olarak küçük tutuluyor – yerler doluyken erken katıl.</p><p>Yer: Sinnergie, Schulzestr. 1, 13187 Berlin-Pankow</p><p><em>„Physical fitness is the first requisite of happiness.“ – Joseph Pilates</em></p>",
+        "image": "",
+        "imageAlt": "",
+        "imagePosition": "left"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Güçlü ve özgür bir merkez için hazır mısın?",
+        "text": "Bana kısaca yaz – kursun nasıl işlediğini sana memnuniyetle anlatırım ve yerini ayırırım. Bağlayıcı olmadan ve tamamen kendi tempında.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Berlin-Pankow'da Pilates – güçlü merkez, özgür sırt | Runayoga",
+      "seoDescription": "Berlin-Pankow'da güçlü bir merkez ve ağrısız bir sırt için nazik Pilates önleme kursları. 10 ünite 200 €, ZPP sertifikalı, %80'e kadar sigorta desteği, küçük gruplar. Runayoga'da yerini ayırt."
+    }
+  },
+  "zones": {}
+}

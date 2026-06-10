@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Oddech i tonowanie podczas porodu",
+        "subtitle": "Jak głęboki oddech brzuszny i tonowanie prowadzą cię przez skurcze, utrzymują obecność i delikatnie rozluźniają miednicę oraz szyjkę macicy.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-tonfigur-schwangere.webp",
+        "imageAlt": "Gliniana figurka kobiety w ciąży",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Dla wielu kobiet, które są na początku swojej ciąży i zaczynają kurs jogi, głęboki oddech brzuszny jest czymś zupełnie nowym. Doświadczone joginki mają tutaj niewielką przewagę, ponieważ jest to kwestia praktyki, aby w codziennym życiu wciąż na nowo uświadamiać sobie swój oddech. Ale nie martw się: każdy oddech, który bierzesz świadomie, jest już krokiem na tej drodze.</p><h2>Oddech jako towarzysz podczas skurczów</h2><p>W odniesieniu do porodu oddech jest cudownym wsparciem dla skurczów. Jest zawsze przy tobie, nie musisz nic przynosić ani uczyć się niczego, co pozostanie ci obce. Musisz tylko pamiętać, aby pozwolić mu płynąć.</p><p>Dzięki głębokiemu oddechowi brzusznemu skierowanemu ku dziecku wspierany jest skurcz macicy. Twój oddech i praca twojego ciała idą ręka w rękę, zamiast działać przeciwko sobie.</p><h2>Pozostać obecną dzięki długiemu wydechowi</h2><p>Długi wydech na jednym dźwięku lub z twoją mantrą porodową utrzymuje cię obecną w twoim ciele i mentalnie świadomą podczas pracy porodowej. Zamiast gubić się w napięciu lub lęku, z każdym wydechem wracasz z powrotem do siebie i do swojego dziecka.</p><h3>Dlaczego tonowanie rozluźnia ciało</h3><p>Podczas tonowania z luźnym stawem żuchwowym również miednica i szyjka macicy pozostają rozluźnione. Żuchwa i miednica są w subtelny sposób ze sobą połączone: tam, gdzie żuchwa staje się miękka, również miednica może się otworzyć.</p><h2>Dźwięki i mantry, które cię niosą</h2><p>Przy tym tonowanie długiego <strong>A</strong> jest bardzo pomocne. Tak samo może ci jednak towarzyszyć twoja <strong>mantra porodowa</strong>, na przykład wdech na <em>ja</em> i wydech na <em>otwieram się</em> &ndash; lub po prostu pozytywne <em>tak</em>.</p><ul><li><strong>Głęboki oddech brzuszny ku dziecku:</strong> wspiera skurcz macicy.</li><li><strong>Długi wydech na jednym dźwięku lub twojej mantrze:</strong> utrzymuje cię obecną w ciele i umyśle.</li><li><strong>Tonowanie z luźną żuchwą:</strong> utrzymuje miednicę i szyjkę macicy rozluźnione.</li><li><strong>Długie A, mantra lub pozytywne tak:</strong> słowa i dźwięki, które cię niosą.</li></ul><blockquote><p>Tam, gdzie żuchwa staje się miękka, również miednica może się otworzyć.</p></blockquote><p>Wypróbuj głęboki oddech brzuszny i tonowanie już w czasie ciąży w swojej praktyce jogi, aby w dniu porodu były ci znajome. W ten sposób z czegoś nowego z czasem staje się spokojny, pełen mocy towarzysz &ndash; oddech za oddechem, dźwięk za dźwiękiem.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Przygotuj się delikatnie do swojego porodu",
+        "text": "Na kursach dla kobiet w ciąży w Runayoga w Berlin-Pankow poznajesz głęboki oddech brzuszny i tonowanie całkowicie w swoim tempie. Napisz do mnie chętnie, jeśli chcesz wziąć udział.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Oddech i tonowanie podczas porodu – Runayoga",
+      "seoDescription": "Jak głęboki oddech brzuszny i tonowanie wspierają poród: oddech pomaga skurczom, długi wydech utrzymuje obecność i rozluźnia miednicę oraz szyjkę macicy.",
+      "date": "2021-06-18"
+    }
+  },
+  "zones": {}
+}

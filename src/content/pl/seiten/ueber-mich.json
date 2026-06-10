@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Cieszę się, że tu jesteś",
+        "subtitle": "Jestem Runa – i tworzę dla ciebie przestrzeń, w której znów możesz się wyciszyć.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/runa-monochord-abendlicht.webp",
+        "imageAlt": "Runa z monochordem w wieczornym świetle",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<h2>Znasz to uczucie, gdy twoje ciało woła o odpoczynek?</h2><p>Napięty kark, dający o sobie znać kręgosłup, myśli, które wieczorem nie znajdują spokoju. Funkcjonujesz – ale głęboko w sobie czujesz ciche pragnienie: spokoju, oddechu, prawdziwego połączenia z samą sobą. Właśnie dla tego istnieje moja przestrzeń w Berlin-Pankow. Tutaj możesz odłożyć to, co stało się ciężkie, i znów poczuć, jak to jest być w pełni przy sobie.</p><p>Moja droga zaczęła się w 1994 roku od kształcenia na masażystkę i medyczną kąpielową, które ukończyłam w 1997 roku – uzupełnione praktyką w berlińskim szpitalu. Już wtedy fascynowało mnie, jak ściśle ciało, umysł i dusza są ze sobą powiązane: że rozluźnione barki często oznaczają rozluźnione serce. Z klasycznej masażystki przez lata stała się holistycznie pracująca terapeutka, która towarzyszy ci z doświadczeniem i subtelnym wyczuciem tego, co istotne.</p><p>U mnie nie chodzi o perfekcyjne pozycje czy osiągnięcia. Chodzi o uważne czucie, o pełne miłości spotkanie z samą sobą – i o ten błogi moment, w którym twój oddech staje się głębszy, a napięcie z ciebie opada. W małych, bezpiecznych grupach znajdziesz miejsce, by być w pełni sobą. Taka, jaka przychodzisz dzisiaj, jesteś dokładnie w porządku.</p><h2>Doświadczenie, któremu możesz zaufać</h2><p>Przez ponad trzy dekady uczyłam się, czułam i przekazywałam dalej. Te kwalifikacje stoją za każdą godziną, którą spędzasz u mnie:</p><ul><li>Masażystka i medyczna kąpielowa (kształcenie 1994–1997)</li><li>Certyfikowana nauczycielka jogi (BDY / E-RYT 500)</li><li>Szkolenie Yin Yoga</li><li>Trenerka pilatesu</li><li>Hawajski masaż Lomi Lomi</li><li>Reiki (wszystkie stopnie)</li><li>Refleksoterapia stóp</li><li>Manualny drenaż limfatyczny</li><li>Masaż dźwiękiem</li><li>Trening powięziowy</li><li>Szamańsko-energetyczna praca uzdrawiająca</li><li>Coaching w naturze</li><li>Działalność wykładowcza w Akademii Terramedus</li><li>Certyfikowana prowadząca kursy profilaktyczne (dopuszczenie kas chorych, § 20 SGB V)</li></ul><p>Ponieważ jestem certyfikowaną prowadzącą kursy profilaktyczne, twoja kasa chorych dofinansowuje kursy profilaktyczne – dobre dla twojego kręgosłupa i dla twojego portfela.</p><h2>Co znajdziesz u mnie</h2><p>Głęboko wierzę, że prawdziwe dobre samopoczucie powstaje holistycznie – w ciele, w oddechu, w sercu. Joga jest dla mnie czymś znacznie więcej niż ruchem na macie: to delikatne zaproszenie, by przejść przez życie z większą uważnością i współczuciem. W mojej pracy łączę mądrość wielu tradycji w coś, co cię odżywia i wzmacnia – ziemiście i serdecznie, bez dogmatu.</p><p>Odbieram cię tam, gdzie właśnie jesteś – niezależnie od tego, czy po raz pierwszy stajesz na macie do jogi, czy praktykujesz od lat. Nie musisz nic umieć i niczego przynosić poza sobą samą. Odkryjmy razem, co naprawdę ci służy. <strong>Po prostu napisz do mnie – cieszę się, że cię poznam.</strong></p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Przyjdź, odetchnij raz głęboko",
+        "text": "Twoje ciało tęskni za spokojem i ruchem – towarzyszę ci w tym, byś znów w pełni dotarła do siebie. Napisz do mnie, a wspólnie odkryjemy, co ci służy.",
+        "buttonText": "Napisz do mnie",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "O mnie – Runa Bulla | Joga, pilates i masaż w Berlin-Pankow",
+      "seoDescription": "Poznaj Runę Bullę: nauczycielkę jogi (BDY/E-RYT 500), masażystkę i holistyczną terapeutkę w Berlin-Pankow. Ponad 30 lat doświadczenia, małe grupy, certyfikat ZPP z dofinansowaniem kasy chorych. Wycisz się i odnajdź drogę do siebie."
+    }
+  },
+  "zones": {}
+}

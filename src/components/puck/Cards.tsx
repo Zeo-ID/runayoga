@@ -1,13 +1,18 @@
 "use client";
 
+import { t } from "../../data/ui";
+import type { Locale } from "../../lib/i18n";
+
 export function Cards({
   title,
   columns = 3,
   cards,
+  locale = "de",
 }: {
   title: string;
   columns: number;
   cards: { title: string; text: string; image: string; link: string }[];
+  locale?: Locale;
 }) {
   const colClass =
     columns === 2
@@ -46,7 +51,7 @@ export function Cards({
             }}
           >
             <div style={{ maxWidth: 620 }}>
-              <span className="kicker">✦ Entdecken</span>
+              <span className="kicker">✦ {t("Entdecken", locale)}</span>
               <h2 className="display-sm" style={{ marginTop: "1.1rem" }}>
                 {title}
               </h2>
@@ -56,7 +61,7 @@ export function Cards({
               aria-hidden="true"
               style={{ fontSize: "1.05rem", color: "var(--color-text-muted)", whiteSpace: "nowrap", paddingBottom: ".4rem" }}
             >
-              {String(list.length).padStart(2, "0")} {list.length === 1 ? "Eintrag" : "Einträge"}
+              {String(list.length).padStart(2, "0")} {list.length === 1 ? t("Eintrag", locale) : t("Einträge", locale)}
             </span>
           </header>
         )}
@@ -179,7 +184,7 @@ export function Cards({
                       className="link-arrow"
                       style={{ marginTop: "1.4rem", fontSize: ".9rem" }}
                     >
-                      Mehr erfahren
+                      {t("Mehr erfahren", locale)}
                       <span className="ry-arrow" aria-hidden="true" style={{ transition: "transform var(--transition)" }}>
                         →
                       </span>

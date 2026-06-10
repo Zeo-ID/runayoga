@@ -1,0 +1,55 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Derin bir nefes al. Kendine gel.",
+        "subtitle": "Berlin-Pankow'da yoga – bedeninin yumuşadığı, nefesinin sakinleştiği ve zihninin nihayet sustuğu korunaklı bir alan.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "Fiyatlara bak",
+        "secondButtonLink": "/preise",
+        "image": "/images/runa/retreat-yurte-savasana.webp",
+        "imageAlt": "Savasana'da derin gevşeme",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Zihnin durup dinlenmek bilmediği o hissi tanıyor musun? Omuzların kulaklarına kadar yükselir, sırtın sızlar ve sadece var olabileceğin bir yere özlem duyarsın. İşte tam da bu yeri senin için yaratıyorum. Yoga benim için minderdeki beden hareketlerinden çok daha fazlası – kendine bir eve dönüştür. Berlin-Pankow'daki stüdyomda küçük, kişisel gruplarda Hatha Yoga, Vinyasa Flow ve Yin Yoga öğretiyorum. Önemli olan kusursuz duruş değil, senin kendine özgü deneyimindir.</p><p>Bir dersin ardından minderden kalktığını hayal et: nefesin derin ve sakin, sırtın daha uzun ve özgür, içindeki gürültü susmuş. Buna içtenlikle inanıyorum – her beden yoga yapabilir. İster minderin üzerine ilk kez çıkıyor ol, ister yıllardır pratik yapıyor, seni tam da bulunduğun yerden alıyorum. Farkındalık, bilinçli nefes ve nazik, anlayışlı düzeltmelerle bedenini yeniden hissetmen ve eski yükleri bırakman için sana eşlik ediyorum.</p><p>Bunun için derin bir cebe ihtiyacın yok: Önleyici kurslarım § 20 SGB V uyarınca sertifikalıdır (Zentrale Prüfstelle Prävention) ve çoğu yasal sağlık sigortası tarafından % 80'e varan oranda desteklenir. Ve gündelik hayat stüdyoya gitmek için zaman bırakmadığında, çevrimiçi pratik yapıyoruz – böylece huzur adan her zaman elinin altında kalır.</p><h2>Burada kendine bunu armağan ediyorsun</h2><ul><li>Seni gerçekten gördüğüm ve bireysel olarak eşlik ettiğim küçük gruplar</li><li>Tüm seviyeler içtenlikle hoş geldi – ilk nefesten deneyimli pratiğe kadar</li><li>Sağlık sigortası sertifikalı önleyici kurslar (§ 20 SGB V) % 80'e varan geri ödemeyle – sana neredeyse hiçbir maliyeti olmayan sağlık</li><li>Tamamen kişisel yolun için birebir dersler</li><li>Hayatına esnekçe uyum sağlayan çevrimiçi yoga</li><li>Hatha, Vinyasa ve Yin Yoga – nazikçe güçlendiren ya da derinden gevşeten, tam da o an neye ihtiyacın varsa</li></ul><h2>Yoga senin için doğru olan mı?</h2><p>Dolu gündelik hayatına denge arıyorsan, sırtını nihayet rahatlatmak ya da yalnızca yeniden derin bir nefes almak istiyorsan – evet, o zaman tam da burada doğru yerdesin. Hamilelikte ve doğumdan sonra da uyarlanmış egzersizlerle sana özenle eşlik ediyorum. Önbilgiye ya da bir profesyonelin esnekliğine ihtiyacın yok. Yalnızca kendine ihtiyacın var. Bana yaz, sana neyin iyi geleceğini birlikte bulalım.</p>"
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-kurs",
+        "title": "Salı akşamın yalnızca sana ait – Yoga Yin & Yang",
+        "text": "<p>Nazikçe güçlendiren ve derinden bırakan – yeni başlayanlar ve yeniden başlamak isteyen herkes için mükemmel. <strong>Salı günleri 19:15–20:30</strong>, seni hafta boyunca güvenilir biçimde taşıyan 8 ya da 10 haftalık kurs olarak.</p><p><strong>2026 kurs blokları:</strong><br>14.04.–16.06.2026 (Paskalya tatilinde ara)<br>25.08.–17.11.2026 (13.–27.10.2026 arası kurs yok)</p><p>ZPP sertifikalı (§ 20 SGB V) · % 80'e varan sigorta geri ödemesi<br>Yer: Sinnergie, Schulzestr. 1, 13187 Berlin-Pankow</p><p>Her birinizin görülebilmesi için yerler bilinçli olarak sınırlı. Boş olduğu sürece yerini güvenceye al.</p>",
+        "image": "",
+        "imageAlt": "",
+        "imagePosition": "left"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Kendine ilk nefesi armağan et",
+        "text": "Hissetmeden karar vermek zorunda değilsin. Bana yaz, senin için doğru hissettiren kursu birlikte bulalım – hiçbir baskı olmadan.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Berlin-Pankow'da Yoga – nihayet derin bir nefes | Runayoga",
+      "seoDescription": "Berlin-Pankow'da küçük gruplarda Hatha, Vinyasa & Yin Yoga. Stresi ve sırt ağrılarını bırak ve kendine gel. % 80'e varan sigorta geri ödemeli ZPP sertifikalı önleyici kurslar – Runayoga'da hemen yerini güvenceye al."
+    }
+  },
+  "zones": {}
+}

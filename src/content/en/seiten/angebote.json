@@ -1,0 +1,90 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Arrive. Breathe.",
+        "subtitle": "A protected space for your body, your mind and your soul – right in the heart of Berlin-Pankow.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/teaser-2.webp",
+        "imageAlt": "",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Maybe you know the feeling: your head is full, your shoulders are pulled up tight, your back is making itself known, and deep inside there is this quiet longing for stillness – for a place where you are simply allowed to be <em>you</em>. That is exactly what I am here for.</p><p>I am Runa, and I have been guiding you for many years with yoga, Pilates and massages, with shamanic healing work, mantra singing and the women's wheel of the year. Here you are not judged but held. In small groups, in a warm, protected space, you find your way back step by step to more lightness, strength and connection – with yourself.</p><p><strong>Simply feel into what is calling you right now.</strong> Browse through the offerings below – and if you like, write to me. Together we will figure out what is good for you.</p>"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-001",
+        "title": "",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "Yoga – arriving on the mat",
+            "text": "Breathe deeply, let the day fall away from you. Hatha, Vinyasa and Yin in small groups – gentle enough for beginners, powerful enough to release your back and finally let your mind grow quieter.",
+            "image": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+            "link": "/angebote/yoga"
+          },
+          {
+            "title": "Pilates – strength from the center",
+            "text": "A stable center, an upright back, a body that carries you again. Mindful, controlled movement in ZPP-certified prevention courses – your health insurance subsidizes participation.",
+            "image": "/images/runa/retreat-yurte-savasana.webp",
+            "link": "/angebote/pilates"
+          },
+          {
+            "title": "Massages – time just for you",
+            "text": "Let yourself be held and let go. Soothing touch that releases tension and lets you breathe deeply – with special experience in pre- and postnatal massages for expectant and new mothers.",
+            "image": "/images/runa/klangschalenmassage.webp",
+            "link": "/angebote/massagen"
+          },
+          {
+            "title": "Healing space for the soul",
+            "text": "When something in you calls for healing: a protected space for shamanic energy work and compassionate support. Here you are allowed to let go of what has grown heavy, and to meet your inner strength again.",
+            "image": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+            "link": "/angebote/heilraum"
+          },
+          {
+            "title": "Mantra singing – sound that carries you",
+            "text": "Feel how tension releases through your voice. Singing mantras and Medicine Songs together – no skill required, just you, your breath and the warming power of community.",
+            "image": "/images/runa/runa-monochord-abendlicht.webp",
+            "link": "/angebote/mantra"
+          },
+          {
+            "title": "Wheel of the year for women",
+            "text": "Held for a whole year in a circle of women: 8 gatherings around the Celtic wheel-of-the-year festivals, with rituals, honest exchange and genuine connection. A home for your longing for depth and belonging.",
+            "image": "/images/runa/retreat-gartentafel.webp",
+            "link": "/angebote/jahreskreis"
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Not sure yet? Let's talk.",
+        "text": "Sometimes all it takes is a first, honest conversation. Write to me about what is on your mind – I will listen and figure out together with you what is truly good for you right now. With no obligation at all.",
+        "buttonText": "Write to me",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Offerings – Yoga, Pilates & Healing Work in Berlin-Pankow | Runayoga",
+      "seoDescription": "Find your calm in Berlin-Pankow: yoga, Pilates (ZPP-certified, insurance-subsidized), massages, shamanic healing space, mantra singing & women's wheel of the year – in small groups, compassionately guided by Runa."
+    }
+  },
+  "zones": {}
+}

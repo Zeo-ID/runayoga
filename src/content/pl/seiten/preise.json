@@ -1,0 +1,223 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-preise",
+        "title": "Zainwestuj w to, co cię wspiera",
+        "subtitle": "Jasne ceny, uczciwe oferty – abyś mogła w spokoju dotrzeć do siebie",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-preise-intro",
+        "content": "<p style=\"text-align:center\">Nie musisz dźwigać wszystkiego sama. Moje kursy prewencyjne jogi i pilatesu są certyfikowane zgodnie z § 20 SGB V (Zentrale Prüfstelle Prävention) – większość ustawowych kas chorych pokrywa <strong>do 80 %</strong> kosztów. Dzięki temu czas dla samej siebie staje się łatwiejszy, niż być może myślisz.</p>"
+      }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-yoga",
+        "title": "Odetchnij głęboko – joga, która uwalnia z ciebie codzienność",
+        "subtitle": "Yin & Yang dla początkujących i powracających – łagodnie prowadzone, certyfikowane przez ZPP",
+        "packages": [
+          {
+            "name": "Kurs prewencyjny",
+            "price": "240 €",
+            "period": "10 jednostek (kurs 8- lub 10-tygodniowy)",
+            "features": ["Wtorki 19:15–20:30 – twój stały wieczór dla siebie", "Yin & Yang: jednocześnie pełne siły i odpuszczania", "Certyfikowany przez ZPP (§ 20 SGB V)", "Do 80 % zwrotu z kasy chorych", "Małe grupy, w których nikt cię nie przeoczy"],
+            "highlighted": true
+          },
+          {
+            "name": "Lekcja indywidualna",
+            "price": "90 €",
+            "period": "Lekcja indywidualna · 60 min",
+            "features": ["W pełni skupione: tylko ty i twoja praktyka", "60 minut w twoim tempie", "Idealne na łagodny początek lub konkretne tematy", "Możliwe również online"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p1", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-pilates",
+        "title": "Silna od środka – pilates dla pleców, które znów cię niosą",
+        "subtitle": "Więcej stabilności, mniej napięć – z małymi przyrządami, certyfikowane przez ZPP",
+        "packages": [
+          {
+            "name": "Kurs prewencyjny",
+            "price": "200 €",
+            "period": "10 jednostek",
+            "features": ["Wtorki 18:00–19:00", "Ukierunkowany trening z małymi przyrządami dla odczuwalnie silnego centrum", "Certyfikowany przez ZPP (§ 20 SGB V)", "Do 80 % zwrotu z kasy chorych", "Małe grupy z uwagą na twoją postawę"],
+            "highlighted": true
+          },
+          {
+            "name": "Lekcja indywidualna",
+            "price": "95 €",
+            "period": "Lekcja indywidualna · 60 min",
+            "features": ["Osobista opieka, całkowicie dostosowana do ciebie", "60 minut w twoim tempie", "Przyrządy są na miejscu", "Każdy ruch jest indywidualnie prowadzony"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p2", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-massagen",
+        "title": "Daj się ponieść – godzina tylko dla twojego ciała",
+        "subtitle": "Lomi Lomi Nui, Ayurveda, misy dźwiękowe, refleksologia stóp i wiele więcej – dotyka tego, czego słowa nie sięgają",
+        "packages": [
+          {
+            "name": "Pojedynczy masaż",
+            "price": "95 €",
+            "period": "60 minut",
+            "features": ["Twój rodzaj masażu, całkowicie według twojego odczucia", "Z miłością dostosowane dla kobiet w ciąży i po porodzie", "Ciepła, bezpieczna przestrzeń, by dotrzeć do siebie", "Wraz z rozmową wstępną – proszę zaplanować 75 min"],
+            "highlighted": false
+          },
+          {
+            "name": "Pojedynczy masaż",
+            "price": "135 €",
+            "period": "90 minut",
+            "features": ["Twój rodzaj masażu, całkowicie według twojego odczucia", "Intensywny zabieg na całe ciało, w którym każde napięcie dostaje czas, by się rozluźnić", "Z miłością dostosowane dla kobiet w ciąży i po porodzie", "Wraz z rozmową wstępną – proszę zaplanować 105 min"],
+            "highlighted": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p2b", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-massagepakete",
+        "title": "Podaruj sobie więcej niż jedną chwilę – pakiety masaży (3 zabiegi)",
+        "subtitle": "Trzy zabiegi, które działają dłużej – i 15 € taniej niż pojedynczo",
+        "packages": [
+          {
+            "name": "Szczęście macierzyństwa",
+            "price": "270 €",
+            "period": "zamiast 285 € · 3 × 60 min",
+            "features": ["3 × masaż dla kobiet w ciąży", "Pełne miłości towarzyszenie w twojej ciąży – dla ciebie i twojego dziecka", "Oszczędność 15 €"],
+            "highlighted": false
+          },
+          {
+            "name": "Dźwięk i relaks",
+            "price": "270 €",
+            "period": "zamiast 285 € · 3 × 60 min",
+            "features": ["3 × masaż misami dźwiękowymi", "Głębokie odprężenie, które pozwala ciału i umysłowi wybrzmieć", "Oszczędność 15 €"],
+            "highlighted": true
+          },
+          {
+            "name": "Ciało i duch",
+            "price": "270 €",
+            "period": "zamiast 285 € · 3 × 60 min",
+            "features": ["3 × masaż do wyboru", "Dowolnie łączone – całkowicie według tego, czego właśnie potrzebujesz", "Oszczędność 15 €"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p3", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-heilraum",
+        "title": "Przestrzeń uzdrawiania dla duszy – gdy wnętrze szuka spokoju",
+        "subtitle": "Szamańska praca uzdrawiająca i uważne towarzyszenie w bezpiecznej przestrzeni",
+        "packages": [
+          {
+            "name": "Podróż szamańska",
+            "price": "120 €",
+            "period": "ok. 75 minut",
+            "features": ["Towarzyszenie z bębnem, głosem i okadzaniem", "Spotkanie z twoim zwierzęciem mocy, odpowiedzi na pytania życiowe", "Rozmowa integracyjna na zakończenie"],
+            "highlighted": true
+          },
+          {
+            "name": "Zamawianie i wyśpiewywanie",
+            "price": "60 €",
+            "period": "za jednostkę (30 min)",
+            "features": ["Dawna ustna tradycja uzdrawiania ze słowami błogosławieństwa", "Często jako mała seria przez 3–7 dni", "Na życzenie również jako towarzyszenie na odległość"],
+            "highlighted": false
+          },
+          {
+            "name": "Ceremonia uzdrawiania",
+            "price": "Na zapytanie",
+            "period": "ok. 90–120 minut",
+            "features": ["Samodzielnie, we dwoje lub w małej grupie", "Rytuały, dźwięk, cisza i świadoma obecność", "Niezobowiązująca rozmowa wstępna wcześniej"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "Divider",
+      "props": { "id": "div-p4", "style": "decorative" }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "Pricing-gemeinschaft",
+        "title": "Mantra & krąg roku – wspólnie wspierane",
+        "subtitle": "Śpiewać, czuć, być połączonym – nie musisz nic umieć, wystarczy być",
+        "packages": [
+          {
+            "name": "Mantra – termin pojedynczy",
+            "price": "Na zapytanie",
+            "period": "za wieczór",
+            "features": ["Otwarte spotkanie – przyjdź taka, jaka jesteś", "Nie potrzeba wcześniejszej wiedzy, wystarczy twój głos", "Mantra chanting i Medicine Songs, które grzeją od środka"],
+            "highlighted": false
+          },
+          {
+            "name": "Krąg roku dla kobiet",
+            "price": "Na zapytanie",
+            "period": "za krąg",
+            "features": ["Otwarte spotkanie wśród kobiet, które cię przygarnia", "Nie potrzeba wcześniejszej wiedzy, wystarczy twój głos", "Rytuały i wspólnota, które dają oparcie", "Cyklicznie przez cały rok – w rytmie natury"],
+            "highlighted": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-preise-hinweise",
+        "content": "<h2>Warto wiedzieć</h2><ul><li>Krótkie zgłoszenie zapewnia ci miejsce.</li><li>Ceny masaży nie obowiązują w przypadku Gesundheitsticket lub Machtfit.</li><li>Karnety wielokrotne i kursy prewencyjne należy opłacić w pełnej wysokości przed rozpoczęciem kursu.</li><li>Wszystkie informacje bez gwarancji – obowiązuje każdorazowo aktualne ogłoszenie.</li></ul>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-preise",
+        "title": "Wciąż nie masz pewności, co do ciebie pasuje?",
+        "text": "Po prostu do mnie napisz – wspólnie odkryjemy, co właśnie ci służy, a ja podam ci aktualne ceny. Całkowicie bez presji.",
+        "buttonText": "Napisz do mnie",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Cennik – joga, pilates i masaż w Berlin-Pankow | Runayoga",
+      "seoDescription": "Wycisz się w Runayoga w Berlin-Pankow: masaż od 95 €, pakiety 3 zabiegów 270 €, certyfikowane przez ZPP kursy prewencyjne jogi i pilatesu z dofinansowaniem do 80 % przez kasę chorych. Zarezerwuj swoje miejsce już teraz."
+    }
+  },
+  "zones": {}
+}

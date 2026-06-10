@@ -1,0 +1,74 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Masaże",
+        "subtitle": "Gdy ciało może wreszcie odpuścić – dotknięte, niesione, w pełni przy sobie",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "Zobacz ceny",
+        "secondButtonLink": "/preise",
+        "image": "/images/runa/wellness-rose-in-haenden.webp",
+        "imageAlt": "Róża trzymana w dłoniach",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Nosisz w sobie tak wiele – codzienność, napięcie w karku i barkach, wewnętrzny niepokój, który nigdy do końca nie cichnie. Czasami ciało nie potrzebuje niczego więcej niż uważnego, czułego dotyku, by wreszcie odpuścić. Moje masaże to coś więcej niż praca nad mięśniami. Są zaproszeniem, byś mogła się rozluźnić, odetchnąć i przez chwilę nie musieć niczego osiągać.</p><p>W moim chronionym gabinecie masażu w Berlin-Pankow czeka na Ciebie ciepło, cisza i przestrzeń tylko dla Ciebie. Wyobraź sobie, jak napięcia rozpuszczają się pod ciepłymi dłońmi, Twój oddech staje się głębszy, a po całym ciele rozlewa się przyjemne uczucie ciężaru. Wracasz do domu nie tylko bardziej zrelaksowana – wracasz na nowo połączona ze sobą.</p><p>Każdy masaż dostosowuję po osobistej rozmowie wstępnej w pełni do Ciebie i Twoich potrzeb. Szczególnie bliskie memu sercu są masaże dla kobiet w ciąży i regeneracja poporodowa: ciąża oraz czas po porodzie to tak cenne, a czasem także wymagające etapy. Empatyczny masaż może Cię w tym wesprzeć. Jestem do tego specjalnie wykształcona – abyś na każdym etapie czuła się bezpiecznie, otoczona troską i zaopiekowana.</p><h2>Znajdź dotyk, który Ci służy</h2><ul><li><strong>Lomi Lomi Nui</strong> – tradycyjny hawajski masaż świątynny z długimi, płynnymi głaskaniami, które wprowadzają Cię w głęboki, medytacyjny stan</li><li><strong>Masaż ajurwedyjski</strong> – ciepły, dobroczynny masaż olejowy w tradycji ajurwedyjskiej, który przywraca równowagę ciału i umysłowi</li><li><strong>Masaż dla kobiet w ciąży</strong> – delikatny, bezpieczny i czule towarzyszący na każdym etapie Twojej ciąży</li><li><strong>Poporodowy masaż regeneracyjny</strong> – abyś po porodzie wróciła do sił i do siebie</li><li><strong>Masaż misami dźwiękowymi</strong> – głębokie odprężenie, które poprzez dźwięk i wibrację sięga aż do komórek</li><li><strong>Masaż refleksologiczny stóp</strong> – poprzez stopy aktywuje całe ciało i rozluźnia to, co jest zablokowane</li><li><strong>Masaż pleców</strong> – ukierunkowany na wszystkich, którzy noszą w sobie napięcia i bóle pleców</li><li><strong>Masaże medyczne</strong> – rzetelne wsparcie przy konkretnych dolegliwościach</li></ul><h2>Co Cię u mnie czeka</h2><ul><li>Pojedynczy masaż od 95 € (60 min) lub 135 € (90 min)</li><li>Korzystne pakiety potrójne za 270 € (zamiast 285 €) – aby odpuszczanie stało się czułym nawykiem</li><li>Ciepła atmosfera dobrego samopoczucia w chronionej przestrzeni, w pełni dla Ciebie</li><li>Indywidualny zabieg, dostosowany w pełni do Ciebie po osobistej rozmowie wstępnej</li><li>Przy masażach 60-minutowych zaplanuj proszę 75 min, a przy 90-minutowych 105 min (wraz z rozmową wstępną)</li></ul><p>Nie musisz mieć ze sobą niczego oprócz pragnienia, by wreszcie zrobić sobie coś dobrego. Napisz do mnie – wspólnie znajdziemy masaż, który właśnie teraz jest dla Ciebie odpowiedni.</p>"
+      }
+    },
+    {
+      "type": "Gallery",
+      "props": {
+        "id": "Gallery-massagen",
+        "title": "Wgląd w moją pracę",
+        "columns": 2,
+        "images": [
+          {
+            "src": "/images/runa/klangschalenmassage.webp",
+            "alt": "Masaż misami dźwiękowymi",
+            "caption": "Masaż misami dźwiękowymi"
+          },
+          {
+            "src": "/images/runa/ayurveda-oelmassage-ruecken.webp",
+            "alt": "Ajurwedyjski masaż olejowy pleców",
+            "caption": "Ajurwedyjski masaż olejowy"
+          },
+          {
+            "src": "/images/runa/lymphdrainage-fuss.webp",
+            "alt": "Masaż stóp i drenaż limfatyczny",
+            "caption": "Refleksologia stóp i drenaż limfatyczny"
+          },
+          {
+            "src": "/images/runa/wochenbettmassage-lotus.webp",
+            "alt": "Masaż dla kobiet w ciąży i po porodzie",
+            "caption": "Dla kobiet w ciąży i poporodowy"
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Podaruj swojemu ciału tę godzinę",
+        "text": "Zasłużyłaś na to, by raz całkowicie odpuścić. Napisz do mnie, a wspólnie znajdziemy Twój termin – cieszę się na spotkanie z Tobą. Zapisy wymagane.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Masaże w Berlin-Pankow – wreszcie odpuścić - Runayoga",
+      "seoDescription": "Uważne masaże w Berlin-Pankow: Lomi Lomi Nui, Ayurveda, misy dźwiękowe, refleksologia stóp oraz empatyczne masaże dla kobiet w ciąży i poporodowe. Chroniona przestrzeń, indywidualnie dostosowana do Ciebie – od 95 € w Runayoga. Zapytaj teraz o termin."
+    }
+  },
+  "zones": {}
+}

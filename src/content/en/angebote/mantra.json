@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Singing Mantras – let your voice carry you",
+        "subtitle": "Sound that releases from within what the mind cannot let go of",
+        "buttonText": "Write to me – I look forward to meeting you",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/runa-monochord-abendlicht.webp",
+        "imageAlt": "Runa with monochord in the evening light",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Do you know that inner restlessness that just won't settle in the evening? The mind that keeps running even though the body has long been tired? When we sing together, something happens that addresses exactly that. Your voice is one of your most primal instruments, and mantras carry a vibration within them that you feel in your chest before your mind understands it. At my mantra evenings, we come together to pause through sound and vibration – and to reconnect with ourselves and with one another.</p><p>Whether traditional mantras from the yoga tradition, healing Medicine Songs from different cultures, or singing Kirtan together – it is never about singing beautifully. It is about feeling yourself through the sound of your own voice and letting go of what you have carried all day. The melodies are simple and repetitive, so you don't need to be able to do anything – you may simply let yourself fall into it. With every note the breath deepens, the shoulders sink, and for a moment there is only this warm, shared sound.</p><p>These evenings are a true matter of the heart for me. In the community a tapestry of sound arises that carries each and every individual – including you, especially when you feel quiet. Many describe singing together as deeply moving and soothing; some arrive exhausted and go home strangely light. You need neither musical experience nor a special voice – only the willingness to engage for one evening. The space is small, warm, and protected, no one looks at you, everyone sings.</p><h2>What awaits you on this evening</h2><ul><li>Singing together in a warm, sheltered circle – every voice is allowed to simply be</li><li>Healing Medicine Songs from different traditions that touch you from within</li><li>No prior experience needed – you don't have to be able to do anything or achieve anything</li><li>An open circle: just come by, exactly as you are right now</li><li>Mantra chanting and Kirtan that let you relax layer by layer</li><li>Sound Healing as a gently supportive, complementary experience</li></ul><p>If your longing for calm and connection is quietly knocking right now – follow it. Write to me, and I'll tell you when the next evening is.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Do you feel the longing to simply sing along?",
+        "text": "Drop me a short message – I'll tell you when the next mantra evening is, and I look forward to hearing your voice in the circle.",
+        "buttonText": "Secure your spot",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Singing Mantras in Berlin-Pankow – Finding calm with your voice | Runayoga",
+      "seoDescription": "Mantra evenings & Medicine Songs at Runayoga in Berlin-Pankow. Let go, find inner calm and connection – no prior experience needed. Write to me for the next date."
+    }
+  },
+  "zones": {}
+}

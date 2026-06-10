@@ -1,4 +1,6 @@
 import siteData from "../../data/site.json";
+import { t } from "../../data/ui";
+import type { Locale } from "../../lib/i18n";
 
 /* ─── Inline glyphs (no deps) ─── */
 function Glyph({ name }: { name: "mail" | "phone" | "pin" | "clock" | "wa" | "ig" }) {
@@ -64,11 +66,13 @@ export function Contact({
   text,
   showMap,
   mapEmbed,
+  locale = "de",
 }: {
   title: string;
   text: string;
   showMap: boolean;
   mapEmbed: string;
+  locale?: Locale;
 }) {
   const contact = siteData.contact as Record<string, string | undefined>;
   const hours = siteData.openingHours;
@@ -76,9 +80,9 @@ export function Contact({
 
   /* Primary contact rows (email / phone / address) */
   const rows: { glyph: "mail" | "phone" | "pin"; label: string; value: string; href?: string }[] = [];
-  if (contact.email) rows.push({ glyph: "mail", label: "E-Mail", value: contact.email, href: `mailto:${contact.email}` });
-  if (contact.phone) rows.push({ glyph: "phone", label: "Telefon", value: contact.phone, href: `tel:${contact.phone.replace(/\s/g, "")}` });
-  if (contact.address) rows.push({ glyph: "pin", label: "Adresse", value: contact.address });
+  if (contact.email) rows.push({ glyph: "mail", label: t("E-Mail", locale), value: contact.email, href: `mailto:${contact.email}` });
+  if (contact.phone) rows.push({ glyph: "phone", label: t("Telefon", locale), value: contact.phone, href: `tel:${contact.phone.replace(/\s/g, "")}` });
+  if (contact.address) rows.push({ glyph: "pin", label: t("Adresse", locale), value: contact.address });
 
   return (
     <section className="relative overflow-hidden section-padding" id="kontakt">
@@ -89,7 +93,7 @@ export function Contact({
       <div className="container relative z-10">
         {/* ── Editorial header ── */}
         <div style={{ maxWidth: 640 }}>
-          <span className="kicker">✦ Kontakt</span>
+          <span className="kicker">✦ {t("Kontakt", locale)}</span>
           {title && (
             <h2 className="display-sm" style={{ marginTop: "1.2rem" }}>
               {title}
@@ -243,7 +247,7 @@ export function Contact({
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Karte"
+                  title={t("Karte", locale)}
                 />
               </div>
             </div>
@@ -276,7 +280,7 @@ export function Contact({
                 className="kicker"
                 style={{ color: "var(--color-rose)" }}
               >
-                {hours && hours.length > 0 ? "Öffnungszeiten" : "Wir sind für dich da"}
+                {hours && hours.length > 0 ? t("Öffnungszeiten", locale) : t("Wir sind für dich da", locale)}
               </span>
 
               {hours && hours.length > 0 ? (
@@ -294,7 +298,7 @@ export function Contact({
                       }}
                     >
                       <span style={{ fontFamily: "Inter, sans-serif", fontSize: ".95rem", color: "rgba(243,235,225,.78)" }}>
-                        {h.day}
+                        {t(h.day, locale)}
                       </span>
                       <span
                         style={{
@@ -304,7 +308,7 @@ export function Contact({
                           color: "var(--color-bg)",
                         }}
                       >
-                        {h.time}
+                        {t(h.time, locale)}
                       </span>
                     </div>
                   ))}
@@ -321,7 +325,7 @@ export function Contact({
                     zIndex: 1,
                   }}
                 >
-                  Schreib uns oder ruf an — wir freuen uns, von dir zu hören und finden gemeinsam den passenden Termin.
+                  {t("Schreib uns oder ruf an — wir freuen uns, von dir zu hören und finden gemeinsam den passenden Termin.", locale)}
                 </p>
               )}
 
@@ -331,7 +335,7 @@ export function Contact({
                   className="ry-c-cta"
                   style={{ marginTop: "2rem", position: "relative", zIndex: 1 }}
                 >
-                  Nachricht schreiben
+                  {t("Nachricht schreiben", locale)}
                 </a>
               )}
             </div>

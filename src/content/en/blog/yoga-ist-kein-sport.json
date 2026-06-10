@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Yoga Is Not a Sport: How Your Attitude Towards Your Body Can Change",
+        "subtitle": "Yoga has so much more to offer than movement. It gives you body awareness and helps you find your very own balance in everyday life.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/deko-palmblaetter.webp",
+        "imageAlt": "Palm leaves in the light",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p><em>Runa Bulla &bull; 29 July 2019</em></p><p><strong>Yoga is not a sport!</strong> No, yoga has much more to offer.</p><p>Body awareness is on everyone's lips, and yet it is often the case that we are simply glad that our body works and is capable of performing. We rely on it to just go along, day after day, without giving it much attention.</p><p>At the latest when illnesses announce themselves and we can no longer ignore these signs, we begin to think about why this might be. Most of the time the reasons are stress, no time for slow and healthy meals, too little movement in everyday life.</p><h2>Every person is different &ndash; and that's a good thing</h2><p>Every person is individual and has different needs in all areas of life. What does one person good can be too much or too little for another. That is precisely why there is no one-size-fits-all recipe that applies to everyone.</p><p>The art lies in living this individual balance with a great deal of feeling and skill in everyday life. This is a prerequisite for maintaining health!</p><blockquote><p>The art lies in living your individual balance with a great deal of feeling and skill in everyday life.</p></blockquote><h2>How do I get there?</h2><p>First of all, I need a sense of what serves my body and to what extent. This is where yoga comes in.</p><p>On the yoga mat I practise with attention and a great deal of feeling for my body. I learn to explore my personal limits, or even to get to know them in the first place. It is not about achieving something or becoming better than yesterday. It is about sensing within and perceiving what is present right now.</p><p>It is precisely this mindful connection to yourself that makes yoga so valuable. It is the foundation for finding your own balance and carrying it gently into your everyday life.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Get to know your body mindfully",
+        "text": "Would you like to experience how yoga feels beyond performance? I would be glad to accompany you on your path to greater body awareness.",
+        "buttonText": "Enquire now",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yoga Is Not a Sport: What It Does to the Body - Runayoga",
+      "seoDescription": "Yoga is not a sport: it fosters body awareness and helps you find your individual balance in everyday life - as a prerequisite for maintaining health.",
+      "date": "2019-07-29"
+    }
+  },
+  "zones": {}
+}

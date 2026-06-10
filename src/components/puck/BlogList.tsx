@@ -1,4 +1,6 @@
 import blogIndex from "../../data/blog-index.json";
+import { localizedHref, type Locale } from "../../lib/i18n";
+import { t } from "../../data/ui";
 
 type Post = {
   slug: string;
@@ -9,11 +11,11 @@ type Post = {
   date: string;
 };
 
-function formatDate(iso: string) {
+function formatDate(iso: string, locale: Locale) {
   if (!iso) return "";
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString("de-DE", {
+  return d.toLocaleDateString(locale === "de" ? "de-DE" : locale, {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -27,6 +29,7 @@ export function BlogList({
   showImage,
   showDate,
   showExcerpt,
+  locale = "de",
 }: {
   title: string;
   count: number;
@@ -34,6 +37,7 @@ export function BlogList({
   showImage: boolean;
   showDate: boolean;
   showExcerpt: boolean;
+  locale?: Locale;
 }) {
   const posts: Post[] = ((blogIndex as { posts: Post[] }).posts || []).slice(
     0,
@@ -93,7 +97,7 @@ export function BlogList({
           whiteSpace: "nowrap",
         }}
       >
-        {posts.length} {posts.length === 1 ? "Beitrag" : "Beiträge"}
+        {posts.length} {posts.length === 1 ? t("Beitrag", locale) : t("Beiträge", locale)}
       </span>
     </div>
   );
@@ -122,7 +126,7 @@ export function BlogList({
             {posts.map((post, i) => (
               <article key={post.slug} className="bloglist-row">
                 <a
-                  href={post.href}
+                  href={localizedHref(locale, post.href)}
                   className="bloglist-row-link group"
                   style={{
                     display: "grid",
@@ -152,7 +156,7 @@ export function BlogList({
                           marginBottom: ".5rem",
                         }}
                       >
-                        {formatDate(post.date)}
+                        {formatDate(post.date, locale)}
                       </p>
                     )}
                     <h3
@@ -176,7 +180,7 @@ export function BlogList({
                       </p>
                     )}
                     <span className="link-arrow" style={{ marginTop: "1rem" }}>
-                      Weiterlesen <span aria-hidden="true">→</span>
+                      {t("Weiterlesen", locale)} <span aria-hidden="true">→</span>
                     </span>
                   </div>
                 </a>
@@ -189,7 +193,7 @@ export function BlogList({
             {posts.map((post, i) => (
               <article key={post.slug} className="bloglist-card">
                 <a
-                  href={post.href}
+                  href={localizedHref(locale, post.href)}
                   className="group"
                   style={{ display: "flex", flexDirection: "column", height: "100%", textDecoration: "none" }}
                 >
@@ -242,7 +246,7 @@ export function BlogList({
                           marginBottom: ".55rem",
                         }}
                       >
-                        {formatDate(post.date)}
+                        {formatDate(post.date, locale)}
                       </p>
                     )}
                     <h3
@@ -266,7 +270,7 @@ export function BlogList({
                       </p>
                     )}
                     <span className="link-arrow" style={{ marginTop: "auto", paddingTop: "1.1rem" }}>
-                      Weiterlesen <span aria-hidden="true">→</span>
+                      {t("Weiterlesen", locale)} <span aria-hidden="true">→</span>
                     </span>
                   </div>
                 </a>

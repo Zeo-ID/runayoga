@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Czym są mantry?",
+        "subtitle": "Święte sylaby, słowa i wersety, które od tysiącleci skupiają umysł i uwalniają pozytywne energie. Łagodne wprowadzenie w moc dźwięków.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/runa-monochord-abendlicht.webp",
+        "imageAlt": "Runa z monochordem w świetle wieczoru",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Być może spotkałeś się z tym już kiedyś podczas zajęć jogi: wspólnie śpiewany dźwięk na początku, ciche nucenie, które wypełnia przestrzeń. Mantry towarzyszą wielu ludziom na ich drodze – a mimo to większość za pierwszym razem zadaje sobie pytanie: czym to właściwie jest i dlaczego tak dobrze działa? Przyjrzyjmy się temu wspólnie.</p><h2>Czym jest mantra?</h2><p>Mantra to święta sylaba, słowo lub cały werset. Pierwotnie mantrami zajmowali się ludzie ludów indyjskich, tybetańskich i mongolskich. Ówcześni wieszczowie odkryli moc dźwięków: określone rytmy i dźwięki uwalniają bowiem pozytywne energie. Zapisywano je i przekazywano w sanskrycie, starożytnym języku indyjskim.</p><h2>Prawdopodobnie najbardziej znana mantra: „Om”</h2><p>Prawdopodobnie najbardziej znaną mantrą również dziś pozostaje <strong>„Om”</strong>. Ma ona opisywać dźwięk wszechświata i symbolizuje najczystszą formę energii. Oprócz mantry „Om” istnieje oczywiście jeszcze cała masa innych mantr, które stosuje się do różnych celów.</p><h2>Jak praktykuje się mantry</h2><p>Mantry są – głośno lub cicho – wypowiadane, śpiewane lub odmawiane w myślach. Wielu ludzi po raz pierwszy styka się z mantrami podczas zajęć jogi lub sesji medytacyjnej. Na początku, na zakończenie lub także wielokrotnie w trakcie zajęć śpiewa się lub wypowiada wspólnie wybraną mantrę.</p><h2>Dlaczego powtarzanie tak działa</h2><p>Powtarzanie mantr służy temu, aby skupić umysł, czyli myśli, i uwolnić pozytywne energie mentalne. Celem nie jest więc „zrozumienie” czy przetłumaczenie słów sanskryckich na poziomie myślowym, lecz raczej rozbudzenie ich oddziaływania na poziomie energetycznym.</p><p>Poprzez powtarzanie dźwięków w tym samym rytmie powstają bowiem wibracje, które zmieniają nasze, a także przestrzenne pole energetyczne. Może to uspokoić umysł, dodać siły i wprowadzić ciało w stan odprężenia.</p><blockquote><p>„Określone rytmy i dźwięki uwalniają pozytywne energie.”</p></blockquote><p>Nie musisz znać sanskrytu ani nic robić poprawnie. Następnym razem po prostu otwórz się na dźwięk, poczuj wibrację w sobie – i zobacz, co się przy tym dla ciebie zmienia.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Doświadcz mantr podczas zajęć jogi",
+        "text": "Zanurz się podczas wspólnych zajęć w Runayoga w Berlin-Pankow w mocy dźwięków – całkiem bez wcześniejszego doświadczenia.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Czym są mantry? – Runayoga",
+      "seoDescription": "Czym jest mantra? Ciepłe wprowadzenie od Runayoga: pochodzenie, mantra „Om” oraz to, jak powtarzanie skupia umysł i uwalnia energię.",
+      "date": "2024-03-19"
+    }
+  },
+  "zones": {}
+}

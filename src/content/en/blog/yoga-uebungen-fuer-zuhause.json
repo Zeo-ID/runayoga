@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Yoga Exercises for Home: Your 15-Minute Routine",
+        "subtitle": "With just 15 minutes a day, your mat and comfortable clothing, you bring a simple yoga routine into your home – from the warm-up to the locust pose.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-yurte-savasana.webp",
+        "imageAlt": "Relaxation in Savasana",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Integrating yoga into your everyday life is like a „turbocharger“ – it reveals its blessed effects very quickly. And as so often, the key here lies in consistency. You don't need a studio or a whole hour: 15 minutes a day are perfectly enough to experience wonderful results. All you need is your yoga mat and comfortable clothing.</p><p>A little tip that makes practicing easy for you: unless stated otherwise, you hold each position for three breaths and then flow smoothly into the next. Let your breath guide you, completely without pressure.</p><h2>Warming up</h2><p>Sit down with your legs crossed and breathe calmly through your nose for two minutes. Feel yourself arriving in the here and now. Then gently rock to the left and right for 15 breaths while you exhale. This lovingly prepares your body and mind for what follows.</p><h2>After the warm-up</h2><h3>Cat and Cow</h3><p>Exhale and move into the <strong>cat pose</strong>. Support yourself on your hands and knees, lower your head while you lift your belly and round your back like a cat. Then move into the <strong>cow pose</strong>: arch your back downward, lift your head and move your shoulders outward. This exercise warms and stretches the hips, shoulders, abdominal muscles and the spine.</p><h3>The Downward-Facing Dog</h3><p>Exhale in the cat pose and push your bottom upward so that an inverted V-shape is formed. This is the <strong>dog pose</strong>. It strengthens your arm and leg muscles. It's best to do five repetitions.</p><h3>The Warrior</h3><p>Stand up and angle your right leg forward. Now lower your left heel and toes at a 45-degree angle to the floor. Stretch your left arm upward so that hand and ankle form a straight line. This exercise stretches and strengthens the thighs, shoulders, back and hips.</p><p>Then repeat the exercises in reverse form (left leg instead of right leg and so on) to include the other side of the body. This keeps your body nicely in balance.</p><h3>The Locust Pose</h3><p>Your workout ends with the <strong>locust pose</strong>: lie down on your back, your arms spread away from your body. Take two deep breaths while lifting your shoulders, head and arms. Then lower your head and arms and lift your legs as you do so. Remain in this position for two breaths.</p><p>Afterwards, stay lying relaxed on your back for a few more minutes. Sense how your body feels and enjoy this moment of stillness.</p><blockquote><p>„The key lies in consistency – not in duration. 15 mindful minutes a day change more than you think.“</p></blockquote><p>Just give this little routine a try – today, tomorrow, again and again. You'll be surprised how quickly these 15 minutes develop into your favorite anchor in the day. Breath by breath, day by day.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Feel like practicing together?",
+        "text": "If you're looking for guidance on your yoga journey, I'm happy to be there for you. Let's build your practice step by step.",
+        "buttonText": "Inquire now",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Yoga Exercises for Home – Runayoga",
+      "seoDescription": "Yoga exercises for home: with 15 minutes daily from the warm-up through cat/cow, dog and warrior to the locust pose. Your simple routine from Runayoga.",
+      "date": "2019-07-28"
+    }
+  },
+  "zones": {}
+}

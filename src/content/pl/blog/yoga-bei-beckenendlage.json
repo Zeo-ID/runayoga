@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Hatha-Yoga przy położeniu miednicowym: pozycje, które zachęcają Twoje dziecko do obrotu",
+        "subtitle": "Wciąż na nowo na moich zajęciach pada pytanie, które pozycje jogi mogą pomóc delikatnie zachęcić dziecko do przejścia z położenia miednicowego do pozycji porodowej. Oto pierwsze, łagodne spojrzenie na ten temat.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/wochenbettmassage-lotus.webp",
+        "imageAlt": "Łagodne towarzyszenie w ciąży",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Wciąż na nowo na moich zajęciach pytają mnie, które pozycje są możliwe dla obrotu dziecka, aby zachęcić Twoje dziecko do przejścia do pozycji porodowej. Chodzi o to, by zsunęło się główką do małej miednicy. Istnieje kilka możliwości praktykowania pozycji z Hatha-Yogi, które temu sprzyjają.</p><h2>Kiedy dziecko leży w położeniu miednicowym</h2><p>Położenie miednicowe oznacza, że Twoje dziecko pod koniec ciąży leży nie główką, lecz pośladkami lub stopami w dół. Wiele przyszłych mam pragnie wtedy delikatnie zaprosić swoje dziecko, by jeszcze się obróciło. Hatha-Yoga oferuje na to kilka sposobów pracy z uważnością i cierpliwością.</p><h2>Ważne: ostrożność przy pozycjach w leżeniu na plecach</h2><p>Przy niektórych ćwiczeniach powinnaś jednak zachować szczególną rozwagę.</p><blockquote><p>Zwłaszcza przy pozycjach w leżeniu na plecach powinnaś przy problemie z żyłą główną (vena cava) wybierać alternatywy lub skracać ćwiczenia.</p></blockquote><p>W takich chwilach koniecznie słuchaj swojego ciała oraz tego, co zaleca Ci Twoja położna lub lekarz. Joga w ciąży opiera się na tym, byś spotykała się ze sobą samą z łagodnością i uwagą.</p><p><em>Uwaga: Ten wpis pomyślany jest jako tekst wprowadzający i przybliża ten temat. Konkretne wskazówki i poszczególne pozycje najlepiej omówimy wspólnie na zajęciach, gdzie mogę uwzględnić Ciebie i Twoją całkiem osobistą sytuację.</em></p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Towarzyszenie w ciąży – całkiem indywidualnie",
+        "text": "Chciałabyś dowiedzieć się więcej o łagodnych pozycjach Hatha-Yogi w ciąży i czuć się przy tym dobrze zaopiekowana? Napisz do mnie śmiało – będę towarzyszyć Ci uważnie na Twojej drodze.",
+        "buttonText": "Zapytaj teraz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Hatha-Yoga przy położeniu miednicowym: pozycje do obrotu – Runayoga",
+      "seoDescription": "Które pozycje Hatha-Yogi mogą delikatnie zachęcić Twoje dziecko z położenia miednicowego do obrotu? Łagodne wprowadzenie od Runy Bulli – ze wskazówką dotyczącą leżenia na plecach.",
+      "date": "2021-07-05"
+    }
+  },
+  "zones": {}
+}

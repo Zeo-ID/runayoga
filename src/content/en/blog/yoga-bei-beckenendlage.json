@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Hatha Yoga for a Breech Position: Postures That Invite Your Baby to Turn",
+        "subtitle": "Time and again I am asked in my classes which yoga postures can help to gently encourage the baby out of a breech position into the birthing position. Here is a first, gentle look at it.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/wochenbettmassage-lotus.webp",
+        "imageAlt": "Gentle support during pregnancy",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Time and again I am asked in my classes which postures are possible for turning the baby, in order to encourage your baby to move into the birthing position. By this I mean that it slides head-down into the lesser pelvis. There are several ways to practise poses from Hatha Yoga for this.</p><h2>When the baby is in a breech position</h2><p>A breech position means that, towards the end of the pregnancy, your baby is lying with its bottom or feet downwards rather than head-down. Many expectant mothers then wish to gently invite their child to turn after all. Hatha Yoga offers several ways to work with this, with mindfulness and patience.</p><h2>Important: Take care with poses lying on your back</h2><p>With some exercises, however, you should be especially mindful.</p><blockquote><p>Particularly with poses lying on your back, you should choose alternatives if you have a vena cava problem, or else shorten the exercises.</p></blockquote><p>In such moments, be sure to listen to your body and to what your midwife or your doctor recommends. Yoga during pregnancy thrives on meeting yourself with gentleness and attentiveness.</p><p><em>Note: This article is intended as an introductory text and offers an introduction to the topic. Concrete instructions and individual postures are best discussed together in a class, where I can respond to you and your very personal situation.</em></p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Support during pregnancy – entirely individual",
+        "text": "Would you like to learn more about gentle Hatha Yoga postures during pregnancy and feel well looked after in the process? Feel free to write to me – I will accompany you mindfully on your way.",
+        "buttonText": "Make an enquiry now",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Hatha Yoga for a Breech Position: Postures to Encourage Turning – Runayoga",
+      "seoDescription": "Which Hatha Yoga postures can gently encourage your baby to turn out of a breech position? A careful introduction by Runa Bulla – with a note on lying on your back.",
+      "date": "2021-07-05"
+    }
+  },
+  "zones": {}
+}

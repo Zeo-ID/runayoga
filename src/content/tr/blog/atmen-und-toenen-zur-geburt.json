@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Doğum için nefes ve ses",
+        "subtitle": "Derin karın nefesinin ve sancılar boyunca seslenmenin seni nasıl taşıdığını, seni nasıl o anda tuttuğunu ve leğen kemiği ile rahim ağzını nasıl nazikçe gevşettiğini.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-tonfigur-schwangere.webp",
+        "imageAlt": "Hamile bir kadının kil figürü",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Hamileliğinin başında olan ve bir yoga kursuna başlayan birçok kadın için derin karın nefesi bambaşka, yepyeni bir şeydir. Deneyimli yoginiler burada küçük bir avantaja sahiptir, çünkü gündelik yaşamda durmadan nefesinin farkına varmak bir alışkanlık meselesidir. Ama merak etme: Bilinçli olarak aldığın her nefes, bu yolda atılmış bir adımdır.</p><h2>Sancılar boyunca bir yol arkadaşı olarak nefes</h2><p>Doğum açısından bakıldığında nefes, sancılar için harika bir destektir. O her zaman seninledir, yanında bir şey getirmene ve sana yabancı kalacak bir şey öğrenmene gerek yoktur. Sadece onu akışta tutmayı hatırlaman yeterli.</p><p>Bebeğe doğru yapılan derin karın nefesiyle rahmin kasılması desteklenir. Nefesin ve bedeninin emeği birbirine karşı değil, el ele çalışır.</p><h2>Uzun nefes vermeyle o anda kalmak</h2><p>Bir ses üzerine ya da doğum mantranla yapılan uzun nefes verme, seni bedeninde o anda tutar ve doğum çalışması sırasında zihinsel olarak bilinçli kalmanı sağlar. Gerginlikte veya korkuda kaybolmak yerine, her nefes verişinde yeniden kendine ve bebeğine dönersin.</p><h3>Seslenmenin bedeni neden gevşettiği</h3><p>Gevşek bir çene eklemiyle seslenirken leğen kemiği ve rahim ağzı da gevşek kalır. Çene ve leğen kemiği ince bir biçimde birbirine bağlıdır: Çenenin yumuşadığı yerde leğen kemiği de açılabilir.</p><h2>Seni taşıyan sesler ve mantralar</h2><p>Bu sırada uzun bir <strong>A</strong> sesi çıkarmak çok faydalıdır. Aynı şekilde <strong>doğum mantran</strong> da sana eşlik edebilir; örneğin nefes alırken <em>ben</em> ve nefes verirken <em>açılıyorum</em> &ndash; ya da sadece olumlu bir <em>Evet</em>.</p><ul><li><strong>Bebeğe doğru derin karın nefesi:</strong> rahmin kasılmasını destekler.</li><li><strong>Bir ses üzerine ya da mantran üzerine uzun nefes verme:</strong> seni beden ve zihinde o anda tutar.</li><li><strong>Gevşek çeneyle seslenme:</strong> leğen kemiği ve rahim ağzını gevşek tutar.</li><li><strong>Uzun bir A, bir mantra ya da olumlu bir Evet:</strong> seni taşıyan sözcükler ve sesler.</li></ul><blockquote><p>Çenenin yumuşadığı yerde leğen kemiği de açılabilir.</p></blockquote><p>Derin karın nefesini ve seslenmeyi daha hamilelikte yoga pratiğinde dene ki doğum gününde sana tanıdık gelsinler. Böylece yeni bir şey, zamanla sakin ve güçlü bir yol arkadaşına dönüşür &ndash; nefes nefes, ses ses.</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Doğumuna nazikçe hazırlan",
+        "text": "Runayoga'nın Berlin-Pankow'daki hamilelik kurslarında derin karın nefesini ve seslenmeyi tamamen kendi tempona göre tanırsın. Katılmak istersen bana çekinmeden yaz.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Doğum için nefes ve ses – Runayoga",
+      "seoDescription": "Derin karın nefesi ve seslenmenin doğumu nasıl desteklediği: Nefes sancılara yardımcı olur, uzun nefes verme seni o anda tutar ve leğen kemiği ile rahim ağzını gevşetir.",
+      "date": "2021-06-18"
+    }
+  },
+  "zones": {}
+}

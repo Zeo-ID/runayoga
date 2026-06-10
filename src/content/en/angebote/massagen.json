@@ -1,0 +1,74 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Massages",
+        "subtitle": "When the body is finally allowed to let go – touched, held, fully present with you",
+        "buttonText": "Enquire now",
+        "buttonLink": "/kontakt",
+        "secondButtonText": "View prices",
+        "secondButtonLink": "/preise",
+        "image": "/images/runa/wellness-rose-in-haenden.webp",
+        "imageAlt": "A rose held in the hands",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>You carry so much – everyday life, the tension in your neck and shoulders, the inner restlessness that never quite settles. Sometimes the body needs nothing more than mindful, loving touch in order to finally let go. My massages are more than muscle work. They are an invitation to let yourself fall, to breathe deeply and, for a while, to have nothing to accomplish.</p><p>In my protected massage room in Berlin-Pankow, warmth, stillness and a space just for you await. Imagine how the tension dissolves under warm hands, how your breath deepens and a pleasant heaviness settles over your whole body. You don't just go home more relaxed – you go home reconnected with yourself.</p><p>I tailor every massage entirely to you and your needs following a personal preliminary conversation. Especially close to my heart are my massages for pregnant women and postnatal regeneration: pregnancy and the time after birth are such precious, sometimes demanding phases. A sensitive massage can carry you through them. I am specially trained for this – so that you feel safe, held and well cared for in every phase.</p><h2>Find the touch that does you good</h2><ul><li><strong>Lomi Lomi Nui</strong> – the traditional Hawaiian temple massage with long, flowing strokes that carry you into a deep, meditative state</li><li><strong>Ayurveda massage</strong> – a warm, soothing oil massage in the Ayurvedic tradition that brings body and mind into balance</li><li><strong>Massage for pregnant women</strong> – gentle, safe and lovingly accompanying you in every phase of your pregnancy</li><li><strong>Postnatal regeneration massage</strong> – so that after birth you regain your strength and return to yourself</li><li><strong>Singing bowl massage</strong> – deep relaxation that reaches down to the cells through sound and vibration</li><li><strong>Foot reflexology massage</strong> – activates the whole body through the feet and releases what is stuck</li><li><strong>Back massage</strong> – targeted for everyone who carries tension and back pain</li><li><strong>Medical massages</strong> – well-founded support for specific complaints</li></ul><h2>What awaits you with me</h2><ul><li>Single massage from 95 € (60 min.) or 135 € (90 min.)</li><li>Value 3-session packages for 270 € (instead of 285 €) – so that letting go becomes a loving habit</li><li>A warm, feel-good atmosphere in a protected space, entirely for you</li><li>An individual treatment, tailored entirely to you following a personal preliminary conversation</li><li>Please allow 75 min. for 60-min. massages and 105 min. for 90-min. massages (incl. preliminary conversation)</li></ul><p>You need to bring nothing but the wish to finally do something good for yourself. Write to me – together we'll find the massage that is exactly right for you right now.</p>"
+      }
+    },
+    {
+      "type": "Gallery",
+      "props": {
+        "id": "Gallery-massagen",
+        "title": "Insights into my work",
+        "columns": 2,
+        "images": [
+          {
+            "src": "/images/runa/klangschalenmassage.webp",
+            "alt": "Singing bowl massage",
+            "caption": "Singing bowl massage"
+          },
+          {
+            "src": "/images/runa/ayurveda-oelmassage-ruecken.webp",
+            "alt": "Ayurveda oil massage on the back",
+            "caption": "Ayurveda oil massage"
+          },
+          {
+            "src": "/images/runa/lymphdrainage-fuss.webp",
+            "alt": "Foot and lymphatic drainage",
+            "caption": "Foot reflexology & lymphatic drainage"
+          },
+          {
+            "src": "/images/runa/wochenbettmassage-lotus.webp",
+            "alt": "Massage for pregnant women and after birth",
+            "caption": "For pregnant women & postnatal"
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Treat your body to this hour",
+        "text": "You deserve to fully let go for once. Write to me, and together we'll find your appointment – I look forward to meeting you. Registration required.",
+        "buttonText": "Enquire now",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Massages in Berlin-Pankow – finally let go | Runayoga",
+      "seoDescription": "Mindful massages in Berlin-Pankow: Lomi Lomi Nui, Ayurveda, singing bowls, foot reflexology as well as sensitive massages for pregnant women & postnatal. A protected space, tailored individually to you – from 95 € at Runayoga. Enquire about an appointment now."
+    }
+  },
+  "zones": {}
+}

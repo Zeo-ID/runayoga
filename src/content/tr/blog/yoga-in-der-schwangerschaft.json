@@ -1,0 +1,45 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Hamilelikte yoga neden bu kadar iyi gelir",
+        "subtitle": "Farkındalık ve beden bilincinden Nadi Shodana'ya kadar – yoga, fiziksel ve duygusal açıdan yoğun bir yaşam döneminde sana nazikçe eşlik eder ve seni doğuma hazırlar.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/retreat-tonfigur-schwangere.webp",
+        "imageAlt": "Hamile bir kadının kil figürü",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Hamilelik dönemi ve doğuma hazırlık, birçok kadın için çok özel bir yaşam dönemidir. İster özel çevrede ister yaşamın diğer tüm alanlarında olsun, geçişler ve değişimler her şeyi kapsar. Kendi bedenin belirgin biçimde merkeze geçer ve değişimler yalnızca fiziksel alanda değil, özellikle duygusal alanda da çok büyüktür.</p><h2>Kendine sevgiyle bakmak için iyi bir zaman</h2><p>Şimdi, kendi bedenine iyi ve sevgiyle bakmak için iyi bir zaman. Güç, dişilliğin derinliğine, „kadın olma“ haline ve kadının içinde barınan yaratıcı gücüne akar.</p><blockquote><p>Doğurmak, tezahür eden yaratıcı güçtür!</p></blockquote><h2>Yoganın binlerce yıllık geleneğinden sunduğu şeyler</h2><p>Bunu keşfetmek ve iyi bir doğum hazırlığı yaşamak için yoganın binlerce yıllık geleneğinde sunacağı çok şey vardır:</p><ul><li><strong>Derin, yogik karın nefesi</strong> bedenini ve bebeği oksijen ve yaşam enerjisiyle iyi besler.</li><li><strong>Bu dönem ve doğum için çok önemli olan gevşeme</strong> temel niteliktedir.</li><li><strong>Birçok asana doğum pozisyonlarıdır</strong> ve önceden çalışılır.</li><li><strong>Olumlu ve kendi kararına dayalı bir doğum süreci için zihinsel hazırlık</strong>, yogik doğum hazırlığının taşıyıcı bir sütunudur.</li></ul><p>Son olarak, söylenen mantralar kalbi açmaya ve tüm enerji kanallarını arındırmaya yardımcı olur. Hadi, bir dene!</p>"
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Hamileliğine yoga ile eşlik et",
+        "text": "Doğuma farkındalıkla hazırlanmak ve bedeninle sevgiyle bağ kurmak mı istiyorsun? Bu yolda sana seve seve eşlik ederim.",
+        "buttonText": "Hemen sor",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Hamilelikte yoga neden bu kadar iyi gelir – Runayoga",
+      "seoDescription": "Yoganın hamilelere nasıl eşlik ettiği: derin karın nefesi, gevşeme, doğum pozisyonu olarak asanalar ve kendi kararına dayalı bir doğuma zihinsel hazırlık.",
+      "date": "2019-10-06"
+    }
+  },
+  "zones": {}
+}

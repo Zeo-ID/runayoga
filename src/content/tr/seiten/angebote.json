@@ -1,0 +1,90 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "Gel. Derin bir nefes al.",
+        "subtitle": "Bedenin, zihnin ve ruhun için korunaklı bir alan – tam Berlin-Pankow'un kalbinde.",
+        "buttonText": "",
+        "buttonLink": "",
+        "secondButtonText": "",
+        "secondButtonLink": "",
+        "image": "/images/runa/teaser-2.webp",
+        "imageAlt": "",
+        "layout": "right"
+      }
+    },
+    {
+      "type": "RichText",
+      "props": {
+        "id": "RichText-001",
+        "content": "<p>Belki bunu tanırsın: zihin dolu, omuzlar yukarı kalkmış, sırt kendini hatırlatıyor ve derinlerde huzura duyulan o sessiz özlem – sadece <em>sen</em> olabileceğin bir yere. İşte tam bunun için buradayım.</p><p>Ben Runa ve yıllardır sana yoga, Pilates ve masajlarla, şamanik şifa çalışmasıyla, Mantra söylemekle ve kadınlar için yıl çemberiyle eşlik ediyorum. Burada yargılanmazsın, aksine tutulursun. Küçük gruplarda, sıcak ve korunaklı bir alanda, adım adım daha fazla hafifliğe, güce ve bağa – kendinle olan bağa – geri dönersin.</p><p><strong>Sadece şu an seni neyin çağırdığını hisset.</strong> Aşağıdaki tekliflere göz at – ve istersen, bana yaz. Sana neyin iyi geleceğini birlikte buluruz.</p>"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-001",
+        "title": "",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "Yoga – mat üzerinde kendine gelmek",
+            "text": "Derin bir nefes al, günün yükünü üzerinden bırak. Küçük gruplarda Hatha, Vinyasa ve Yin – başlangıç için yeterince yumuşak, sırtını gevşetmeye ve zihni nihayet sessizleştirmeye yetecek kadar güçlü.",
+            "image": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+            "link": "/angebote/yoga"
+          },
+          {
+            "title": "Pilates – merkezden gelen güç",
+            "text": "Sağlam bir merkez, dik bir sırt, yeniden taşıyan bir beden. ZPP sertifikalı önleyici kurslarda bilinçli, kontrollü hareket – sağlık sigortan katılıma katkı sağlar.",
+            "image": "/images/runa/retreat-yurte-savasana.webp",
+            "link": "/angebote/pilates"
+          },
+          {
+            "title": "Masajlar – yalnızca senin için zaman",
+            "text": "Bırak kendini tutulmaya ve gevşemeye. Gerginlikleri çözen ve derin bir nefes almanı sağlayan iyileştirici dokunuş – anne adayları ve yeni anneler için doğum öncesi ve doğum sonrası masajlarda özel deneyimle.",
+            "image": "/images/runa/klangschalenmassage.webp",
+            "link": "/angebote/massagen"
+          },
+          {
+            "title": "Ruh için şifa alanı",
+            "text": "İçinde bir şey şifa için çağırdığında: şamanik enerji çalışması ve duyarlı eşlik için korunaklı bir alan. Burada ağırlaşmış olanı bırakabilir ve içsel gücünle yeniden buluşabilirsin.",
+            "image": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+            "link": "/angebote/heilraum"
+          },
+          {
+            "title": "Mantra söylemek – seni taşıyan ses",
+            "text": "Gerginliğin sesinde nasıl çözüldüğünü hisset. Mantraları ve Medicine Songs'u birlikte söylemek – beceri gerekmez, yalnızca sen, nefesin ve topluluğun ısıtan gücü.",
+            "image": "/images/runa/runa-monochord-abendlicht.webp",
+            "link": "/angebote/mantra"
+          },
+          {
+            "title": "Kadınlar için yıl çemberi",
+            "text": "Bir yıl boyunca bir kadınlar çemberinde tutulmak: Kelt yıl çemberi bayramlarına göre 8 buluşma, ritüeller, içten paylaşım ve gerçek bağ ile. Derinliğe ve aidiyete duyduğun özlem için bir yuva.",
+            "image": "/images/runa/retreat-gartentafel.webp",
+            "link": "/angebote/jahreskreis"
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "Henüz emin değil misin? Hadi konuşalım.",
+        "text": "Bazen yalnızca ilk, içten bir sohbet gerekir. Seni neyin meşgul ettiğini bana yaz – seni dinler ve şu an sana gerçekten neyin iyi geleceğini birlikte buluruz. Tamamen bağlayıcı olmadan.",
+        "buttonText": "Bana yaz",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "Teklifler – Berlin-Pankow'da Yoga, Pilates ve Şifa Çalışması | Runayoga",
+      "seoDescription": "Berlin-Pankow'da huzura kavuş: Yoga, Pilates (ZPP sertifikalı, sigorta katkılı), masajlar, şamanik şifa alanı, Mantra söyleme ve kadınlar yıl çemberi – küçük gruplarda, Runa tarafından duyarlıca eşlik edilerek."
+    }
+  },
+  "zones": {}
+}

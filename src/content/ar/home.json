@@ -1,0 +1,127 @@
+{
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-001",
+        "title": "تعالَ. تنفّس. عُد إلى ذاتك من جديد.",
+        "subtitle": "حين تستنزفك الحياة اليومية وتتوق إلى السكينة: في الاستوديو الخاص بي في Berlin-Pankow تجد فضاءً محميًّا يلين فيه جسدك، ويهدأ فيه عقلك، ويتعمّق فيه نَفَسك. يوغا، Pilates، تدليك وعمل شفائي – على إيقاعك تمامًا.",
+        "buttonText": "اكتشف ما أقدّمه",
+        "buttonLink": "/angebote",
+        "secondButtonText": "راسلني",
+        "secondButtonLink": "/kontakt",
+        "image": "/images/runa/retreat-steg-herbstsee.webp",
+        "imageAlt": "جسر خشبي على بحيرة في الخريف",
+        "layout": "center"
+      }
+    },
+    {
+      "type": "Cards",
+      "props": {
+        "id": "Cards-001",
+        "title": "من أين يحقّ لرحلتك أن تبدأ؟",
+        "columns": 3,
+        "cards": [
+          {
+            "title": "يوغا",
+            "text": "Hatha وVinyasa وYin Yoga في مجموعات صغيرة – هنا تُرى وتُحتضن. اشعر كيف يتلاشى التوتر، ويتعمّق نَفَسك، وكيف يخفت أخيرًا الضجيج الداخلي.",
+            "image": "/images/runa/retreat-seminarraum-matten-kreis.webp",
+            "link": "/angebote/yoga"
+          },
+          {
+            "title": "Pilates",
+            "text": "يبدأ مركز قويّ خالٍ من الألم بحركة واعية ومضبوطة. قوِّ ظهرك برفق وعلى نحو دائم – في دورات وقائية معتمدة قد تشارك صندوقك الصحي في تكلفتها.",
+            "image": "/images/runa/retreat-yurte-savasana.webp",
+            "link": "/angebote/pilates"
+          },
+          {
+            "title": "التدليك",
+            "text": "ساعة لك وحدك، لا تُلزَم فيها بشيء، ويحقّ لك أن تتخلّى عن كل شيء. لمسة شافية للجسد والروح – بخبرة خاصة في تدليك ما قبل الولادة وما بعدها.",
+            "image": "/images/runa/klangschalenmassage.webp",
+            "link": "/angebote/massagen"
+          },
+          {
+            "title": "فضاء الشفاء",
+            "text": "حين تشعر أن شيئًا في الأعماق يريد أن يُشفى: عمل طاقي شامانيّ ومرافقة رقيقة للموضوعات التي تمسّك حقًّا. بوعيٍ، وثباتٍ راسخ، وحضورٍ تامٍّ مع ذاتك.",
+            "image": "/images/runa/retreat-ritual-altar-klangschalen.webp",
+            "link": "/angebote/heilraum"
+          },
+          {
+            "title": "إنشاد المانترا",
+            "text": "أطلق صوتك حرًّا واشعر كيف يحرّرك الصوت من الداخل. إنشاد جماعي لـ Mantra وأغاني Medicine Songs – محمول بالقوة الدافئة للجماعة.",
+            "image": "/images/runa/runa-monochord-abendlicht.webp",
+            "link": "/angebote/mantra"
+          },
+          {
+            "title": "دائرة العام",
+            "text": "دائرة من النساء تحملك عبر العام: 8 لقاءات في أعياد دائرة العام الكلتية. طقوس، وروابط صادقة، وذلك الشعور الجميل بأنك لا تسير وحدك.",
+            "image": "/images/runa/retreat-gartentafel.webp",
+            "link": "/angebote/jahreskreis"
+          }
+        ]
+      }
+    },
+    {
+      "type": "TextImage",
+      "props": {
+        "id": "TextImage-001",
+        "title": "كم يسعدني وجودك هنا – أنا Runa",
+        "text": "<p>ربما تعرف هذا الشعور: في حركة دائمة، حاضرٌ دومًا من أجل الآخرين، ومع ذلك لم تصل يومًا إلى ذاتك حقًّا. من هنا تحديدًا أبدأ. في الاستوديو الخاص بي في Berlin-Pankow أحفظ لك فضاءً محميًّا – لليوغا وPilates والعمل الشفائي الشامل، دون أي ضغط للأداء.</p><p>بخبرة طويلة وقلبٍ كبير أرافقك في تقوية جسدك، وفي ترك عقلك يهدأ، وفي منح روحك فضاءً من جديد. لا يلزمك أن تتقن شيئًا ولا أن تُحضِر شيئًا – سوى نفسك.</p>",
+        "image": "/images/runa/retreat-herbstspaziergang.webp",
+        "imageAlt": "Runa مبتسمة جالسة متربّعة على الحصيرة",
+        "imagePosition": "right"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "id": "Quote-001",
+        "text": "اليوغا هي رحلة الذات، عبر الذات، إلى الذات.",
+        "source": "Bhagavad Gita",
+        "variant": "decorative"
+      }
+    },
+    {
+      "type": "Testimonials",
+      "props": {
+        "id": "Testimonials-001",
+        "title": "أصوات من الاستوديو الخاص بي",
+        "items": [
+          {
+            "text": "حصص اليوغا لدى Runa هي ذروة أسبوعي. بعدها أشعر دائمًا بالثبات والاسترخاء وامتلاء الطاقة – وكأنني أخذتُ نفَسًا عميقًا.",
+            "name": "Maria S.",
+            "rating": 4
+          },
+          {
+            "text": "التدليك رائع ببساطة. تمتلك Runa حسًّا لا يُصدَّق وتخلق أجواءً آمنة إلى حدّ أستطيع معه أن أتخلّى عن كل شيء تمامًا.",
+            "name": "Kathrin L.",
+            "rating": 5
+          },
+          {
+            "text": "كان الـ Retreat تجربة غيّرت حياتي. المزيج من اليوغا والطبيعة والجماعة لمسني في العمق وأعاد إليّ القوة.",
+            "name": "Sandra B.",
+            "rating": 5
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "id": "CTA-001",
+        "title": "هل أنت مستعدّ للعودة إلى ذاتك تمامًا من جديد؟",
+        "text": "لستَ مضطرًّا للالتزام بعد. راسلني فقط بما يشغلك الآن – وسنكتشف معًا، بكل هدوء، ما الذي يفيدك الآن.",
+        "buttonText": "راسلني – دون أي التزام",
+        "buttonLink": "/kontakt",
+        "variant": "primary"
+      }
+    }
+  ],
+  "root": {
+    "props": {
+      "seoTitle": "يوغا وPilates وتدليك في Berlin-Pankow | Runa Bulla - Runayoga",
+      "seoDescription": "يوغا، Pilates، تدليك وعمل شفائي في Berlin-Pankow. تعالَ إلى السكينة، تخلّص من التوتر واملأ نفسك بقوة جديدة – في مجموعات صغيرة، محميّة وبوعي. دورات وقائية معتمدة بمساهمة من الصندوق الصحي. راسلني."
+    }
+  },
+  "zones": {}
+}
