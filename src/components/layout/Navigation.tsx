@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import siteData from "../../data/site.json";
 
 interface NavItem {
@@ -14,6 +15,7 @@ export function Navigation() {
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
   const nav: NavItem[] = siteData.navigation || [];
 
   useEffect(() => {
@@ -33,6 +35,8 @@ export function Navigation() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  if (pathname?.startsWith("/links")) return null;
 
   const Wordmark = siteData.logo ? (
     <img src={siteData.logo} alt={siteData.name} className="h-[42px] w-auto" />

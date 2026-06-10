@@ -49,7 +49,7 @@ export function Map({
             title={title || `Karte: ${address}`}
           />
         </div>
-        <p className="mt-3 text-center text-sm">
+        <p className="mt-3 text-center text-sm flex flex-wrap justify-center gap-x-6 gap-y-1">
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
               address
@@ -59,6 +59,16 @@ export function Map({
             className="text-[var(--color-primary)] hover:underline"
           >
             In Google Maps öffnen ↗
+          </a>
+          <a
+            href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+              address
+            )}&travelmode=transit`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--color-primary)] hover:underline"
+          >
+            Mit Öffentlichen (BVG) ↗
           </a>
         </p>
       </div>
