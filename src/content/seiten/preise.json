@@ -32,9 +32,9 @@
           },
           {
             "name": "Einzelstunde",
-            "price": "Auf Anfrage",
-            "period": "pro Einheit",
-            "features": ["60 Minuten ganz in deinem Tempo", "Egal, wo du gerade stehst – du bist willkommen", "Matten sind da, komm einfach", "Auch online, wenn dir das Zuhause lieber ist"],
+            "price": "90 €",
+            "period": "Einzelstunde · 60 Min.",
+            "features": ["Ganz im Fokus: nur du und deine Praxis", "60 Minuten in deinem Tempo", "Ideal für einen sanften Einstieg oder gezielte Themen", "Auch online möglich"],
             "highlighted": false
           }
         ]
@@ -60,9 +60,9 @@
           },
           {
             "name": "Einzelstunde",
-            "price": "Auf Anfrage",
-            "period": "pro Einheit",
-            "features": ["75 Minuten ganz auf dich abgestimmt", "Egal, wo du gerade stehst – du bist willkommen", "Geräte sind vorhanden", "Persönliche Betreuung, die jede Bewegung begleitet"],
+            "price": "95 €",
+            "period": "Einzelstunde · 60 Min.",
+            "features": ["Persönliche Betreuung, ganz auf dich abgestimmt", "60 Minuten in deinem Tempo", "Geräte sind vorhanden", "Jede Bewegung wird individuell begleitet"],
             "highlighted": false
           }
         ]
