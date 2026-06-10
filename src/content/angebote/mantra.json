@@ -10,8 +10,8 @@
         "buttonLink": "/kontakt",
         "secondButtonText": "",
         "secondButtonLink": "",
-        "image": "",
-        "imageAlt": "",
+        "image": "/images/runa/runa-monochord-abendlicht.webp",
+        "imageAlt": "Runa mit Monochord im Abendlicht",
         "layout": "right"
       }
     },

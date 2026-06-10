@@ -10,8 +10,8 @@
         "buttonLink": "/kontakt",
         "secondButtonText": "Preise ansehen",
         "secondButtonLink": "/preise",
-        "image": "",
-        "imageAlt": "",
+        "image": "/images/runa/retreat-yurte-savasana.webp",
+        "imageAlt": "Tiefe Entspannung in Savasana",
         "layout": "right"
       }
     },

@@ -10,8 +10,8 @@
         "buttonLink": "/angebote",
         "secondButtonText": "Schreib mir",
         "secondButtonLink": "/kontakt",
-        "image": "/images/hero.jpg",
-        "imageAlt": "Runa beim Yoga im Bambuswald",
+        "image": "/images/runa/retreat-steg-herbstsee.webp",
+        "imageAlt": "Holzsteg am herbstlichen See",
         "layout": "center"
       }
     },
@@ -25,37 +25,37 @@
           {
             "title": "Yoga",
             "text": "Hatha, Vinyasa und Yin Yoga in kleinen Gruppen – hier wirst du gesehen. Spür, wie Verspannungen sich lösen, dein Atem tiefer geht und der innere Lärm endlich leiser wird.",
-            "image": "",
+            "image": "/images/runa/retreat-seminarraum-matten-kreis.webp",
             "link": "/angebote/yoga"
           },
           {
             "title": "Pilates",
             "text": "Eine starke, schmerzfreie Mitte beginnt mit bewusster, kontrollierter Bewegung. Stärke deinen Rücken sanft und nachhaltig – in zertifizierten Präventionskursen, bei denen sich deine Kasse beteiligen kann.",
-            "image": "",
+            "image": "/images/runa/retreat-yurte-savasana.webp",
             "link": "/angebote/pilates"
           },
           {
             "title": "Massagen",
             "text": "Eine Stunde nur für dich, in der du nichts musst und alles loslassen darfst. Wohltuende Berührung für Körper und Seele – mit besonderer Erfahrung in Pre- und Postnatal-Massagen.",
-            "image": "",
+            "image": "/images/runa/klangschalenmassage.webp",
             "link": "/angebote/massagen"
           },
           {
             "title": "Heilraum",
             "text": "Wenn du spürst, dass tiefer etwas heilen möchte: Schamanische Energiearbeit und behutsame Begleitung für die Themen, die dich wirklich bewegen. Achtsam, geerdet, ganz bei dir.",
-            "image": "",
+            "image": "/images/runa/retreat-ritual-altar-klangschalen.webp",
             "link": "/angebote/heilraum"
           },
           {
             "title": "Mantra singen",
             "text": "Lass deine Stimme frei und fühl, wie Klang dich von innen löst. Gemeinsames Singen von Mantras und Medicine Songs – getragen von der wärmenden Kraft der Gemeinschaft.",
-            "image": "",
+            "image": "/images/runa/runa-monochord-abendlicht.webp",
             "link": "/angebote/mantra"
           },
           {
             "title": "Jahreskreis",
             "text": "Ein Kreis von Frauen, der dich durch das Jahr trägt: 8 Treffen zu den keltischen Jahreskreisfesten. Rituale, ehrliche Verbindung und das gute Gefühl, nicht allein zu gehen.",
-            "image": "",
+            "image": "/images/runa/retreat-gartentafel.webp",
             "link": "/angebote/jahreskreis"
           }
         ]
@@ -67,8 +67,8 @@
         "id": "TextImage-001",
         "title": "Schön, dass du da bist – ich bin Runa",
         "text": "<p>Vielleicht kennst du das Gefühl: ständig in Bewegung, ständig für andere da, und trotzdem nie wirklich angekommen. Genau hier setze ich an. In meinem Studio in Berlin-Pankow halte ich einen geschützten Raum für dich – für Yoga, Pilates und ganzheitliche Heilarbeit, ganz ohne Leistungsdruck.</p><p>Mit langjähriger Erfahrung und viel Herz begleite ich dich dabei, deinen Körper zu stärken, deinen Geist zur Ruhe kommen zu lassen und deiner Seele wieder Raum zu geben. Du musst nichts können und nichts mitbringen – außer dich selbst.</p>",
-        "image": "/images/about.jpg",
-        "imageAlt": "Runa in der Natur",
+        "image": "/images/runa/retreat-herbstspaziergang.webp",
+        "imageAlt": "Runa, lächelnd im Schneidersitz auf der Matte",
         "imagePosition": "right"
       }
     },

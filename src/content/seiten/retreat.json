@@ -10,8 +10,8 @@
         "buttonLink": "/kontakt",
         "secondButtonText": "",
         "secondButtonLink": "",
-        "image": "/images/retreat.jpg",
-        "imageAlt": "Yoga Retreat in der Natur",
+        "image": "/images/runa/retreat-terrasse-am-see.webp",
+        "imageAlt": "Terrasse mit Blick auf den See",
         "layout": "right"
       }
     },
@@ -20,6 +20,23 @@
       "props": {
         "id": "RichText-001",
         "content": "<h2>Erlaube dir, ganz anzukommen</h2><p><em>Eine Woche, in der nichts von dir verlangt wird \u2013 au\u00dfer da zu sein.</em></p><p>Du sp\u00fcrst es schon l\u00e4nger: Der Kopf ist voll, die Schultern hochgezogen, die To-do-Liste endlos. Du funktionierst \u2013 aber du sehnst dich nach echter Ruhe, nach Tiefe, nach dem Gef\u00fchl, wieder bei dir selbst zu sein. Genau daf\u00fcr ist dieses Retreat da.</p><p>Stell dir vor: Du wachst auf mit dem Gesang der V\u00f6gel statt mit dem Wecker. Der Tag beginnt sanft auf der Matte, w\u00e4hrend die Sonne aufgeht und dein Atem ruhiger wird. Abends sitzt du im warmen Kreis, l\u00e4sst dich von Mantras und Stille tragen und f\u00fchlst, wie die Anspannung der letzten Monate Schicht f\u00fcr Schicht von dir abf\u00e4llt. Dieses Retreat ist kein Urlaub, den du \u201eabhakst\u201c \u2013 es ist eine liebevolle Einladung, wieder zu atmen.</p><p>In einer kleinen, vertrauten Runde halte ich einen gesch\u00fctzten Raum f\u00fcr dich: einen Ort ohne Erwartungen, an dem du loslassen, auftanken und dich mit anderen Frauen auf Augenh\u00f6he verbinden darfst. T\u00e4gliche Yogapraxis, schamanische Heilarbeit, n\u00e4hrendes Essen und die Stille der Natur weben sich zu einer Woche zusammen, die dich ver\u00e4ndert zur\u00fcckkehren l\u00e4sst \u2013 ger\u00e4umiger, weicher, ganz bei dir.</p><p>Und keine Sorge: Du musst nichts k\u00f6nnen. Ob du zum ersten Mal auf der Matte stehst oder seit Jahren \u00fcbst \u2013 ich hole dich dort ab, wo du gerade bist. Hier z\u00e4hlt kein Leistungsdruck, nur dein eigener Rhythmus.</p><h2>Was diese Woche f\u00fcr dich bereith\u00e4lt</h2><p>Ein rundum n\u00e4hrendes Erlebnis f\u00fcr K\u00f6rper, Herz und Seele:</p><ul><li>T\u00e4gliche Yoga- und Meditationspraxis, die dich erdet und l\u00f6st</li><li>Schamanische Zeremonien, die Altes loslassen helfen</li><li>Mantrachanting und Medicine Songs, die das Herz \u00f6ffnen</li><li>Liebevoll zubereitete vegetarische Vollverpflegung</li><li>Eine kleine, vertraute Gruppe (max. 12 Teilnehmerinnen) \u2013 damit echte N\u00e4he entstehen kann</li><li>Freie Zeit zum Wandern, Tr\u00e4umen und einfach Sein in der Natur</li></ul><h2>Termine &amp; Ort</h2><p><strong>Fr\u00fchling 2026</strong> – Termine werden bald bekannt gegeben.</p><p><strong>Ort:</strong> Mittelmeerraum – genauer Ort wird noch bekannt gegeben</p><p><strong>Dauer:</strong> 7 Tage / 6 N\u00e4chte</p><p>Die Pl\u00e4tze sind bewusst begrenzt \u2013 sie sind schnell vergeben. Trag dich jetzt unverbindlich auf die Warteliste ein und erfahre als Erste von Terminen, Ort und Fr\u00fchbucher-Pl\u00e4tzen.</p>"
+      }
+    },
+    {
+      "type": "Gallery",
+      "props": {
+        "id": "Gallery-retreat",
+        "title": "Impressionen",
+        "columns": 3,
+        "images": [
+          { "src": "/images/runa/retreat-seminarraum-matten-kreis.webp", "alt": "Seminarraum mit Yogamatten im Kreis", "caption": "" },
+          { "src": "/images/runa/retreat-yurte-savasana.webp", "alt": "Savasana in der Jurte", "caption": "" },
+          { "src": "/images/runa/retreat-steg-herbstsee.webp", "alt": "Holzsteg am herbstlichen See", "caption": "" },
+          { "src": "/images/runa/retreat-see-schilf.webp", "alt": "See mit Schilf", "caption": "" },
+          { "src": "/images/runa/retreat-gartentafel.webp", "alt": "Gemeinsame Tafel im Garten", "caption": "" },
+          { "src": "/images/runa/retreat-herbstspaziergang-2.webp", "alt": "Achtsamer Spaziergang im Herbst", "caption": "" },
+          { "src": "/images/runa/retreat-ritual-altar-klangschalen.webp", "alt": "Ritual-Altar mit Klangschalen", "caption": "" }
+        ]
       }
     },
     {

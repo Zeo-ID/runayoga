@@ -10,8 +10,8 @@
         "buttonLink": "/kontakt",
         "secondButtonText": "Preise ansehen",
         "secondButtonLink": "/preise",
-        "image": "",
-        "imageAlt": "",
+        "image": "/images/runa/wellness-rose-in-haenden.webp",
+        "imageAlt": "Eine Rose in den Händen gehalten",
         "layout": "right"
       }
     },
@@ -20,6 +20,20 @@
       "props": {
         "id": "RichText-001",
         "content": "<p>Du trägst so viel – den Alltag, die Anspannung in Nacken und Schultern, die innere Unruhe, die nie ganz zur Ruhe kommt. Manchmal braucht der Körper nichts weiter als achtsame, liebevolle Berührung, um endlich loszulassen. Meine Massagen sind mehr als Muskelarbeit. Sie sind eine Einladung, dich fallen zu lassen, durchzuatmen und für eine Weile nichts leisten zu müssen.</p><p>In meinem geschützten Massageraum in Berlin-Pankow erwartet dich Wärme, Stille und ein Raum nur für dich. Stell dir vor, wie sich die Verspannungen unter warmen Händen lösen, dein Atem tiefer wird und sich ein wohliges Schweregefühl über deinen ganzen Körper legt. Du gehst nicht nur entspannter nach Hause – du gehst wieder verbunden mit dir selbst.</p><p>Jede Massage stimme ich nach einem persönlichen Vorgespräch ganz auf dich und deine Bedürfnisse ab. Besonders am Herzen liegen mir meine Massagen für Schwangere und die postnatale Regeneration: Die Schwangerschaft und die Zeit nach der Geburt sind so kostbare, manchmal auch fordernde Phasen. Eine einfühlsame Massage kann dich darin tragen. Dafür bin ich eigens ausgebildet – damit du dich in jeder Phase sicher, gehalten und gut aufgehoben fühlst.</p><h2>Finde die Berührung, die dir guttut</h2><ul><li><strong>Lomi Lomi Nui</strong> – die traditionelle hawaiianische Tempelmassage mit langen, fließenden Streichungen, die dich in einen tiefen, meditativen Zustand tragen</li><li><strong>Ayurveda-Massage</strong> – warme, wohltuende Ölmassage nach ayurvedischer Tradition, die Körper und Geist ins Gleichgewicht bringt</li><li><strong>Massage für Schwangere</strong> – sanft, sicher und liebevoll begleitend in jeder Phase deiner Schwangerschaft</li><li><strong>Postnatale Regenerationsmassage</strong> – damit du nach der Geburt wieder bei Kräften und bei dir ankommst</li><li><strong>Klangschalenmassage</strong> – tiefe Entspannung, die durch Klang und Schwingung bis in die Zellen reicht</li><li><strong>Fußreflexzonenmassage</strong> – aktiviert über die Füße den ganzen Körper und löst, was festsitzt</li><li><strong>Rückenmassage</strong> – gezielt für alle, die Verspannungen und Rückenschmerzen mit sich tragen</li><li><strong>Medizinische Massagen</strong> – fundierte Unterstützung bei konkreten Beschwerden</li></ul><h2>Was dich bei mir erwartet</h2><ul><li>Einzelmassage ab 95 € (60 Min.) bzw. 135 € (90 Min.)</li><li>Vorteils-3er-Pakete für 270 € (statt 285 €) – damit Loslassen zur liebevollen Gewohnheit wird</li><li>Eine warme Wohlfühlatmosphäre in einem geschützten Raum, ganz für dich</li><li>Eine individuelle Behandlung, die nach einem persönlichen Vorgespräch ganz auf dich abgestimmt ist</li><li>Bitte bei 60-Min.-Massagen 75 Min., bei 90-Min.-Massagen 105 Min. einplanen (inkl. Vorgespräch)</li></ul><p>Du musst nichts mitbringen außer dem Wunsch, dir endlich etwas Gutes zu tun. Schreib mir – ich finde mit dir gemeinsam die Massage, die genau jetzt richtig für dich ist.</p>"
+      }
+    },
+    {
+      "type": "Gallery",
+      "props": {
+        "id": "Gallery-massagen",
+        "title": "Einblicke in meine Arbeit",
+        "columns": 2,
+        "images": [
+          { "src": "/images/runa/klangschalenmassage.webp", "alt": "Klangschalenmassage", "caption": "Klangschalenmassage" },
+          { "src": "/images/runa/ayurveda-oelmassage-ruecken.webp", "alt": "Ayurveda-Ölmassage am Rücken", "caption": "Ayurveda-Ölmassage" },
+          { "src": "/images/runa/lymphdrainage-fuss.webp", "alt": "Fuß- und Lymphdrainage", "caption": "Fußreflex & Lymphdrainage" },
+          { "src": "/images/runa/wochenbettmassage-lotus.webp", "alt": "Massage für Schwangere und nach der Geburt", "caption": "Für Schwangere & postnatal" }
+        ]
       }
     },
     {
